@@ -26,7 +26,7 @@ Blow list a table to show how different parameters affect the system security.
 - LB-factor and CC-facotr are two methods for cracking McEliece Crytosystem, for example, if LB-factor is 80, that means we need a computational
 complexity of 2^80 to break this cryosystem.
 
-<table>
+<table border=".5">
 <tr><td>m</td><td>t</td><td>\\(\delta\\)</td><td>cost</td><td>\\(\sigma\\)</td><td>failure rate</td><td> LB-factor</td><td>CC-factor</td></tr>
 <tr><td>16</td><td>8</td><td>1</td><td>40342.155480</td><td>0.180500</td><td>0.834852</td><td>88.417718</td><td>88.123587</td></tr>
 <tr><td>16</td><td>8</td><td>2</td><td>40347.080736</td><td>1182.765390</td><td>0.000000</td><td>75.739844</td><td>75.445713</td></tr>
@@ -74,4 +74,32 @@ complexity of 2^80 to break this cryosystem.
 <tr><td>20</td><td>10</td><td>2</td><td>3629024.952874</td><td>2295.279230</td><td>0.000000</td><td>127.304165</td><td>152.924831</td></tr>
 <tr><td>20</td><td>10</td><td>3</td><td>3629059.562349</td><td>185134397.744232</td><td>0.000000</td><td>111.004622</td><td>136.625288</td></tr>
 <tr><td></td></tr>
+</table>
+
+
+
+## Crypto-Coprocessor Architecture
+### Single Instruction Single Datastream (SISD Version)
+#### Instruction Set
+We list below the operations that are allowed in our processor, that is, addition, subtraction and multiplication for two integer operands.
+<table border=".5">
+<caption><em>Instruction type</em></caption>
+<tr><th>Microcode</th> <th>Instruction</th> <th>Illustration</th></tr>
+<tr><td>1001</td> <td>ADD</td> <td>Add two integers located in register or memory</td></tr>
+<tr><td>1010</td> <td>SUB</td> <td>Subtract two integers located in register or memory</td></tr>
+<tr><td>1011</td> <td>MUL</td> <td>Multiply two integers located in register or memory</td></tr>
+</table>
+
+<table border=".5">
+<caption><em>Instruction format for two register operands</em></caption>
+<tr><th colspan="4">Reg[19:16]<th colspan="4">Reg[15:12]<th colspan="4">Reg[11:8]<th colspan="4">Reg[7:4]<th colspan="4">Reg[3:0]
+<tr><td>19<td>18<td>17<td>16<td>15<td>14<td>13<td>12<td>11<td>10<td>9<td>8<td>7<td>6<td>5<td>4<td>3<td>2<td>1<td>0
+<tr><td>  <td>  <td>  <td>  <td> 1<td colspan="3"> ALU<br>control code<td colspan="4"> Register-1 address<br>(Destination)<td colspan="4"> Register-2 address<td colspan="4"> NULL
+</table>
+
+<table border=".5">
+<caption><em>Instruction format for register-memory operands</em></caption>
+<tr><th colspan="4">Reg[19:16]<th colspan="4">Reg[15:12]<th colspan="4">Reg[11:8]<th colspan="4">Reg[7:4]<th colspan="4">Reg[3:0]
+<tr><td>19<td>18<td>17<td>16<td>15<td>14<td>13<td>12<td>11<td>10<td>9<td>8<td>7<td>6<td>5<td>4<td>3<td>2<td>1<td>0
+<tr><td>  <td>  <td>  <td>  <td> 0<td colspan="3"> ALU<br>control code<td colspan="4"> Register-1 address<br>(Destination)<td colspan="8"> Memory address
 </table>
