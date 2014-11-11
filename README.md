@@ -90,6 +90,8 @@ We list below the operations that are allowed in our processor, that is, additio
 <tr><td>1011</td> <td>MUL</td> <td>Multiply two integers located in register or memory</td></tr>
 </table>
 
+In our ISA, for each instruction, two operands are required --- They can be both registers or one register and one memory block. The first operand also serves as the destination: In other words, the computation result is stored in the first operand after the ALU completes its computation. By the time being, 20-bit data width of instruction is constructed to support all the existing operations. 
+
 <table border=".5">
 <caption><em>Instruction format for two register operands</em></caption>
 <tr><th colspan="4">Reg[19:16]<th colspan="4">Reg[15:12]<th colspan="4">Reg[11:8]<th colspan="4">Reg[7:4]<th colspan="4">Reg[3:0]
