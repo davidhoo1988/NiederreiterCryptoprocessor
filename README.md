@@ -81,27 +81,76 @@ complexity of 2^80 to break this cryosystem.
 ## Crypto-Coprocessor Architecture
 ### Single Instruction Single Datastream (SISD Version)
 #### Instruction Set
-We list below the operations that are allowed in our processor, that is, addition, subtraction and multiplication for two integer operands.
-<table border=".5">
-<caption><em>Instruction type</em></caption>
-<tr><th>Microcode</th> <th>Instruction</th> <th>Illustration</th></tr>
-<tr><td>1001</td> <td>ADD</td> <td>Add two integers located in register or memory</td></tr>
-<tr><td>1010</td> <td>SUB</td> <td>Subtract two integers located in register or memory</td></tr>
-<tr><td>1011</td> <td>MUL</td> <td>Multiply two integers located in register or memory</td></tr>
-</table>
-
-In our ISA, for each instruction, two operands are required --- They can be both registers or one register and one memory block. The first operand also serves as the destination: In other words, the computation result is stored in the first operand after the ALU completes its computation. By the time being, 20-bit data width of instruction is constructed to support all the existing operations. 
+In our ISA, for each instruction, two operands are required --- They can be both registers or one register and one memory block or one immediate data and one register. The second operand also serves as the destination: In other words, the computation result is stored in the second operand after the ALU completes its computation. By the time being, 25-bit data width of instruction is constructed to support all the existing operations. 
 
 <table border=".5">
-<caption><em>Instruction format for two register operands</em></caption>
-<tr><th colspan="4">Reg[19:16]<th colspan="4">Reg[15:12]<th colspan="4">Reg[11:8]<th colspan="4">Reg[7:4]<th colspan="4">Reg[3:0]
-<tr><td>19<td>18<td>17<td>16<td>15<td>14<td>13<td>12<td>11<td>10<td>9<td>8<td>7<td>6<td>5<td>4<td>3<td>2<td>1<td>0
-<tr><td>  <td>  <td>  <td>  <td> 1<td colspan="3"> ALU<br>control code<td colspan="4"> Register-1 address<br>(Destination)<td colspan="4"> Register-2 address<td colspan="4"> NULL
+<caption><em>Instruction format </em></caption>
+<tr><th colspan="4">Reg[24:20]<th colspan="5">Reg[19:10]<th colspan="5">Reg[9:0]
+<tr><td>24<td>23<td>...<td>20<td>19<td>18<td>17<td>...<td>10<td>9<td>8<td>7<td>...<td>0
+<tr><td colspan="4"> Instruction type <td colspan="2"> operand type <td colspan="3"> operand value  <td colspan="2"> operand type <td colspan="3"> operand value 
 </table>
 
 <table border=".5">
-<caption><em>Instruction format for register-memory operands</em></caption>
-<tr><th colspan="4">Reg[19:16]<th colspan="4">Reg[15:12]<th colspan="4">Reg[11:8]<th colspan="4">Reg[7:4]<th colspan="4">Reg[3:0]
-<tr><td>19<td>18<td>17<td>16<td>15<td>14<td>13<td>12<td>11<td>10<td>9<td>8<td>7<td>6<td>5<td>4<td>3<td>2<td>1<td>0
-<tr><td>  <td>  <td>  <td>  <td> 0<td colspan="3"> ALU<br>control code<td colspan="4"> Register-1 address<br>(Destination)<td colspan="8"> Memory address
+<caption><em>Instruction format (for jump instructions) </em></caption>
+<tr><th colspan="4">Reg[24:20]<th colspan="5">Reg[19:10]<th colspan="6">Reg[9:0]
+<tr><td>24<td>23<td>...<td>20<td>19<td>...<td>18<td>17<td>...<td>10<td>9<td>8<td>7<td>...<td>0
+<tr><td colspan="4"> Instruction type <td colspan="3"> register-I <td colspan="3"> register-II <td colspan="6"> destination address 
 </table>
+
+instruction type --- reg[24:20]:
+	* MOV  --- 00001
+	* ADD  --- 00010
+	* SUB  --- 00011
+	* MUL  --- 00100
+	* HALT --- 00000
+	* JMP  --- 00101
+	* JZ  ---  00110
+	
+operand type --- reg[19:18] or reg[9:8]:
+	* reg --- 00
+	* mem --- 01
+	* imm --- 10
+
+operand value --- reg[17:10] or reg[7:0]:
+	* If the operand type is register-based, then operand value  stores the register number(0~3);
+	* If the operand type is memory-based, then operand value  stores the memory address(8-bits);
+	* If the operand type is imm-based, then operand value stores value of the immediate data(8-bits).	
+
+
+
+
+We list below the operations that are allowed in our processor, that is, mov, addition, subtraction and multiplication for two integer operands.	
+
+
+##### MOV
+MOV is the data transfer instuction in our processor, up to date, four types of transportation are supported:
+<table border=".5">
+<caption><em>MOV instruction details</em></caption>
+<tr><th>Microcode</th>    <th>Instruction</th>               						 <th>Latency</th>       <th>Illustration</th></tr>
+<tr><td>MOV @addr Rx</td> <td>to transfer data from external memory to register</td> <td>4 cycles</td> <td>'MOV @3 R0' means to move data at addr=3 in external memory to register R0</td></tr>
+<tr><td>MOV Rx @addr</td> <td>to transfer data from register to external memory</td> <td>3 cycles</td> <td>'MOV R0 @4' means to move data at register R0 to addr=4 in external memory</td></tr>
+<tr><td>MOV imm Rx  </td> <td>to transfer an immediate data to register, data width of imm should be less than 8 bits.</td> <td>3 cycles</td> <td>'MOV 11111111 R2' means to move 11111111 to register R2</td></tr>
+<tr><td>MOV Rx Ry  </td> <td>to transfer data from register Rx to register Ry</td> 											<td>3 cycles</td> <td>'MOV R2 R0' means to move data at reg R2 to reg R0</td></tr>
+</table>
+Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune up the whole system, the latency is extended to 3 cycles instead.
+
+##### ADD, SUB, MUL
+<table border=".5">
+<caption><em>ALU Instruction type</em></caption>
+<tr><th>Microcode</th> <th>Instruction</th> 								<th>Latency</th>   <th>Illustration</th></tr>
+<tr><td>ADD Rx Ry</td> <td>ADD Rx and Ry and store the result into Ry</td>  <td> 6 cycles</td> <td>'ADD R0 R2' means to add R0 and R2 and results into R2</td></tr>
+<tr><td>SUB Rx Ry</td> <td>SUB Rx by Ry and store the result into Ry</td>   <td> 6 cycles</td> <td>'SUB R2 R0' means to subtract R0 and R2 and results into R0</td></tr>
+<tr><td>MUL Rx Ry</td> <td>MUL Rx by Ry and store the result into Ry</td> 	<td> 6 cycles</td> <td>'MUL R2 R2' means to add R2 and R2 and results into R2</td></tr>
+</table>
+
+##### JEQ, HALT
+<table border=".5">
+<caption><em>CONTROL Instruction type</em></caption>
+<tr><th>Microcode</th> <th>Instruction</th> 								<th>Latency</th>   <th>Illustration</th></tr>
+<tr><td>HALT</td> <td>Halt processor</td>  <td> 1 cycles</td> <td>'HALT'</td></tr>
+<tr><td>JMP @label</td> <td>unconditional jump to label</td> 	<td> 5 cycles</td> <td>'JMP@4' means to jump to line 4 unconditionally</td></tr>
+<tr><td>JZ Rx @label</td> <td>if Rx equals 0, then jump to label line</td> 	<td> 9 cycles</td> <td>'JZ R2 @1' means to jump to line 1 if R2==0</td></tr>
+</table>
+
+Note that in jump instructions(JEQ), R0-R31 can be used only because our instruction set currently supports 5-bit addressing capability for registers;
+However, in JMP, the jumping address is stored in reg[9:0] and reg[19:10] of the instruction format is left blank. 
