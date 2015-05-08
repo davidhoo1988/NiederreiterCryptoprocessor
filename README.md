@@ -92,7 +92,7 @@ In our ISA, for each instruction, two operands are required --- They can be both
 
 <table border=".5">
 <caption><em>Instruction format (for jump instructions) </em></caption>
-<tr><th colspan="4">Reg[24:20]<th colspan="5">Reg[19:10]<th colspan="6">Reg[9:0]
+<tr><th colspan="4">Reg[24:20]<th colspan="6">Reg[19:10]<th colspan="5">Reg[9:0]
 <tr><td>24<td>23<td>...<td>20<td>19<td>...<td>18<td>17<td>...<td>10<td>9<td>8<td>7<td>...<td>0
 <tr><td colspan="4"> Instruction type <td colspan="3"> register-I <td colspan="3"> register-II <td colspan="6"> destination address 
 </table>
@@ -102,15 +102,18 @@ instruction type --- reg[24:20]:
 	* ADD  --- 00010
 	* SUB  --- 00011
 	* MUL  --- 00100
+	* INV  --- 00101
+	* PRNG --- 00110
 	* HALT --- 00000
-	* JMP  --- 00101
-	* JZ  ---  00110
+	* JMP  --- 10000
+	* JZ  ---  10001
 	
 operand type --- reg[19:18] or reg[9:8]:
 	* reg --- 00
 	* mem --- 01
 	* imm --- 10
-
+	* indirect reg --- 11
+	
 operand value --- reg[17:10] or reg[7:0]:
 	* If the operand type is register-based, then operand value  stores the register number(0~3);
 	* If the operand type is memory-based, then operand value  stores the memory address(8-bits);
@@ -127,20 +130,30 @@ MOV is the data transfer instuction in our processor, up to date, four types of 
 <table border=".5">
 <caption><em>MOV instruction details</em></caption>
 <tr><th>Microcode</th>    <th>Instruction</th>               						 <th>Latency</th>       <th>Illustration</th></tr>
-<tr><td>MOV @addr Rx</td> <td>to transfer data from external memory to register</td> <td>4 cycles</td> <td>'MOV @3 R0' means to move data at addr=3 in external memory to register R0</td></tr>
-<tr><td>MOV Rx @addr</td> <td>to transfer data from register to external memory</td> <td>3 cycles</td> <td>'MOV R0 @4' means to move data at register R0 to addr=4 in external memory</td></tr>
-<tr><td>MOV imm Rx  </td> <td>to transfer an immediate data to register, data width of imm should be less than 8 bits.</td> <td>3 cycles</td> <td>'MOV 11111111 R2' means to move 11111111 to register R2</td></tr>
-<tr><td>MOV Rx Ry  </td> <td>to transfer data from register Rx to register Ry</td> 											<td>3 cycles</td> <td>'MOV R2 R0' means to move data at reg R2 to reg R0</td></tr>
+<tr><td>MOV @addr Rx</td> <td>to transfer data from external memory to register</td> <td>5 cycles</td> <td>'MOV @3 R0' means to move data at addr=3 in external memory to register R0</td></tr>
+<tr><td>MOV Rx @addr</td> <td>to transfer data from register to external memory</td> <td>4 cycles</td> <td>'MOV R0 @4' means to move data at register R0 to addr=4 in external memory</td></tr>
+<tr><td>MOV imm Rx  </td> <td>to transfer an immediate data to register, data width of imm should be less than 8 bits.</td> <td>4 cycles</td> <td>'MOV #11111111 R2' means to move 11111111 to register R2</td></tr>
+<tr><td>MOV Rx Ry  </td> <td>to transfer data from register Rx to register Ry</td> 											<td>4 cycles</td> <td>'MOV R2 R0' means to move data at reg R2 to reg R0</td></tr>
+<tr><td>MOV	Rx @Ry </td> <td> Register Indirect Addressing, to transfer Rx into memory @Ry</td>								<td>X cycles</td>	<td>'MOV R0 @R1' means to move data at register R0 to addr=R1 in external memory</td></tr>
 </table>
 Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune up the whole system, the latency is extended to 3 cycles instead.
 
-##### ADD, SUB, MUL
+##### ADD, SUB, MUL, INV
 <table border=".5">
 <caption><em>ALU Instruction type</em></caption>
 <tr><th>Microcode</th> <th>Instruction</th> 								<th>Latency</th>   <th>Illustration</th></tr>
-<tr><td>ADD Rx Ry</td> <td>ADD Rx and Ry and store the result into Ry</td>  <td> 6 cycles</td> <td>'ADD R0 R2' means to add R0 and R2 and results into R2</td></tr>
-<tr><td>SUB Rx Ry</td> <td>SUB Rx by Ry and store the result into Ry</td>   <td> 6 cycles</td> <td>'SUB R2 R0' means to subtract R0 and R2 and results into R0</td></tr>
-<tr><td>MUL Rx Ry</td> <td>MUL Rx by Ry and store the result into Ry</td> 	<td> 6 cycles</td> <td>'MUL R2 R2' means to add R2 and R2 and results into R2</td></tr>
+<tr><td>ADD Rx Ry</td> <td>ADD Rx and Ry and store the result into Ry</td>  <td> 7 cycles</td> <td>'ADD R0 R2' means to add R0 and R2 and results into R2</td></tr>
+<tr><td>SUB Rx Ry</td> <td>SUB Rx by Ry and store the result into Ry</td>   <td> 7 cycles</td> <td>'SUB R2 R0' means to subtract R0 and R2 and results into R0</td></tr>
+<tr><td>MUL Rx Ry</td> <td>MUL Rx by Ry and store the result into Ry</td> 	<td> 9 cycles</td> <td>'MUL R2 R2' means to add R2 and R2 and results into R2</td></tr>
+<tr><td>INV Rx Ry</td> <td>Get Inverse Rx^{-1} and store the result into Ry</td> 	<td> 33 cycles</td> <td>'INV R2 R3' means to calculate R2^-1 and then store it into R3</td></tr>
+</table>
+
+#### RNG
+<table border=".5">
+<caption><em>ALU Instruction type</em></caption>
+<tr><th>Microcode</th> <th>Instruction</th> 								<th>Latency</th>   <th>Illustration</th></tr>
+<tr><td>PRNG imm Rx</td> <td>Update PRNG using imm as its seed</td>  <td> 6 cycles</td> <td>'PRNG 32 R2' means to update PRNG with seed=32 and update R2=32</td></tr>
+<tr><td>PRNG Rx</td> <td>Start PRNG and transfer the random number into Rx</td>  <td> 6 cycles</td> <td>'PRNG R20' means to generate random number and put it into R20</td></tr>
 </table>
 
 ##### JEQ, HALT
@@ -148,8 +161,8 @@ Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune 
 <caption><em>CONTROL Instruction type</em></caption>
 <tr><th>Microcode</th> <th>Instruction</th> 								<th>Latency</th>   <th>Illustration</th></tr>
 <tr><td>HALT</td> <td>Halt processor</td>  <td> 1 cycles</td> <td>'HALT'</td></tr>
-<tr><td>JMP @label</td> <td>unconditional jump to label</td> 	<td> 5 cycles</td> <td>'JMP@4' means to jump to line 4 unconditionally</td></tr>
-<tr><td>JZ Rx @label</td> <td>if Rx equals 0, then jump to label line</td> 	<td> 9 cycles</td> <td>'JZ R2 @1' means to jump to line 1 if R2==0</td></tr>
+<tr><td>JMP @label</td> <td>unconditional jump to label</td> 	<td> 6 cycles</td> <td>'JMP@4' means to jump to line 4 unconditionally</td></tr>
+<tr><td>JZ Rx @label</td> <td>if Rx equals 0, then jump to label line</td> 	<td> 10 cycles</td> <td>'JZ R2 @1' means to jump to line 1 if R2==0</td></tr>
 </table>
 
 Note that in jump instructions(JEQ), R0-R31 can be used only because our instruction set currently supports 5-bit addressing capability for registers;
