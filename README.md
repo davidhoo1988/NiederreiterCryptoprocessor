@@ -10,7 +10,7 @@ Basically, we have two options for it.
 
 For example, assume we are prepared to calculate C(x) = A(x)*B(x) mod F(x). When speed is set top priority,  a specific irreducible polynomial F(x) is fixed such that we construct a new matrix Z to make C = Z*B hold where C, B is the column vector form of C(x) and B(x) and Z is exclusively related to F(x). One can observe thath this calculation can be performed in a single cycle because each entry in the C vector is independent and thus is able to be executed in parallel. 
 
-On the other hand, if area consumption is more concerned whereas the high speed need to be preserved to some extent, we can split GF(2^m) into two halves as GF(2^{m/2}) in which we use matrix multiplication method. Furthermore, to recover GF(2^{m/2} or to be more precise, to combine this subfield back to GF(2^m), Karatsuba-Offman multiplication is applied. In this way, we can perform GF(2^{m/2})multiplication in one cycle and the whole GF(2^m) could be done in several， and more importantly, we use one GF(2^{m/2}) module to accomplish the GF(2^m)multiplication, which saves the circuit area definitely.
+On the other hand, if area consumption is more concerned whereas the high speed need to be preserved to some extent, we can split GF(2^m) into two halves as GF(2^{m/2}) in which we use matrix multiplication method. Furthermore, to recover GF(2^{m/2} or to be more precise, to combine this subfield back to GF(2^m), Karatsuba-Offman multiplication is applied. In this way, we can perform GF(2^{m/2}) multiplication in one cycle and the whole GF(2^m) could be done in several， and more importantly, we use one GF(2^{m/2}) module to accomplish the GF(2^m)multiplication, which saves the circuit area definitely.
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 
@@ -85,39 +85,45 @@ In our ISA, for each instruction, two operands are required --- They can be both
 
 <table border=".5">
 <caption><em>Instruction format </em></caption>
-<tr><th colspan="4">Reg[24:20]<th colspan="5">Reg[19:10]<th colspan="5">Reg[9:0]
-<tr><td>24<td>23<td>...<td>20<td>19<td>18<td>17<td>...<td>10<td>9<td>8<td>7<td>...<td>0
-<tr><td colspan="4"> Instruction type <td colspan="2"> operand type <td colspan="3"> operand value  <td colspan="2"> operand type <td colspan="3"> operand value 
+<tr><th colspan="4">Reg[42:38]<th colspan="6">Reg[34:19]<th colspan="6">Reg[18:0]
+<tr><td>42<td>41<td>...<td>38<td>37<td>36<td>35<td>34<td>...<td>19<td>18<td>17<td>16<td>15<td>...<td>0
+<tr><td colspan="4"> Instruction type <td colspan="3"> operand type <td colspan="3"> operand value  <td colspan="3"> operand type <td colspan="3"> operand value 
 </table>
 
 <table border=".5">
 <caption><em>Instruction format (for jump instructions) </em></caption>
-<tr><th colspan="4">Reg[24:20]<th colspan="6">Reg[19:10]<th colspan="5">Reg[9:0]
-<tr><td>24<td>23<td>...<td>20<td>19<td>...<td>18<td>17<td>...<td>10<td>9<td>8<td>7<td>...<td>0
-<tr><td colspan="4"> Instruction type <td colspan="3"> register-I <td colspan="3"> register-II <td colspan="6"> destination address 
+<tr><th colspan="4">Reg[42:38]<th colspan="6">Reg[37:19]<th colspan="5">Reg[18:0]
+<tr><td>42<td>41<td>...<td>38<td>37<td>...<td>22<td>21<td>20<td>19<td>18<td>...<td>3<td>2<td>1<td>0
+<tr><td colspan="4"> Instruction type <td colspan="6"> Register <td colspan="6"> destination address 
 </table>
 
-instruction type --- reg[24:20]:
+instruction type --- reg[42:38]:
 	* MOV  --- 00001
 	* ADD  --- 00010
 	* SUB  --- 00011
 	* MUL  --- 00100
-	* INV  --- 00101
+	* DIV  --- 00101
 	* PRNG --- 00110
+	* IDX --- 00111
+	* INV --- 01000
+	* SPLIT --- 01001
+	* DEG --- 01010
+	* RSHIFT --- 01011
 	* HALT --- 00000
 	* JMP  --- 10000
-	* JZ  ---  10001
+	* JRE  ---  10001
 	
-operand type --- reg[19:18] or reg[9:8]:
-	* reg --- 00
-	* mem --- 01
-	* imm --- 10
-	* indirect reg --- 11
-	
-operand value --- reg[17:10] or reg[7:0]:
-	* If the operand type is register-based, then operand value  stores the register number(0~3);
-	* If the operand type is memory-based, then operand value  stores the memory address(8-bits);
-	* If the operand type is imm-based, then operand value stores value of the immediate data(8-bits).	
+operand type --- reg[37:35] or reg[18:16]:
+	* reg --- 000
+	* mem --- 001
+	* imm --- 010
+	* indirect gprf reg --- 011
+	* gprf-mod-reg --- 100
+	* indirect sprf+gprf reg --- 101
+operand value --- reg[34:19] or reg[15:0]:
+	* If the operand type is register-based, then operand value  stores the register number(0~31);
+	* If the operand type is memory-based, then operand value  stores the memory address(16-bits);
+	* If the operand type is imm-based, then operand value stores value of the immediate data(16-bits).	
 
 
 
@@ -130,22 +136,35 @@ MOV is the data transfer instuction in our processor, up to date, four types of 
 <table border=".5">
 <caption><em>MOV instruction details</em></caption>
 <tr><th>Microcode</th>    <th>Instruction</th>               						 <th>Latency</th>       <th>Illustration</th></tr>
-<tr><td>MOV @addr Rx</td> <td>to transfer data from external memory to register</td> <td>5 cycles</td> <td>'MOV @3 R0' means to move data at addr=3 in external memory to register R0</td></tr>
-<tr><td>MOV Rx @addr</td> <td>to transfer data from register to external memory</td> <td>4 cycles</td> <td>'MOV R0 @4' means to move data at register R0 to addr=4 in external memory</td></tr>
+<tr><td>MOV @R[IDX[y]] Rx</td> <td>to transfer data from external memory to register Rx</td> <td>8 cycles</td> <td>'MOV @R[IDX0] Rx' means to move data at addr=R[IDX0] in external memory to register Rx</td></tr>
+<tr><td>MOV Rx @addr</td> <td>to transfer data from register Rx to external memory</td> <td>4 cycles</td> <td>'MOV Rx @4' means to move data at register Rx to addr=4 in external memory</td></tr>
 <tr><td>MOV imm Rx  </td> <td>to transfer an immediate data to register, data width of imm should be less than 8 bits.</td> <td>4 cycles</td> <td>'MOV #11111111 R2' means to move 11111111 to register R2</td></tr>
 <tr><td>MOV Rx Ry  </td> <td>to transfer data from register Rx to register Ry</td> 											<td>4 cycles</td> <td>'MOV R2 R0' means to move data at reg R2 to reg R0</td></tr>
-<tr><td>MOV	Rx @Ry </td> <td> Register Indirect Addressing, to transfer Rx into memory @Ry</td>								<td>X cycles</td>	<td>'MOV R0 @R1' means to move data at register R0 to addr=R1 in external memory</td></tr>
+<tr><td>MOV	Rx @Ry </td> <td> Register Indirect Addressing, to transfer R0-R8 into memory @Ry</td>								<td>5 cycles</td>	<td>'MOV Rx @R1' means to move data at register Rx to addr=R1 in external memory</td></tr>
+<tr><td>MOV Rx IDX[y] </td> <td>MOV Rx into IDX[y]</td>  <td> X cycles</td> <td>'MOV R13 IDX1' means to update IDX1 with the value of R13</td></tr>
 </table>
 Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune up the whole system, the latency is extended to 3 cycles instead.
 
-##### ADD, SUB, MUL, INV
+##### ADD, SUB, MUL, DIV, INV, SPLIT, DEG, RSHIFT
 <table border=".5">
 <caption><em>ALU Instruction type</em></caption>
 <tr><th>Microcode</th> <th>Instruction</th> 								<th>Latency</th>   <th>Illustration</th></tr>
 <tr><td>ADD Rx Ry</td> <td>ADD Rx and Ry and store the result into Ry</td>  <td> 7 cycles</td> <td>'ADD R0 R2' means to add R0 and R2 and results into R2</td></tr>
 <tr><td>SUB Rx Ry</td> <td>SUB Rx by Ry and store the result into Ry</td>   <td> 7 cycles</td> <td>'SUB R2 R0' means to subtract R0 and R2 and results into R0</td></tr>
-<tr><td>MUL Rx Ry</td> <td>MUL Rx by Ry and store the result into Ry</td> 	<td> 9 cycles</td> <td>'MUL R2 R2' means to add R2 and R2 and results into R2</td></tr>
-<tr><td>INV Rx Ry</td> <td>Get Inverse Rx^{-1} and store the result into Ry</td> 	<td> 33 cycles</td> <td>'INV R2 R3' means to calculate R2^-1 and then store it into R3</td></tr>
+<tr><td>INV Rx Ry</td> <td>INV Rx and store the result into Ry</td>   <td> 34 cycles</td> <td>'INV R0 R0' means to calcuate the inverse of R0 and results into R0</td></tr>
+<tr><td>MUL Rx Ry</td> <td>MUL Rx by Ry and store the result into Ry</td> 	<td> uncertain</td> <td>'MUL R2 R2' means to add R2 and R2 and results into R2</td></tr>
+<tr><td>DIV Rx Ry</td> <td>Get Rx/Ry and store the result into Rx,Ry</td> 	<td> uncertain</td> <td>'DIV R2 R3' means to calculate R2/R3 and then store quotient to R2 and remainder to R3</td></tr>
+<tr><td>SPLIT Rx Ry</td> <td>Split Rx and store the result into Rx,Ry</td> 	<td> uncertain</td> <td>'SPLIT R2 R3' means to calculate R2 and R3 such that 'R2=R2^2+x*R3^2'</td></tr>
+<tr><td>DEG Rx Ry</td> <td>Calculate the deg of polynomial in Rx and store the deg into Ry</td> 	<td> uncertain</td> <td>'DEG R2 R3' means to calculate deg(R2) and store it in R3 </td></tr>
+<tr><td>RSHIFT Rx Ry</td> <td>Calculate the deg of polynomial in Rx and store the deg into Ry</td> 	<td> </td> <td>'RSHIFT R2 R3' means to right shift R2 and store the MSB part in R2 and the remaining part in R3</td></tr>
+</table>
+
+#### SPRF
+<table border=".5">
+<caption><em>SPRFInstruction type</em></caption>
+<tr><th>Microcode</th> <th>Instruction</th> 								<th>Latency</th>   <th>Illustration</th></tr>
+<tr><td>IDX[x] ++</td> <td>Update IDX[x] by adding '1' to it</td>  <td> 4 cycles</td> <td>'IDX1 ++' means to update IDX1 by subtracting '1'</td></tr>
+<tr><td>IDX[x] --</td> <td>Update IDX[x] by subtracting '1' from it</td>  <td> 4 cycles</td> <td>'IDX2 --' means to update IDX2 by subtracting '1'</td></tr>
 </table>
 
 #### RNG
@@ -156,13 +175,13 @@ Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune 
 <tr><td>PRNG Rx</td> <td>Start PRNG and transfer the random number into Rx</td>  <td> 6 cycles</td> <td>'PRNG R20' means to generate random number and put it into R20</td></tr>
 </table>
 
-##### JEQ, HALT
+##### JRE, HALT
 <table border=".5">
 <caption><em>CONTROL Instruction type</em></caption>
 <tr><th>Microcode</th> <th>Instruction</th> 								<th>Latency</th>   <th>Illustration</th></tr>
 <tr><td>HALT</td> <td>Halt processor</td>  <td> 1 cycles</td> <td>'HALT'</td></tr>
 <tr><td>JMP @label</td> <td>unconditional jump to label</td> 	<td> 6 cycles</td> <td>'JMP@4' means to jump to line 4 unconditionally</td></tr>
-<tr><td>JZ Rx @label</td> <td>if Rx equals 0, then jump to label line</td> 	<td> 10 cycles</td> <td>'JZ R2 @1' means to jump to line 1 if R2==0</td></tr>
+<tr><td>JRE IDX[x] @label</td> <td>if IDX[x] is greater than R31(by default), then jump to label line</td> 	<td> 9 cycles</td> <td>'JRE IDX2 @1' means to jump to line 1 if IDX2>R31</td></tr>
 </table>
 
 Note that in jump instructions(JEQ), R0-R31 can be used only because our instruction set currently supports 5-bit addressing capability for registers;
