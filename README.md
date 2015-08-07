@@ -109,6 +109,7 @@ instruction type --- reg[42:38]:
 	* SPLIT --- 01001
 	* DEG --- 01010
 	* RSHIFT --- 01011
+	* EVAL --- 01100
 	* HALT --- 00000
 	* JMP  --- 10000
 	* JRE  ---  10001
@@ -117,9 +118,8 @@ operand type --- reg[37:35] or reg[18:16]:
 	* reg --- 000
 	* mem --- 001
 	* imm --- 010
-	* indirect gprf reg --- 011
 	* gprf-mod-reg --- 100
-	* indirect sprf+gprf reg --- 101
+	* indirect sprf reg --- 101
 operand value --- reg[34:19] or reg[15:0]:
 	* If the operand type is register-based, then operand value  stores the register number(0~31);
 	* If the operand type is memory-based, then operand value  stores the memory address(16-bits);
@@ -136,16 +136,16 @@ MOV is the data transfer instuction in our processor, up to date, four types of 
 <table border=".5">
 <caption><em>MOV instruction details</em></caption>
 <tr><th>Microcode</th>    <th>Instruction</th>               						 <th>Latency</th>       <th>Illustration</th></tr>
-<tr><td>MOV @R[IDX[y]] Rx</td> <td>to transfer data from external memory to register Rx</td> <td>8 cycles</td> <td>'MOV @R[IDX0] Rx' means to move data at addr=R[IDX0] in external memory to register Rx</td></tr>
+<tr><td>MOV @IDX[y] Rx</td> <td>to transfer data from external memory to register Rx</td> <td>7 cycles</td> <td>'MOV @IDX0 Rx' means to move data at addr=IDX0 in external memory to register Rx</td></tr>
 <tr><td>MOV Rx @addr</td> <td>to transfer data from register Rx to external memory</td> <td>4 cycles</td> <td>'MOV Rx @4' means to move data at register Rx to addr=4 in external memory</td></tr>
 <tr><td>MOV imm Rx  </td> <td>to transfer an immediate data to register, data width of imm should be less than 8 bits.</td> <td>4 cycles</td> <td>'MOV #11111111 R2' means to move 11111111 to register R2</td></tr>
 <tr><td>MOV Rx Ry  </td> <td>to transfer data from register Rx to register Ry</td> 											<td>4 cycles</td> <td>'MOV R2 R0' means to move data at reg R2 to reg R0</td></tr>
-<tr><td>MOV	Rx @Ry </td> <td> Register Indirect Addressing, to transfer R0-R8 into memory @Ry</td>								<td>5 cycles</td>	<td>'MOV Rx @R1' means to move data at register Rx to addr=R1 in external memory</td></tr>
+<tr><td>MOV Rx	@IDX[y] </td> <td> Register Indirect Addressing, to transfer R0-R31 into memory @IDX[y]</td>								<td>5 cycles</td>	<td>'MOV R0	@IDX0' means to move data Ro to addr=IDX0 in external memory</td></tr>
 <tr><td>MOV Rx IDX[y] </td> <td>MOV Rx into IDX[y]</td>  <td> X cycles</td> <td>'MOV R13 IDX1' means to update IDX1 with the value of R13</td></tr>
 </table>
 Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune up the whole system, the latency is extended to 3 cycles instead.
 
-##### ADD, SUB, MUL, DIV, INV, SPLIT, DEG, RSHIFT
+##### ADD, SUB, MUL, DIV, INV, SPLIT, DEG, RSHIFT, EVAL
 <table border=".5">
 <caption><em>ALU Instruction type</em></caption>
 <tr><th>Microcode</th> <th>Instruction</th> 								<th>Latency</th>   <th>Illustration</th></tr>
@@ -157,6 +157,7 @@ Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune 
 <tr><td>SPLIT Rx Ry</td> <td>Split Rx and store the result into Rx,Ry</td> 	<td> uncertain</td> <td>'SPLIT R2 R3' means to calculate R2 and R3 such that 'R2=R2^2+x*R3^2'</td></tr>
 <tr><td>DEG Rx Ry</td> <td>Calculate the deg of polynomial in Rx and store the deg into Ry</td> 	<td> uncertain</td> <td>'DEG R2 R3' means to calculate deg(R2) and store it in R3 </td></tr>
 <tr><td>RSHIFT Rx Ry</td> <td>Calculate the deg of polynomial in Rx and store the deg into Ry</td> 	<td> </td> <td>'RSHIFT R2 R3' means to right shift R2 and store the MSB part in R2 and the remaining part in R3</td></tr>
+<tr><td>EVAL Rx Ry</td> <td>Eval the value of error locator polynomial Rx, the input unkown value is store in Ry (9 different values at a time)</td> 	<td> 68 cycles</td> <td>'EVAL R2 R3' means to evalue R2 by substituting the unkowns with R3</td></tr>
 </table>
 
 #### SPRF
