@@ -1,4 +1,5 @@
 
+
 # FPGA Implementation of Goppa Code Decoder
 
 
@@ -156,7 +157,7 @@ Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune 
 <tr><td>DIV Rx Ry</td> <td>Get Rx/Ry and store the result into Rx,Ry</td> 	<td> uncertain</td> <td>'DIV R2 R3' means to calculate R2/R3 and then store quotient to R2 and remainder to R3</td></tr>
 <tr><td>SPLIT Rx Ry</td> <td>Split Rx and store the result into Rx,Ry</td> 	<td> uncertain</td> <td>'SPLIT R2 R3' means to calculate R2 and R3 such that 'R2=R2^2+x*R3^2'</td></tr>
 <tr><td>DEG Rx Ry</td> <td>Calculate the deg of polynomial in Rx and store the deg into Ry</td> 	<td> uncertain</td> <td>'DEG R2 R3' means to calculate deg(R2) and store it in R3 </td></tr>
-<tr><td>RSHIFT Rx Ry</td> <td>Calculate the deg of polynomial in Rx and store the deg into Ry</td> 	<td> </td> <td>'RSHIFT R2 R3' means to right shift R2 and store the MSB part in R2 and the remaining part in R3</td></tr>
+<tr><td>RSHIFT Rx Ry</td> <td>Right Shift Rx and store the result into (Rx,Ry)</td> 	<td> </td> <td>'RSHIFT R2 R3' means to right shift R2 and store the MSB part in R2 and the remaining part in R3</td></tr>
 <tr><td>EVAL Rx Ry</td> <td>Eval the value of error locator polynomial Rx, the input unkown value is store in Ry (9 different values at a time)</td> 	<td> 68 cycles</td> <td>'EVAL R2 R3' means to evalue R2 by substituting the unkowns with R3</td></tr>
 </table>
 
