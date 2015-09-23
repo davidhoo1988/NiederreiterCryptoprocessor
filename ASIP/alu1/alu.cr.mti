@@ -1,46 +1,46 @@
-/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v
+/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module ALU_InvGenerator
 
+Top level modules:
+	ALU_InvGenerator
 
-} {3.0 4.0} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/gopf_mul.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/gopf_mul.v
+} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/gopf_mul.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/gopf_mul.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 -- Compiling module GOPF_MUL
 
 Top level modules:
 	GOPF_MUL
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module Inv_Mux
 
+Top level modules:
+	Inv_Mux
 
-} {3.0 4.0} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module ALU
 
+Top level modules:
+	ALU
 
-} {3.0 4.0} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_DIV/gopf_div.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_DIV/gopf_div.v
+} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_DIV/gopf_div.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_DIV/gopf_div.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 -- Compiling module GOPF_DIV
 
 Top level modules:
 	GOPF_DIV
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module Inv_Ctrl
 
+Top level modules:
+	Inv_Ctrl
 
-} {3.0 4.0} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v
+} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 -- Compiling module Inv_Exp
 
@@ -54,14 +54,14 @@ Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 Top level modules:
 	Inv_Reg0
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/DEG/deg.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/DEG/deg.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/DEG/deg.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/DEG/deg.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module DEG
 
+Top level modules:
+	DEG
 
-} {3.0 4.0} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v
+} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 -- Compiling module Inv_Reg1
 
@@ -82,40 +82,26 @@ Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 Top level modules:
 	ALU_Multiplier
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
-Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
-
-
-} {3.0 4.0} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
+} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 -- Compiling module Mul_MultiCore
 
 Top level modules:
 	Mul_MultiCore
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_MUL/gopf_mul.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_MUL/gopf_mul.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module Mul_ModularX8
 
+Top level modules:
+	Mul_ModularX8
 
-} {3.0 4.0} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v
+} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 -- Compiling module ALU_InvGenerator
 
 Top level modules:
 	ALU_InvGenerator
-
-} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu.v
-Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
--- Compiling module ALU
-
-Top level modules:
-	ALU
 
 } {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
@@ -124,95 +110,95 @@ Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 Top level modules:
 	Inv_Mux
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_DIV/gopf_div.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_DIV/gopf_div.v
+} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_DIV/gopf_div.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_DIV/gopf_div.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module GOPF_DIV
 
+Top level modules:
+	GOPF_DIV
 
-} {3.0 4.0} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/mul_array.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/mul_array.v
+} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/mul_array.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/mul_array.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 -- Compiling module MUL_ARRAY
 
 Top level modules:
 	MUL_ARRAY
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_EVAL/gopf_eval.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_EVAL/gopf_eval.v
-Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
-
-
-} {3.0 4.0} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v
-Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
-
-
-} {3.0 4.0} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v
+} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 -- Compiling module Inv_Ctrl
 
 Top level modules:
 	Inv_Ctrl
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg0.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg0.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module Inv_Exp
 
+Top level modules:
+	Inv_Exp
 
-} {3.0 4.0} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu_tb.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu_tb.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_EVAL/gopf_eval.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_EVAL/gopf_eval.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module GOPF_EVAL
 
+Top level modules:
+	GOPF_EVAL
 
-} {3.0 4.0} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/SPLIT/split.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/SPLIT/split.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg0.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg0.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module Inv_Reg0
 
+Top level modules:
+	Inv_Reg0
 
-} {3.0 4.0} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/MUL_ARRAY/mul_array.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/MUL_ARRAY/mul_array.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module Inv_Reg1
 
+Top level modules:
+	Inv_Reg1
 
-} {3.0 4.0} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/ALU_Multiplier.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/ALU_Multiplier.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/ALU_Multiplier.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/ALU_Multiplier.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module ALU_Multiplier
 
+Top level modules:
+	ALU_Multiplier
 
-} {3.0 4.0} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/MUL_ARRAY/mul_array.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/MUL_ARRAY/mul_array.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module MUL_ARRAY
 
+Top level modules:
+	MUL_ARRAY
 
-} {3.0 4.0} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/SPLIT/split.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/SPLIT/split.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
-** Error: (vlog-19) Failed to access library 'work' at "work".
-No such file or directory. (errno = ENOENT)
-** Fatal: (vlog-7004) No work directory defined. (work=work)
+-- Compiling module SPLIT
 
+Top level modules:
+	SPLIT
 
-} {3.0 4.0} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
+} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 -- Compiling module Mul_ModularX8
 
 Top level modules:
 	Mul_ModularX8
+
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
+Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
+-- Compiling module Mul_MultiCore
+
+Top level modules:
+	Mul_MultiCore
 
 } {} {}}
