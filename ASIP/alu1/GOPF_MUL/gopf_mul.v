@@ -109,8 +109,8 @@ parameter 	DATA_PRE  	= 0, //do nothing, then get prepared to DATA_MUL1
 										NextState = DATA_MUL;
 								end					
 					
-					DATA_MUL: 	begin // it takes 3 cycles to do one BF_MUL
-									if (mul_cnt == 2'd3)
+					DATA_MUL: 	begin // it takes 1 cycles to do one BF_MUL
+									if (mul_cnt == 2'd1)
 										NextState = DATA_MAC;
 									else
 										NextState = DATA_MUL;
