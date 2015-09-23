@@ -1,6 +1,5 @@
-
-
 # FPGA Implementation of Goppa Code Decoder
+
 
 
 ## GF(2^m) Multiplier
@@ -138,11 +137,10 @@ MOV is the data transfer instuction in our processor, up to date, four types of 
 <caption><em>MOV instruction details</em></caption>
 <tr><th>Microcode</th>    <th>Instruction</th>               						 <th>Latency</th>       <th>Illustration</th></tr>
 <tr><td>MOV @IDX[y] Rx</td> <td>to transfer data from external memory to register Rx</td> <td>7 cycles</td> <td>'MOV @IDX0 Rx' means to move data at addr=IDX0 in external memory to register Rx</td></tr>
-<tr><td>MOV Rx @addr</td> <td>to transfer data from register Rx to external memory</td> <td>4 cycles</td> <td>'MOV Rx @4' means to move data at register Rx to addr=4 in external memory</td></tr>
 <tr><td>MOV imm Rx  </td> <td>to transfer an immediate data to register, data width of imm should be less than 8 bits.</td> <td>4 cycles</td> <td>'MOV #11111111 R2' means to move 11111111 to register R2</td></tr>
 <tr><td>MOV Rx Ry  </td> <td>to transfer data from register Rx to register Ry</td> 											<td>4 cycles</td> <td>'MOV R2 R0' means to move data at reg R2 to reg R0</td></tr>
-<tr><td>MOV Rx	@IDX[y] </td> <td> Register Indirect Addressing, to transfer R0-R31 into memory @IDX[y]</td>								<td>5 cycles</td>	<td>'MOV R0	@IDX0' means to move data Ro to addr=IDX0 in external memory</td></tr>
-<tr><td>MOV Rx IDX[y] </td> <td>MOV Rx into IDX[y]</td>  <td> X cycles</td> <td>'MOV R13 IDX1' means to update IDX1 with the value of R13</td></tr>
+<tr><td>MOV Rx	@IDX[y] </td> <td> Register Indirect Addressing, to transfer R0-R7 into memory @IDX[y]</td>								<td>6 cycles</td>	<td>'MOV R0	@IDX0' means to move data Ro to addr=IDX0 in external memory</td></tr>
+<tr><td>MOV Rx IDX[y] </td> <td>MOV Rx into IDX[y]</td>  <td> 4 cycles</td> <td>'MOV R13 IDX1' means to update IDX1 with the value of R13</td></tr>
 </table>
 Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune up the whole system, the latency is extended to 3 cycles instead.
 
@@ -173,8 +171,8 @@ Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune 
 <table border=".5">
 <caption><em>ALU Instruction type</em></caption>
 <tr><th>Microcode</th> <th>Instruction</th> 								<th>Latency</th>   <th>Illustration</th></tr>
-<tr><td>PRNG imm Rx</td> <td>Update PRNG using imm as its seed</td>  <td> 6 cycles</td> <td>'PRNG 32 R2' means to update PRNG with seed=32 and update R2=32</td></tr>
-<tr><td>PRNG Rx</td> <td>Start PRNG and transfer the random number into Rx</td>  <td> 6 cycles</td> <td>'PRNG R20' means to generate random number and put it into R20</td></tr>
+<tr><td>PRNG imm Rx</td> <td>Update PRNG using imm as its seed</td>  <td>6 cycles </td> <td>'PRNG 32 R2' means to update PRNG with seed=32 and update R2=32</td></tr>
+<tr><td>PRNG Rx</td> <td>Start PRNG and transfer the random number into Rx</td>  <td> LSFR---6 cycles; LGC---7 cycles</td> <td>'PRNG R20' means to generate random number and put it into R20</td></tr>
 </table>
 
 ##### JRE, HALT
