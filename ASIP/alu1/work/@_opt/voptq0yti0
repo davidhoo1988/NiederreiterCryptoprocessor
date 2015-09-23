@@ -1,0 +1,235 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\RSPC\Dropbox\Goppa_Code_Decoder_Verilog\ASIP\alu1\GOPF_MUL
+T_opt
+Z1 V8Tm`EN^[TC:9mTVb2YD_L3
+Z2 04 6 4 work alu_tb fast 0
+Z3 =1-f8b156b053e7-55890247-77-3444
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 n@_opt
+Z6 OE;O;6.5;42
+vALU
+Z7 I<N^514JF5Z=jkL^=7;m;:2
+Z8 Voe^M3c2InJ9;^HifPQI6Q1
+Z9 dC:\Users\RSPC\Dropbox\Goppa_Code_Decoder_Verilog\ASIP\alu1
+Z10 w1434859622
+Z11 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu.v
+Z12 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu.v
+L0 27
+Z13 OE;L;6.5;42
+r1
+31
+Z14 !s102 -nocovercells
+Z15 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+Z16 n@a@l@u
+Z17 !s100 J^>>8;I4?90GX7_N`i5F`3
+!s85 0
+vALU_InvGenerator
+Z18 IMYKH72dlaeJ[<Vo6DZWY01
+Z19 VNj4MJ@Nk>?bhejI]FDTL32
+R9
+Z20 w1434525373
+Z21 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v
+Z22 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z23 n@a@l@u_@inv@generator
+Z24 !s100 MOFoHl?ob5PSc6R2Sk@I90
+!s85 0
+vALU_Multiplier
+Z25 I5g`5f6<ombg04Ea<nP;0@2
+Z26 VboMMjzV^jj4=]IRFz3RR03
+R9
+Z27 w1434075569
+Z28 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/ALU_Multiplier.v
+Z29 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/ALU_Multiplier.v
+L0 3
+R13
+r1
+31
+R14
+R15
+Z30 n@a@l@u_@multiplier
+Z31 !s100 T6>IKYeXB^K[eXOHdeL>>1
+!s85 0
+valu_tb
+Z32 IUjh=IjE0`D[N1ODhE8Eji3
+Z33 VL;=kgzZ7GJ2Reg7Z1GkmR2
+R9
+Z34 w1435042305
+Z35 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu_tb.v
+Z36 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu_tb.v
+L0 5
+R13
+r1
+31
+R14
+R15
+Z37 !s100 @NX=K0ZZ><B0Ag:FEVdFe2
+!s85 0
+vGOPF_DIV
+Z38 If80^K4L>c16Kg8=hUk0O`1
+Z39 VBXYON:Yjon>f>Zj?2I<I^3
+R9
+Z40 w1435027668
+Z41 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_DIV/gopf_div.v
+Z42 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_DIV/gopf_div.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z43 n@g@o@p@f_@d@i@v
+Z44 !s100 cm_?2FcQ_>Za@NcY7;=LO2
+!s85 0
+vGOPF_MUL
+Z45 IAG8>lhe09R[A04SUAaXd]3
+Z46 V0noSL65YSURYN[F[lT_AC2
+R9
+Z47 w1434357743
+Z48 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/gopf_mul.v
+Z49 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/gopf_mul.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z50 n@g@o@p@f_@m@u@l
+Z51 !s100 [hdQaUMD72Sj;hJl9kV_H1
+!s85 0
+vInv_Ctrl
+Z52 Igh@n]cnJ219Fo[=B?=nO32
+Z53 VE_PP7TL:PKA[_8ai;P^lU3
+R9
+Z54 w1431004738
+Z55 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v
+Z56 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v
+L0 5
+R13
+r1
+31
+R14
+R15
+Z57 n@inv_@ctrl
+Z58 !s100 @`^6FP<GL970RZO33DYMY1
+!s85 0
+vInv_Exp
+Z59 I0LDBXQc6W70WD5o<67][^1
+Z60 VG:<mX7a;fHT9Z>eCOjldY3
+R9
+Z61 w1431004729
+Z62 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v
+Z63 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z64 n@inv_@exp
+Z65 !s100 XTb`_djVgfYRUM:m[<7dT3
+!s85 0
+vInv_Mux
+Z66 I8nM<;D3mX:g;Ro`jhik5F1
+Z67 Vog@GEA2Z@HomRM0Y;kPKK1
+R9
+Z68 w1431004726
+Z69 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v
+Z70 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z71 n@inv_@mux
+Z72 !s100 C?[L5CiBM9k^[djf@G5K22
+!s85 0
+vInv_Reg0
+Z73 Id`[JN@fe_;nf:_g:lO7dA0
+Z74 VM0T>AIh:2PH;bJSBZ^BSQ2
+R9
+Z75 w1431004721
+Z76 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Reg0.v
+Z77 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Reg0.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z78 n@inv_@reg0
+Z79 !s100 ld<cmcG7T@Sk1oCc_SD5V1
+!s85 0
+vInv_Reg1
+Z80 I?G8@8Ea=8H[T7jZoU6X]@2
+Z81 VU5Zjg;O6cXD_AL34UCG;02
+R9
+Z82 w1431004676
+Z83 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v
+Z84 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z85 n@inv_@reg1
+Z86 !s100 W]SEiCS4[L31fAVZhNMW=1
+!s85 0
+vMUL_ARRAY
+Z87 Il8aZRK9KIX`YQ[FY?YYHA1
+Z88 V89]g0jnQL6m7^Gz9hNzbc1
+R9
+Z89 w1434270025
+Z90 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/mul_array.v
+Z91 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/mul_array.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z92 n@m@u@l_@a@r@r@a@y
+Z93 !s100 QeF4i^SeFonjYJnGlfNSe3
+!s85 0
+vMul_ModularX8
+Z94 I7eKK:6DX^BjGoaOjM2Kgg1
+Z95 VBdEnKzi1aME_0j@RjVzWF2
+R9
+Z96 w1431004783
+Z97 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
+Z98 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z99 n@mul_@modular@x8
+Z100 !s100 `4AHALj3_aGFk5E33=>^B3
+!s85 0
+vMul_MultiCore
+Z101 ImW7:d_?ZQGSJ]F5AH7AAi1
+Z102 V0><=X<e8n?HeZECId0PNb3
+R9
+Z103 w1431004788
+Z104 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
+Z105 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z106 n@mul_@multi@core
+Z107 !s100 _<gIalSY`Qa]_E0<N;8:n0
+!s85 0

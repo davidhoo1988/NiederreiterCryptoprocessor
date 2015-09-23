@@ -1,0 +1,22 @@
+		MOV #5619  R18 // public key (R18-R26) 5619	8431	9036	10055	20992	32792	36991	49819	55007	
+		MOV #8431  R19
+		MOV #9036  R20
+		MOV #10055 R21
+		MOV #20992 R22
+		MOV #32792 R23
+		MOV #36991 R24
+		MOV #49819 R25
+		MOV #55007 R26
+		MOV #0	R9
+		MOV #18 R30
+		MOV #9  R31
+		MOV R30 IDX0
+		MOV R31 IDX2 //IDX2 serves as encrypt cnt
+ENCRYPT:MOV @R[IDX0] R0 //final result kept in R9
+		ADD R0  R9
+		IDX0++
+		IDX2--
+		JNZ IDX2 @ENCRYPT
+		MOV #1025 R31
+		MOV R9 @R31 //store the ciphertext
+		HALT

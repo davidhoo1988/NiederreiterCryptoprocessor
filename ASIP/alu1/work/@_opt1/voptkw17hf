@@ -1,0 +1,311 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\RSPC\Dropbox\Goppa_Code_Decoder_Verilog\ASIP\alu1\GOPF_MUL
+T_opt
+Z1 V8Tm`EN^[TC:9mTVb2YD_L3
+Z2 04 6 4 work alu_tb fast 0
+Z3 =1-f8b156b053e7-55890247-77-3444
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 n@_opt
+Z6 OE;O;6.5;42
+T_opt1
+Z7 VYXLC>]_DH`0S?3:lXfJF^1
+R2
+Z8 =1-005056f531ac-55b09c21-397-f50
+R4
+Z9 n@_opt1
+R6
+T_opt2
+Z10 VnjaV77LlhHd_039><X`Zh3
+R2
+Z11 =1-f8b156b053e7-55ab67e4-40643-1e8a
+Z12 o-quiet -auto_acc_if_foreign -work work
+Z13 n@_opt2
+Z14 OE;O;6.5b;42
+vALU
+Z15 I@H[EnB`8dmgDgN8;84OiU2
+Z16 VXYPe^VT`R3N6kYe`l0c=:0
+Z17 dZ:\David On My Mac\Dropbox\Goppa_Code_Decoder_Verilog\ASIP\alu1
+Z18 w1437637153
+Z19 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu.v
+Z20 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu.v
+L0 27
+Z21 OE;L;6.5;42
+r1
+31
+Z22 !s102 -nocovercells
+Z23 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+Z24 n@a@l@u
+Z25 !s100 ^M1X7Qjo0K>ejAm<_3FkU1
+!s85 0
+vALU_InvGenerator
+Z26 IMYKH72dlaeJ[<Vo6DZWY01
+Z27 VNj4MJ@Nk>?bhejI]FDTL32
+R17
+Z28 w1434525373
+Z29 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v
+Z30 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v
+L0 1
+R21
+r1
+31
+R22
+R23
+Z31 n@a@l@u_@inv@generator
+Z32 !s100 MOFoHl?ob5PSc6R2Sk@I90
+!s85 0
+vALU_Multiplier
+Z33 I5g`5f6<ombg04Ea<nP;0@2
+Z34 VboMMjzV^jj4=]IRFz3RR03
+R17
+Z35 w1434075569
+Z36 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/ALU_Multiplier.v
+Z37 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/ALU_Multiplier.v
+L0 3
+R21
+r1
+31
+R22
+R23
+Z38 n@a@l@u_@multiplier
+Z39 !s100 T6>IKYeXB^K[eXOHdeL>>1
+!s85 0
+valu_tb
+Z40 ITVif^jM18;N^[350?;1]F3
+Z41 VL;=kgzZ7GJ2Reg7Z1GkmR2
+R17
+Z42 w1437636967
+Z43 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu_tb.v
+Z44 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu_tb.v
+L0 6
+R21
+r1
+31
+R22
+R23
+Z45 !s100 <YK_O9W4;GDh]=MT;8VT12
+!s85 0
+vDEG
+Z46 Ic^kE1[dd>KKBODdU2FhgV2
+Z47 V?:9S`P>^Y:H`YSC4P8iao0
+R17
+Z48 w1437534540
+Z49 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg.v
+Z50 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg.v
+L0 16
+R21
+r1
+31
+R22
+R23
+Z51 n@d@e@g
+Z52 !s100 Z4jB_L6R0HGKd?GUXgTBG0
+!s85 0
+vGOPF_DIV
+Z53 IYeKo`iD5z]@:lE;;Zn`X80
+Z54 VBXYON:Yjon>f>Zj?2I<I^3
+R17
+Z55 w1436254733
+Z56 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_DIV/gopf_div.v
+Z57 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_DIV/gopf_div.v
+L0 1
+R21
+r1
+31
+R22
+R23
+Z58 n@g@o@p@f_@d@i@v
+Z59 !s100 21Ci24<g1=BN5Ch_ljKzf0
+!s85 0
+vGOPF_MUL
+Z60 IAG8>lhe09R[A04SUAaXd]3
+Z61 V0noSL65YSURYN[F[lT_AC2
+R17
+Z62 w1435396066
+Z63 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/gopf_mul.v
+Z64 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/gopf_mul.v
+L0 1
+R21
+r1
+31
+R22
+R23
+Z65 n@g@o@p@f_@m@u@l
+Z66 !s100 [hdQaUMD72Sj;hJl9kV_H1
+!s85 0
+vInv_Ctrl
+Z67 Igh@n]cnJ219Fo[=B?=nO32
+Z68 VE_PP7TL:PKA[_8ai;P^lU3
+R17
+Z69 w1431004738
+Z70 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v
+Z71 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v
+L0 5
+R21
+r1
+31
+R22
+R23
+Z72 n@inv_@ctrl
+Z73 !s100 @`^6FP<GL970RZO33DYMY1
+!s85 0
+vInv_Exp
+Z74 I0LDBXQc6W70WD5o<67][^1
+Z75 VG:<mX7a;fHT9Z>eCOjldY3
+R17
+Z76 w1431004729
+Z77 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v
+Z78 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v
+L0 1
+R21
+r1
+31
+R22
+R23
+Z79 n@inv_@exp
+Z80 !s100 XTb`_djVgfYRUM:m[<7dT3
+!s85 0
+vInv_Mux
+Z81 I8nM<;D3mX:g;Ro`jhik5F1
+Z82 Vog@GEA2Z@HomRM0Y;kPKK1
+R17
+Z83 w1431004726
+Z84 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v
+Z85 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v
+L0 1
+R21
+r1
+31
+R22
+R23
+Z86 n@inv_@mux
+Z87 !s100 C?[L5CiBM9k^[djf@G5K22
+!s85 0
+vInv_Reg0
+Z88 Id`[JN@fe_;nf:_g:lO7dA0
+Z89 VM0T>AIh:2PH;bJSBZ^BSQ2
+R17
+Z90 w1431004721
+Z91 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Reg0.v
+Z92 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Reg0.v
+L0 1
+R21
+r1
+31
+R22
+R23
+Z93 n@inv_@reg0
+Z94 !s100 ld<cmcG7T@Sk1oCc_SD5V1
+!s85 0
+vInv_Reg1
+Z95 I?G8@8Ea=8H[T7jZoU6X]@2
+Z96 VU5Zjg;O6cXD_AL34UCG;02
+R17
+Z97 w1431004676
+Z98 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v
+Z99 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v
+L0 1
+R21
+r1
+31
+R22
+R23
+Z100 n@inv_@reg1
+Z101 !s100 W]SEiCS4[L31fAVZhNMW=1
+!s85 0
+vinv_tb
+Z102 I[:liA7YaVdig;;`7nHHCW0
+Z103 Vhj=S;DXM[]EfHHFT<d6K?1
+R17
+Z104 w1434524592
+Z105 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/inv_tb.v
+Z106 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/inv_tb.v
+L0 5
+R21
+r1
+31
+R22
+R23
+Z107 !s100 AR57@:4>H5z68H^ghTW?02
+!s85 0
+vMUL_ARRAY
+Z108 Il8aZRK9KIX`YQ[FY?YYHA1
+Z109 V89]g0jnQL6m7^Gz9hNzbc1
+R17
+Z110 w1434270025
+Z111 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/MUL_ARRAY/mul_array.v
+Z112 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/MUL_ARRAY/mul_array.v
+L0 1
+R21
+r1
+31
+R22
+R23
+Z113 n@m@u@l_@a@r@r@a@y
+Z114 !s100 QeF4i^SeFonjYJnGlfNSe3
+!s85 0
+vMul_ModularX8
+Z115 I7eKK:6DX^BjGoaOjM2Kgg1
+Z116 VBdEnKzi1aME_0j@RjVzWF2
+R17
+Z117 w1431004783
+Z118 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
+Z119 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
+L0 1
+R21
+r1
+31
+R22
+R23
+Z120 n@mul_@modular@x8
+Z121 !s100 `4AHALj3_aGFk5E33=>^B3
+!s85 0
+vMul_MultiCore
+Z122 ImW7:d_?ZQGSJ]F5AH7AAi1
+Z123 V0><=X<e8n?HeZECId0PNb3
+R17
+Z124 w1431004788
+Z125 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
+Z126 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
+L0 1
+R21
+r1
+31
+R22
+R23
+Z127 n@mul_@multi@core
+Z128 !s100 _<gIalSY`Qa]_E0<N;8:n0
+!s85 0
+vmultiplier_tb
+Z129 I?4h_0oAXiU2kJb<3NOZ:J3
+Z130 V^H:_=S]b3MjPQnbW_`2:Y0
+Z131 d/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1
+Z132 w1430716302
+Z133 8/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/multiplier_tb.v
+Z134 F/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/multiplier_tb.v
+L0 3
+Z135 OE;L;6.5b;42
+r1
+31
+R22
+R23
+Z136 !s100 U<l]NQ_Dm@R>UC7j4_TX`1
+!s85 0
+vSPLIT
+Z137 IYgcJok3hn@:G9eO<K4f_M0
+Z138 V?d]e1NKnOCK8;C[NUfX^G1
+R17
+Z139 w1437398605
+Z140 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/SPLIT/split.v
+Z141 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/SPLIT/split.v
+L0 16
+R21
+r1
+31
+R22
+R23
+Z142 n@s@p@l@i@t
+Z143 !s100 eBPo0jG7lP5Khg8@^PRH<2
+!s85 0

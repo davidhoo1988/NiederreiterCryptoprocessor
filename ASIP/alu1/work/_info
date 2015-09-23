@@ -1,0 +1,327 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\RSPC\Dropbox\Goppa_Code_Decoder_Verilog\ASIP\alu1\GOPF_MUL
+T_opt
+V8Tm`EN^[TC:9mTVb2YD_L3
+Z1 04 6 4 work alu_tb fast 0
+=1-f8b156b053e7-55890247-77-3444
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+Z3 OE;O;6.5;42
+T_opt1
+VYXLC>]_DH`0S?3:lXfJF^1
+R1
+=1-005056f531ac-55b09c21-397-f50
+R2
+n@_opt1
+R3
+T_opt2
+Vg_A5>Q6:K=K:^iLzl>z_P1
+04 14 4 work ALU_Multiplier fast 0
+=1-f8b156b053e7-56021773-56d91-1116
+o-quiet -auto_acc_if_foreign -work work
+n@_opt2
+OE;O;6.5b;42
+vALU
+IDj2BMS2Y`19F?TQ2D^Lnb3
+VXYPe^VT`R3N6kYe`l0c=:0
+Z4 d/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1
+w1442974620
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v
+L0 27
+Z5 OE;L;6.5b;42
+r1
+31
+Z6 !s102 -nocovercells
+Z7 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+n@a@l@u
+!s100 U0Wm1Lab7QUL6j<ePGB5:0
+!s85 0
+vALU_InvGenerator
+VNj4MJ@Nk>?bhejI]FDTL32
+r1
+31
+IMYKH72dlaeJ[<Vo6DZWY01
+R4
+w1434525373
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v
+L0 1
+R5
+R6
+R7
+n@a@l@u_@inv@generator
+!s85 0
+!s100 MOFoHl?ob5PSc6R2Sk@I90
+vALU_Multiplier
+VboMMjzV^jj4=]IRFz3RR03
+r1
+31
+I5g`5f6<ombg04Ea<nP;0@2
+R4
+w1434075569
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/ALU_Multiplier.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/ALU_Multiplier.v
+L0 3
+R5
+R6
+R7
+n@a@l@u_@multiplier
+!s85 0
+!s100 T6>IKYeXB^K[eXOHdeL>>1
+valu_tb
+IKm=i;03z_1cOTK3lGKK;Y2
+VL;=kgzZ7GJ2Reg7Z1GkmR2
+R4
+w1442978577
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu_tb.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu_tb.v
+L0 6
+R5
+r1
+31
+R6
+R7
+!s100 ;?6e]agb5Vc^=@P1_>1mO0
+!s85 0
+vDEG
+Io9K@aFS[L347iHdkbcYjB0
+V?:9S`P>^Y:H`YSC4P8iao0
+R4
+w1437984614
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/DEG/deg.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/DEG/deg.v
+L0 16
+R5
+r1
+31
+R6
+R7
+n@d@e@g
+!s100 ICiUf7kP6zfBdF:X7;[XW3
+!s85 0
+vGOPF_DIV
+VBXYON:Yjon>f>Zj?2I<I^3
+r1
+31
+IYeKo`iD5z]@:lE;;Zn`X80
+R4
+w1436254766
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_DIV/gopf_div.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_DIV/gopf_div.v
+L0 1
+R5
+R6
+R7
+n@g@o@p@f_@d@i@v
+!s85 0
+!s100 21Ci24<g1=BN5Ch_ljKzf0
+vGOPF_EVAL
+VKS<H6JHjCB]65[07_g>Q11
+r1
+!s85 0
+31
+IfCnJcGPFBzPPBE3]E>0g90
+R4
+w1438827989
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_EVAL/gopf_eval.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_EVAL/gopf_eval.v
+L0 1
+R5
+R6
+R7
+n@g@o@p@f_@e@v@a@l
+!s100 JeZFmLVi?9Z9@dWUfeVMi1
+vGOPF_MUL
+V<O>RI3@jH934_G?az7ZY51
+r1
+31
+ILoC_]V_faj:WhZ6GYS@GH2
+R4
+w1442978020
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_MUL/gopf_mul.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_MUL/gopf_mul.v
+L0 1
+R5
+R6
+R7
+n@g@o@p@f_@m@u@l
+!s85 0
+!s100 eRD8MIKP6i`9TQ0PCld6L0
+vInv_Ctrl
+Igh@n]cnJ219Fo[=B?=nO32
+VE_PP7TL:PKA[_8ai;P^lU3
+R4
+w1431004738
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v
+L0 5
+R5
+r1
+31
+R6
+R7
+n@inv_@ctrl
+!s100 @`^6FP<GL970RZO33DYMY1
+!s85 0
+vInv_Exp
+I0LDBXQc6W70WD5o<67][^1
+VG:<mX7a;fHT9Z>eCOjldY3
+R4
+w1431004729
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v
+L0 1
+R5
+r1
+31
+R6
+R7
+n@inv_@exp
+!s100 XTb`_djVgfYRUM:m[<7dT3
+!s85 0
+vInv_Mux
+I8nM<;D3mX:g;Ro`jhik5F1
+Vog@GEA2Z@HomRM0Y;kPKK1
+R4
+w1431004726
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v
+L0 1
+R5
+r1
+31
+R6
+R7
+n@inv_@mux
+!s100 C?[L5CiBM9k^[djf@G5K22
+!s85 0
+vInv_Reg0
+Id`[JN@fe_;nf:_g:lO7dA0
+VM0T>AIh:2PH;bJSBZ^BSQ2
+R4
+w1431004721
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg0.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg0.v
+L0 1
+R5
+r1
+31
+R6
+R7
+n@inv_@reg0
+!s100 ld<cmcG7T@Sk1oCc_SD5V1
+!s85 0
+vInv_Reg1
+I?G8@8Ea=8H[T7jZoU6X]@2
+VU5Zjg;O6cXD_AL34UCG;02
+R4
+w1431004676
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v
+L0 1
+R5
+r1
+31
+R6
+R7
+n@inv_@reg1
+!s100 W]SEiCS4[L31fAVZhNMW=1
+!s85 0
+vinv_tb
+I[:liA7YaVdig;;`7nHHCW0
+Vhj=S;DXM[]EfHHFT<d6K?1
+dZ:\David On My Mac\Dropbox\Goppa_Code_Decoder_Verilog\ASIP\alu1
+w1434524592
+8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/inv_tb.v
+FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/inv_tb.v
+L0 5
+OE;L;6.5;42
+r1
+31
+R6
+R7
+!s100 AR57@:4>H5z68H^ghTW?02
+!s85 0
+vMUL_ARRAY
+V89]g0jnQL6m7^Gz9hNzbc1
+r1
+31
+Il8aZRK9KIX`YQ[FY?YYHA1
+R4
+w1434270025
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/MUL_ARRAY/mul_array.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/MUL_ARRAY/mul_array.v
+L0 1
+R5
+R6
+R7
+n@m@u@l_@a@r@r@a@y
+!s85 0
+!s100 QeF4i^SeFonjYJnGlfNSe3
+vMul_ModularX8
+VBdEnKzi1aME_0j@RjVzWF2
+r1
+31
+I7eKK:6DX^BjGoaOjM2Kgg1
+R4
+w1431004783
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
+L0 1
+R5
+R6
+R7
+n@mul_@modular@x8
+!s85 0
+!s100 `4AHALj3_aGFk5E33=>^B3
+vMul_MultiCore
+V0><=X<e8n?HeZECId0PNb3
+r1
+31
+ImW7:d_?ZQGSJ]F5AH7AAi1
+R4
+w1431004788
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
+L0 1
+R5
+R6
+R7
+n@mul_@multi@core
+!s85 0
+!s100 _<gIalSY`Qa]_E0<N;8:n0
+vmultiplier_tb
+I?4h_0oAXiU2kJb<3NOZ:J3
+V^H:_=S]b3MjPQnbW_`2:Y0
+d/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1
+w1430716302
+8/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/multiplier_tb.v
+F/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/multiplier_tb.v
+L0 3
+R5
+r1
+31
+R6
+R7
+!s100 U<l]NQ_Dm@R>UC7j4_TX`1
+!s85 0
+vSPLIT
+IYgcJok3hn@:G9eO<K4f_M0
+V?d]e1NKnOCK8;C[NUfX^G1
+R4
+w1437398605
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/SPLIT/split.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/SPLIT/split.v
+L0 16
+R5
+r1
+31
+R6
+R7
+n@s@p@l@i@t
+!s100 eBPo0jG7lP5Khg8@^PRH<2
+!s85 0

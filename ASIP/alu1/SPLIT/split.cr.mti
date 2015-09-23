@@ -1,0 +1,8 @@
+/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/SPLIT/split_tb.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/SPLIT/split_tb.v
+Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
+-- Compiling module split_tb
+
+Top level modules:
+	split_tb
+
+} {} {}}

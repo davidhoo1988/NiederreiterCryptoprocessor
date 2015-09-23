@@ -1,0 +1,41 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/SPLIT
+T_opt
+V:YdF_moPK[0DXERmQH3cJ0
+Z1 04 8 4 work split_tb fast 0
+Z2 =1-f8b156b053e7-55a7c663-2f0f4-4d3c
+Z3 o-quiet -auto_acc_if_foreign -work work +acc
+Z4 n@_opt
+Z5 OE;O;6.5b;42
+vSPLIT
+Z6 I0=BjaTHJgW_YKb0YzY4AC1
+Z7 V?d]e1NKnOCK8;C[NUfX^G1
+Z8 w1437058615
+Z9 8/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/SPLIT/split.v
+Z10 F/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/SPLIT/split.v
+L0 16
+Z11 OE;L;6.5b;42
+r1
+31
+Z12 !s102 -nocovercells
+Z13 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+Z14 n@s@p@l@i@t
+Z15 !s100 =hGR:GVoS;T:ga9U`:0EU1
+!s85 0
+vsplit_tb
+Z16 IX8Vi6NQjjeQ>8:d9R14K_2
+Z17 V<z`oVIJ9lL=ZT@iMSFNNg2
+Z18 w1437053484
+Z19 8/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/SPLIT/split_tb.v
+Z20 F/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/SPLIT/split_tb.v
+L0 5
+R11
+r1
+31
+R12
+R13
+Z21 !s100 H>2g9RP`@HL8X]jgVe^Tg1
+!s85 0

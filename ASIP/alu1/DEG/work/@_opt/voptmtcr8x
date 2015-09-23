@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG
+T_opt
+Z1 VOXafH8lNDYIlz5I81^eQ22
+Z2 04 6 4 work deg_tb fast 0
+Z3 =1-005056f531ac-55af0958-94-2ed4
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 n@_opt
+Z6 OE;O;6.5;42
+vDEG
+Z7 Ic^kE1[dd>KKBODdU2FhgV2
+Z8 V?:9S`P>^Y:H`YSC4P8iao0
+Z9 dZ:\David On My Mac\Dropbox\Goppa_Code_Decoder_Verilog\ASIP\alu1\DEG
+Z10 w1437534540
+Z11 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg.v
+Z12 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg.v
+L0 16
+Z13 OE;L;6.5;42
+r1
+31
+Z14 !s102 -nocovercells
+Z15 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+Z16 n@d@e@g
+Z17 !s100 Z4jB_L6R0HGKd?GUXgTBG0
+!s85 0
+vdeg_tb
+Z18 IG`H^CHQOV1bPBX1egc23T2
+Z19 VzHiinZDfJn70X>lIG545m0
+R9
+Z20 w1437533676
+Z21 8Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg_tb.v
+Z22 FZ:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg_tb.v
+L0 5
+R13
+r1
+31
+R14
+R15
+Z23 !s100 4;_mbP03KGJ;jFb_>X]XZ2
+!s85 0

@@ -1,0 +1,104 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\RSPC\Dropbox\Goppa_Code_Decoder_Verilog\ASIP\alu1\GOPF_MUL
+T_opt
+Z1 VimST<AlBIhJd0AZ<UPo2E1
+Z2 04 11 4 work gopf_mul_tb fast 0
+Z3 =1-f8b156b053e7-557a41c7-353-6684
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OE;O;6.5;42
+T_opt1
+Z7 VlM<<1oEz_KPeTIW<8Q5o51
+Z8 04 14 7 work ALU_Multiplier fast__1 0
+Z9 04 8 7 work GOPF_MUL fast__1 0
+R2
+Z10 04 13 4 work Mul_ModularX8 fast 0
+Z11 04 13 4 work Mul_MultiCore fast 0
+Z12 =1-f8b156b053e7-557a4201-2fe-4ca8
+R4
+Z13 n@_opt1
+R6
+T_opt2
+VXbCHSQTzVPz[:o]8EDoRG0
+R2
+Z14 =1-f8b156b053e7-557cedc7-2bf-ab44
+Z15 o-quiet -auto_acc_if_foreign -work work +acc
+Z16 n@_opt2
+R6
+vALU_Multiplier
+Z17 I5g`5f6<ombg04Ea<nP;0@2
+Z18 VboMMjzV^jj4=]IRFz3RR03
+Z19 w1434075569
+Z20 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/ALU_Multiplier.v
+Z21 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/ALU_Multiplier.v
+L0 3
+Z22 OE;L;6.5;42
+r1
+31
+Z23 !s102 -nocovercells
+Z24 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+Z25 n@a@l@u_@multiplier
+Z26 !s100 T6>IKYeXB^K[eXOHdeL>>1
+!s85 0
+vGOPF_MUL
+Z27 Ib^?5[n?enE]8MAd>bDzW43
+Z28 Vgm8<d98AV>:K2P?=eofl:1
+Z29 w1434107137
+Z30 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/gopf_mul.v
+Z31 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/gopf_mul.v
+L0 1
+R22
+r1
+31
+R23
+R24
+Z32 n@g@o@p@f_@m@u@l
+Z33 !s100 XVP1VR<HR:0i[Gj9<m;oV0
+!s85 0
+vgopf_mul_tb
+Z34 IWDAKYFFbl9gNn??17Bb8d0
+Z35 Veg?_]N:`SV5AMcKP2cK]D3
+Z36 w1434250576
+Z37 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/gopf_mul_tb.v
+Z38 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_MUL/gopf_mul_tb.v
+L0 5
+R22
+r1
+31
+R23
+R24
+Z39 !s100 ;L:g2C?oMmD0GjX8ma1HV1
+!s85 0
+vMul_ModularX8
+Z40 I7eKK:6DX^BjGoaOjM2Kgg1
+Z41 VBdEnKzi1aME_0j@RjVzWF2
+Z42 w1431004783
+Z43 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
+Z44 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
+L0 1
+R22
+r1
+31
+R23
+R24
+Z45 n@mul_@modular@x8
+Z46 !s100 `4AHALj3_aGFk5E33=>^B3
+!s85 0
+vMul_MultiCore
+Z47 ImW7:d_?ZQGSJ]F5AH7AAi1
+Z48 V0><=X<e8n?HeZECId0PNb3
+Z49 w1431004788
+Z50 8C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
+Z51 FC:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
+L0 1
+R22
+r1
+31
+R23
+R24
+Z52 n@mul_@multi@core
+Z53 !s100 _<gIalSY`Qa]_E0<N;8:n0
+!s85 0

@@ -1,0 +1,27 @@
+{Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg.v} {1 {vlog -work work -vopt -nocovercells {Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg.v}
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module DEG
+
+Top level modules:
+	DEG
+
+} {} {}} /home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg.v
+Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
+-- Compiling module DEG
+
+Top level modules:
+	DEG
+
+} {} {}} {Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg_tb.v} {1 {vlog -work work -vopt -nocovercells {Z:/David On My Mac/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg_tb.v}
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module deg_tb
+
+Top level modules:
+	deg_tb
+
+} {} {}} /home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg_tb.v {0 {vlog -work work -vopt -nocovercells /home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg_tb.v
+Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
+-- Compiling module deg_tb
+** Error: /home/david/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/DEG/deg_tb.v(41): Undefined variable: CLK_PERIOD.
+
+} {4.0 5.0} {}}
