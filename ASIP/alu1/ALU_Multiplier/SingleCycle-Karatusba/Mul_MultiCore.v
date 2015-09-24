@@ -1,3 +1,5 @@
+`include "../timescale.v"
+
 module Mul_MultiCore(a_in, b_in, c_out);
 
 parameter m=8;

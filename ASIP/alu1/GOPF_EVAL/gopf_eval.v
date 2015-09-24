@@ -92,11 +92,19 @@ parameter 	DATA_PRE  		= 0, //do nothing, then get prepared input
 					CurrentState <= NextState; 
 					
 					
+
+
 //----------------------------------------------------------
 //  signal Declaration
-//	the signal start, overflow, finish control the end of montgomery
-//---------------------------------------------------------- 
-		reg [4:0]		counter;
+//----------------------------------------------------------	
+reg [4:0]		counter;
+
+reg [0:m+15] 	gopf_reg;
+reg [0:m-1]		gf2e_element_reg;
+reg [0:m-1] 	eval_r_reg;
+
+reg [0:m-1] 	mul_o_in_reg;
+reg [0:m-1]		mul_t_in_reg;		
 //----------------------------------------------------------
 //2nd always block, combinational condition judgement
 //----------------------------------------------------------		
@@ -114,33 +122,25 @@ parameter 	DATA_PRE  		= 0, //do nothing, then get prepared input
 										NextState = DATA_MUL;	
 								end					
 					
-					DATA_MUL: 	begin // it takes 3 cycles to do one BF_MUL
-									if (eval_done)
-										NextState = DATA_PRE;
-									else if (counter == 5'd3)
+					DATA_MUL: 	begin // it takes 1 cycles to do one BF_MUL
+									if (counter == 5'd0)
 										NextState = DATA_ADD;
 									else
 										NextState = DATA_MUL;
 								end
 					
-					DATA_ADD: 	begin													
-									NextState = DATA_SHIFT;									
+					DATA_ADD: 	begin	
+									if (eval_done)
+										NextState = DATA_PRE;	
+									else
+										NextState = DATA_SHIFT;									
 								end
 					
 					default: NextState = DATA_PRE;
 				endcase
 		end	
 		
-//----------------------------------------------------------
-//  signal Declaration
-//----------------------------------------------------------	
 
-reg [0:m+15] 	gopf_reg;
-reg [0:m-1]		gf2e_element_reg;
-reg [0:m-1] 	eval_r_reg;
-
-reg [0:m-1] 	mul_o_in_reg;
-reg [0:m-1]		mul_t_in_reg;
 
 
 
@@ -174,14 +174,16 @@ always @ (posedge clk or negedge rst_b) begin
 					DATA_SHIFT: begin //locate each coefficient of gpof
 						gopf_reg 			<= {16'b0, gopf_reg[0:143]};
 						gf2e_element_reg 	<= gf2e_element_reg;
-						mul_o_in_reg		<= mul_o_in_reg;
-						mul_t_in_reg		<= mul_t_in_reg;
+						/*mul_o_in_reg		<= mul_o_in_reg;
+						mul_t_in_reg		<= mul_t_in_reg;*/
+						mul_o_in_reg 		<= gf2e_element_reg;
+						mul_t_in_reg 		<= eval_r_reg;
 						counter				<= counter;
 					end
 									
 					DATA_MUL: begin					
-						mul_o_in_reg 		<= gf2e_element_reg;
-						mul_t_in_reg 		<= eval_r_reg; 
+						/*mul_o_in_reg 		<= gf2e_element_reg;
+						mul_t_in_reg 		<= eval_r_reg;*/ 
 						counter 			<= counter + 1'b1;
 
 						if (gopf_reg[0:159] == 160'b0)
@@ -193,6 +195,7 @@ always @ (posedge clk or negedge rst_b) begin
 					DATA_ADD: begin					
 						eval_r_reg			<= {mul1_r_dat ^ gopf_reg[144:159], mul2_r_dat ^ gopf_reg[144:159], mul3_r_dat ^ gopf_reg[144:159], mul4_r_dat ^ gopf_reg[144:159], mul5_r_dat ^ gopf_reg[144:159], mul6_r_dat ^ gopf_reg[144:159], mul7_r_dat ^ gopf_reg[144:159], mul8_r_dat ^ gopf_reg[144:159], mul9_r_dat ^ gopf_reg[144:159]};
 						counter				<= 0;
+						eval_done			<= 0;
 					end
 				endcase
 			end
