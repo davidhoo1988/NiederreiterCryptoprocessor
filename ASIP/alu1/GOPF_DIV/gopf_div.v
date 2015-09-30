@@ -128,8 +128,8 @@ parameter 	DATA_PRE  		= 0, //do nothing, then get prepared to DATA_MUL1
 										NextState = DATA_LDCOEFF;
 					end
 					
-					DATA_MUL: 	begin // it takes 3 cycles to do one BF_MUL
-									if (counter == 5'd4)
+					DATA_MUL: 	begin // it takes 1 cycles to do one BF_MUL
+									if (counter == 5'd2)
 										NextState = DATA_MAC;
 									else
 										NextState = DATA_MUL;
@@ -271,29 +271,21 @@ always @ (posedge clk or negedge rst_b) begin
 							counter 	<= counter + 5'b1;
 						end
 						//GF(2^16) mul
-						else if (first_time && counter == 5'd28) begin
+						else if (first_time && counter == 5'd18) begin
 							mul_t_in_reg  <=  inv_r_dat;
 							mul_o_in_reg  <= (dividend_tmp_reg[m]==1'b1)?{1'b1,143'b0}:{dividend_tmp_reg[m-16:m-1],128'b0};
 							inv_r_reg 	<= inv_r_dat; 
 							inv_en_reg <= 1'b0;
-							ldcoeff_done <= 1'b0;
-							counter 	<= counter + 5'b1;							
-						end
-						else if (first_time && counter == 5'd30) begin
-							counter 	<= 5'b11111;
 							ldcoeff_done <= 1'b1;
-							first_time <= 0;
+							counter 	<= 5'b11111;	
+							first_time <= 0;						
 						end
 						else if (~first_time && counter == 5'd0) begin
 							mul_t_in_reg  <=  inv_r_reg;
 							mul_o_in_reg  <= (dividend_tmp_reg[m]==1'b1)?{1'b1,143'b0}:{dividend_tmp_reg[m-16:m-1],128'b0};
 							inv_en_reg <= 1'b0;
-							ldcoeff_done <= 1'b0;
-							counter 	<= counter + 5'b1;
-						end
-						else if (~first_time && counter == 5'd2) begin
-							counter 	<= 5'b11111;
 							ldcoeff_done <= 1'b1;
+							counter 	<= 5'b11111;
 						end
 						else begin
 							inv_in_reg <= inv_in_reg;
@@ -317,7 +309,7 @@ always @ (posedge clk or negedge rst_b) begin
 						else
 							inv_tmp_reg <= inv_tmp_reg;
 							
-						if (counter == 5'd4) begin //allocate partial remainder into remainder_reg
+						if (counter == 5'd2) begin //allocate partial remainder into remainder_reg
 							remainder_reg <= {mul1_r_dat, mul2_r_dat, mul3_r_dat, mul4_r_dat, mul5_r_dat, mul6_r_dat, mul7_r_dat, mul8_r_dat, mul9_r_dat};
 							counter <= 0;
 						end

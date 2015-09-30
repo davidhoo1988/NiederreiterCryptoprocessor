@@ -174,18 +174,13 @@ always @ (posedge clk or negedge rst_b) begin
 					DATA_SHIFT: begin //locate each coefficient of gpof
 						gopf_reg 			<= {16'b0, gopf_reg[0:143]};
 						gf2e_element_reg 	<= gf2e_element_reg;
-						/*mul_o_in_reg		<= mul_o_in_reg;
-						mul_t_in_reg		<= mul_t_in_reg;*/
 						mul_o_in_reg 		<= gf2e_element_reg;
 						mul_t_in_reg 		<= eval_r_reg;
 						counter				<= counter;
 					end
 									
 					DATA_MUL: begin					
-						/*mul_o_in_reg 		<= gf2e_element_reg;
-						mul_t_in_reg 		<= eval_r_reg;*/ 
 						counter 			<= counter + 1'b1;
-
 						if (gopf_reg[0:159] == 160'b0)
 							eval_done <= 1'b1;
 						else

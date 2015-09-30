@@ -218,7 +218,7 @@ begin
 					alu_t_sel 			<= 1;
 					alu_typ_sel 		<= `ALU_TYP_W'd6;
 					src_dst_delay_sel 	<= 1;
-					src_dst_delay 		<= `DLY_W'd31;	
+					src_dst_delay 		<= `DLY_W'd21;	
 					end		
 		//SPLIT
 		`OPR_W'd9: begin
@@ -258,7 +258,7 @@ begin
 					alu_t_sel 			<= 1;
 					alu_typ_sel 		<= `ALU_TYP_W'd9;
 					src_dst_delay_sel 	<= 1;
-					src_dst_delay 		<= `DLY_W'd65;	
+					src_dst_delay 		<= `DLY_W'd34;	
 		end							
 		//JMP,  unconditional jump instruction			
 		`OPR_W'd16: begin

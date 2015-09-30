@@ -10,7 +10,12 @@
 //                          memory.
 
 // synthesis translate_on
-`include    "./include/define.v"
+//`define SYNTHESIS
+`ifndef SYNTHESIS
+	`include    "../include/define.v"
+`else
+	`include 	"./include/define.v"
+`endif
 
 module   asip_syn(
                 clk,                // system clock

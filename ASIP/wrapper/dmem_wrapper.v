@@ -13,7 +13,7 @@
 //  ----------------------------------------------------------------------------
 //===============================================================================
 // synthesis translate_on
-`include    "./include/define.v"
+`include    "../include/define.v"
 module dmem_wrapper(
 		//input
 		input wire 						clk,

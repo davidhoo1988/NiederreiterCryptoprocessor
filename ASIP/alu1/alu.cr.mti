@@ -12,19 +12,19 @@ Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 Top level modules:
 	GOPF_MUL
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v
-Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
--- Compiling module Inv_Mux
-
-Top level modules:
-	Inv_Mux
-
 } {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
 -- Compiling module ALU
 
 Top level modules:
 	ALU
+
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v
+Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
+-- Compiling module Inv_Mux
+
+Top level modules:
+	Inv_Mux
 
 } {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_DIV/gopf_div.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/GOPF_DIV/gopf_div.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
@@ -82,19 +82,19 @@ Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 Top level modules:
 	ALU_Multiplier
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
-Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
--- Compiling module Mul_ModularX8
-
-Top level modules:
-	Mul_ModularX8
-
 } {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 -- Compiling module Mul_MultiCore
 
 Top level modules:
 	Mul_MultiCore
+
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
+Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
+-- Compiling module Mul_ModularX8
+
+Top level modules:
+	Mul_ModularX8
 
 } {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/ALU_InvGenerator.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
@@ -103,12 +103,12 @@ Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 Top level modules:
 	ALU_InvGenerator
 
-} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu.v
-Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
--- Compiling module ALU
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_MUL/gopf_mul.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_MUL/gopf_mul.v
+Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
+-- Compiling module GOPF_MUL
 
 Top level modules:
-	ALU
+	GOPF_MUL
 
 } {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Mux.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
@@ -116,6 +116,13 @@ Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 
 Top level modules:
 	Inv_Mux
+
+} {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/alu.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module ALU
+
+Top level modules:
+	ALU
 
 } {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_DIV/gopf_div.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_DIV/gopf_div.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
@@ -138,19 +145,19 @@ Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
 Top level modules:
 	GOPF_EVAL
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v
-Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
--- Compiling module Inv_Exp
-
-Top level modules:
-	Inv_Exp
-
 } {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 -- Compiling module Inv_Ctrl
 
 Top level modules:
 	Inv_Ctrl
+
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Exp.v
+Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
+-- Compiling module Inv_Exp
+
+Top level modules:
+	Inv_Exp
 
 } {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg0.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg0.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
@@ -173,12 +180,12 @@ Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
 Top level modules:
 	ALU_Multiplier
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/SPLIT/split.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/SPLIT/split.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
--- Compiling module SPLIT
+-- Compiling module Inv_Reg1
 
 Top level modules:
-	SPLIT
+	Inv_Reg1
 
 } {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/MUL_ARRAY/mul_array.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/MUL_ARRAY/mul_array.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
@@ -187,19 +194,12 @@ Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
 Top level modules:
 	MUL_ARRAY
 
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Reg1.v
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/SPLIT/split.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/SPLIT/split.v
 Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
--- Compiling module Inv_Reg1
+-- Compiling module SPLIT
 
 Top level modules:
-	Inv_Reg1
-
-} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
-Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
--- Compiling module Mul_MultiCore
-
-Top level modules:
-	Mul_MultiCore
+	SPLIT
 
 } {} {}} C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v {1 {vlog -work work -vopt -nocovercells C:/Users/RSPC/Dropbox/Goppa_Code_Decoder_Verilog/ASIP/alu1/ALU_Multiplier/Mul_ModularX8.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
@@ -207,5 +207,12 @@ Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 
 Top level modules:
 	Mul_ModularX8
+
+} {} {}} /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v {1 {vlog -work work -vopt -nocovercells /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_Multiplier/Mul_MultiCore.v
+Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
+-- Compiling module Mul_MultiCore
+
+Top level modules:
+	Mul_MultiCore
 
 } {} {}}

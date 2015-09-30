@@ -10,11 +10,15 @@
 //  Description      : This module include the ASIP top logic part, and
 //                          the instruction memory and the data memory.
 //  ----------------------------------------------------------------------------
-// synthesis translate_off
-`include    "./include/timescale.v"
-// synthesis translate_on
-`include    "./include/define.v"
+//`define SYNTHESIS
+`ifndef SYNTHESIS
+`include    "../include/timescale.v"
+`include    "../include/define.v"
 
+`else
+`include    "./include/timescale.v"
+`include    "./include/define.v"
+`endif
 
 module asip_top(
 	    clk,            // system clock
@@ -73,7 +77,8 @@ asip_syn   	asip_syn(
 //----------------------------------------------------------
 // Instance ins_sram: Instruction memory
 //---------------------------------------------------------- 
-/*RA1SH   ins_sram(
+`ifndef SYNTHESIS
+RA1SH   ins_sram(
                 .CLK 				( clk				),
                 .A   				( {7'b0,imem_addr}	),
                 .D   				( `MEM_W'b0			),  
@@ -81,8 +86,9 @@ asip_syn   	asip_syn(
                 .CEN 				( imem_en_b			),
                 .Q   				( imem_Q			),
                 .OEN 				( 1'b0				)
-);*/
+);
 
+`else
 ins_sram 	ins_sram(
 					.clka					(clk),
 					.wea					(1'b0),//read
@@ -90,13 +96,14 @@ ins_sram 	ins_sram(
 					.dina					(`MEM_W'b0),
 					.douta				(imem_Q)
 );
-
+`endif
 assign imem_dat = imem_Q[`INS_W-1:0];
 
 //----------------------------------------------------------
 // Instance dat_sram: Data memory
 //---------------------------------------------------------- 
-/*RA1SH   dat_sram1(
+`ifndef SYNTHESIS
+RA1SH   dat_sram1(
                 .CLK 				( clk						),
                 .A   				( dmem1_addr			    ),
                 .D   				( asip_to_dmem1_dat        	),  
@@ -104,8 +111,9 @@ assign imem_dat = imem_Q[`INS_W-1:0];
                 .CEN 				( dmem1_en_b  				),
                 .Q   				( dmem_Q					),
                 .OEN 				( 1'b0						)
-);*/
+);
 
+`else
 dat_sram dat_sram1(
 					.clka					(clk),
 					.wea					(dmem1_rw),
@@ -113,6 +121,7 @@ dat_sram dat_sram1(
 					.dina					(asip_to_dmem1_dat),
 					.douta				(dmem_Q)
 );
+`endif
 
 assign dmem1_to_asip_dat = dmem_Q[`MEM_W-1:0];
 

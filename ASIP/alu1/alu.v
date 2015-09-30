@@ -462,12 +462,12 @@ MUL_ARRAY mul_array(
  ALU_InvGenerator invgenerator(
 	.clk				(clk),
 	.rst				(invgenerator_rst), 		//from gopf_div
-	.inv_in				(inv_dat_in),	//from gopf_div
+	.inv_in				(inv_dat_in),	//from gopf_div or INV-alu_o_reg
 	.inv_out			(inv_dat_out),	//to gopf_div
 	.product_in			(mul1_r_dat),	//from mul_array
 	.operandA_out		(operandA_out),	//from mul_array
 	.operandB_out		(operandB_out),	//from mul_array
-	.alu_o_sel			(invgenerator_trg)		//from gopf_div, pulse signal to trigger inverter
+	.alu_o_sel			(invgenerator_trg)		//from gopf_div or INV, pulse signal to trigger inverter
 );
 
 

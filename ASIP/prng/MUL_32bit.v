@@ -20,7 +20,6 @@ reg  [n/2-1:0]  AHALAdd, BHBLAdd;
 reg  [n-1:0]	z0_reg0, z2_reg0;
 reg  [n-1:0]	z0_reg1, z1_reg1, z2_reg1;
 
-
 //ISE template or Modelsim template
 MUL_DSP my_MUL_IPCore0 (
   .clk(clk), // input clk
