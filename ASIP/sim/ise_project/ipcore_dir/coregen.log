@@ -1,0 +1,64 @@
+CoreGen has not been configured with any user repositories.
+CoreGen has been configured with the following Xilinx repositories:
+ - 'C:\Xilinx\ISE_13.2\ISE_DS\ISE\coregen\' [reloaded]
+INFO:sim - Generating component instance 'dat_sram' of
+   'xilinx.com:ip:blk_mem_gen:6.2' from
+   'C:\Xilinx\ISE_13.2\ISE_DS\ISE\coregen\ip\xilinx\primary\com\xilinx\ip\blk_me
+   m_gen_v6_2\component.xml'.
+Applying current project options...
+Finished applying current project options.
+WARNING:sim - A core named 'dat_sram' already exists in the project. Output
+   products for this core may be overwritten.
+Resolving generics for 'dat_sram'...
+WARNING:sim - A core named 'dat_sram' already exists in the project. Output
+   products for this core may be overwritten.
+Applying external generics to 'dat_sram'...
+Delivering associated files for 'dat_sram'...
+WARNING:sim - Can't find 'Verilog' synthesis view; using general synthesis view
+Delivering EJava files for 'dat_sram'...
+Generating implementation netlist for 'dat_sram'...
+INFO:sim - Pre-processing HDL files for 'dat_sram'...
+Running synthesis for 'dat_sram'
+Writing VEO instantiation template for 'dat_sram'...
+Writing Verilog behavioral simulation model for 'dat_sram'...
+Generating ASY schematic symbol...
+Generating SYM schematic symbol for 'dat_sram'...
+Generating metadata file...
+Generating metadata file...
+Generating ISE project...
+WARNING:coreutil - TclTasksC:project_006: Exception detected while executing
+   [project set].
+   Type [help project set] for more information.
+       while executing
+   "project set $key $value"
+       ("foreach" body line 5)
+       invoked from within
+   "foreach {xco_key ise_key} $xco2ise_key_mapping {
+         set key     $ise_key
+         set value   [set xcovals($xco_key)]
+         project set $key $value
+    ..."
+       (procedure "xco2ise" line 24)
+       invoked from within
+   "xco2ise $xcofile"
+       (procedure "core2ise" line 49)
+       invoked from within
+   "core2ise $corename"
+       invoked from within
+   "if {[info exists argc]} {
+      if {$argc==1} {
+         set corename [lindex $argv 0]
+         core2ise $corename
+      } elseif {$argc==2} {
+         set corepath ..."
+       (file "C:\Xilinx\ISE_13.2\ISE_DS\ISE\coregen\tcl\core2ise.tcl" line 250)
+WARNING:coreutil - Process returned a non-zero exit code '1'
+WARNING:sim - ISE project './tmp/_cg/dat_sram.xise' will not be released.
+WARNING:sim - ISE file could not be generated.
+Generating README file...
+Generating FLIST file...
+INFO:sim - Finished FLIST file generation.
+Launching README viewer...
+Moving files to output directory...
+Finished moving files to output directory
+Wrote CGP file for project 'dat_sram'.

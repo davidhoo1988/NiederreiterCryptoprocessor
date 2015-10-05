@@ -1,0 +1,559 @@
+--------------------------------------------------------------------------------
+Release 13.2 Trace  (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\ISE_13.2\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s
+3 -n 3 -fastpaths -xml asip_top.twx asip_top.ncd -o asip_top.twr asip_top.pcf
+-ucf asip_top.ucf
+
+Design file:              asip_top.ncd
+Physical constraint file: asip_top.pcf
+Device,package,speed:     xc6vlx240t,ff784,C,-3 (PRODUCTION 1.15 2011-06-20, STEPPING level 0)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 5 ns HIGH 50%;
+
+ 263919 paths analyzed, 27850 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   4.990ns.
+--------------------------------------------------------------------------------
+
+Paths for end point asip_syn/gprf/r_4_114 (SLICE_X64Y129.DX), 11 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.010ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/wrapper_top/gprf_wrapper/decsrc_to_wrp_en_b_reg (FF)
+  Destination:          asip_syn/gprf/r_4_114 (FF)
+  Requirement:          5.000ns
+  Data Path Delay:      4.913ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.042ns (1.288 - 1.330)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: asip_syn/wrapper_top/gprf_wrapper/decsrc_to_wrp_en_b_reg to asip_syn/gprf/r_4_114
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y85.DQ      Tcko                  0.283   asip_syn/wrapper_top/gprf_wrapper/decsrc_to_wrp_en_b_reg
+                                                       asip_syn/wrapper_top/gprf_wrapper/decsrc_to_wrp_en_b_reg
+    SLICE_X57Y150.B6     net (fanout=144)      3.050   asip_syn/wrapper_top/gprf_wrapper/decsrc_to_wrp_en_b_reg
+    SLICE_X57Y150.B      Tilo                  0.053   asip_syn/gprf/rmod<118>
+                                                       asip_syn/wrapper_top/opt_wrp_to_gprf_dat<114>_SW0
+    SLICE_X57Y150.A6     net (fanout=1)        0.086   N198
+    SLICE_X57Y150.A      Tilo                  0.053   asip_syn/gprf/rmod<118>
+                                                       asip_syn/wrapper_top/opt_wrp_to_gprf_dat<114>
+    SLICE_X64Y129.DX     net (fanout=8)        1.397   asip_syn/wrp_to_gprf_dat<114>
+    SLICE_X64Y129.CLK    Tdick                -0.009   asip_syn/gprf/r_4_114
+                                                       asip_syn/gprf/r_4_114
+    -------------------------------------------------  ---------------------------
+    Total                                      4.913ns (0.380ns logic, 4.533ns route)
+                                                       (7.7% logic, 92.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.014ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1_3 (FF)
+  Destination:          asip_syn/gprf/r_4_114 (FF)
+  Requirement:          5.000ns
+  Data Path Delay:      3.927ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.024ns (0.902 - 0.926)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1_3 to asip_syn/gprf/r_4_114
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y122.DQ     Tcko                  0.283   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1<3>
+                                                       asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1_3
+    SLICE_X53Y125.A4     net (fanout=3)        0.495   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1<3>
+    SLICE_X53Y125.A      Tilo                  0.053   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1[3]_alu_typ_sel_tmp1[3]_OR_340_o
+                                                       asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1[3]_alu_typ_sel_tmp1[3]_OR_340_o1
+    SLICE_X57Y150.A4     net (fanout=144)      1.655   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1[3]_alu_typ_sel_tmp1[3]_OR_340_o
+    SLICE_X57Y150.A      Tilo                  0.053   asip_syn/gprf/rmod<118>
+                                                       asip_syn/wrapper_top/opt_wrp_to_gprf_dat<114>
+    SLICE_X64Y129.DX     net (fanout=8)        1.397   asip_syn/wrp_to_gprf_dat<114>
+    SLICE_X64Y129.CLK    Tdick                -0.009   asip_syn/gprf/r_4_114
+                                                       asip_syn/gprf/r_4_114
+    -------------------------------------------------  ---------------------------
+    Total                                      3.927ns (0.380ns logic, 3.547ns route)
+                                                       (9.7% logic, 90.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.039ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1_2 (FF)
+  Destination:          asip_syn/gprf/r_4_114 (FF)
+  Requirement:          5.000ns
+  Data Path Delay:      3.902ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.024ns (0.902 - 0.926)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1_2 to asip_syn/gprf/r_4_114
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y122.CQ     Tcko                  0.283   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1<3>
+                                                       asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1_2
+    SLICE_X53Y125.A3     net (fanout=2)        0.470   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1<2>
+    SLICE_X53Y125.A      Tilo                  0.053   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1[3]_alu_typ_sel_tmp1[3]_OR_340_o
+                                                       asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1[3]_alu_typ_sel_tmp1[3]_OR_340_o1
+    SLICE_X57Y150.A4     net (fanout=144)      1.655   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp1[3]_alu_typ_sel_tmp1[3]_OR_340_o
+    SLICE_X57Y150.A      Tilo                  0.053   asip_syn/gprf/rmod<118>
+                                                       asip_syn/wrapper_top/opt_wrp_to_gprf_dat<114>
+    SLICE_X64Y129.DX     net (fanout=8)        1.397   asip_syn/wrp_to_gprf_dat<114>
+    SLICE_X64Y129.CLK    Tdick                -0.009   asip_syn/gprf/r_4_114
+                                                       asip_syn/gprf/r_4_114
+    -------------------------------------------------  ---------------------------
+    Total                                      3.902ns (0.380ns logic, 3.522ns route)
+                                                       (9.7% logic, 90.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point asip_syn/alu/mac_array/BF_MUL07/C_inv_out_9 (SLICE_X9Y101.C2), 88 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.014ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1 (FF)
+  Destination:          asip_syn/alu/mac_array/BF_MUL07/C_inv_out_9 (FF)
+  Requirement:          5.000ns
+  Data Path Delay:      4.922ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.029ns (1.230 - 1.259)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1 to asip_syn/alu/mac_array/BF_MUL07/C_inv_out_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y145.BQ     Tcko                  0.246   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2<3>
+                                                       asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1
+    SLICE_X21Y143.B5     net (fanout=217)      0.721   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2<1>
+    SLICE_X21Y143.B      Tilo                  0.053   asip_syn/alu/alu_typ_sel[3]_PWR_74_o_equal_18_o
+                                                       asip_syn/alu/alu_typ_sel[3]_PWR_74_o_equal_18_o<3>1
+    SLICE_X17Y118.A3     net (fanout=440)      1.858   asip_syn/alu/alu_typ_sel[3]_PWR_74_o_equal_18_o
+    SLICE_X17Y118.A      Tilo                  0.053   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_9_xo<0>6
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_Ax<5>_xo<0>1
+    SLICE_X11Y101.A6     net (fanout=20)       1.180   asip_syn/alu/mac_array/BF_MUL07/Ax<5>
+    SLICE_X11Y101.A      Tilo                  0.053   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_7_xo<0>
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_9_xo<0>2
+    SLICE_X9Y101.C2      net (fanout=1)        0.711   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_9_xo<0>1
+    SLICE_X9Y101.CLK     Tas                   0.047   asip_syn/alu/mac_array/BF_MUL07/C_inv_out<9>
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_9_xo<0>8
+                                                       asip_syn/alu/mac_array/BF_MUL07/C_inv_out_9
+    -------------------------------------------------  ---------------------------
+    Total                                      4.922ns (0.452ns logic, 4.470ns route)
+                                                       (9.2% logic, 90.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.098ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1 (FF)
+  Destination:          asip_syn/alu/mac_array/BF_MUL07/C_inv_out_9 (FF)
+  Requirement:          5.000ns
+  Data Path Delay:      4.838ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.029ns (1.230 - 1.259)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1 to asip_syn/alu/mac_array/BF_MUL07/C_inv_out_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y145.BQ     Tcko                  0.246   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2<3>
+                                                       asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1
+    SLICE_X23Y145.A4     net (fanout=217)      0.661   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2<1>
+    SLICE_X23Y145.A      Tilo                  0.053   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_3_1
+                                                       asip_syn/alu/alu_typ_sel[3]_GND_55_o_equal_3_o<3>1
+    SLICE_X19Y127.A5     net (fanout=440)      1.373   asip_syn/alu/alu_typ_sel[3]_GND_55_o_equal_3_o
+    SLICE_X19Y127.A      Tilo                  0.053   asip_syn/alu/gopf_div/Mmux_CurrentState[2]_dividend_tmp_reg[0]_wide_mux_279_OUT<31>1
+                                                       asip_syn/alu/Mmux_multiplicand07111
+    SLICE_X17Y118.A6     net (fanout=2)        0.408   asip_syn/alu/multiplicand07<4>
+    SLICE_X17Y118.A      Tilo                  0.053   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_9_xo<0>6
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_Ax<5>_xo<0>1
+    SLICE_X11Y101.A6     net (fanout=20)       1.180   asip_syn/alu/mac_array/BF_MUL07/Ax<5>
+    SLICE_X11Y101.A      Tilo                  0.053   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_7_xo<0>
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_9_xo<0>2
+    SLICE_X9Y101.C2      net (fanout=1)        0.711   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_9_xo<0>1
+    SLICE_X9Y101.CLK     Tas                   0.047   asip_syn/alu/mac_array/BF_MUL07/C_inv_out<9>
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_9_xo<0>8
+                                                       asip_syn/alu/mac_array/BF_MUL07/C_inv_out_9
+    -------------------------------------------------  ---------------------------
+    Total                                      4.838ns (0.505ns logic, 4.333ns route)
+                                                       (10.4% logic, 89.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.107ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1 (FF)
+  Destination:          asip_syn/alu/mac_array/BF_MUL07/C_inv_out_9 (FF)
+  Requirement:          5.000ns
+  Data Path Delay:      4.829ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.029ns (1.230 - 1.259)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1 to asip_syn/alu/mac_array/BF_MUL07/C_inv_out_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y145.BQ     Tcko                  0.246   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2<3>
+                                                       asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1
+    SLICE_X21Y143.B5     net (fanout=217)      0.721   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2<1>
+    SLICE_X21Y143.B      Tilo                  0.053   asip_syn/alu/alu_typ_sel[3]_PWR_74_o_equal_18_o
+                                                       asip_syn/alu/alu_typ_sel[3]_PWR_74_o_equal_18_o<3>1
+    SLICE_X19Y118.B5     net (fanout=440)      1.744   asip_syn/alu/alu_typ_sel[3]_PWR_74_o_equal_18_o
+    SLICE_X19Y118.B      Tilo                  0.053   asip_syn/alu/multiplicand07<3>
+                                                       asip_syn/alu/Mmux_multiplicand07101
+    SLICE_X17Y112.A6     net (fanout=4)        0.377   asip_syn/alu/multiplicand07<3>
+    SLICE_X17Y112.A      Tilo                  0.053   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_0_xo<0>2
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_Ax2<5>_xo<0>1
+    SLICE_X11Y101.A5     net (fanout=17)       0.771   asip_syn/alu/mac_array/BF_MUL07/Ax2<5>
+    SLICE_X11Y101.A      Tilo                  0.053   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_7_xo<0>
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_9_xo<0>2
+    SLICE_X9Y101.C2      net (fanout=1)        0.711   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_9_xo<0>1
+    SLICE_X9Y101.CLK     Tas                   0.047   asip_syn/alu/mac_array/BF_MUL07/C_inv_out<9>
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_9_xo<0>8
+                                                       asip_syn/alu/mac_array/BF_MUL07/C_inv_out_9
+    -------------------------------------------------  ---------------------------
+    Total                                      4.829ns (0.505ns logic, 4.324ns route)
+                                                       (10.5% logic, 89.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point asip_syn/alu/mac_array/BF_MUL07/C_inv_out_5 (SLICE_X10Y101.C2), 110 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.017ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1 (FF)
+  Destination:          asip_syn/alu/mac_array/BF_MUL07/C_inv_out_5 (FF)
+  Requirement:          5.000ns
+  Data Path Delay:      4.918ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.030ns (1.229 - 1.259)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1 to asip_syn/alu/mac_array/BF_MUL07/C_inv_out_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y145.BQ     Tcko                  0.246   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2<3>
+                                                       asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1
+    SLICE_X21Y143.B5     net (fanout=217)      0.721   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2<1>
+    SLICE_X21Y143.B      Tilo                  0.053   asip_syn/alu/alu_typ_sel[3]_PWR_74_o_equal_18_o
+                                                       asip_syn/alu/alu_typ_sel[3]_PWR_74_o_equal_18_o<3>1
+    SLICE_X19Y118.B5     net (fanout=440)      1.744   asip_syn/alu/alu_typ_sel[3]_PWR_74_o_equal_18_o
+    SLICE_X19Y118.B      Tilo                  0.053   asip_syn/alu/multiplicand07<3>
+                                                       asip_syn/alu/Mmux_multiplicand07101
+    SLICE_X17Y112.A6     net (fanout=4)        0.377   asip_syn/alu/multiplicand07<3>
+    SLICE_X17Y112.A      Tilo                  0.053   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_0_xo<0>2
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_Ax2<5>_xo<0>1
+    SLICE_X10Y103.D5     net (fanout=17)       1.028   asip_syn/alu/mac_array/BF_MUL07/Ax2<5>
+    SLICE_X10Y103.D      Tilo                  0.053   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_5_xo<0>
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_5_xo<0>1
+    SLICE_X10Y101.C2     net (fanout=1)        0.578   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_5_xo<0>
+    SLICE_X10Y101.CLK    Tas                   0.012   asip_syn/alu/mac_array/BF_MUL07/C_inv_out<5>
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_5_xo<0>8
+                                                       asip_syn/alu/mac_array/BF_MUL07/C_inv_out_5
+    -------------------------------------------------  ---------------------------
+    Total                                      4.918ns (0.470ns logic, 4.448ns route)
+                                                       (9.6% logic, 90.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.104ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1 (FF)
+  Destination:          asip_syn/alu/mac_array/BF_MUL07/C_inv_out_5 (FF)
+  Requirement:          5.000ns
+  Data Path Delay:      4.831ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.030ns (1.229 - 1.259)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1 to asip_syn/alu/mac_array/BF_MUL07/C_inv_out_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y145.BQ     Tcko                  0.246   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2<3>
+                                                       asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1
+    SLICE_X23Y145.A4     net (fanout=217)      0.661   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2<1>
+    SLICE_X23Y145.A      Tilo                  0.053   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_3_1
+                                                       asip_syn/alu/alu_typ_sel[3]_GND_55_o_equal_3_o<3>1
+    SLICE_X19Y118.B6     net (fanout=440)      1.717   asip_syn/alu/alu_typ_sel[3]_GND_55_o_equal_3_o
+    SLICE_X19Y118.B      Tilo                  0.053   asip_syn/alu/multiplicand07<3>
+                                                       asip_syn/alu/Mmux_multiplicand07101
+    SLICE_X17Y112.A6     net (fanout=4)        0.377   asip_syn/alu/multiplicand07<3>
+    SLICE_X17Y112.A      Tilo                  0.053   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_0_xo<0>2
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_Ax2<5>_xo<0>1
+    SLICE_X10Y103.D5     net (fanout=17)       1.028   asip_syn/alu/mac_array/BF_MUL07/Ax2<5>
+    SLICE_X10Y103.D      Tilo                  0.053   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_5_xo<0>
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_5_xo<0>1
+    SLICE_X10Y101.C2     net (fanout=1)        0.578   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_5_xo<0>
+    SLICE_X10Y101.CLK    Tas                   0.012   asip_syn/alu/mac_array/BF_MUL07/C_inv_out<5>
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_5_xo<0>8
+                                                       asip_syn/alu/mac_array/BF_MUL07/C_inv_out_5
+    -------------------------------------------------  ---------------------------
+    Total                                      4.831ns (0.470ns logic, 4.361ns route)
+                                                       (9.7% logic, 90.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.119ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_2 (FF)
+  Destination:          asip_syn/alu/mac_array/BF_MUL07/C_inv_out_5 (FF)
+  Requirement:          5.000ns
+  Data Path Delay:      4.820ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.026ns (1.229 - 1.255)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_2 to asip_syn/alu/mac_array/BF_MUL07/C_inv_out_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y143.CQ     Tcko                  0.246   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2<2>
+                                                       asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_2
+    SLICE_X21Y143.B4     net (fanout=217)      0.623   asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2<2>
+    SLICE_X21Y143.B      Tilo                  0.053   asip_syn/alu/alu_typ_sel[3]_PWR_74_o_equal_18_o
+                                                       asip_syn/alu/alu_typ_sel[3]_PWR_74_o_equal_18_o<3>1
+    SLICE_X19Y118.B5     net (fanout=440)      1.744   asip_syn/alu/alu_typ_sel[3]_PWR_74_o_equal_18_o
+    SLICE_X19Y118.B      Tilo                  0.053   asip_syn/alu/multiplicand07<3>
+                                                       asip_syn/alu/Mmux_multiplicand07101
+    SLICE_X17Y112.A6     net (fanout=4)        0.377   asip_syn/alu/multiplicand07<3>
+    SLICE_X17Y112.A      Tilo                  0.053   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_0_xo<0>2
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_Ax2<5>_xo<0>1
+    SLICE_X10Y103.D5     net (fanout=17)       1.028   asip_syn/alu/mac_array/BF_MUL07/Ax2<5>
+    SLICE_X10Y103.D      Tilo                  0.053   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_5_xo<0>
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_5_xo<0>1
+    SLICE_X10Y101.C2     net (fanout=1)        0.578   asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_5_xo<0>
+    SLICE_X10Y101.CLK    Tas                   0.012   asip_syn/alu/mac_array/BF_MUL07/C_inv_out<5>
+                                                       asip_syn/alu/mac_array/BF_MUL07/Mxor_C_Buffer[15]_ADD_inv_in[15]_xor_36_OUT_5_xo<0>8
+                                                       asip_syn/alu/mac_array/BF_MUL07/C_inv_out_5
+    -------------------------------------------------  ---------------------------
+    Total                                      4.820ns (0.470ns logic, 4.350ns route)
+                                                       (9.8% logic, 90.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 5 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAMB36_X3Y20.ADDRARDADDRL12), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.030ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg_6 (FF)
+  Destination:          ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.150ns (Levels of Logic = 0)
+  Clock Path Skew:      0.120ns (0.579 - 0.459)
+  Source Clock:         clk_BUFGP rising at 5.000ns
+  Destination Clock:    clk_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg_6 to ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
+    Location                    Delay type         Delay(ns)  Physical Resource
+                                                              Logical Resource(s)
+    --------------------------------------------------------  -------------------
+    SLICE_X55Y104.CQ            Tcko                  0.098   asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg<6>
+                                                              asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg_6
+    RAMB36_X3Y20.ADDRARDADDRL12 net (fanout=4)        0.149   asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg<6>
+    RAMB36_X3Y20.CLKARDCLKL     Trckc_ADDRA (-Th)     0.097   ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
+                                                              ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
+    --------------------------------------------------------  ---------------------------
+    Total                                             0.150ns (0.001ns logic, 0.149ns route)
+                                                              (0.7% logic, 99.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAMB36_X3Y20.ADDRARDADDRU12), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.031ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg_6 (FF)
+  Destination:          ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.151ns (Levels of Logic = 0)
+  Clock Path Skew:      0.120ns (0.579 - 0.459)
+  Source Clock:         clk_BUFGP rising at 5.000ns
+  Destination Clock:    clk_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg_6 to ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
+    Location                    Delay type         Delay(ns)  Physical Resource
+                                                              Logical Resource(s)
+    --------------------------------------------------------  -------------------
+    SLICE_X55Y104.CQ            Tcko                  0.098   asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg<6>
+                                                              asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg_6
+    RAMB36_X3Y20.ADDRARDADDRU12 net (fanout=4)        0.150   asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg<6>
+    RAMB36_X3Y20.CLKARDCLKU     Trckc_ADDRA (-Th)     0.097   ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
+                                                              ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
+    --------------------------------------------------------  ---------------------------
+    Total                                             0.151ns (0.001ns logic, 0.150ns route)
+                                                              (0.7% logic, 99.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAMB36_X3Y20.ADDRBWRADDRL12), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.036ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg_6 (FF)
+  Destination:          ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.153ns (Levels of Logic = 0)
+  Clock Path Skew:      0.117ns (0.576 - 0.459)
+  Source Clock:         clk_BUFGP rising at 5.000ns
+  Destination Clock:    clk_BUFGP rising at 5.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg_6 to ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
+    Location                    Delay type         Delay(ns)  Physical Resource
+                                                              Logical Resource(s)
+    --------------------------------------------------------  -------------------
+    SLICE_X55Y104.CQ            Tcko                  0.098   asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg<6>
+                                                              asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg_6
+    RAMB36_X3Y20.ADDRBWRADDRL12 net (fanout=4)        0.152   asip_syn/wrapper_top/imem_wrapper/pcif_to_wrp_addr_reg<6>
+    RAMB36_X3Y20.CLKBWRCLKL     Trckc_ADDRB (-Th)     0.097   ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
+                                                              ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
+    --------------------------------------------------------  ---------------------------
+    Total                                             0.153ns (0.001ns logic, 0.152ns route)
+                                                              (0.7% logic, 99.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 5 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 3.333ns (period - min period limit)
+  Period: 5.000ns
+  Min period limit: 1.667ns (599.880MHz) (Trper_CLKA)
+  Physical resource: dat_sram1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram/CLKARDCLKL
+  Logical resource: dat_sram1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram/CLKARDCLKL
+  Location pin: RAMB36_X1Y26.CLKARDCLKL
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 3.333ns (period - min period limit)
+  Period: 5.000ns
+  Min period limit: 1.667ns (599.880MHz) (Trper_CLKB)
+  Physical resource: dat_sram1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram/CLKBWRCLKL
+  Logical resource: dat_sram1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram/CLKBWRCLKL
+  Location pin: RAMB36_X1Y26.CLKBWRCLKL
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 3.333ns (period - min period limit)
+  Period: 5.000ns
+  Min period limit: 1.667ns (599.880MHz) (Trper_CLKA)
+  Physical resource: dat_sram1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram/CLKARDCLKL
+  Logical resource: dat_sram1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram/CLKARDCLKL
+  Location pin: RAMB36_X1Y21.CLKARDCLKL
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.990|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 263919 paths, 0 nets, and 48455 connections
+
+Design statistics:
+   Minimum period:   4.990ns{1}   (Maximum frequency: 200.401MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Oct 05 10:11:45 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 783 MB
+
+
+
