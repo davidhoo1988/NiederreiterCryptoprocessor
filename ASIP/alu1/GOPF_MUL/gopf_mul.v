@@ -22,6 +22,15 @@ module GOPF_MUL(
 	mul8_o_out,
 	mul9_o_out,
 	mul_t_out,
+	mul1_add_out,
+	mul2_add_out,
+	mul3_add_out,
+	mul4_add_out,
+	mul5_add_out,
+	mul6_add_out,
+	mul7_add_out,
+	mul8_add_out,
+	mul9_add_out,
 	
 	//input from MUL_ARRAY
 	mul1_r_dat,
@@ -53,6 +62,10 @@ output wire [0:15]		mul1_o_out,	mul2_o_out,	mul3_o_out,
 						
 output wire [0:15]		mul_t_out;
 
+output wire [0:15]		mul1_add_out, mul2_add_out, mul3_add_out,
+						mul4_add_out, mul5_add_out, mul6_add_out,
+						mul7_add_out, mul8_add_out, mul9_add_out;
+
 input wire 	[0:15]		mul1_r_dat,	mul2_r_dat,	mul3_r_dat,
 						mul4_r_dat,	mul5_r_dat,	mul6_r_dat,
 						mul7_r_dat,	mul8_r_dat,	mul9_r_dat;
@@ -63,8 +76,8 @@ input wire 	[0:15]		mul1_r_dat,	mul2_r_dat,	mul3_r_dat,
 parameter 	DATA_PRE  	= 0, //do nothing, then get prepared to DATA_MUL1
 			DATA_DEGREE = 1, //calculate degree of multiplier
 			DATA_SHIFT  = 2, //shift or shift by multiplying x
-			DATA_MUL	= 3, //multiplicand * multiplier[i]
-			DATA_MAC  	= 4; //accumulator
+			DATA_MAC 	= 3; //multiplicand * multiplier[i] + adder
+
 					
 
 //----------------------------------------------------------
@@ -89,7 +102,7 @@ parameter 	DATA_PRE  	= 0, //do nothing, then get prepared to DATA_MUL1
 //----------------------------------------------------------
 //2nd always block, combinational condition judgement
 //----------------------------------------------------------		
-		always @ (CurrentState or start or degree_done or mul_cnt or overflow or finish)
+		always @ (CurrentState or start or degree_done or mul_cnt)
 			begin
                case (CurrentState)
 					DATA_PRE:	begin
@@ -100,30 +113,24 @@ parameter 	DATA_PRE  	= 0, //do nothing, then get prepared to DATA_MUL1
 								end	
 					DATA_DEGREE: begin
 									if (degree_done)
-										NextState = DATA_MUL;
+										NextState = DATA_MAC;
 									else
 										NextState = DATA_DEGREE;	
 					end			
 								
 					DATA_SHIFT:	begin	
-										NextState = DATA_MUL;
+									NextState = DATA_MAC;
 								end					
 					
-					DATA_MUL: 	begin // it takes 1 cycles to do one BF_MUL
-									if (mul_cnt == 2'd1)
-										NextState = DATA_MAC;
-									else
-										NextState = DATA_MUL;
-								end
-					
-					DATA_MAC: 	begin													
-									if (finish)
+					DATA_MAC: 	begin // it takes 1 cycles to do one BF_MUL
+									if (mul_done)
 										NextState = DATA_PRE;
-									else if (overflow == 1'b0) // there is no overflow, goes to the next position.
+									else if ((overflow == 1'd0 && mul_cnt == 2'd1) || (overflow == 1'd1 && mul_cnt == 2'd3))
 										NextState = DATA_SHIFT;
 									else
-										NextState = DATA_MUL;
+										NextState = DATA_MAC;
 								end
+						
 					
 					default: NextState = DATA_PRE;
 				endcase
@@ -142,6 +149,7 @@ reg [0:15]  mul_t_tmp_reg;
 
 reg [0:m-1] mul_o_in_reg;
 reg [0:15] mul_t_in_reg;
+reg [0:m-1] mul_add_in_reg;
 
 reg [3:0] 	counter, multiplier_degree;	
 
@@ -164,8 +172,9 @@ wire [0:15] mul_t_in;
 				mul_r_reg 	<= 144'b0;
 				mul_o_tmp_reg <= 16'b0;
 				
-				mul_o_in_reg<= 144'b0;
-				mul_t_in_reg<= 16'b0;
+				mul_o_in_reg <= 144'b0;
+				mul_t_in_reg <= 16'b0;
+				mul_add_in_reg <= 144'b0;
 				
 				counter 	<= 0;
 				multiplier_degree <= 4'd9;
@@ -219,53 +228,60 @@ wire [0:15] mul_t_in;
 					
 					DATA_SHIFT: begin
 						counter 		<= counter + 4'b1;
-						mul_cnt			<= 0;
-						
+						mul_cnt <= 0;
+
 						mul_t_reg 		<= {mul_t_reg[16:m-1], 16'b0};
 						mul_o_reg 		<= {16'b0, mul_o_reg[0:m-17]};
 						mul_o_tmp_reg	<= mul_o_reg[m-16:m-1];
-						if (mul_o_reg[m-16:m-1] == 16'b0) begin
+
+						mul_r_reg <= {mul1_r_dat,mul2_r_dat,mul3_r_dat,mul4_r_dat,mul5_r_dat,mul6_r_dat,mul7_r_dat,mul8_r_dat,mul9_r_dat}; //result from process 'DATA_MAC'
+
+						if (mul_o_reg[m-16:m-1] == 16'b0) begin  // it does not overflow
 							overflow <= 0;
 						end
-						else begin
+						else begin //it  overflows
 							overflow <= 1;
 						end
-					end
-					
-					DATA_MUL: begin	
-						counter <= counter;
-						mul_cnt	<= mul_cnt + 1;
-						
-						if (overflow == 1'b0) begin
-							mul_o_in_reg <= mul_o_reg;
-							mul_t_in_reg <= mul_t_reg[0:15];	
-						end
-						else begin
-							mul_o_in_reg <= mod_reg;
-							mul_t_in_reg <= mul_o_tmp_reg;
-						end
-						
-						if (counter == multiplier_degree && overflow == 1'b0)
-							finish <= 1'b1;
-						else
-							finish <= 1'b0;
-					end					
-					
-					DATA_MAC: begin	
-						mul_cnt 	<= 0;
-						overflow 	<= 1'b0;
-						if (overflow == 1'b0) begin
-							mul_r_reg <= mul_r_reg ^ {mul1_r_dat, mul2_r_dat, mul3_r_dat, mul4_r_dat, mul5_r_dat, mul6_r_dat, mul7_r_dat, mul8_r_dat, mul9_r_dat};
-						end
-						else begin
-							mul_o_reg <= mul_o_reg ^ {mul1_r_dat, mul2_r_dat, mul3_r_dat, mul4_r_dat, mul5_r_dat, mul6_r_dat, mul7_r_dat, mul8_r_dat, mul9_r_dat};
-						end
-						if (finish)
+
+						if (counter == multiplier_degree)
 							mul_done <= 1;
 						else
-							mul_done <= 0;
+							mul_done <= 0;	
+					end
+
+
+
 						
-					end		
+
+					
+					DATA_MAC: begin	
+						mul_done <= 0;
+						counter <= counter;	
+						mul_cnt <= mul_cnt + 1;	
+
+						if (overflow == 1'b0) begin
+							mul_o_in_reg <= mul_o_reg;
+							mul_t_in_reg <= mul_t_reg[0:15];
+							mul_add_in_reg <= mul_r_reg;	
+						end
+						else if (overflow == 1'b1 && mul_cnt == 2'd0) begin
+							mul_o_in_reg <= mod_reg;
+							mul_t_in_reg <= mul_o_tmp_reg;
+							mul_add_in_reg <= mul_o_reg;
+						end
+						else begin
+							mul_o_in_reg <= {mul1_r_dat,mul2_r_dat,mul3_r_dat,mul4_r_dat,mul5_r_dat,mul6_r_dat,mul7_r_dat,mul8_r_dat,mul9_r_dat};
+							mul_t_in_reg <= mul_t_reg[0:15];
+							mul_add_in_reg <= mul_r_reg;
+						end
+						
+						//update multiplier A*X^i
+						if (mul_cnt == 2'd2)
+							mul_o_reg <= {mul1_r_dat,mul2_r_dat,mul3_r_dat,mul4_r_dat,mul5_r_dat,mul6_r_dat,mul7_r_dat,mul8_r_dat,mul9_r_dat};
+						else
+							mul_o_reg <= mul_o_reg;
+							
+					end					
 					
 					default: mul_r_reg <= mul_r_reg;
 				endcase
@@ -283,6 +299,16 @@ assign mul8_o_out = mul_o_in_reg[112:127];
 assign mul9_o_out = mul_o_in_reg[128:143];
 
 assign mul_t_out = mul_t_in_reg;	
+
+assign mul1_add_out = mul_add_in_reg[0:15];
+assign mul2_add_out = mul_add_in_reg[16:31];
+assign mul3_add_out = mul_add_in_reg[32:47];
+assign mul4_add_out = mul_add_in_reg[48:63];
+assign mul5_add_out = mul_add_in_reg[64:79];
+assign mul6_add_out = mul_add_in_reg[80:95];
+assign mul7_add_out = mul_add_in_reg[96:111];
+assign mul8_add_out = mul_add_in_reg[112:127];
+assign mul9_add_out = mul_add_in_reg[128:143];
 
 assign mul_out = mul_r_reg;
 

@@ -3,6 +3,7 @@ module ALU_Multiplier(
 	clk,
 	A_in,
 	B_in,
+	ADD_in,
 	C_out);
 
 parameter m=16, k2=5, k1=3, k0=2;
@@ -10,13 +11,14 @@ parameter m=16, k2=5, k1=3, k0=2;
 input wire clk;
 input wire [0:m-1] A_in;
 input wire [0:m-1] B_in;
+input wire [0:m-1] ADD_in;
 
 output reg [0:m-1] C_out;
 
 wire [m-1:0] Ax, Ax1, Ax2, Ax3, Ax4, Ax5, Ax6, Ax7, Ax8, Ax9, Ax10, Ax11, Ax12, Ax13, Ax14, Ax15;
 wire [m-1:0] C_Buffer;
 
-reg [m-1:0] 	A_inv_in, B_inv_in;
+reg [m-1:0] 	A_inv_in, B_inv_in, ADD_inv_in;
 reg [m-1:0] 	C_inv_out;
 integer i;
 
@@ -25,6 +27,7 @@ begin
 	for(i=0; i<m; i=i+1) begin
 		A_inv_in[i] = A_in[i];
 		B_inv_in[i] = B_in[i];
+		ADD_inv_in[i] = ADD_in[i];
 	end
 end
 
@@ -49,7 +52,7 @@ assign C_Buffer = A_inv_in&{m{B_inv_in[0]}} ^ Ax&{m{B_inv_in[1]}} ^ Ax2&{m{B_inv
 
 always @ (posedge clk)
 begin
-	C_inv_out <= C_Buffer;
+	C_inv_out <= C_Buffer ^ ADD_inv_in; //add after mul using a single xor gate.
 end
 
 always @ (*)

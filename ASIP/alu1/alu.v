@@ -61,16 +61,22 @@ wire				mul_done;
 wire 				en_mul;
 reg 				en_mul_reg;
 
+//gopf_mul signal declared
 wire [0:m-1]		mul1_o_in, mul2_o_in, mul3_o_in, 
 					mul4_o_in, mul5_o_in, mul6_o_in,   
 					mul7_o_in, mul8_o_in, mul9_o_in,
 					
 					mul_t_in,
+
+					mul1_add_in, mul2_add_in, mul3_add_in,
+					mul4_add_in, mul5_add_in, mul6_add_in,
+					mul7_add_in, mul8_add_in, mul9_add_in,
 					
 					mul1_r_dat, mul2_r_dat, mul3_r_dat,
 					mul4_r_dat, mul5_r_dat, mul6_r_dat,
 					mul7_r_dat, mul8_r_dat, mul9_r_dat;
-					
+
+//gopf_div signal declared					
 wire [0:`DAT_W-1] 	quotient_dat, remainder_dat;
 wire				div_done;
 
@@ -81,7 +87,11 @@ wire [0:m-1]		div1_o_out, div2_o_out, div3_o_out,
 					div4_o_out, div5_o_out, div6_o_out,
 					div7_o_out, div8_o_out, div9_o_out,
 					
-					div_t_out;
+					div_t_out,
+
+					div1_add_in, div2_add_in, div3_add_in, 
+					div4_add_in, div5_add_in, div6_add_in, 
+					div7_add_in, div8_add_in, div9_add_in;
 					
 wire 				inv_en, inv_enable, inv_trg, invgenerator_trg, invgenerator_rst; //enable GF(2^m) inverse
 reg 				inv_enable_reg, alu_o_sel_reg;
@@ -95,8 +105,11 @@ wire [0:m-1]		multiplicand01, multiplicand02, multiplicand03,
 					
 					multiplier01, multiplier02, multiplier03,
 					multiplier04, multiplier05, multiplier06,
-					multiplier07, multiplier08, multiplier09;
-					
+					multiplier07, multiplier08, multiplier09,
+
+					adder01, adder02, adder03,
+					adder04, adder05, adder06,
+					adder07, adder08, adder09;					
 					
 wire [0:`DAT_W-1] 	alu_o_reg_out, alu_t_reg_out, inv_o_reg_out, inv_t_reg_out;
 
@@ -130,6 +143,10 @@ wire [0:m-1] 		eval1_o_out,eval2_o_out,eval3_o_out,
 wire [0:m-1]		eval1_t_out,eval2_t_out,eval3_t_out,
 					eval4_t_out,eval5_t_out,eval6_t_out,
 					eval7_t_out,eval8_t_out,eval9_t_out;
+
+wire [0:m-1]		eval1_add_in,eval2_add_in,eval3_add_in,
+					eval4_add_in,eval5_add_in,eval6_add_in,
+					eval7_add_in,eval8_add_in,eval9_add_in;					
 
 assign alu_o_reg_out = alu_o_reg[0:`DAT_W-1];
 assign alu_t_reg_out = alu_t_reg;
@@ -335,15 +352,25 @@ assign multiplicand07 = (alu_typ_sel == `ALU_TYP_W'h3)? mul7_o_in :(alu_typ_sel 
 assign multiplicand08 = (alu_typ_sel == `ALU_TYP_W'h3)? mul8_o_in :(alu_typ_sel == `ALU_TYP_W'd9)?  eval8_o_out : div8_o_out;
 assign multiplicand09 = (alu_typ_sel == `ALU_TYP_W'h3)? mul9_o_in :(alu_typ_sel == `ALU_TYP_W'd9)?  eval9_o_out : div9_o_out;
 
-assign multiplier01 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval1_t_out : ((inv_en == 1'b1 || inv_enable == 1'b1)? operandB_out: div_t_out);
-assign multiplier02 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval2_t_out : ((inv_en == 1'b1 || inv_enable == 1'b1)? operandB_out: div_t_out);
-assign multiplier03 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval3_t_out : ((inv_en == 1'b1 || inv_enable == 1'b1)? operandB_out: div_t_out);
-assign multiplier04 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval4_t_out : ((inv_en == 1'b1 || inv_enable == 1'b1)? operandB_out: div_t_out);
-assign multiplier05 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval5_t_out : ((inv_en == 1'b1 || inv_enable == 1'b1)? operandB_out: div_t_out);
-assign multiplier06 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval6_t_out : ((inv_en == 1'b1 || inv_enable == 1'b1)? operandB_out: div_t_out);
-assign multiplier07 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval7_t_out : ((inv_en == 1'b1 || inv_enable == 1'b1)? operandB_out: div_t_out);
-assign multiplier08 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval8_t_out : ((inv_en == 1'b1 || inv_enable == 1'b1)? operandB_out: div_t_out);
-assign multiplier09 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval9_t_out : ((inv_en == 1'b1 || inv_enable == 1'b1)? operandB_out: div_t_out);
+assign multiplier01 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval1_t_out : ((inv_en == 1'b1 || inv_enable == 1'b1)? operandB_out: div_t_out); 
+assign multiplier02 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval2_t_out : div_t_out;
+assign multiplier03 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval3_t_out : div_t_out;
+assign multiplier04 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval4_t_out : div_t_out;
+assign multiplier05 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval5_t_out : div_t_out;
+assign multiplier06 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval6_t_out : div_t_out;
+assign multiplier07 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval7_t_out : div_t_out;
+assign multiplier08 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval8_t_out : div_t_out;
+assign multiplier09 = (alu_typ_sel == `ALU_TYP_W'h3)? mul_t_in : (alu_typ_sel == `ALU_TYP_W'd9)?  eval9_t_out : div_t_out;
+
+assign adder01 = (alu_typ_sel == `ALU_TYP_W'd3)? mul1_add_in : (alu_typ_sel == `ALU_TYP_W'd9) ? eval1_add_in : ((inv_en == 1'b1 || inv_enable == 1'b1)? 16'd0 : div1_add_in);
+assign adder02 = (alu_typ_sel == `ALU_TYP_W'd3)? mul2_add_in : (alu_typ_sel == `ALU_TYP_W'd9) ? eval2_add_in : div2_add_in;
+assign adder03 = (alu_typ_sel == `ALU_TYP_W'd3)? mul3_add_in : (alu_typ_sel == `ALU_TYP_W'd9) ? eval3_add_in : div3_add_in;
+assign adder04 = (alu_typ_sel == `ALU_TYP_W'd3)? mul4_add_in : (alu_typ_sel == `ALU_TYP_W'd9) ? eval4_add_in : div4_add_in;
+assign adder05 = (alu_typ_sel == `ALU_TYP_W'd3)? mul5_add_in : (alu_typ_sel == `ALU_TYP_W'd9) ? eval5_add_in : div5_add_in;
+assign adder06 = (alu_typ_sel == `ALU_TYP_W'd3)? mul6_add_in : (alu_typ_sel == `ALU_TYP_W'd9) ? eval6_add_in : div6_add_in;
+assign adder07 = (alu_typ_sel == `ALU_TYP_W'd3)? mul7_add_in : (alu_typ_sel == `ALU_TYP_W'd9) ? eval7_add_in : div7_add_in;
+assign adder08 = (alu_typ_sel == `ALU_TYP_W'd3)? mul8_add_in : (alu_typ_sel == `ALU_TYP_W'd9) ? eval8_add_in : div8_add_in;
+assign adder09 = (alu_typ_sel == `ALU_TYP_W'd3)? mul9_add_in : (alu_typ_sel == `ALU_TYP_W'd9) ? eval9_add_in : div9_add_in;
 
 GOPF_MUL gopf_mul(
 	//input
@@ -358,7 +385,7 @@ GOPF_MUL gopf_mul(
 	.mul_out			(mul_dat ),
 	.mul_done			(mul_done),
 	
-	//output to MUL_ARRAY
+	//output to MAC_ARRAY
 	.mul1_o_out			(mul1_o_in),
 	.mul2_o_out			(mul2_o_in),
 	.mul3_o_out			(mul3_o_in),
@@ -369,8 +396,18 @@ GOPF_MUL gopf_mul(
 	.mul8_o_out			(mul8_o_in),
 	.mul9_o_out			(mul9_o_in),
 	.mul_t_out			(mul_t_in),
-	
-	//input from MUL_ARRAY
+	.mul1_add_out		(mul1_add_in),
+	.mul2_add_out		(mul2_add_in),
+	.mul3_add_out		(mul3_add_in),
+	.mul4_add_out		(mul4_add_in),
+	.mul5_add_out		(mul5_add_in),
+	.mul6_add_out		(mul6_add_in),
+	.mul7_add_out		(mul7_add_in),
+	.mul8_add_out		(mul8_add_in),
+	.mul9_add_out		(mul9_add_in),
+
+
+	//input from MAC_ARRAY
 	.mul1_r_dat			(mul1_r_dat),
 	.mul2_r_dat			(mul2_r_dat),
 	.mul3_r_dat			(mul3_r_dat),
@@ -395,7 +432,7 @@ GOPF_DIV gopf_div(
 	.remainder_out		(remainder_dat),
 	.div_done			(div_done),
 	
-	//output to MUL_ARRAY
+	//output to MAC_ARRAY
 	.mul1_o_out			(div1_o_out),
 	.mul2_o_out			(div2_o_out),
 	.mul3_o_out			(div3_o_out),
@@ -406,7 +443,16 @@ GOPF_DIV gopf_div(
 	.mul8_o_out			(div8_o_out),
 	.mul9_o_out			(div9_o_out),
 	.mul_t_out			(div_t_out),	
-	//input from MUL_ARRAY
+	.mul1_add_out		(div1_add_in),
+	.mul2_add_out		(div2_add_in),
+	.mul3_add_out		(div3_add_in),
+	.mul4_add_out		(div4_add_in),
+	.mul5_add_out		(div5_add_in),
+	.mul6_add_out		(div6_add_in),
+	.mul7_add_out		(div7_add_in),
+	.mul8_add_out		(div8_add_in),
+	.mul9_add_out		(div9_add_in),
+	//input from MAC_ARRAY
 	.mul1_r_dat			(mul1_r_dat),
 	.mul2_r_dat			(mul2_r_dat),
 	.mul3_r_dat			(mul3_r_dat),
@@ -425,28 +471,36 @@ GOPF_DIV gopf_div(
 	.inv_r_dat			(inv_dat_out)
 );
 
-MUL_ARRAY mul_array(
+MAC_ARRAY mac_array(
 	//input
 	.clk				(clk),
 	.multiplicand01		(multiplicand01),
 	.multiplier01		(multiplier01),
+	.adder01			(adder01),
 	.multiplicand02		(multiplicand02),
 	.multiplier02		(multiplier02),
+	.adder02			(adder02),
 	.multiplicand03		(multiplicand03),
 	.multiplier03		(multiplier03),
+	.adder03			(adder03),
 	.multiplicand04		(multiplicand04),
 	.multiplier04		(multiplier04),
+	.adder04			(adder04),
 	.multiplicand05		(multiplicand05),
 	.multiplier05		(multiplier05),
+	.adder05			(adder05),
 	.multiplicand06		(multiplicand06),
 	.multiplier06		(multiplier06),
+	.adder06			(adder06),
 	.multiplicand07		(multiplicand07),
 	.multiplier07		(multiplier07),
+	.adder07			(adder07),
 	.multiplicand08		(multiplicand08),
 	.multiplier08		(multiplier08),
+	.adder08			(adder08),
 	.multiplicand09		(multiplicand09),
 	.multiplier09		(multiplier09),
-	
+	.adder09			(adder09),
 	//output
 	.result01			(mul1_r_dat),
 	.result02			(mul2_r_dat),
@@ -528,6 +582,17 @@ GOPF_EVAL gopf_eval(
 	.mul7_t_out 		(eval7_t_out),	
 	.mul8_t_out 		(eval8_t_out),	
 	.mul9_t_out 		(eval9_t_out),	
+
+	.mul1_add_out 		(eval1_add_in),
+	.mul2_add_out 		(eval2_add_in),
+	.mul3_add_out 		(eval3_add_in),
+	.mul4_add_out 		(eval4_add_in),
+	.mul5_add_out 		(eval5_add_in),
+	.mul6_add_out 		(eval6_add_in),
+	.mul7_add_out 		(eval7_add_in),
+	.mul8_add_out 		(eval8_add_in),
+	.mul9_add_out 		(eval9_add_in),
+
 	//input from MUL_ARRAY
 	.mul1_r_dat 		(mul1_r_dat),
 	.mul2_r_dat 		(mul2_r_dat),

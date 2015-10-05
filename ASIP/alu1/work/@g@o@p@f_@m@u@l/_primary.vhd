@@ -6,8 +6,7 @@ entity GOPF_MUL is
         DATA_PRE        : integer := 0;
         DATA_DEGREE     : integer := 1;
         DATA_SHIFT      : integer := 2;
-        DATA_MUL        : integer := 3;
-        DATA_MAC        : integer := 4
+        DATA_MAC        : integer := 3
     );
     port(
         clk             : in     vl_logic;
@@ -28,6 +27,15 @@ entity GOPF_MUL is
         mul8_o_out      : out    vl_logic_vector(0 to 15);
         mul9_o_out      : out    vl_logic_vector(0 to 15);
         mul_t_out       : out    vl_logic_vector(0 to 15);
+        mul1_add_out    : out    vl_logic_vector(0 to 15);
+        mul2_add_out    : out    vl_logic_vector(0 to 15);
+        mul3_add_out    : out    vl_logic_vector(0 to 15);
+        mul4_add_out    : out    vl_logic_vector(0 to 15);
+        mul5_add_out    : out    vl_logic_vector(0 to 15);
+        mul6_add_out    : out    vl_logic_vector(0 to 15);
+        mul7_add_out    : out    vl_logic_vector(0 to 15);
+        mul8_add_out    : out    vl_logic_vector(0 to 15);
+        mul9_add_out    : out    vl_logic_vector(0 to 15);
         mul1_r_dat      : in     vl_logic_vector(0 to 15);
         mul2_r_dat      : in     vl_logic_vector(0 to 15);
         mul3_r_dat      : in     vl_logic_vector(0 to 15);

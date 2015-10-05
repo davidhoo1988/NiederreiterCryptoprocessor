@@ -11,6 +11,7 @@ entity ALU_Multiplier is
         clk             : in     vl_logic;
         A_in            : in     vl_logic_vector;
         B_in            : in     vl_logic_vector;
+        ADD_in          : in     vl_logic_vector;
         C_out           : out    vl_logic_vector
     );
 end ALU_Multiplier;

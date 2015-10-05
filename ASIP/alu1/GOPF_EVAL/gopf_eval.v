@@ -30,8 +30,18 @@ module GOPF_EVAL (
 	mul7_t_out,
 	mul8_t_out,
 	mul9_t_out,	
-	
-	//input from MUL_ARRAY
+
+	mul1_add_out,
+	mul2_add_out,
+	mul3_add_out,
+	mul4_add_out,
+	mul5_add_out,
+	mul6_add_out,
+	mul7_add_out,
+	mul8_add_out,
+	mul9_add_out,
+
+	//input from MAC_ARRAY
 	mul1_r_dat,
 	mul2_r_dat,
 	mul3_r_dat,
@@ -63,8 +73,11 @@ output wire [0:15]		mul1_o_out,	mul2_o_out,	mul3_o_out,
 
 output wire [0:15]		mul1_t_out,	mul2_t_out,	mul3_t_out,
 						mul4_t_out,	mul5_t_out,	mul6_t_out,
-						mul7_t_out,	mul8_t_out,	mul9_t_out;						
+						mul7_t_out,	mul8_t_out,	mul9_t_out;	
 
+output wire [0:15] 		mul1_add_out, mul2_add_out, mul3_add_out,
+						mul4_add_out, mul5_add_out, mul6_add_out,
+						mul7_add_out, mul8_add_out, mul9_add_out;
 
 input wire 	[0:15]		mul1_r_dat,	mul2_r_dat,	mul3_r_dat,
 						mul4_r_dat,	mul5_r_dat,	mul6_r_dat,
@@ -77,10 +90,9 @@ input wire 	[0:15]		mul1_r_dat,	mul2_r_dat,	mul3_r_dat,
 //----------------------------------------------------------		
 parameter 	DATA_PRE  		= 0, //do nothing, then get prepared input 
 			DATA_SHIFT  	= 1, //shift sigma to load coefficents sequentially
-			DATA_MUL		= 2, 
-			DATA_ADD 		= 3;
+			DATA_MAC		= 2;
 					
-
+		
 //----------------------------------------------------------
 //1st always block, sequential state transition
 //----------------------------------------------------------
@@ -97,45 +109,39 @@ parameter 	DATA_PRE  		= 0, //do nothing, then get prepared input
 //----------------------------------------------------------
 //  signal Declaration
 //----------------------------------------------------------	
-reg [4:0]		counter;
-
-reg [0:m+15] 	gopf_reg;
+reg [0:m-1] 	gopf_reg;
 reg [0:m-1]		gf2e_element_reg;
 reg [0:m-1] 	eval_r_reg;
 
 reg [0:m-1] 	mul_o_in_reg;
-reg [0:m-1]		mul_t_in_reg;		
+reg [0:m-1]		mul_t_in_reg;	
+reg [0:m-1] 	mul_add_in_reg;	
+
+reg 			finish;
 //----------------------------------------------------------
 //2nd always block, combinational condition judgement
 //----------------------------------------------------------		
-		always @ (CurrentState or start or counter or eval_done)
+		always @ (CurrentState or start  or  finish or eval_done)
 			begin
                case (CurrentState)
 					DATA_PRE:	begin
 									if (start)
-										NextState = DATA_MUL;
+										NextState = DATA_MAC;
 									else
 										NextState = DATA_PRE;
 								end	
 								
 					DATA_SHIFT:	begin
-										NextState = DATA_MUL;	
+									if (finish)
+										NextState = DATA_PRE;
+									else
+										NextState = DATA_MAC;	
 								end					
 					
-					DATA_MUL: 	begin // it takes 1 cycles to do one BF_MUL
-									if (counter == 5'd0)
-										NextState = DATA_ADD;
-									else
-										NextState = DATA_MUL;
+					DATA_MAC: 	begin // it takes 1 cycles to do one BF_MUL
+										NextState = DATA_SHIFT;
 								end
-					
-					DATA_ADD: 	begin	
-									if (eval_done)
-										NextState = DATA_PRE;	
-									else
-										NextState = DATA_SHIFT;									
-								end
-					
+
 					default: NextState = DATA_PRE;
 				endcase
 		end	
@@ -149,10 +155,10 @@ reg [0:m-1]		mul_t_in_reg;
 //3rd always block, the sequential FSM output
 //----------------------------------------------------------			
 always @ (posedge clk or negedge rst_b) begin
-			if (!rst_b) begin				
-				counter				<= 0;
+			if (!rst_b) begin		
+				finish				<= 0;		
 				eval_done			<= 0;
-				gopf_reg			<= 160'b0;
+				gopf_reg			<= 144'b0;
 				gf2e_element_reg 	<= 144'b0;
 				mul_o_in_reg		<= 144'b0;
 				mul_t_in_reg		<= 144'b0;
@@ -161,37 +167,35 @@ always @ (posedge clk or negedge rst_b) begin
 			else begin
 				case (CurrentState)
 					DATA_PRE: begin	
+						finish				<= 0;
 						eval_done 			<= 0;
-						counter 			<= 0;
-						gopf_reg 			<= {gopf,15'b0};
+						gopf_reg 			<= gopf[0:m-1];
 						gf2e_element_reg 	<= gf2e_element;
-						mul_o_in_reg		<= 144'b0;
-						mul_t_in_reg		<= 144'b0;
-						eval_r_reg 			<= 144'b0;
-
+						mul_o_in_reg		<= gf2e_element;
+						mul_t_in_reg		<= 144'b100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000;
+						mul_add_in_reg 		<= {gopf[m-16:m-1],gopf[m-16:m-1],gopf[m-16:m-1],gopf[m-16:m-1],gopf[m-16:m-1],gopf[m-16:m-1],gopf[m-16:m-1],gopf[m-16:m-1],gopf[m-16:m-1]};
 					end
 					
 					DATA_SHIFT: begin //locate each coefficient of gpof
-						gopf_reg 			<= {16'b0, gopf_reg[0:143]};
+						gopf_reg 			<= {16'b0, gopf_reg[0:m-17]};
 						gf2e_element_reg 	<= gf2e_element_reg;
 						mul_o_in_reg 		<= gf2e_element_reg;
-						mul_t_in_reg 		<= eval_r_reg;
-						counter				<= counter;
+						mul_t_in_reg 		<= {mul1_r_dat,mul2_r_dat,mul3_r_dat,mul4_r_dat,mul5_r_dat,mul6_r_dat,mul7_r_dat,mul8_r_dat,mul9_r_dat};
+						mul_add_in_reg 		<= {gopf_reg[m-32:m-17],gopf_reg[m-32:m-17],gopf_reg[m-32:m-17],gopf_reg[m-32:m-17],gopf_reg[m-32:m-17],gopf_reg[m-32:m-17],gopf_reg[m-32:m-17],gopf_reg[m-32:m-17],gopf_reg[m-32:m-17]};
+						
+						if (finish)
+							eval_done <= 1;
+						else
+							eval_done <= 0;					
 					end
 									
-					DATA_MUL: begin					
-						counter 			<= counter + 1'b1;
-						if (gopf_reg[0:159] == 160'b0)
-							eval_done <= 1'b1;
-						else
-							eval_done <= 1'b0;	
+					DATA_MAC: begin					
+							if (gopf_reg[0:m-17] == 128'b0)
+								finish <= 1'b1;
+							else
+								finish <= 1'b0;
 					end
 					
-					DATA_ADD: begin					
-						eval_r_reg			<= {mul1_r_dat ^ gopf_reg[144:159], mul2_r_dat ^ gopf_reg[144:159], mul3_r_dat ^ gopf_reg[144:159], mul4_r_dat ^ gopf_reg[144:159], mul5_r_dat ^ gopf_reg[144:159], mul6_r_dat ^ gopf_reg[144:159], mul7_r_dat ^ gopf_reg[144:159], mul8_r_dat ^ gopf_reg[144:159], mul9_r_dat ^ gopf_reg[144:159]};
-						counter				<= 0;
-						eval_done			<= 0;
-					end
 				endcase
 			end
 end			
@@ -216,6 +220,15 @@ assign mul7_t_out = mul_t_in_reg[96:111];
 assign mul8_t_out = mul_t_in_reg[112:127];
 assign mul9_t_out = mul_t_in_reg[128:143];
 
+assign mul1_add_out = mul_add_in_reg[0:15];
+assign mul2_add_out = mul_add_in_reg[16:31];
+assign mul3_add_out = mul_add_in_reg[32:47];
+assign mul4_add_out = mul_add_in_reg[48:63];
+assign mul5_add_out = mul_add_in_reg[64:79];
+assign mul6_add_out = mul_add_in_reg[80:95];
+assign mul7_add_out = mul_add_in_reg[96:111];
+assign mul8_add_out = mul_add_in_reg[112:127];
+assign mul9_add_out = mul_add_in_reg[128:143];
 
-assign eval_r_dat = eval_r_reg;	
+assign eval_r_dat = mul_t_in_reg;	
 endmodule
