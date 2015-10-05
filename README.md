@@ -150,13 +150,13 @@ Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune 
 <tr><th>Microcode</th> <th>Instruction</th> 								<th>Latency</th>   <th>Illustration</th></tr>
 <tr><td>ADD Rx Ry</td> <td>ADD Rx and Ry and store the result into Ry</td>  <td> 7 cycles</td> <td>'ADD R0 R2' means to add R0 and R2 and results into R2</td></tr>
 <tr><td>SUB Rx Ry</td> <td>SUB Rx by Ry and store the result into Ry</td>   <td> 7 cycles</td> <td>'SUB R2 R0' means to subtract R0 and R2 and results into R0</td></tr>
-<tr><td>INV Rx Ry</td> <td>INV Rx and store the result into Ry</td>   <td> 34 cycles</td> <td>'INV R0 R0' means to calcuate the inverse of R0 and results into R0</td></tr>
-<tr><td>MUL Rx Ry</td> <td>MUL Rx by Ry and store the result into Ry</td> 	<td> uncertain</td> <td>'MUL R2 R2' means to add R2 and R2 and results into R2</td></tr>
-<tr><td>DIV Rx Ry</td> <td>Get Rx/Ry and store the result into Rx,Ry</td> 	<td> uncertain</td> <td>'DIV R2 R3' means to calculate R2/R3 and then store quotient to R2 and remainder to R3</td></tr>
-<tr><td>SPLIT Rx Ry</td> <td>Split Rx and store the result into Rx,Ry</td> 	<td> uncertain</td> <td>'SPLIT R2 R3' means to calculate R2 and R3 such that 'R2=R2^2+x*R3^2'</td></tr>
-<tr><td>DEG Rx Ry</td> <td>Calculate the deg of polynomial in Rx and store the deg into Ry</td> 	<td> uncertain</td> <td>'DEG R2 R3' means to calculate deg(R2) and store it in R3 </td></tr>
-<tr><td>RSHIFT Rx Ry</td> <td>Right Shift Rx and store the result into (Rx,Ry)</td> 	<td> </td> <td>'RSHIFT R2 R3' means to right shift R2 and store the MSB part in R2 and the remaining part in R3</td></tr>
-<tr><td>EVAL Rx Ry</td> <td>Eval the value of error locator polynomial Rx, the input unkown value is store in Ry (9 different values at a time)</td> 	<td> 68 cycles</td> <td>'EVAL R2 R3' means to evalue R2 by substituting the unkowns with R3</td></tr>
+<tr><td>INV Rx Ry</td> <td>INV Rx and store the result into Ry</td>   <td> 24 cycles</td> <td>'INV R0 R0' means to calcuate the inverse of R0 and results into R0</td></tr>
+<tr><td>MUL Rx Ry</td> <td>MUL Rx by Ry and store the result into Ry</td> 	<td> leq 55 cycles</td> <td>'MUL R2 R2' means to add R2 and R2 and results into R2</td></tr>
+<tr><td>DIV Rx Ry</td> <td>Get Rx/Ry and store the result into Rx,Ry</td> 	<td> leq 43 cycles</td> <td>'DIV R2 R3' means to calculate R2/R3 and then store quotient to R2 and remainder to R3</td></tr>
+<tr><td>SPLIT Rx Ry</td> <td>Split Rx and store the result into Rx,Ry</td> 	<td> 26 cycles</td> <td>'SPLIT R2 R3' means to calculate R2 and R3 such that 'R2=R2^2+x*R3^2'</td></tr>
+<tr><td>DEG Rx Ry</td> <td>Calculate the deg of polynomial in Rx and store the deg into Ry</td> 	<td> leq 17 cycles</td> <td>'DEG R2 R3' means to calculate deg(R2) and store it in R3 </td></tr>
+<tr><td>RSHIFT Rx Ry</td> <td>Right Shift Rx and store the result into (Rx,Ry)</td> 	<td> 9 cycles</td> <td>'RSHIFT R2 R3' means to right shift R2 and store the MSB part in R2 and the remaining part in R3</td></tr>
+<tr><td>EVAL Rx Ry</td> <td>Eval the value of error locator polynomial Rx, the input unkown value is store in Ry (9 different values at a time)</td> 	<td> 24 cycles</td> <td>'EVAL R2 R3' means to evalue R2 by substituting the unkowns with R3</td></tr>
 </table>
 
 #### SPRF

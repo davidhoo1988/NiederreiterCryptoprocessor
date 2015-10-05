@@ -12,7 +12,7 @@
 ../alu1/ALU_Multiplier/ALU_Multiplier.v
 ../alu1/ALU_Multiplier/Mul_ModularX8.v
 ../alu1/ALU_Multiplier/Mul_MultiCore.v
-../alu1/MUL_ARRAY/mul_array.v
+../alu1/MAC_ARRAY/mac_array.v
 ../alu1/GOPF_MUL/gopf_mul.v
 ../alu1/GOPF_DIV/gopf_div.v
 ../alu1/SPLIT/split.v
