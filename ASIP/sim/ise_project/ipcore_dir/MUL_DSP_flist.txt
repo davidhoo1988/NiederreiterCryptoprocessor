@@ -1,0 +1,14 @@
+# Output products list for <MUL_DSP>
+MUL_DSP.asy
+MUL_DSP.gise
+MUL_DSP.ngc
+MUL_DSP.sym
+MUL_DSP.v
+MUL_DSP.veo
+MUL_DSP.xco
+MUL_DSP.xise
+MUL_DSP\doc\mult_gen_ds255.pdf
+MUL_DSP\doc\mult_gen_v11_2_vinfo.html
+MUL_DSP_flist.txt
+MUL_DSP_readme.txt
+MUL_DSP_xmdf.tcl

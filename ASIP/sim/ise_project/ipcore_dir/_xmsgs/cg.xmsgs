@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="sim" num="0" delta="new" >Generating component instance &apos;<arg fmt="%s" index="1">dat_sram</arg>&apos; of &apos;<arg fmt="%s" index="2">xilinx.com:ip:blk_mem_gen:6.2</arg>&apos; from &apos;<arg fmt="%s" index="3">C:\Xilinx\ISE_13.2\ISE_DS\ISE\coregen\ip\xilinx\primary\com\xilinx\ip\blk_mem_gen_v6_2\component.xml</arg>&apos;.
+</msg>
+
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;dat_sram&apos; already exists in the project. Output products for this core may be overwritten.</arg>
+</msg>
+
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;dat_sram&apos; already exists in the project. Output products for this core may be overwritten.</arg>
+</msg>
+
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Can&apos;t find &apos;Verilog&apos; synthesis view; using general synthesis view</arg>
+</msg>
+
+<msg type="info" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Pre-processing HDL files for &apos;dat_sram&apos;...</arg>
+</msg>
+
+<msg type="warning" file="coreutil" num="0" delta="new" >TclTasksC:project_006: Exception detected while executing [project set].
+Type [help project set] for more information.
+    while executing
+&quot;project set $key $value&quot;
+    (&quot;foreach&quot; body line 5)
+    invoked from within
+&quot;foreach {xco_key ise_key} $xco2ise_key_mapping {
+      set key     $ise_key
+      set value   [set xcovals($xco_key)]
+      project set $key $value
+ ...&quot;
+    (procedure &quot;xco2ise&quot; line 24)
+    invoked from within
+&quot;xco2ise $xcofile&quot;
+    (procedure &quot;core2ise&quot; line 49)
+    invoked from within
+&quot;core2ise $corename&quot;
+    invoked from within
+&quot;if {[info exists argc]} {
+   if {$argc==1} {
+      set corename [lindex $argv 0]
+      core2ise $corename
+   } elseif {$argc==2} {
+      set corepath ...&quot;
+    (file &quot;C:\Xilinx\ISE_13.2\ISE_DS\ISE\coregen\tcl\core2ise.tcl&quot; line 250)
+</msg>
+
+<msg type="warning" file="coreutil" num="0" delta="new" >Process returned a non-zero exit code &apos;<arg fmt="%x" index="1">1</arg>&apos;
+</msg>
+
+<msg type="warning" file="sim" num="0" delta="new" >ISE project &apos;<arg fmt="%s" index="1">./tmp/_cg/dat_sram.xise</arg>&apos; will not be released.
+</msg>
+
+<msg type="warning" file="sim" num="0" delta="new" >ISE file could not be generated.
+</msg>
+
+<msg type="info" file="sim" num="0" delta="new" >Finished FLIST file generation.
+</msg>
+
+</messages>
+

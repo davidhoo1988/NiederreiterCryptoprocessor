@@ -1,0 +1,25 @@
+# Output products list for <ins_sram>
+_xmsgs\pn_parser.xmsgs
+blk_mem_gen_ds512.pdf
+blk_mem_gen_v6_2_readme.txt
+ins_sram.asy
+ins_sram.gise
+ins_sram.ngc
+ins_sram.sym
+ins_sram.v
+ins_sram.veo
+ins_sram.xco
+ins_sram.xise
+ins_sram_flist.txt
+ins_sram_ste\example_design\bmg_wrapper.vhd
+ins_sram_ste\example_design\ins_sram_top.ucf
+ins_sram_ste\example_design\ins_sram_top.vhd
+ins_sram_ste\example_design\ins_sram_top.xdc
+ins_sram_ste\implement\implement.sh
+ins_sram_ste\implement\planAhead_rdn.bat
+ins_sram_ste\implement\planAhead_rdn.sh
+ins_sram_ste\implement\planAhead_rdn.tcl
+ins_sram_ste\implement\xst.prj
+ins_sram_ste\implement\xst.scr
+ins_sram_xmdf.tcl
+summary.log

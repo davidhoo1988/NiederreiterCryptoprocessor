@@ -1,0 +1,23 @@
+# Output products list for <dat_sram>
+blk_mem_gen_ds512.pdf
+blk_mem_gen_v6_2_readme.txt
+dat_sram.asy
+dat_sram.gise
+dat_sram.ngc
+dat_sram.sym
+dat_sram.v
+dat_sram.veo
+dat_sram.xco
+dat_sram_flist.txt
+dat_sram_ste\example_design\bmg_wrapper.vhd
+dat_sram_ste\example_design\dat_sram_top.ucf
+dat_sram_ste\example_design\dat_sram_top.vhd
+dat_sram_ste\example_design\dat_sram_top.xdc
+dat_sram_ste\implement\implement.sh
+dat_sram_ste\implement\planAhead_rdn.bat
+dat_sram_ste\implement\planAhead_rdn.sh
+dat_sram_ste\implement\planAhead_rdn.tcl
+dat_sram_ste\implement\xst.prj
+dat_sram_ste\implement\xst.scr
+dat_sram_xmdf.tcl
+summary.log
