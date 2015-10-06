@@ -2,9 +2,9 @@ library verilog;
 use verilog.vl_types.all;
 entity RA1SH is
     generic(
-        AddressWidth    : integer := 17;
+        AddressWidth    : integer := 12;
         DataWidth       : integer := 144;
-        Deapth          : integer := 131072
+        Deapth          : integer := 4096
     );
     port(
         CLK             : in     vl_logic;

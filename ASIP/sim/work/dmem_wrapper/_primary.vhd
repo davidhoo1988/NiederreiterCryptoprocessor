@@ -15,6 +15,7 @@ entity dmem_wrapper is
         ipt_sprfwrp_to_wrp_addr: in     vl_logic_vector(16 downto 0);
         opt_wrp_to_dram_en_b: out    vl_logic;
         opt_wrp_to_dram_rw: out    vl_logic;
-        opt_wrp_to_dram_addr: out    vl_logic_vector(16 downto 0)
+        opt_wrp_to_dram_cs: out    vl_logic_vector(4 downto 0);
+        opt_wrp_to_dram_addr: out    vl_logic_vector(11 downto 0)
     );
 end dmem_wrapper;

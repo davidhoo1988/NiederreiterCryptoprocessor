@@ -10,7 +10,7 @@
 //                          memory.
 
 // synthesis translate_on
-//`define SYNTHESIS
+`define SYNTHESIS
 `ifndef SYNTHESIS
 	`include    "../include/define.v"
 `else
@@ -30,6 +30,7 @@ module   asip_syn(
 				// Interface with data memory1 					
                 dat_mem1_rw,        // dat memory1 read or write 1--read, 0 -- write
                 dat_mem1_en_b,      // dat memory1 chip enable 
+                dat_mem1_cs,        // dram block select signal
                 dat_mem1_addr,      // to dat memory1 address 
                 mem1_to_wrp_dat,    // From dat_ram1 
                 wrp_to_mem1_dat     // To dat_ram1 
@@ -49,8 +50,9 @@ module   asip_syn(
  output wire						ins_mem_en_b;
  output wire	[`IMEMADDRW-1:0]	ins_mem_addr; 
  output wire                    	dat_mem1_rw; 
- output wire                    	dat_mem1_en_b; 
- output wire 	[`DMEMADDRW-1:0]   	dat_mem1_addr;  
+ output wire                    	dat_mem1_en_b;
+ output wire 	[`DMEMCSW-1:0]   	dat_mem1_cs; 
+ output wire 	[`SUBDMEMADDRW-1:0] dat_mem1_addr;  
  output wire 	[`MEM_W-1:0]       	wrp_to_mem1_dat;  
  
 
@@ -328,6 +330,7 @@ wrapper_top    wrapper_top(
 				//output from wrapper to dat_ram, source from ins_decoder src or dst part.
 				.opt_wrp_to_dram_en_b		( dat_mem1_en_b   ),
 				.opt_wrp_to_dram_rw			( dat_mem1_rw	  ),
+				.opt_wrp_to_dram_cs 		( dat_mem1_cs     ),
 				.opt_wrp_to_dram_addr		( dat_mem1_addr   ),
 				
 				//input from sprf to wrapper,

@@ -9,6 +9,7 @@ add wave -noupdate -format Logic /asip_tb/asip_top/imem_en_b
 add wave -noupdate -format Literal /asip_tb/asip_top/imem_dat
 add wave -noupdate -format Logic /asip_tb/asip_top/dmem1_rw
 add wave -noupdate -format Logic /asip_tb/asip_top/dmem1_en_b
+add wave -noupdate -format Literal /asip_tb/asip_top/dmem1_cs
 add wave -noupdate -format Literal /asip_tb/asip_top/dmem1_addr
 add wave -noupdate -format Literal /asip_tb/asip_top/dmem1_to_asip_dat
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_to_dmem1_dat
@@ -23,6 +24,7 @@ add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/ins_mem_en_b
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/ins_mem_addr
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/dat_mem1_rw
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/dat_mem1_en_b
+add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/dat_mem1_cs
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/dat_mem1_addr
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrp_to_mem1_dat
 add wave -noupdate -color Gold -format Literal -itemcolor Gold -radix unsigned /asip_tb/asip_top/asip_syn/mv_PC
@@ -254,6 +256,7 @@ add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/wrapper_top/ipt_decd
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrapper_top/ipt_decdst_to_wrp_jmp_addr
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/wrapper_top/opt_wrp_to_dram_en_b
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/wrapper_top/opt_wrp_to_dram_rw
+add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrapper_top/opt_wrp_to_dram_cs
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrapper_top/opt_wrp_to_dram_addr
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrapper_top/ipt_sprf_to_wrp_dat
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrapper_top/ipt_dram_to_wrp_dat
@@ -357,9 +360,11 @@ add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrapper_top/dmem_w
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrapper_top/dmem_wrapper/ipt_sprfwrp_to_wrp_addr
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/wrapper_top/dmem_wrapper/opt_wrp_to_dram_en_b
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/wrapper_top/dmem_wrapper/opt_wrp_to_dram_rw
+add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrapper_top/dmem_wrapper/opt_wrp_to_dram_cs
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrapper_top/dmem_wrapper/opt_wrp_to_dram_addr
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrapper_top/dmem_wrapper/decsrc_to_wrp_addr_reg
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/wrapper_top/dmem_wrapper/decdst_to_wrp_rw_reg
+add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrapper_top/dmem_wrapper/dmemwrp_to_dram_cs_reg
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/wrapper_top/dmem_wrapper/decdst_to_wrp_addr_reg
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/wrapper_top/dmem_wrapper/decdst_to_wrp_rw_tmp1
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/wrapper_top/dmem_wrapper/decdst_to_wrp_rw_tmp2
@@ -1035,7 +1040,7 @@ add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_mul/mul7_
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_mul/mul8_r_dat
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_mul/mul9_r_dat
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_mul/NextState
-add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_mul/CurrentState
+add wave -noupdate -format Literal -height 16 /asip_tb/asip_top/asip_syn/alu/gopf_mul/CurrentState
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/alu/gopf_mul/finish
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/alu/gopf_mul/overflow
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_mul/mul_cnt
@@ -1102,7 +1107,7 @@ add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_div/mul8_
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_div/mul9_r_dat
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_div/inv_r_dat
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_div/NextState
-add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_div/CurrentState
+add wave -noupdate -format Literal -height 16 /asip_tb/asip_top/asip_syn/alu/gopf_div/CurrentState
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_div/counter
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/alu/gopf_div/dividend_degree_done
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/alu/gopf_div/divisor_degree_done
@@ -1471,7 +1476,7 @@ add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/split/first_fr
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/split/second_fragment_out
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/alu/split/split_done
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/split/NextState
-add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/split/CurrentState
+add wave -noupdate -format Literal -height 16 /asip_tb/asip_top/asip_syn/alu/split/CurrentState
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/alu/split/finish
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/split/poly_in_reg
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/split/first_fragment_reg
@@ -1500,7 +1505,7 @@ add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/deg/poly_in
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/deg/poly_deg_out
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/alu/deg/deg_done
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/deg/NextState
-add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/deg/CurrentState
+add wave -noupdate -format Literal -height 16 /asip_tb/asip_top/asip_syn/alu/deg/CurrentState
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/deg/poly_in_reg
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/alu/gopf_eval/clk
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/alu/gopf_eval/rst_b
@@ -1546,7 +1551,7 @@ add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_eval/mul7
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_eval/mul8_r_dat
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_eval/mul9_r_dat
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_eval/NextState
-add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_eval/CurrentState
+add wave -noupdate -format Literal -height 16 /asip_tb/asip_top/asip_syn/alu/gopf_eval/CurrentState
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_eval/gopf_reg
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_eval/gf2e_element_reg
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/alu/gopf_eval/eval_r_reg
@@ -1568,7 +1573,7 @@ add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/prng/result_high
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/prng/cnt
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/prng/prng_seed_reg
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/prng/NextState
-add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/prng/CurrentState
+add wave -noupdate -format Literal -height 16 /asip_tb/asip_top/asip_syn/prng/CurrentState
 add wave -noupdate -format Logic /asip_tb/asip_top/asip_syn/prng/multiplier/clk
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/prng/multiplier/multiplicand
 add wave -noupdate -format Literal /asip_tb/asip_top/asip_syn/prng/multiplier/multiplier
@@ -1623,17 +1628,201 @@ add wave -noupdate -format Logic /asip_tb/asip_top/ins_sram/CEN
 add wave -noupdate -format Logic /asip_tb/asip_top/ins_sram/WEN
 add wave -noupdate -format Logic /asip_tb/asip_top/ins_sram/OEN
 add wave -noupdate -format Literal /asip_tb/asip_top/ins_sram/Q_tmp
-add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram1/A
-add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram1/CLK
-add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram1/D
-add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram1/Q
-add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram1/CEN
-add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram1/WEN
-add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram1/OEN
-add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram1/Q_tmp
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/clk
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem_rw
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dmem_cs
+add wave -noupdate -format Literal -radix unsigned /asip_tb/asip_top/dat_sram/dmem_addr
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_in
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem_rw_tmp1
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem_cs_tmp1
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dmem_addr_tmp1
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_in_tmp1
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem0_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem1_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem2_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem3_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem4_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem5_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem6_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem7_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem8_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem9_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem10_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem11_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem12_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem13_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem14_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem15_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem16_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem17_rw
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem_rw_tmp2
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dmem_cs_tmp2
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out0
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out1
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out2
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out3
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out4
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out5
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out6
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out7
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out8
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out9
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out10
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out11
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out12
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out13
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out14
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out15
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out16
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/data_out17
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram0/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram0/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram0/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram0/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram0/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram0/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram0/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram0/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram1/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram1/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram1/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram1/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram1/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram1/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram1/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram1/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram2/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram2/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram2/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram2/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram2/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram2/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram2/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram2/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram3/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram3/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram3/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram3/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram3/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram3/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram3/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram3/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram4/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram4/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram4/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram4/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram4/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram4/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram4/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram4/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram5/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram5/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram5/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram5/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram5/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram5/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram5/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram5/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram6/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram6/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram6/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram6/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram6/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram6/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram6/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram6/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram7/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram7/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram7/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram7/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram7/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram7/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram7/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram7/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram8/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram8/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram8/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram8/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram8/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram8/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram8/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram8/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram9/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram9/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram9/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram9/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram9/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram9/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram9/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram9/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram10/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram10/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram10/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram10/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram10/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram10/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram10/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram10/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram11/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram11/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram11/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram11/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram11/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram11/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram11/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram11/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram12/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram12/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram12/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram12/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram12/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram12/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram12/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram12/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram13/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram13/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram13/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram13/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram13/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram13/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram13/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram13/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram14/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram14/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram14/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram14/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram14/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram14/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram14/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram14/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram15/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram15/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram15/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram15/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram15/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram15/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram15/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram15/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram16/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram16/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram16/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram16/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram16/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram16/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram16/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram16/Q_tmp
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram17/A
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram17/CLK
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram17/D
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram17/Q
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram17/CEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram17/WEN
+add wave -noupdate -format Logic /asip_tb/asip_top/dat_sram/dat_sram17/OEN
+add wave -noupdate -format Literal /asip_tb/asip_top/dat_sram/dat_sram17/Q_tmp
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ns} 0}
-configure wave -namecolwidth 458
+WaveRestoreCursors {{Cursor 1} {250 ns} 0} {{Cursor 2} {320 ns} 0} {{Cursor 3} {29821 ns} 0} {{Cursor 4} {29560 ns} 0} {{Cursor 5} {18406 ns} 0} {{Cursor 6} {29860 ns} 0} {{Cursor 7} {29870 ns} 0}
+configure wave -namecolwidth 417
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -1647,4 +1836,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {356 ns}
+WaveRestoreZoom {29794 ns} {29890 ns}

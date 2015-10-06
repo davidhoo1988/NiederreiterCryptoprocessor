@@ -44,3 +44,4 @@
 ../pc_if/pc_if.v
 
 ../ram/RA1SH.v
+../ram/dmem_array.v

@@ -34,7 +34,8 @@ module dmem_wrapper(
 		//output from wrapper to dat_ram
 		output wire 					opt_wrp_to_dram_en_b, // either from src or dst
 		output wire 					opt_wrp_to_dram_rw,
-		output wire [`DMEMADDRW-1:0]	opt_wrp_to_dram_addr // either from src or dst or gprf_indirect_address
+		output wire [`DMEMCSW-1:0]		opt_wrp_to_dram_cs,
+		output wire [`SUBDMEMADDRW-1:0]	opt_wrp_to_dram_addr // either from src or dst or gprf_indirect_address
 );
 //----------------------------------------------------------
 // Signal Declaration
@@ -43,6 +44,7 @@ module dmem_wrapper(
 reg	[`DMEMADDRW-1:0]	decsrc_to_wrp_addr_reg;
 
 reg						decdst_to_wrp_rw_reg;
+reg [`DMEMCSW-1:0] 		dmemwrp_to_dram_cs_reg;
 reg	[`DMEMADDRW-1:0]	decdst_to_wrp_addr_reg;
 
 
@@ -122,8 +124,10 @@ end
  always@ (posedge clk or negedge reset_b) begin
 	if (!reset_b)
 		sprfwrp_to_wrp_addr_reg <= `DMEMADDRW'b0;
-	else if (t_cs)
-		sprfwrp_to_wrp_addr_reg <= ipt_sprfwrp_to_wrp_addr;
+	else if (t_cs) begin
+		sprfwrp_to_wrp_addr_reg <= ipt_sprfwrp_to_wrp_addr[`SUBDMEMADDRW-1:0];
+		dmemwrp_to_dram_cs_reg <= ipt_sprfwrp_to_wrp_addr[`DMEMADDRW-1:`DMEMADDRW-5];
+	end	
 	else
 		sprfwrp_to_wrp_addr_reg <= sprfwrp_to_wrp_addr_reg;
  end
@@ -134,6 +138,7 @@ end
  
 assign opt_wrp_to_dram_en_b 		= 1'b0;
 assign opt_wrp_to_dram_rw 			= decdst_to_wrp_rw_reg;
+assign opt_wrp_to_dram_cs 			= dmemwrp_to_dram_cs_reg;
 assign opt_wrp_to_dram_addr  	    = sprfwrp_to_wrp_addr_reg;
 
 
