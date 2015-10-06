@@ -74,7 +74,8 @@ entity wrapper_top is
         ipt_decdst_to_wrp_jmp_addr: in     vl_logic_vector(18 downto 0);
         opt_wrp_to_dram_en_b: out    vl_logic;
         opt_wrp_to_dram_rw: out    vl_logic;
-        opt_wrp_to_dram_addr: out    vl_logic_vector(16 downto 0);
+        opt_wrp_to_dram_cs: out    vl_logic_vector(4 downto 0);
+        opt_wrp_to_dram_addr: out    vl_logic_vector(11 downto 0);
         ipt_sprf_to_wrp_dat: in     vl_logic_vector(143 downto 0);
         ipt_dram_to_wrp_dat: in     vl_logic_vector(143 downto 0);
         opt_wrp_to_gprf_dat: out    vl_logic_vector(143 downto 0);

@@ -306,11 +306,20 @@ reg 					halt;
 		decsrc_to_wrp_en_b_tmp4 <= decsrc_to_wrp_en_b_tmp4;	
  end
 
+ always@ (posedge clk or negedge reset_b) begin
+	if (!reset_b)
+		decsrc_to_wrp_en_b_tmp5 <= 1'b1;
+	else if (t_cs)
+		decsrc_to_wrp_en_b_tmp5 <= decsrc_to_wrp_en_b_tmp4;
+	else
+		decsrc_to_wrp_en_b_tmp5 <= decsrc_to_wrp_en_b_tmp5;	
+ end
+
   always@ (posedge clk or negedge reset_b) begin
 	if (!reset_b)
 		decsrc_to_wrp_en_b_reg <= 1'b1;
 	else if (t_cs)
-		decsrc_to_wrp_en_b_reg <= decsrc_to_wrp_en_b_tmp4;
+		decsrc_to_wrp_en_b_reg <= decsrc_to_wrp_en_b_tmp5;
 	else
 		decsrc_to_wrp_en_b_reg <= decsrc_to_wrp_en_b_reg;	
  end
@@ -318,14 +327,14 @@ reg 					halt;
 always@ (decsrc_to_wrp_imm_en_reg 
 or decsrc_to_wrp_imm_reg
 or decsrc_to_wrp_en_b_reg
-or dram_to_wrp_dat_reg
+or ipt_dram_to_wrp_dat
 or gprf_to_wrp_dat1_reg
 ) 
 begin
 	if (decsrc_to_wrp_imm_en_reg) 	//source from imm 
 		opt_wrp_to_gprf_dat <= decsrc_to_wrp_imm_reg;
 	else if (~decsrc_to_wrp_en_b_reg)// source from dram
-		opt_wrp_to_gprf_dat <= dram_to_wrp_dat_reg;
+		opt_wrp_to_gprf_dat <= ipt_dram_to_wrp_dat;
 	else 							//source from gprf
 		opt_wrp_to_gprf_dat <= gprf_to_wrp_dat1_reg;
 end

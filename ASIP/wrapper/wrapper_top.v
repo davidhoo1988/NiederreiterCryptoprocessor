@@ -91,7 +91,8 @@ module  wrapper_top(
 				//output from wrapper to dat_ram
 				output wire 					opt_wrp_to_dram_en_b, // either from src or dst
 				output wire 					opt_wrp_to_dram_rw,
-				output wire [`DMEMADDRW-1:0]	opt_wrp_to_dram_addr, // either from src or dst
+				output wire [`DMEMCSW-1:0]		opt_wrp_to_dram_cs,
+				output wire [`SUBDMEMADDRW-1:0]	opt_wrp_to_dram_addr, // either from src or dst
 				
 				//input from sprf to wrapper, connected to gprf
 				input wire 	[`SPRF_DAT_W-1:0]	ipt_sprf_to_wrp_dat,
@@ -235,6 +236,7 @@ dmem_wrapper dmem_wrapper(
 		//output from wrapper to dat_ram
 		.opt_wrp_to_dram_en_b			( opt_wrp_to_dram_en_b		), // either from src or dst
 		.opt_wrp_to_dram_rw				( opt_wrp_to_dram_rw		),
+		.opt_wrp_to_dram_cs 			( opt_wrp_to_dram_cs 		),
 		.opt_wrp_to_dram_addr			( opt_wrp_to_dram_addr		) // either from src or dst or gprf_indirect_address
 );
 //----------------------------------------------------------

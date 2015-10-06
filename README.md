@@ -136,10 +136,10 @@ MOV is the data transfer instuction in our processor, up to date, four types of 
 <table border=".5">
 <caption><em>MOV instruction details</em></caption>
 <tr><th>Microcode</th>    <th>Instruction</th>               						 <th>Latency</th>       <th>Illustration</th></tr>
-<tr><td>MOV @IDX[y] Rx</td> <td>to transfer data from external memory to register Rx</td> <td>7 cycles</td> <td>'MOV @IDX0 Rx' means to move data at addr=IDX0 in external memory to register Rx</td></tr>
+<tr><td>MOV @IDX[y] Rx</td> <td>to transfer data from external memory to register Rx</td> <td>8 cycles</td> <td>'MOV @IDX0 Rx' means to move data at addr=IDX0 in external memory to register Rx</td></tr>
 <tr><td>MOV imm Rx  </td> <td>to transfer an immediate data to register, data width of imm should be less than 8 bits.</td> <td>4 cycles</td> <td>'MOV #11111111 R2' means to move 11111111 to register R2</td></tr>
 <tr><td>MOV Rx Ry  </td> <td>to transfer data from register Rx to register Ry</td> 											<td>4 cycles</td> <td>'MOV R2 R0' means to move data at reg R2 to reg R0</td></tr>
-<tr><td>MOV Rx	@IDX[y] </td> <td> Register Indirect Addressing, to transfer R0-R7 into memory @IDX[y]</td>								<td>6 cycles</td>	<td>'MOV R0	@IDX0' means to move data Ro to addr=IDX0 in external memory</td></tr>
+<tr><td>MOV Rx	@IDX[y] </td> <td> Register Indirect Addressing, to transfer R0-R7 into memory @IDX[y]</td>								<td>5 cycles</td>	<td>'MOV R0	@IDX0' means to move data Ro to addr=IDX0 in external memory</td></tr>
 <tr><td>MOV Rx IDX[y] </td> <td>MOV Rx into IDX[y]</td>  <td> 4 cycles</td> <td>'MOV R13 IDX1' means to update IDX1 with the value of R13</td></tr>
 </table>
 Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune up the whole system, the latency is extended to 3 cycles instead.
@@ -156,7 +156,7 @@ Please note that 'MOV imm Rx' actually takes only 2 cycles but in order to tune 
 <tr><td>SPLIT Rx Ry</td> <td>Split Rx and store the result into Rx,Ry</td> 	<td> 26 cycles</td> <td>'SPLIT R2 R3' means to calculate R2 and R3 such that 'R2=R2^2+x*R3^2'</td></tr>
 <tr><td>DEG Rx Ry</td> <td>Calculate the deg of polynomial in Rx and store the deg into Ry</td> 	<td> leq 17 cycles</td> <td>'DEG R2 R3' means to calculate deg(R2) and store it in R3 </td></tr>
 <tr><td>RSHIFT Rx Ry</td> <td>Right Shift Rx and store the result into (Rx,Ry)</td> 	<td> 9 cycles</td> <td>'RSHIFT R2 R3' means to right shift R2 and store the MSB part in R2 and the remaining part in R3</td></tr>
-<tr><td>EVAL Rx Ry</td> <td>Eval the value of error locator polynomial Rx, the input unkown value is store in Ry (9 different values at a time)</td> 	<td> 24 cycles</td> <td>'EVAL R2 R3' means to evalue R2 by substituting the unkowns with R3</td></tr>
+<tr><td>EVAL Rx Ry</td> <td>Eval the value of error locator polynomial Rx, the input unkown value is store in Ry (9 different values at a time)</td> 	<td> 26 cycles</td> <td>'EVAL R2 R3' means to evalue R2 by substituting the unkowns with R3</td></tr>
 </table>
 
 #### SPRF

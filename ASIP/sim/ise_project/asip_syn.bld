@@ -1,0 +1,38 @@
+Release 13.2 ngdbuild O.61xd (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: /home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/unwrapped/ngdbuild
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6vlx240t-ff784-3
+asip_syn.ngc asip_syn.ngd
+
+Reading NGO file
+"/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/asip_syn.n
+gc" ...
+Loading design module "ipcore_dir/MUL_DSP.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 129224 kilobytes
+
+Writing NGD file "asip_syn.ngd" ...
+Total REAL time to NGDBUILD completion:  6 sec
+Total CPU time to NGDBUILD completion:   6 sec
+
+Writing NGDBUILD log file "asip_syn.bld"...

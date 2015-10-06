@@ -10,7 +10,7 @@
 //  Description      : This module include the ASIP top logic part, and
 //                          the instruction memory and the data memory.
 //  ----------------------------------------------------------------------------
-//`define SYNTHESIS
+`define SYNTHESIS
 `ifndef SYNTHESIS
 `include    "../include/timescale.v"
 `include    "../include/define.v"
@@ -47,7 +47,8 @@ wire [`INS_W-1:0]		imem_dat;
 
 wire 					dmem1_rw;
 wire 					dmem1_en_b;
-wire [`DMEMADDRW-1:0]	dmem1_addr;
+wire [`DMEMCSW-1:0]     dmem1_cs;
+wire [`SUBDMEMADDRW-1:0]dmem1_addr;
 wire [`MEM_W-1:0]		dmem1_to_asip_dat;
 wire [`MEM_W-1:0]		asip_to_dmem1_dat;
 
@@ -68,7 +69,8 @@ asip_syn   	asip_syn(
 				
 				// Interface with data memory1 					
                 .dat_mem1_rw		( dmem1_rw		),        // dat memory1 read or write 1--read, 0 -- write
-                .dat_mem1_en_b     	( dmem1_en_b	),		// dat memory1 chip enable 
+                .dat_mem1_en_b     	( dmem1_en_b	),		// dat memory1 chip enable
+                .dat_mem1_cs        ( dmem1_cs      ), 
                 .dat_mem1_addr		( dmem1_addr	),      // to dat memory1 address 
 				.mem1_to_wrp_dat	( dmem1_to_asip_dat),    // To processor 
                 .wrp_to_mem1_dat    ( asip_to_dmem1_dat)	// To dat_ram1 
@@ -80,7 +82,7 @@ asip_syn   	asip_syn(
 `ifndef SYNTHESIS
 RA1SH   ins_sram(
                 .CLK 				( clk				),
-                .A   				( {7'b0,imem_addr}	),
+                .A   				( {2'b0,imem_addr}	),
                 .D   				( `MEM_W'b0			),  
                 .WEN 				( 1'b1				),
                 .CEN 				( imem_en_b			),
@@ -102,26 +104,15 @@ assign imem_dat = imem_Q[`INS_W-1:0];
 //----------------------------------------------------------
 // Instance dat_sram: Data memory
 //---------------------------------------------------------- 
-`ifndef SYNTHESIS
-RA1SH   dat_sram1(
-                .CLK 				( clk						),
-                .A   				( dmem1_addr			    ),
-                .D   				( asip_to_dmem1_dat        	),  
-                .WEN 				( dmem1_rw					),
-                .CEN 				( dmem1_en_b  				),
-                .Q   				( dmem_Q					),
-                .OEN 				( 1'b0						)
-);
+dmem_array dat_sram(
+                    .clk        ( clk                   ), 
+                    .dmem_rw    ( dmem1_rw              ),
+                    .dmem_cs    ( dmem1_cs              ),
+                    .dmem_addr  ( dmem1_addr            ),
+                    .data_in    ( asip_to_dmem1_dat     ),
 
-`else
-dat_sram dat_sram1(
-					.clka					(clk),
-					.wea					(dmem1_rw),
-					.addra				(dmem1_addr),
-					.dina					(asip_to_dmem1_dat),
-					.douta				(dmem_Q)
+                    .data_out   ( dmem_Q                )
 );
-`endif
 
 assign dmem1_to_asip_dat = dmem_Q[`MEM_W-1:0];
 

@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/asip_syn.xst" -ofn "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/asip_syn.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6vlx240t-ff784-3 asip_syn.ngc asip_syn.ngd  
+map -intstyle ise -p xc6vlx240t-ff784-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o asip_syn_map.ncd asip_syn.ngd asip_syn.pcf 
+par -w -intstyle ise -ol high -mt off asip_syn_map.ncd asip_syn.ncd asip_syn.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml asip_syn.twx asip_syn.ncd -o asip_syn.twr asip_syn.pcf 
+xst -intstyle ise -ifn "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/asip_syn.xst" -ofn "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/asip_syn.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6vlx240t-ff784-3 asip_syn.ngc asip_syn.ngd  
+map -intstyle ise -p xc6vlx240t-ff784-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o asip_syn_map.ncd asip_syn.ngd asip_syn.pcf 
+par -w -intstyle ise -ol high -mt off asip_syn_map.ncd asip_syn.ncd asip_syn.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml asip_syn.twx asip_syn.ncd -o asip_syn.twr asip_syn.pcf 

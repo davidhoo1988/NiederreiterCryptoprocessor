@@ -49,10 +49,24 @@ asip_top   asip_top(
 initial
 begin
    $readmemb("./mem_data/program.asm",asip_top.ins_sram.mem);
-   $readmemb("./mem_data/data1.txt",asip_top.dat_sram1.mem);
-   //$readmemh("table1.txt",tcore_chip.tcore_top.tcore_syn.connector.Table_luta1.mem);
-  // $readmemh("table2.txt",tcore_chip.tcore_top.tcore_syn.connector.Table_luta2.mem);
-  // $readmemh("table3.txt",tcore_chip.tcore_top.tcore_syn.connector.Table_lutb1.mem);
+   $readmemb("./mem_data/multiple_dram/data0.txt",asip_top.dat_sram.dat_sram0.mem);
+   $readmemb("./mem_data/multiple_dram/data1.txt",asip_top.dat_sram.dat_sram1.mem);
+   $readmemb("./mem_data/multiple_dram/data2.txt",asip_top.dat_sram.dat_sram2.mem);
+   $readmemb("./mem_data/multiple_dram/data3.txt",asip_top.dat_sram.dat_sram3.mem);
+   $readmemb("./mem_data/multiple_dram/data4.txt",asip_top.dat_sram.dat_sram4.mem);
+   $readmemb("./mem_data/multiple_dram/data5.txt",asip_top.dat_sram.dat_sram5.mem);
+   $readmemb("./mem_data/multiple_dram/data6.txt",asip_top.dat_sram.dat_sram6.mem);
+   $readmemb("./mem_data/multiple_dram/data7.txt",asip_top.dat_sram.dat_sram7.mem);
+   $readmemb("./mem_data/multiple_dram/data8.txt",asip_top.dat_sram.dat_sram8.mem);
+   $readmemb("./mem_data/multiple_dram/data9.txt",asip_top.dat_sram.dat_sram9.mem);
+   $readmemb("./mem_data/multiple_dram/data10.txt",asip_top.dat_sram.dat_sram10.mem);
+   $readmemb("./mem_data/multiple_dram/data11.txt",asip_top.dat_sram.dat_sram11.mem);
+   $readmemb("./mem_data/multiple_dram/data12.txt",asip_top.dat_sram.dat_sram12.mem);
+   $readmemb("./mem_data/multiple_dram/data13.txt",asip_top.dat_sram.dat_sram13.mem);
+   $readmemb("./mem_data/multiple_dram/data14.txt",asip_top.dat_sram.dat_sram14.mem);
+   $readmemb("./mem_data/multiple_dram/data15.txt",asip_top.dat_sram.dat_sram15.mem);
+   $readmemb("./mem_data/multiple_dram/data16.txt",asip_top.dat_sram.dat_sram16.mem);
+   $readmemb("./mem_data/multiple_dram/data17.txt",asip_top.dat_sram.dat_sram17.mem);
 end    
 
 
