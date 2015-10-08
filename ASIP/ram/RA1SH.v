@@ -29,9 +29,9 @@ module RA1SH(
 // Parameter Declarations
 // -----------------------------------------------------------------------------    
     parameter 
-              AddressWidth  = 12,
+              AddressWidth  = 11,
               DataWidth     = 144,
-              Deapth        = 4096; //2^AddressWidth
+              Deapth        = 2048; //2^AddressWidth
 
 // -----------------------------------------------------------------------------
 // Ports Declaration

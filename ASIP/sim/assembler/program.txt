@@ -1,7 +1,21 @@
-		MOV #1 	R6
+		PRNG #100 R2
+DECODEFAILURE:	MOV #1 	R6
 		MOV R6 IDX0
-		MOV @IDX0 R1   //load s1(x) = s(x) to R1
-		IDX0--
+		MOV @IDX0 R1   //load s1(x) = s(x) to R1			
+		PRNG R2 	//guess three positions using PRNG
+		MOV R2  IDX0
+		MOV @IDX0 R2
+		ADD R2	R1
+		PRNG R2
+		MOV R2  IDX0
+		MOV @IDX0 R2
+		ADD R2	R1
+		PRNG R2
+		MOV R2  IDX0
+		MOV @IDX0 R2
+		ADD R2	R1   //update s(x) to R1
+		MOV #0 	R6
+		MOV R6 IDX0
 		MOV @IDX0 Rmod //load g(x),Rmod
 		MOV #0  R2
 		MOV #2	R6
@@ -34,7 +48,7 @@ GCD:	MOV R1 		R5
 		MOV #3 		R6
 		MOV R6 		IDX0
 		MOV @IDX0	R1 //load 'x' to R1
-		ADD R1 R2  //store x+T(x) to R2
+		ADD R1 R2  	   //store x+T(x) to R2
 		SPLIT R2 	R3
 		MOV #4		R6
 		MOV R6		IDX0
@@ -102,4 +116,4 @@ SOLVE_EQ:	MOV @IDX0	R0 //load GF(2^16) code locators
 		IDX0--
 		JRE IDX0	@SOLVE_EQ
 		HALT
-DECODEFAILURE:	HALT
+

@@ -10,7 +10,7 @@
 //  Description      : This module include the ASIP top logic part, and
 //                          the instruction memory and the data memory.
 //  ----------------------------------------------------------------------------
-`define SYNTHESIS
+//`define SYNTHESIS
 `ifndef SYNTHESIS
 `include    "../include/timescale.v"
 `include    "../include/define.v"
@@ -82,7 +82,7 @@ asip_syn   	asip_syn(
 `ifndef SYNTHESIS
 RA1SH   ins_sram(
                 .CLK 				( clk				),
-                .A   				( {2'b0,imem_addr}	),
+                .A   				( {1'b0,imem_addr}	),
                 .D   				( `MEM_W'b0			),  
                 .WEN 				( 1'b1				),
                 .CEN 				( imem_en_b			),

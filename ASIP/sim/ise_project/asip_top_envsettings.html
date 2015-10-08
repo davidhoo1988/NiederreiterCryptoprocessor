@@ -18,21 +18,21 @@
 <td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE//lib/lin:<br>/home/david/gf2x-1.1</td>
 <td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE//lib/lin:<br>/home/david/gf2x-1.1</td>
 <td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE//lib/lin:<br>/home/david/gf2x-1.1</td>
-<td><font color=gray>/home/david/Xilinx/ISE13.2/ISE_DS/ISE//lib/lin:<br>/home/david/gf2x-1.1</font></td>
+<td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE//lib/lin:<br>/home/david/gf2x-1.1</td>
 </tr>
 <tr>
 <td>PATH</td>
 <td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE//bin/lin:<br>/home/david/jdk1.7.0_67/bin:<br>/home/david/jdk1.7.0_67/jre/bin:<br>/home/david/sage-6.2-i686-Linux:<br>/home/david/synopsys/dc201303/bin:<br>/home/david/texlive/2014/bin/i386-linux:<br>/usr/lib/lightdm/lightdm:<br>/usr/local/sbin:<br>/usr/local/bin:<br>/usr/sbin:<br>/usr/bin:<br>/sbin:<br>/bin:<br>/usr/games:<br>/home/david/modelsim6.5b/modeltech/bin:<br>/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin</td>
 <td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE//bin/lin:<br>/home/david/jdk1.7.0_67/bin:<br>/home/david/jdk1.7.0_67/jre/bin:<br>/home/david/sage-6.2-i686-Linux:<br>/home/david/synopsys/dc201303/bin:<br>/home/david/texlive/2014/bin/i386-linux:<br>/usr/lib/lightdm/lightdm:<br>/usr/local/sbin:<br>/usr/local/bin:<br>/usr/sbin:<br>/usr/bin:<br>/sbin:<br>/bin:<br>/usr/games:<br>/home/david/modelsim6.5b/modeltech/bin:<br>/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin</td>
 <td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE//bin/lin:<br>/home/david/jdk1.7.0_67/bin:<br>/home/david/jdk1.7.0_67/jre/bin:<br>/home/david/sage-6.2-i686-Linux:<br>/home/david/synopsys/dc201303/bin:<br>/home/david/texlive/2014/bin/i386-linux:<br>/usr/lib/lightdm/lightdm:<br>/usr/local/sbin:<br>/usr/local/bin:<br>/usr/sbin:<br>/usr/bin:<br>/sbin:<br>/bin:<br>/usr/games:<br>/home/david/modelsim6.5b/modeltech/bin:<br>/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin</td>
-<td><font color=gray>/home/david/Xilinx/ISE13.2/ISE_DS/ISE//bin/lin:<br>/home/david/jdk1.7.0_67/bin:<br>/home/david/jdk1.7.0_67/jre/bin:<br>/home/david/sage-6.2-i686-Linux:<br>/home/david/synopsys/dc201303/bin:<br>/home/david/texlive/2014/bin/i386-linux:<br>/usr/lib/lightdm/lightdm:<br>/usr/local/sbin:<br>/usr/local/bin:<br>/usr/sbin:<br>/usr/bin:<br>/sbin:<br>/bin:<br>/usr/games:<br>/home/david/modelsim6.5b/modeltech/bin:<br>/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin</font></td>
+<td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE//bin/lin:<br>/home/david/jdk1.7.0_67/bin:<br>/home/david/jdk1.7.0_67/jre/bin:<br>/home/david/sage-6.2-i686-Linux:<br>/home/david/synopsys/dc201303/bin:<br>/home/david/texlive/2014/bin/i386-linux:<br>/usr/lib/lightdm/lightdm:<br>/usr/local/sbin:<br>/usr/local/bin:<br>/usr/sbin:<br>/usr/bin:<br>/sbin:<br>/bin:<br>/usr/games:<br>/home/david/modelsim6.5b/modeltech/bin:<br>/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin</td>
 </tr>
 <tr>
 <td>XILINX</td>
 <td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE/</td>
 <td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE/</td>
 <td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE/</td>
-<td><font color=gray>/home/david/Xilinx/ISE13.2/ISE_DS/ISE/</font></td>
+<td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE/</td>
 </tr>
 </TABLE>
 <A NAME="Synthesis Property Settings"></A>
@@ -395,6 +395,12 @@
 <td>high</td>
 </tr>
 <tr>
+<td>-xe</td>
+<td>Placer Extra Effort Map</td>
+<td>NORMAL</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
 <td>-xt</td>
 <td>Extra Cost Tables</td>
 <td>0</td>
@@ -417,6 +423,12 @@
 <td>Register Ordering</td>
 <td>4</td>
 <td>4</td>
+</tr>
+<tr>
+<td>-register_duplication</td>
+<td>Register Duplication Map</td>
+<td>TRUE</td>
+<td>FALSE</td>
 </tr>
 <tr>
 <td>-intstyle</td>
@@ -467,28 +479,34 @@
 <td><b>Default Value</b></td>
 </tr>
 <tr>
-<td><font color=gray>-x</font></td>
-<td><font color=gray>Ignore User Timing Constraints</font></td>
-<td><font color=gray>true</font></td>
-<td><font color=gray>false</font></td>
+<td>-xe</td>
+<td>&nbsp;</td>
+<td>n</td>
+<td>None</td>
 </tr>
 <tr>
-<td><font color=gray>-intstyle</font></td>
-<td><font color=gray>&nbsp;</font></td>
-<td><font color=gray>ise</font></td>
-<td><font color=gray>&nbsp;</font></td>
+<td>-intstyle</td>
+<td>&nbsp;</td>
+<td>ise</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
-<td><font color=gray>-ol</font></td>
-<td><font color=gray>Place & Route Effort Level (Overall)</font></td>
-<td><font color=gray>high</font></td>
-<td><font color=gray>std</font></td>
+<td>-mt</td>
+<td>Enable Multi-Threading</td>
+<td>off</td>
+<td>off</td>
 </tr>
 <tr>
-<td><font color=gray>-w</font></td>
-<td><font color=gray>&nbsp;</font></td>
-<td><font color=gray>true</font></td>
-<td><font color=gray>false</font></td>
+<td>-ol</td>
+<td>Place & Route Effort Level (Overall)</td>
+<td>high</td>
+<td>std</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>&nbsp;</td>
+<td>true</td>
+<td>false</td>
 </tr>
 </TABLE>
 <A NAME="Operating System Information"></A>
@@ -505,31 +523,31 @@
 </tr>
 <tr>
 <td>CPU Architecture/Speed</td>
-<td>Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz/2100.000 MHz</td>
 <td>Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz/800.000 MHz</td>
+<td>Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz/3401.000 MHz</td>
+<td>Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz/1000.000 MHz</td>
 <td>Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz/800.000 MHz</td>
-<td><font color=gray>Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz/800.000 MHz</font></td>
 </tr>
 <tr>
 <td>Host</td>
 <td>david-desktop</td>
 <td>david-desktop</td>
 <td>david-desktop</td>
-<td><font color=gray>david-desktop</font></td>
+<td>david-desktop</td>
 </tr>
 <tr>
 <td>OS Name</td>
 <td>Ubuntu</td>
 <td>Ubuntu</td>
 <td>Ubuntu</td>
-<td><font color=gray>Ubuntu</font></td>
+<td>Ubuntu</td>
 </tr>
 <tr>
 <td>OS Release</td>
 <td>Ubuntu 12.04.5 LTS</td>
 <td>Ubuntu 12.04.5 LTS</td>
 <td>Ubuntu 12.04.5 LTS</td>
-<td><font color=gray>Ubuntu 12.04.5 LTS</font></td>
+<td>Ubuntu 12.04.5 LTS</td>
 </tr>
 </TABLE>
 </BODY> </HTML>

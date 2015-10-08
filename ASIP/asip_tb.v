@@ -67,6 +67,24 @@ begin
    $readmemb("./mem_data/multiple_dram/data15.txt",asip_top.dat_sram.dat_sram15.mem);
    $readmemb("./mem_data/multiple_dram/data16.txt",asip_top.dat_sram.dat_sram16.mem);
    $readmemb("./mem_data/multiple_dram/data17.txt",asip_top.dat_sram.dat_sram17.mem);
+   $readmemb("./mem_data/multiple_dram/data0.txt",asip_top.dat_sram.dat_sram18.mem);
+   $readmemb("./mem_data/multiple_dram/data1.txt",asip_top.dat_sram.dat_sram19.mem);
+   $readmemb("./mem_data/multiple_dram/data2.txt",asip_top.dat_sram.dat_sram20.mem);
+   $readmemb("./mem_data/multiple_dram/data3.txt",asip_top.dat_sram.dat_sram21.mem);
+   $readmemb("./mem_data/multiple_dram/data4.txt",asip_top.dat_sram.dat_sram22.mem);
+   $readmemb("./mem_data/multiple_dram/data5.txt",asip_top.dat_sram.dat_sram23.mem);
+   $readmemb("./mem_data/multiple_dram/data6.txt",asip_top.dat_sram.dat_sram24.mem);
+   $readmemb("./mem_data/multiple_dram/data7.txt",asip_top.dat_sram.dat_sram25.mem);
+   $readmemb("./mem_data/multiple_dram/data8.txt",asip_top.dat_sram.dat_sram26.mem);
+   $readmemb("./mem_data/multiple_dram/data9.txt",asip_top.dat_sram.dat_sram27.mem);
+   $readmemb("./mem_data/multiple_dram/data10.txt",asip_top.dat_sram.dat_sram28.mem);
+   $readmemb("./mem_data/multiple_dram/data11.txt",asip_top.dat_sram.dat_sram29.mem);
+   $readmemb("./mem_data/multiple_dram/data12.txt",asip_top.dat_sram.dat_sram30.mem);
+   $readmemb("./mem_data/multiple_dram/data13.txt",asip_top.dat_sram.dat_sram31.mem);
+   $readmemb("./mem_data/multiple_dram/data14.txt",asip_top.dat_sram.dat_sram32.mem);
+   $readmemb("./mem_data/multiple_dram/data15.txt",asip_top.dat_sram.dat_sram33.mem);
+   $readmemb("./mem_data/multiple_dram/data16.txt",asip_top.dat_sram.dat_sram34.mem);
+   $readmemb("./mem_data/multiple_dram/data17.txt",asip_top.dat_sram.dat_sram35.mem);   
 end    
 
 
