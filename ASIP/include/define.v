@@ -35,8 +35,8 @@
 `define    MEM_W			144				// Ram Data Width
 `define    IMEMADDRW		10				// Instruction Memory Address Width
 `define    DMEMADDRW        17 				// Data Memory Address Width (smaller than DAT_W)
-`define    SUBDMEMADDRW  	12
-`define    DMEMCSW 			5				//number of memory blocks, {DMEMADDRW - SUBDMEMADDRW} 
+`define    SUBDMEMADDRW  	11
+`define    DMEMCSW 			6				//number of memory blocks, {DMEMADDRW - SUBDMEMADDRW} 
 //----------------------------------------------------------
 // SetUp Function Unit
 //----------------------------------------------------------  

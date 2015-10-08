@@ -10,7 +10,7 @@
 //                          memory.
 
 // synthesis translate_on
-`define SYNTHESIS
+//`define SYNTHESIS
 `ifndef SYNTHESIS
 	`include    "../include/define.v"
 `else

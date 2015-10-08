@@ -54,7 +54,7 @@
 dat_sram your_instance_name (
   .clka(clka), // input clka
   .wea(wea), // input [0 : 0] wea
-  .addra(addra), // input [11 : 0] addra
+  .addra(addra), // input [10 : 0] addra
   .dina(dina), // input [143 : 0] dina
   .douta(douta) // output [143 : 0] douta
 );

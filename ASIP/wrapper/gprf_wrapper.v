@@ -149,7 +149,8 @@ reg						decsrc_to_wrp_imm_en_tmp;
 reg	[`IMM_DAT_W-1:0]	decsrc_to_wrp_imm_tmp;
 
 reg 					decsrc_to_wrp_en_b_reg,		decsrc_to_wrp_en_b_tmp1,	decsrc_to_wrp_en_b_tmp2,
-						decsrc_to_wrp_en_b_tmp3, 	decsrc_to_wrp_en_b_tmp4, 	decsrc_to_wrp_en_b_tmp5;
+						decsrc_to_wrp_en_b_tmp3, 	decsrc_to_wrp_en_b_tmp4, 	decsrc_to_wrp_en_b_tmp5,
+						decsrc_to_wrp_en_b_tmp6;
 
 reg 					decsrc_to_wrp_r0_r_sel_tmp,decsrc_to_wrp_r1_r_sel_tmp,decsrc_to_wrp_r2_r_sel_tmp,decsrc_to_wrp_r3_r_sel_tmp,
 						decsrc_to_wrp_r4_r_sel_tmp,decsrc_to_wrp_r5_r_sel_tmp,decsrc_to_wrp_r6_r_sel_tmp,decsrc_to_wrp_r7_r_sel_tmp;
@@ -317,9 +318,18 @@ reg 					halt;
 
   always@ (posedge clk or negedge reset_b) begin
 	if (!reset_b)
+		decsrc_to_wrp_en_b_tmp6 <= 1'b1;
+	else if (t_cs)
+		decsrc_to_wrp_en_b_tmp6 <= decsrc_to_wrp_en_b_tmp5;
+	else
+		decsrc_to_wrp_en_b_tmp6 <= decsrc_to_wrp_en_b_tmp6;	
+ end
+
+ always@ (posedge clk or negedge reset_b) begin
+	if (!reset_b)
 		decsrc_to_wrp_en_b_reg <= 1'b1;
 	else if (t_cs)
-		decsrc_to_wrp_en_b_reg <= decsrc_to_wrp_en_b_tmp5;
+		decsrc_to_wrp_en_b_reg <= decsrc_to_wrp_en_b_tmp6;
 	else
 		decsrc_to_wrp_en_b_reg <= decsrc_to_wrp_en_b_reg;	
  end

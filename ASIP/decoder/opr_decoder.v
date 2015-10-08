@@ -83,13 +83,13 @@ begin
 						{3'b101,3'b000}: begin
 							opr_typ_sel			<= opr_code;
 							src_dst_delay_sel 	<= 1;
-							src_dst_delay 		<= `DLY_W'd5;
+							src_dst_delay 		<= `DLY_W'd6;
 						end	
 						//MOV @IDX Rmod
 						{3'b101,3'b100}: begin
 							opr_typ_sel			<= opr_code;
 							src_dst_delay_sel 	<= 1;
-							src_dst_delay 		<= `DLY_W'd5;
+							src_dst_delay 		<= `DLY_W'd6;
 						end	
 						//MOV imm Rx
 						{3'b010,3'b000}: begin

@@ -17,7 +17,7 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/wrapper/imem_wrapper.v" Line 164: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/wrapper/dmem_wrapper.v" Line 142: Result of <arg fmt="%d" index="1">17</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/wrapper/dmem_wrapper.v" Line 142: Result of <arg fmt="%d" index="1">17</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/wrapper/wrapper_top.v" Line 347: Assignment to <arg fmt="%s" index="1">gprfwrp_to_dram_addr</arg> ignored, since the identifier is never used
@@ -96,6 +96,9 @@
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1499" delta="old" >"/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/dat_sram.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">dat_sram</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/ram/dmem_array.v" Line 996: Assignment to <arg fmt="%s" index="1">dmem_rw_tmp2</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/asip_top.v</arg>&quot; line <arg fmt="%s" index="2">60</arg>: Output port &lt;<arg fmt="%s" index="3">ins_mem_en_b</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">asip_syn</arg>&gt; is unconnected or connected to loadless signal.
@@ -333,6 +336,9 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pcif_to_wrp_addr_reg_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">imem_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sprfwrp_to_wrp_addr_reg_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dmem_wrapper</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sprfwrp_to_wrp_addr_reg_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dmem_wrapper</arg>&gt;.
@@ -860,7 +866,7 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">result_63</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">multiplier</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">sprfwrp_to_wrp_addr_reg</arg>&lt;<arg fmt="%d" index="2">16</arg>:<arg fmt="%d" index="3">12</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">dmem_wrapper</arg>&gt;.
+<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">sprfwrp_to_wrp_addr_reg</arg>&lt;<arg fmt="%d" index="2">16</arg>:<arg fmt="%d" index="3">11</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">dmem_wrapper</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">gprf_bus1_r_dat</arg>&lt;<arg fmt="%d" index="2">144</arg>:<arg fmt="%d" index="3">144</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">alu_wrapper</arg>&gt;.

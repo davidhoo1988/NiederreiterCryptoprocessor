@@ -126,7 +126,7 @@ end
 		sprfwrp_to_wrp_addr_reg <= `DMEMADDRW'b0;
 	else if (t_cs) begin
 		sprfwrp_to_wrp_addr_reg <= ipt_sprfwrp_to_wrp_addr[`SUBDMEMADDRW-1:0];
-		dmemwrp_to_dram_cs_reg <= ipt_sprfwrp_to_wrp_addr[`DMEMADDRW-1:`DMEMADDRW-5];
+		dmemwrp_to_dram_cs_reg <= ipt_sprfwrp_to_wrp_addr[`DMEMADDRW-1:`DMEMADDRW-6];
 	end	
 	else
 		sprfwrp_to_wrp_addr_reg <= sprfwrp_to_wrp_addr_reg;

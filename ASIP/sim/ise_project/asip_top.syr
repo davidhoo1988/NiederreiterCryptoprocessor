@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: asip_top.prj
@@ -226,7 +226,7 @@ WARNING:HDLCompiler:91 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/w
 WARNING:HDLCompiler:413 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/wrapper/imem_wrapper.v" Line 164: Result of 32-bit expression is truncated to fit in 1-bit target.
 
 Elaborating module <dmem_wrapper>.
-WARNING:HDLCompiler:413 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/wrapper/dmem_wrapper.v" Line 142: Result of 17-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/wrapper/dmem_wrapper.v" Line 142: Result of 17-bit expression is truncated to fit in 11-bit target.
 
 Elaborating module <gprf_wrapper>.
 WARNING:HDLCompiler:1127 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/wrapper/wrapper_top.v" Line 347: Assignment to gprfwrp_to_dram_addr ignored, since the identifier is never used
@@ -317,6 +317,7 @@ Elaborating module <dmem_array>.
 
 Elaborating module <dat_sram>.
 WARNING:HDLCompiler:1499 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/dat_sram.v" Line 39: Empty module <dat_sram> remains a black box.
+WARNING:HDLCompiler:1127 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/ram/dmem_array.v" Line 996: Assignment to dmem_rw_tmp2 ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -374,9 +375,9 @@ WARNING:Xst:647 - Input <ipt_decdst_to_wrp_en_b> is never used. This port will b
     Found 1-bit register for signal <decdst_to_wrp_rw_tmp2>.
     Found 1-bit register for signal <decdst_to_wrp_rw_tmp3>.
     Found 1-bit register for signal <decdst_to_wrp_rw_tmp1>.
-    Found 5-bit register for signal <dmemwrp_to_dram_cs_reg>.
+    Found 6-bit register for signal <dmemwrp_to_dram_cs_reg>.
     Summary:
-	inferred  25 D-type flip-flop(s).
+	inferred  26 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
 Unit <dmem_wrapper> synthesized.
 
@@ -388,6 +389,7 @@ WARNING:Xst:647 - Input <ipt_decsrc_to_wrp_rmod_t_sel> is never used. This port 
     Found 1-bit register for signal <decsrc_to_wrp_en_b_tmp3>.
     Found 1-bit register for signal <decsrc_to_wrp_en_b_tmp4>.
     Found 1-bit register for signal <decsrc_to_wrp_en_b_tmp5>.
+    Found 1-bit register for signal <decsrc_to_wrp_en_b_tmp6>.
     Found 1-bit register for signal <decsrc_to_wrp_en_b_reg>.
     Found 1-bit register for signal <decsrc_to_wrp_en_b_tmp1>.
     Found 144-bit register for signal <gprf_to_wrp_dat1_reg>.
@@ -433,10 +435,10 @@ WARNING:Xst:647 - Input <ipt_decsrc_to_wrp_rmod_t_sel> is never used. This port 
     Found 1-bit register for signal <decdst_to_wrp_r7_t_sel_tmp>.
     Found 1-bit register for signal <decdst_to_wrp_rmod_t_sel_tmp>.
     Found 1-bit register for signal <halt>.
-    Found 8-bit subtractor for signal <timer_cnt[7]_GND_7_o_sub_16_OUT> created at line 683.
+    Found 8-bit subtractor for signal <timer_cnt[7]_GND_7_o_sub_16_OUT> created at line 693.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred 372 D-type flip-flop(s).
+	inferred 373 D-type flip-flop(s).
 	inferred  21 Multiplexer(s).
 Unit <gprf_wrapper> synthesized.
 
@@ -2543,8 +2545,9 @@ Unit <sprf> synthesized.
 
 Synthesizing Unit <dmem_array>.
     Related source file is "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/ram/dmem_array.v".
-    Found 12-bit register for signal <dmem_addr_tmp1>.
-    Found 5-bit register for signal <dmem_cs_tmp1>.
+    Set property "MAX_FANOUT = 18" for signal <data_in_tmp1>.
+    Found 11-bit register for signal <dmem_addr_tmp1>.
+    Found 6-bit register for signal <dmem_cs_tmp1>.
     Found 144-bit register for signal <data_in_tmp1>.
     Found 1-bit register for signal <dmem0_rw>.
     Found 1-bit register for signal <dmem1_rw>.
@@ -2564,13 +2567,41 @@ Synthesizing Unit <dmem_array>.
     Found 1-bit register for signal <dmem15_rw>.
     Found 1-bit register for signal <dmem16_rw>.
     Found 1-bit register for signal <dmem17_rw>.
-    Found 1-bit register for signal <dmem_rw_tmp2>.
-    Found 5-bit register for signal <dmem_cs_tmp2>.
+    Found 1-bit register for signal <dmem18_rw>.
+    Found 1-bit register for signal <dmem19_rw>.
+    Found 1-bit register for signal <dmem20_rw>.
+    Found 1-bit register for signal <dmem21_rw>.
+    Found 1-bit register for signal <dmem22_rw>.
+    Found 1-bit register for signal <dmem23_rw>.
+    Found 1-bit register for signal <dmem24_rw>.
+    Found 1-bit register for signal <dmem25_rw>.
+    Found 1-bit register for signal <dmem26_rw>.
+    Found 1-bit register for signal <dmem27_rw>.
+    Found 1-bit register for signal <dmem28_rw>.
+    Found 1-bit register for signal <dmem29_rw>.
+    Found 1-bit register for signal <dmem30_rw>.
+    Found 1-bit register for signal <dmem31_rw>.
+    Found 1-bit register for signal <dmem32_rw>.
+    Found 1-bit register for signal <dmem33_rw>.
+    Found 1-bit register for signal <dmem34_rw>.
+    Found 1-bit register for signal <dmem35_rw>.
+    Found 6-bit register for signal <dmem_cs_tmp2>.
+    Found 3-bit register for signal <dmem_cs_tmp3<5:3>>.
+    Found 144-bit register for signal <data_out1_reg>.
+    Found 144-bit register for signal <data_out2_reg>.
+    Found 144-bit register for signal <data_out3_reg>.
+    Found 144-bit register for signal <data_out4_reg>.
+    Found 144-bit register for signal <data_out5_reg>.
     Found 144-bit register for signal <data_out>.
-    Found 1-bit register for signal <dmem_rw_tmp1>.
+    Found 144-bit 8-to-1 multiplexer for signal <dmem_cs_tmp2[2]_data_out7[143]_wide_mux_51_OUT> created at line 1010.
+    Found 144-bit 8-to-1 multiplexer for signal <dmem_cs_tmp2[2]_data_out15[143]_wide_mux_52_OUT> created at line 1010.
+    Found 144-bit 8-to-1 multiplexer for signal <dmem_cs_tmp2[2]_data_out23[143]_wide_mux_53_OUT> created at line 1010.
+    Found 144-bit 8-to-1 multiplexer for signal <dmem_cs_tmp2[2]_data_out31[143]_wide_mux_54_OUT> created at line 1010.
+    Found 144-bit 5-to-1 multiplexer for signal <dmem_cs_tmp2[2]_GND_76_o_wide_mux_55_OUT> created at line 1010.
+    Found 144-bit 7-to-1 multiplexer for signal <dmem_cs_tmp3[5]_GND_76_o_wide_mux_62_OUT> created at line 1073.
     Summary:
-	inferred 330 D-type flip-flop(s).
-	inferred  66 Multiplexer(s).
+	inferred 1070 D-type flip-flop(s).
+	inferred 174 Multiplexer(s).
 Unit <dmem_array> synthesized.
 
 =========================================================================
@@ -2594,22 +2625,23 @@ Macro Statistics
  5-bit adder                                           : 2
  5-bit subtractor                                      : 1
  8-bit subtractor                                      : 2
-# Registers                                            : 1805
- 1-bit register                                        : 1700
+# Registers                                            : 1828
+ 1-bit register                                        : 1717
  10-bit register                                       : 2
- 12-bit register                                       : 1
- 144-bit register                                      : 34
+ 11-bit register                                       : 1
+ 144-bit register                                      : 39
  145-bit register                                      : 6
  16-bit register                                       : 24
  17-bit register                                       : 2
  19-bit register                                       : 1
  2-bit register                                        : 7
  25-bit register                                       : 2
- 3-bit register                                        : 1
+ 3-bit register                                        : 2
  32-bit register                                       : 6
  4-bit register                                        : 9
  43-bit register                                       : 2
- 5-bit register                                        : 5
+ 5-bit register                                        : 2
+ 6-bit register                                        : 3
  64-bit register                                       : 1
  8-bit register                                        : 2
 # Latches                                              : 36
@@ -2620,10 +2652,12 @@ Macro Statistics
  4-bit comparator greater                              : 1
  5-bit comparator greater                              : 1
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 1751
- 1-bit 2-to-1 multiplexer                              : 1631
+# Multiplexers                                         : 1859
+ 1-bit 2-to-1 multiplexer                              : 1733
  10-bit 2-to-1 multiplexer                             : 1
- 144-bit 8-to-1 multiplexer                            : 2
+ 144-bit 5-to-1 multiplexer                            : 1
+ 144-bit 7-to-1 multiplexer                            : 1
+ 144-bit 8-to-1 multiplexer                            : 6
  16-bit 2-to-1 multiplexer                             : 70
  17-bit 2-to-1 multiplexer                             : 3
  19-bit 2-to-1 multiplexer                             : 1
@@ -2675,6 +2709,24 @@ Loading core <dat_sram> for timing and area information for instance <dat_sram14
 Loading core <dat_sram> for timing and area information for instance <dat_sram15>.
 Loading core <dat_sram> for timing and area information for instance <dat_sram16>.
 Loading core <dat_sram> for timing and area information for instance <dat_sram17>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram18>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram19>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram20>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram21>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram22>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram23>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram24>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram25>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram26>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram27>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram28>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram29>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram30>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram31>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram32>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram33>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram34>.
+Loading core <dat_sram> for timing and area information for instance <dat_sram35>.
 INFO:Xst:2261 - The FF/Latch <first_fragment_reg_143> in Unit <split> is equivalent to the following 63 FFs/Latches, which will be removed : <first_fragment_reg_142> <first_fragment_reg_141> <first_fragment_reg_140> <first_fragment_reg_139> <first_fragment_reg_138> <first_fragment_reg_137> <first_fragment_reg_136> <first_fragment_reg_135> <first_fragment_reg_134> <first_fragment_reg_133> <first_fragment_reg_132> <first_fragment_reg_131> <first_fragment_reg_130> <first_fragment_reg_129> <first_fragment_reg_128> <first_fragment_reg_127> <first_fragment_reg_126> <first_fragment_reg_125> <first_fragment_reg_124> <first_fragment_reg_123> <first_fragment_reg_122> <first_fragment_reg_121> <first_fragment_reg_120> <first_fragment_reg_119> <first_fragment_reg_118> <first_fragment_reg_117> <first_fragment_reg_116> <first_fragment_reg_115> <first_fragment_reg_114> <first_fragment_reg_113> <first_fragment_reg_112> <first_fragment_reg_111> <first_fragment_reg_110> <first_fragment_reg_109> <first_fragment_reg_108>
    <first_fragment_reg_107> <first_fragment_reg_106> <first_fragment_reg_105> <first_fragment_reg_104> <first_fragment_reg_103> <first_fragment_reg_102> <first_fragment_reg_101> <first_fragment_reg_100> <first_fragment_reg_99> <first_fragment_reg_98> <first_fragment_reg_97> <first_fragment_reg_96> <first_fragment_reg_95> <first_fragment_reg_94> <first_fragment_reg_93> <first_fragment_reg_92> <first_fragment_reg_91> <first_fragment_reg_90> <first_fragment_reg_89> <first_fragment_reg_88> <first_fragment_reg_87> <first_fragment_reg_86> <first_fragment_reg_85> <first_fragment_reg_84> <first_fragment_reg_83> <first_fragment_reg_82> <first_fragment_reg_81> <first_fragment_reg_80> 
 INFO:Xst:2261 - The FF/Latch <second_fragment_reg_143> in Unit <split> is equivalent to the following 79 FFs/Latches, which will be removed : <second_fragment_reg_142> <second_fragment_reg_141> <second_fragment_reg_140> <second_fragment_reg_139> <second_fragment_reg_138> <second_fragment_reg_137> <second_fragment_reg_136> <second_fragment_reg_135> <second_fragment_reg_134> <second_fragment_reg_133> <second_fragment_reg_132> <second_fragment_reg_131> <second_fragment_reg_130> <second_fragment_reg_129> <second_fragment_reg_128> <second_fragment_reg_127> <second_fragment_reg_126> <second_fragment_reg_125> <second_fragment_reg_124> <second_fragment_reg_123> <second_fragment_reg_122> <second_fragment_reg_121> <second_fragment_reg_120> <second_fragment_reg_119> <second_fragment_reg_118> <second_fragment_reg_117> <second_fragment_reg_116> <second_fragment_reg_115> <second_fragment_reg_114> <second_fragment_reg_113> <second_fragment_reg_112> <second_fragment_reg_111> <second_fragment_reg_110>
@@ -2701,6 +2753,7 @@ WARNING:Xst:1710 - FF/Latch <prng_r_dat_15> (without init value) has a constant 
 WARNING:Xst:2677 - Node <pcif_to_wrp_addr_reg_7> of sequential type is unconnected in block <imem_wrapper>.
 WARNING:Xst:2677 - Node <pcif_to_wrp_addr_reg_8> of sequential type is unconnected in block <imem_wrapper>.
 WARNING:Xst:2677 - Node <pcif_to_wrp_addr_reg_9> of sequential type is unconnected in block <imem_wrapper>.
+WARNING:Xst:2677 - Node <sprfwrp_to_wrp_addr_reg_11> of sequential type is unconnected in block <dmem_wrapper>.
 WARNING:Xst:2677 - Node <sprfwrp_to_wrp_addr_reg_12> of sequential type is unconnected in block <dmem_wrapper>.
 WARNING:Xst:2677 - Node <sprfwrp_to_wrp_addr_reg_13> of sequential type is unconnected in block <dmem_wrapper>.
 WARNING:Xst:2677 - Node <sprfwrp_to_wrp_addr_reg_14> of sequential type is unconnected in block <dmem_wrapper>.
@@ -2876,7 +2929,7 @@ WARNING:Xst:2677 - Node <result_60> of sequential type is unconnected in block <
 WARNING:Xst:2677 - Node <result_61> of sequential type is unconnected in block <multiplier>.
 WARNING:Xst:2677 - Node <result_62> of sequential type is unconnected in block <multiplier>.
 WARNING:Xst:2677 - Node <result_63> of sequential type is unconnected in block <multiplier>.
-WARNING:Xst:2404 -  FFs/Latches <sprfwrp_to_wrp_addr_reg<16:12>> (without init value) have a constant value of 0 in block <dmem_wrapper>.
+WARNING:Xst:2404 -  FFs/Latches <sprfwrp_to_wrp_addr_reg<16:11>> (without init value) have a constant value of 0 in block <dmem_wrapper>.
 WARNING:Xst:2404 -  FFs/Latches <gprf_bus1_r_dat<144:144>> (without init value) have a constant value of 0 in block <alu_wrapper>.
 WARNING:Xst:2404 -  FFs/Latches <gprf_t_dat<143:26>> (without init value) have a constant value of 0 in block <prng_wrapper>.
 WARNING:Xst:2404 -  FFs/Latches <prng_r_dat<24:15>> (without init value) have a constant value of 0 in block <prng_lcg>.
@@ -3065,17 +3118,19 @@ Macro Statistics
  10-bit up counter                                     : 1
  3-bit up counter                                      : 1
  4-bit up counter                                      : 2
-# Registers                                            : 8120
- Flip-Flops                                            : 8120
+# Registers                                            : 8861
+ Flip-Flops                                            : 8861
 # Comparators                                          : 5
  16-bit comparator greater                             : 1
  4-bit comparator equal                                : 1
  4-bit comparator greater                              : 1
  5-bit comparator greater                              : 1
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 1775
- 1-bit 2-to-1 multiplexer                              : 1661
- 144-bit 8-to-1 multiplexer                            : 2
+# Multiplexers                                         : 1883
+ 1-bit 2-to-1 multiplexer                              : 1763
+ 144-bit 5-to-1 multiplexer                            : 1
+ 144-bit 7-to-1 multiplexer                            : 1
+ 144-bit 8-to-1 multiplexer                            : 6
  16-bit 2-to-1 multiplexer                             : 68
  17-bit 2-to-1 multiplexer                             : 3
  19-bit 2-to-1 multiplexer                             : 1
@@ -3869,13 +3924,157 @@ INFO:Xst:2261 - The FF/Latch <asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat1
 INFO:Xst:2261 - The FF/Latch <asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat1_reg_97> in Unit <asip_top> is equivalent to the following 2 FFs/Latches, which will be removed : <asip_syn/wrapper_top/alu_wrapper/gprf_bus1_r_dat_97> <asip_syn/wrapper_top/sprf_wrapper/sprf_t_dat_97> 
 INFO:Xst:2261 - The FF/Latch <asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat1_reg_98> in Unit <asip_top> is equivalent to the following 2 FFs/Latches, which will be removed : <asip_syn/wrapper_top/alu_wrapper/gprf_bus1_r_dat_98> <asip_syn/wrapper_top/sprf_wrapper/sprf_t_dat_98> 
 INFO:Xst:2261 - The FF/Latch <asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat1_reg_99> in Unit <asip_top> is equivalent to the following 2 FFs/Latches, which will be removed : <asip_syn/wrapper_top/alu_wrapper/gprf_bus1_r_dat_99> <asip_syn/wrapper_top/sprf_wrapper/sprf_t_dat_99> 
-Found area constraint ratio of 100 (+ 5) on block asip_top, actual ratio is 9.
+Found area constraint ratio of 100 (+ 5) on block asip_top, actual ratio is 10.
 FlipFlop asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_3 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_0 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_1 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_10 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_100 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_101 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_102 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_103 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_104 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_105 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_106 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_107 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_108 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_109 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_11 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_110 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_111 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_112 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_113 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_114 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_115 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_116 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_117 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_118 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_119 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_12 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_120 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_121 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_122 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_123 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_124 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_125 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_126 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_127 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_128 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_129 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_13 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_130 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_131 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_132 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_133 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_134 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_135 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_136 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_137 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_138 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_139 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_14 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_140 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_141 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_142 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_143 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_15 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_16 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_17 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_18 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_19 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_2 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_20 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_21 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_22 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_23 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_24 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_25 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_26 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_27 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_28 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_29 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_3 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_30 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_31 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_32 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_33 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_34 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_35 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_36 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_37 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_38 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_39 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_4 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_40 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_41 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_42 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_43 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_44 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_45 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_46 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_47 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_48 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_49 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_5 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_50 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_51 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_52 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_53 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_54 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_55 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_56 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_57 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_58 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_59 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_6 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_60 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_61 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_62 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_63 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_64 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_65 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_66 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_67 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_68 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_69 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_7 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_70 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_71 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_72 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_73 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_74 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_75 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_76 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_77 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_78 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_79 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_8 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_80 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_81 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_82 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_83 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_84 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_85 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_86 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_87 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_88 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_89 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_9 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_90 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_91 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_92 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_93 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_94 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_95 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_96 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_97 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_98 has been replicated 1 time(s)
+FlipFlop dat_sram/data_in_tmp1_99 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
 Processing Unit <asip_top> :
-	Found 5-bit shift register for signal <asip_syn/wrapper_top/gprf_wrapper/decsrc_to_wrp_en_b_reg>.
+	Found 6-bit shift register for signal <asip_syn/wrapper_top/gprf_wrapper/decsrc_to_wrp_en_b_reg>.
 	Found 2-bit shift register for signal <asip_syn/prng/multiplier/result_15>.
 	Found 2-bit shift register for signal <asip_syn/prng/multiplier/result_14>.
 	Found 2-bit shift register for signal <asip_syn/prng/multiplier/result_13>.
@@ -3892,23 +4091,24 @@ Processing Unit <asip_top> :
 	Found 2-bit shift register for signal <asip_syn/prng/multiplier/result_2>.
 	Found 2-bit shift register for signal <asip_syn/prng/multiplier/result_1>.
 	Found 2-bit shift register for signal <asip_syn/prng/multiplier/result_0>.
-	Found 2-bit shift register for signal <dat_sram/dmem_cs_tmp2_4>.
-	Found 2-bit shift register for signal <dat_sram/dmem_cs_tmp2_3>.
+	Found 3-bit shift register for signal <dat_sram/dmem_cs_tmp3_5>.
+	Found 3-bit shift register for signal <dat_sram/dmem_cs_tmp3_4>.
+	Found 3-bit shift register for signal <dat_sram/dmem_cs_tmp3_3>.
 	Found 2-bit shift register for signal <dat_sram/dmem_cs_tmp2_2>.
 	Found 2-bit shift register for signal <dat_sram/dmem_cs_tmp2_1>.
 	Found 2-bit shift register for signal <dat_sram/dmem_cs_tmp2_0>.
-	Found 2-bit shift register for signal <dat_sram/dmem_rw_tmp2>.
 Unit <asip_top> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 7212
- Flip-Flops                                            : 7212
+# Registers                                            : 8093
+ Flip-Flops                                            : 8093
 # Shift Registers                                      : 23
- 2-bit shift register                                  : 22
- 5-bit shift register                                  : 1
+ 2-bit shift register                                  : 19
+ 3-bit shift register                                  : 3
+ 6-bit shift register                                  : 1
 
 =========================================================================
 
@@ -3931,28 +4131,28 @@ Top Level Output File Name         : asip_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 11956
-#      GND                         : 23
+# BELS                             : 13445
+#      GND                         : 41
 #      INV                         : 309
 #      LUT1                        : 319
-#      LUT2                        : 619
-#      LUT3                        : 1344
-#      LUT4                        : 856
-#      LUT5                        : 2734
-#      LUT6                        : 4305
+#      LUT2                        : 617
+#      LUT3                        : 1493
+#      LUT4                        : 851
+#      LUT5                        : 2713
+#      LUT6                        : 5062
 #      MUXCY                       : 720
-#      MUXF7                       : 9
-#      VCC                         : 23
+#      MUXF7                       : 584
+#      VCC                         : 41
 #      XORCY                       : 695
-# FlipFlops/Latches                : 7261
-#      FD                          : 494
+# FlipFlops/Latches                : 8143
+#      FD                          : 1501
 #      FDC                         : 393
-#      FDCE                        : 5554
-#      FDE                         : 636
+#      FDCE                        : 5553
+#      FDE                         : 493
 #      FDP                         : 1
-#      FDPE                        : 11
+#      FDPE                        : 12
 #      FDRE                        : 133
-#      FDSE                        : 18
+#      FDSE                        : 36
 #      LD                          : 21
 # RAMS                             : 290
 #      RAMB36E1                    : 290
@@ -3974,18 +4174,18 @@ Selected Device : 6vlx240tff784-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            7261  out of  301440     2%  
- Number of Slice LUTs:                10509  out of  150720     6%  
-    Number used as Logic:             10486  out of  150720     6%  
+ Number of Slice Registers:            8143  out of  301440     2%  
+ Number of Slice LUTs:                11387  out of  150720     7%  
+    Number used as Logic:             11364  out of  150720     7%  
     Number used as Memory:               23  out of  58400     0%  
        Number used as SRL:               23
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  12896
-   Number with an unused Flip Flop:    5635  out of  12896    43%  
-   Number with an unused LUT:          2387  out of  12896    18%  
-   Number of fully used LUT-FF pairs:  4874  out of  12896    37%  
-   Number of unique control sets:        62
+ Number of LUT Flip Flop pairs used:  13634
+   Number with an unused Flip Flop:    5491  out of  13634    40%  
+   Number with an unused LUT:          2247  out of  13634    16%  
+   Number of fully used LUT-FF pairs:  5896  out of  13634    43%  
+   Number of unique control sets:        61
 
 IO Utilization: 
  Number of IOs:                         147
@@ -4015,14 +4215,14 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
-Clock Signal                                                                                                                           | Clock buffer(FF name)                                    | Load  |
----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
-clk                                                                                                                                    | BUFGP                                                    | 7556  |
-asip_syn/ins_decoder/opr_decoder/_n0129(asip_syn/ins_decoder/opr_decoder/_n01291:O)                                                    | NONE(*)(asip_syn/ins_decoder/opr_decoder/alu_typ_sel_0)  | 4     |
-asip_syn/dec_delay_src_dst_sel(asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel5:O)                                                  | NONE(*)(asip_syn/ins_decoder/opr_decoder/src_dst_delay_0)| 10    |
-asip_syn/ins_decoder/dst_decoder/opr_code[4]_opr_code[4]_AND_95_o(asip_syn/ins_decoder/dst_decoder/opr_code[4]_opr_code[4]_AND_95_o1:O)| NONE(*)(asip_syn/ins_decoder/dst_decoder/jmp_addr_0)     | 7     |
----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
+Clock Signal                                                                                                                                                   | Clock buffer(FF name)                                    | Load  |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
+clk                                                                                                                                                            | BUFGP                                                    | 8438  |
+asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel2(asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel3:O)                                                     | NONE(*)(asip_syn/ins_decoder/opr_decoder/alu_typ_sel_0)  | 4     |
+asip_syn/dec_delay_src_dst_sel(asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel4:O)                                                                          | NONE(*)(asip_syn/ins_decoder/opr_decoder/src_dst_delay_0)| 10    |
+asip_syn/ins_decoder/opr_decoder/opr_code[4]_alu_typ_sel[3]_select_63_OUT<2>1(asip_syn/ins_decoder/opr_decoder/opr_code[4]_alu_typ_sel[3]_select_63_OUT<2>11:O)| NONE(*)(asip_syn/ins_decoder/dst_decoder/jmp_addr_0)     | 7     |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
 (*) These 3 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -4030,37 +4230,55 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Control Signal                                       | Buffer(FF name)                                                                                                                                 | Load  |
------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-dat_sram/dat_sram0/N1(dat_sram/dat_sram0/XST_GND:G)  | NONE(dat_sram/dat_sram0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram1/N1(dat_sram/dat_sram1/XST_GND:G)  | NONE(dat_sram/dat_sram1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram10/N1(dat_sram/dat_sram10/XST_GND:G)| NONE(dat_sram/dat_sram10/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram11/N1(dat_sram/dat_sram11/XST_GND:G)| NONE(dat_sram/dat_sram11/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram12/N1(dat_sram/dat_sram12/XST_GND:G)| NONE(dat_sram/dat_sram12/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram13/N1(dat_sram/dat_sram13/XST_GND:G)| NONE(dat_sram/dat_sram13/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram14/N1(dat_sram/dat_sram14/XST_GND:G)| NONE(dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram15/N1(dat_sram/dat_sram15/XST_GND:G)| NONE(dat_sram/dat_sram15/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram16/N1(dat_sram/dat_sram16/XST_GND:G)| NONE(dat_sram/dat_sram16/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 32    |
-dat_sram/dat_sram17/N1(dat_sram/dat_sram17/XST_GND:G)| NONE(dat_sram/dat_sram17/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram2/N1(dat_sram/dat_sram2/XST_GND:G)  | NONE(dat_sram/dat_sram2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)  | 32    |
-dat_sram/dat_sram3/N1(dat_sram/dat_sram3/XST_GND:G)  | NONE(dat_sram/dat_sram3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)  | 32    |
-dat_sram/dat_sram4/N1(dat_sram/dat_sram4/XST_GND:G)  | NONE(dat_sram/dat_sram4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram5/N1(dat_sram/dat_sram5/XST_GND:G)  | NONE(dat_sram/dat_sram5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram6/N1(dat_sram/dat_sram6/XST_GND:G)  | NONE(dat_sram/dat_sram6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram7/N1(dat_sram/dat_sram7/XST_GND:G)  | NONE(dat_sram/dat_sram7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)  | 32    |
-dat_sram/dat_sram8/N1(dat_sram/dat_sram8/XST_GND:G)  | NONE(dat_sram/dat_sram8/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 32    |
-dat_sram/dat_sram9/N1(dat_sram/dat_sram9/XST_GND:G)  | NONE(dat_sram/dat_sram9/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)  | 32    |
-ins_sram/N1(ins_sram/XST_GND:G)                      | NONE(ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram)              | 4     |
------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+-----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                       | Buffer(FF name)                                                                                                                                | Load  |
+-----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+dat_sram/dat_sram0/N1(dat_sram/dat_sram0/XST_GND:G)  | NONE(dat_sram/dat_sram0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram1/N1(dat_sram/dat_sram1/XST_GND:G)  | NONE(dat_sram/dat_sram1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram10/N1(dat_sram/dat_sram10/XST_GND:G)| NONE(dat_sram/dat_sram10/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram11/N1(dat_sram/dat_sram11/XST_GND:G)| NONE(dat_sram/dat_sram11/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram12/N1(dat_sram/dat_sram12/XST_GND:G)| NONE(dat_sram/dat_sram12/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram13/N1(dat_sram/dat_sram13/XST_GND:G)| NONE(dat_sram/dat_sram13/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram14/N1(dat_sram/dat_sram14/XST_GND:G)| NONE(dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram15/N1(dat_sram/dat_sram15/XST_GND:G)| NONE(dat_sram/dat_sram15/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram16/N1(dat_sram/dat_sram16/XST_GND:G)| NONE(dat_sram/dat_sram16/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram17/N1(dat_sram/dat_sram17/XST_GND:G)| NONE(dat_sram/dat_sram17/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram18/N1(dat_sram/dat_sram18/XST_GND:G)| NONE(dat_sram/dat_sram18/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram19/N1(dat_sram/dat_sram19/XST_GND:G)| NONE(dat_sram/dat_sram19/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram2/N1(dat_sram/dat_sram2/XST_GND:G)  | NONE(dat_sram/dat_sram2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram20/N1(dat_sram/dat_sram20/XST_GND:G)| NONE(dat_sram/dat_sram20/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram21/N1(dat_sram/dat_sram21/XST_GND:G)| NONE(dat_sram/dat_sram21/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram22/N1(dat_sram/dat_sram22/XST_GND:G)| NONE(dat_sram/dat_sram22/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram23/N1(dat_sram/dat_sram23/XST_GND:G)| NONE(dat_sram/dat_sram23/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram24/N1(dat_sram/dat_sram24/XST_GND:G)| NONE(dat_sram/dat_sram24/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram25/N1(dat_sram/dat_sram25/XST_GND:G)| NONE(dat_sram/dat_sram25/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram26/N1(dat_sram/dat_sram26/XST_GND:G)| NONE(dat_sram/dat_sram26/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram27/N1(dat_sram/dat_sram27/XST_GND:G)| NONE(dat_sram/dat_sram27/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram28/N1(dat_sram/dat_sram28/XST_GND:G)| NONE(dat_sram/dat_sram28/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram29/N1(dat_sram/dat_sram29/XST_GND:G)| NONE(dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram3/N1(dat_sram/dat_sram3/XST_GND:G)  | NONE(dat_sram/dat_sram3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram30/N1(dat_sram/dat_sram30/XST_GND:G)| NONE(dat_sram/dat_sram30/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram31/N1(dat_sram/dat_sram31/XST_GND:G)| NONE(dat_sram/dat_sram31/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram32/N1(dat_sram/dat_sram32/XST_GND:G)| NONE(dat_sram/dat_sram32/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram33/N1(dat_sram/dat_sram33/XST_GND:G)| NONE(dat_sram/dat_sram33/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram34/N1(dat_sram/dat_sram34/XST_GND:G)| NONE(dat_sram/dat_sram34/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram35/N1(dat_sram/dat_sram35/XST_GND:G)| NONE(dat_sram/dat_sram35/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram4/N1(dat_sram/dat_sram4/XST_GND:G)  | NONE(dat_sram/dat_sram4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram5/N1(dat_sram/dat_sram5/XST_GND:G)  | NONE(dat_sram/dat_sram5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram6/N1(dat_sram/dat_sram6/XST_GND:G)  | NONE(dat_sram/dat_sram6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram7/N1(dat_sram/dat_sram7/XST_GND:G)  | NONE(dat_sram/dat_sram7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram8/N1(dat_sram/dat_sram8/XST_GND:G)  | NONE(dat_sram/dat_sram8/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram9/N1(dat_sram/dat_sram9/XST_GND:G)  | NONE(dat_sram/dat_sram9/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+ins_sram/N1(ins_sram/XST_GND:G)                      | NONE(ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram)             | 4     |
+-----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -3
 
    Minimum period: 3.578ns (Maximum Frequency: 279.454MHz)
-   Minimum input arrival time before clock: 1.652ns
-   Maximum output required time after clock: 0.585ns
+   Minimum input arrival time before clock: 1.591ns
+   Maximum output required time after clock: 0.590ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -4070,7 +4288,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 3.578ns (frequency: 279.454MHz)
-  Total number of paths / destination ports: 276600 / 19980
+  Total number of paths / destination ports: 282256 / 23058
 -------------------------------------------------------------------------
 Delay:               3.578ns (Levels of Logic = 146)
   Source:            asip_syn/sprf/r_1_0 (FF)
@@ -4236,9 +4454,9 @@ Delay:               3.578ns (Levels of Logic = 146)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 1843 / 1838
+  Total number of paths / destination ports: 1845 / 1839
 -------------------------------------------------------------------------
-Offset:              1.652ns (Levels of Logic = 3)
+Offset:              1.591ns (Levels of Logic = 3)
   Source:            reset_b (PAD)
   Destination:       asip_syn/alu/gopf_div/mul_t_in_reg_0 (FF)
   Destination Clock: clk rising
@@ -4247,19 +4465,19 @@ Offset:              1.652ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             9   0.003   0.394  reset_b_IBUF (reset_b_IBUF)
-     LUT3:I1->O            1   0.053   0.594  asip_syn/alu/gopf_div/_n4622_inv_SW0 (N380)
+     IBUF:I->O             9   0.003   0.333  reset_b_IBUF (reset_b_IBUF)
+     LUT3:I2->O            1   0.053   0.594  asip_syn/alu/gopf_div/_n4622_inv_SW0 (N380)
      LUT6:I0->O          160   0.053   0.406  asip_syn/alu/gopf_div/_n4622_inv (asip_syn/alu/gopf_div/_n4622_inv)
      FDE:CE                    0.149          asip_syn/alu/gopf_div/mul_o_in_reg_143
     ----------------------------------------
-    Total                      1.652ns (0.258ns logic, 1.394ns route)
-                                       (15.6% logic, 84.4% route)
+    Total                      1.591ns (0.258ns logic, 1.333ns route)
+                                       (16.2% logic, 83.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 144 / 144
 -------------------------------------------------------------------------
-Offset:              0.585ns (Levels of Logic = 1)
+Offset:              0.590ns (Levels of Logic = 1)
   Source:            asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat1_reg_143 (FF)
   Destination:       out<143> (PAD)
   Source Clock:      clk rising
@@ -4268,11 +4486,11 @@ Offset:              0.585ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             6   0.280   0.302  asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat1_reg_143 (asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat1_reg_143)
+     FDCE:C->Q             7   0.280   0.307  asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat1_reg_143 (asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat1_reg_143)
      OBUF:I->O                 0.003          out_143_OBUF (out<143>)
     ----------------------------------------
-    Total                      0.585ns (0.283ns logic, 0.302ns route)
-                                       (48.3% logic, 51.7% route)
+    Total                      0.590ns (0.283ns logic, 0.307ns route)
+                                       (47.9% logic, 52.1% route)
 
 =========================================================================
 
@@ -4284,10 +4502,10 @@ Clock to Setup on destination clock asip_syn/dec_delay_src_dst_sel
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    2.632|         |
+clk            |         |         |    2.032|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock asip_syn/ins_decoder/dst_decoder/opr_code[4]_opr_code[4]_AND_95_o
+Clock to Setup on destination clock asip_syn/ins_decoder/opr_decoder/opr_code[4]_alu_typ_sel[3]_select_63_OUT<2>1
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -4295,7 +4513,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    0.647|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock asip_syn/ins_decoder/opr_decoder/_n0129
+Clock to Setup on destination clock asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel2
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -4304,28 +4522,28 @@ clk            |         |         |    1.032|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
------------------------------------------------------------------+---------+---------+---------+---------+
-                                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------------------------------------------------------+---------+---------+---------+---------+
-asip_syn/dec_delay_src_dst_sel                                   |         |    3.195|         |         |
-asip_syn/ins_decoder/dst_decoder/opr_code[4]_opr_code[4]_AND_95_o|         |    0.561|         |         |
-asip_syn/ins_decoder/opr_decoder/_n0129                          |         |    0.561|         |         |
-clk                                                              |    3.578|         |         |         |
------------------------------------------------------------------+---------+---------+---------+---------+
+-----------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------------------------------------+---------+---------+---------+---------+
+asip_syn/dec_delay_src_dst_sel                                               |         |    3.178|         |         |
+asip_syn/ins_decoder/opr_decoder/opr_code[4]_alu_typ_sel[3]_select_63_OUT<2>1|         |    0.561|         |         |
+asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel2                          |         |    0.561|         |         |
+clk                                                                          |    3.578|         |         |         |
+-----------------------------------------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 48.00 secs
-Total CPU time to Xst completion: 48.17 secs
+Total REAL time to Xst completion: 49.00 secs
+Total CPU time to Xst completion: 47.98 secs
  
 --> 
 
 
-Total memory usage is 218956 kilobytes
+Total memory usage is 241152 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  732 (   0 filtered)
+Number of warnings :  734 (   0 filtered)
 Number of infos    :  354 (   0 filtered)
 

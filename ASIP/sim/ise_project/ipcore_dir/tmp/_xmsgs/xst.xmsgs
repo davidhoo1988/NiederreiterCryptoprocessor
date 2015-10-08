@@ -8,100 +8,52 @@
 <msg type="warning" file="UtilitiesC" num="159" delta="old" >Message file &quot;<arg fmt="%s" index="1">usenglish/ip.msg</arg>&quot; wasn&apos;t found.
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">0</arg>: (<arg fmt="%d" index="2">0</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">0</arg>: (<arg fmt="%d" index="2">0</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">1</arg>: (<arg fmt="%d" index="2">9</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">1</arg>: (<arg fmt="%d" index="2">18</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">2</arg>: (<arg fmt="%d" index="2">18</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">2</arg>: (<arg fmt="%d" index="2">36</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">3</arg>: (<arg fmt="%d" index="2">27</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">3</arg>: (<arg fmt="%d" index="2">54</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">4</arg>: (<arg fmt="%d" index="2">36</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">4</arg>: (<arg fmt="%d" index="2">72</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">5</arg>: (<arg fmt="%d" index="2">45</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">5</arg>: (<arg fmt="%d" index="2">90</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">6</arg>: (<arg fmt="%d" index="2">54</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">6</arg>: (<arg fmt="%d" index="2">108</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">7</arg>: (<arg fmt="%d" index="2">63</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">7</arg>: (<arg fmt="%d" index="2">126</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">8</arg>: (<arg fmt="%d" index="2">72</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">0</arg>: (<arg fmt="%d" index="2">0</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">9</arg>: (<arg fmt="%d" index="2">81</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">1</arg>: (<arg fmt="%d" index="2">18</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">10</arg>: (<arg fmt="%d" index="2">90</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">2</arg>: (<arg fmt="%d" index="2">36</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">11</arg>: (<arg fmt="%d" index="2">99</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">3</arg>: (<arg fmt="%d" index="2">54</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">12</arg>: (<arg fmt="%d" index="2">108</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">4</arg>: (<arg fmt="%d" index="2">72</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">13</arg>: (<arg fmt="%d" index="2">117</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">5</arg>: (<arg fmt="%d" index="2">90</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">14</arg>: (<arg fmt="%d" index="2">126</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">6</arg>: (<arg fmt="%d" index="2">108</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">15</arg>: (<arg fmt="%d" index="2">135</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">0</arg>: (<arg fmt="%d" index="2">0</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">1</arg>: (<arg fmt="%d" index="2">9</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">2</arg>: (<arg fmt="%d" index="2">18</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">3</arg>: (<arg fmt="%d" index="2">27</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">4</arg>: (<arg fmt="%d" index="2">36</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">5</arg>: (<arg fmt="%d" index="2">45</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">6</arg>: (<arg fmt="%d" index="2">54</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">7</arg>: (<arg fmt="%d" index="2">63</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">8</arg>: (<arg fmt="%d" index="2">72</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">9</arg>: (<arg fmt="%d" index="2">81</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">10</arg>: (<arg fmt="%d" index="2">90</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">11</arg>: (<arg fmt="%d" index="2">99</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">12</arg>: (<arg fmt="%d" index="2">108</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">13</arg>: (<arg fmt="%d" index="2">117</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">14</arg>: (<arg fmt="%d" index="2">126</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
-</msg>
-
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">15</arg>: (<arg fmt="%d" index="2">135</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">9</arg>x<arg fmt="%d" index="5">4096</arg> 	u:<arg fmt="%d" index="6">9</arg>
+<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">7</arg>: (<arg fmt="%d" index="2">126</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">2048</arg> 	u:<arg fmt="%d" index="6">18</arg>
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="746" delta="old" >"/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_input_block.vhd" Line 416: Range is empty (null range)
@@ -119,61 +71,61 @@
 <msg type="warning" file="HDLCompiler" num="220" delta="old" >"/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_prim_width.vhd" Line 978: Assignment ignored
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_prim_wrapper_v6.vhd" Line 512: Net &lt;<arg fmt="%s" index="1">doutb_i[8]</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_prim_wrapper_v6.vhd" Line 512: Net &lt;<arg fmt="%s" index="1">doutb_i[17]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">doutb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">doutb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">rdaddrecc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">rdaddrecc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_bid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_bid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_bresp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_bresp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rdata</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rdata</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rresp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rresp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rdaddrecc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rdaddrecc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">sbiterr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">sbiterr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">dbiterr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">dbiterr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_awready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_awready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_wready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_wready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_bvalid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_bvalid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_arready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_arready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rlast</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rlast</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rvalid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rvalid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_sbiterr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_sbiterr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_dbiterr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/dat_sram.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_dbiterr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">S_AXI_AWID&lt;3:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -287,7 +239,7 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;143:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -344,100 +296,52 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[0].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[0].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[0].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[0].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[1].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[1].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[1].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[1].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[2].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[2].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[2].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[2].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[3].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[3].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[3].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[3].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[4].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[4].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[4].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[4].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[5].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[5].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[5].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[5].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[6].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[6].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[6].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[6].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[7].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[7].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[7].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[8].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[8].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[9].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[9].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[10].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[10].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[11].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[11].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[12].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[12].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[13].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[13].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[14].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[14].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[15].ram.r</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[15].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/tmp/_cg/_dbg/blk_mem_gen_v6_2/blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1341</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[7].ram.r</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">RDADDRECC</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -452,10 +356,10 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DINB&lt;17:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -479,7 +383,7 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_1</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_1</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000000</arg>).
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -491,10 +395,10 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DINB&lt;17:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -518,7 +422,7 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_2</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_2</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000000</arg>).
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -530,10 +434,10 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DINB&lt;17:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -557,7 +461,7 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_3</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_3</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000000</arg>).
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -569,10 +473,10 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DINB&lt;17:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -596,7 +500,7 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_4</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_4</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000000</arg>).
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -608,10 +512,10 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DINB&lt;17:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -635,7 +539,7 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_5</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_5</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000000</arg>).
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -647,10 +551,10 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DINB&lt;17:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -674,7 +578,7 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_6</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_6</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000000</arg>).
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -686,10 +590,10 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DINB&lt;17:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -713,7 +617,7 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_7</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_7</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000000</arg>).
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -725,49 +629,10 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLKB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ENB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">REGCEB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_8</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">DBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DINB&lt;17:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -791,280 +656,7 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_9</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">DBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLKB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ENB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">REGCEB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_10</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">DBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLKB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ENB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">REGCEB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_11</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">DBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLKB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ENB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">REGCEB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_12</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">DBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLKB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ENB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">REGCEB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_13</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">DBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLKB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ENB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">REGCEB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_14</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">DBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLKB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ENB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">REGCEB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_15</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">DBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WEB&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDRB&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DINB&lt;8:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLKB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SSRB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ENB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">REGCEB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_16</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">doutb_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_wrapper_v6_8</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000000</arg>).
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -1076,7 +668,7 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DOUTB_I&lt;143:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">RDADDRECC_I&lt;11:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RDADDRECC_I&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLKB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.

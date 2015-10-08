@@ -83,7 +83,7 @@ ENTITY dat_sram_top IS
       --Inputs - Port A
   
     WEA            : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA          : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    ADDRA          : IN STD_LOGIC_VECTOR(10 DOWNTO 0);
   
     DINA           : IN STD_LOGIC_VECTOR(143 DOWNTO 0);
   
@@ -110,7 +110,7 @@ ARCHITECTURE xilinx OF dat_sram_top IS
       --Port A
   
     WEA        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA      : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    ADDRA      : IN STD_LOGIC_VECTOR(10 DOWNTO 0);
   
     DINA       : IN STD_LOGIC_VECTOR(143 DOWNTO 0);
   
