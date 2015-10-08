@@ -4,9 +4,11 @@ line3 --- 1
 line4 --- x
 line5 --- g0*g1^-1
 line6-line7287 --- code locators(65536 GF(2^16) elements)
-line7288-line72823 --- goppa code patrity check matrix(transposed)
+line7288-line72823 --- goppa code parity check matrix(transposed)
 
-
+//---------------------------------
+// 18 blocks brams
+//---------------------------------
 data0.txt --- 1 ~ 4096
 data1.txt --- 4097 ~ 8192
 data2.txt --- 8193 ~ 12288
@@ -25,6 +27,46 @@ data14.txt --- 57345 ~ 61440
 data15.txt --- 61441 ~ 65536
 data16.txt --- 65537 ~ 69632
 data17.txt --- 69633 ~ 72823(not fully occupied)
+
+//---------------------------------
+// 36 blocks brams
+//---------------------------------
+data0.txt --- 1 ~ 2048
+data1.txt --- 2049 ~ 4096
+data2.txt --- 4097 ~ 6144
+data3.txt --- 6145 ~ 8192
+data4.txt --- 8193 ~ 10240
+data5.txt --- 10241 ~ 12288
+data6.txt --- 12289 ~ 14336
+data7.txt --- 14337 ~ 16384
+data8.txt --- 16385 ~ 18432
+data9.txt --- 18433 ~ 20480
+data10.txt --- 20481 ~ 22528
+data11.txt --- 22529 ~ 24576
+data12.txt --- 24577 ~ 26624
+data13.txt --- 26625 ~ 28672
+data14.txt --- 28673 ~ 30720
+data15.txt --- 30721 ~ 32768
+data16.txt --- 32769 ~ 34816
+data17.txt --- 34817 ~ 36864
+data18.txt --- 36865 ~ 38912
+data19.txt --- 38913 ~ 40960
+data20.txt --- 40961 ~ 43008
+data21.txt --- 43009 ~ 45056
+data22.txt --- 45057 ~ 47104
+data23.txt --- 47105 ~ 49152
+data24.txt --- 49153 ~ 51200
+data25.txt --- 51201 ~ 53248
+data26.txt --- 53249 ~ 55296
+data27.txt --- 55297 ~ 57344
+data28.txt --- 57345 ~ 59392
+data29.txt --- 59393 ~ 61440
+data30.txt --- 61441 ~ 63488
+data31.txt --- 63489 ~ 65536
+data32.txt --- 65537 ~ 67584
+data33.txt --- 67585 ~ 69632
+data34.txt --- 69633 ~ 71680
+data35.txt --- 71681 ~ 72823(not fully occupied, total:1143)
 	
 	
 	
