@@ -1,0 +1,99 @@
+
+<smartXplorerReport>
+    <command>smartxplorer -p xc6vlx240t-ff784-3 -b -wd smartxplorer_results asip_top.ngd -to "-v 3 -s 3 -n 3 -fastpaths -xml asip_top.twx -ucf asip_top.ucf" -max_runs 3
+    </command>
+    <programStatus>Done
+    </programStatus>
+    <programPID>10686
+    </programPID>
+    
+    <strategy name="MapRunTime">
+        <strategyData>map  -ol high -w ; par  -ol high 
+        </strategyData>
+        <xdsFile>mapruntime.xds
+        </xdsFile>
+        <host name="david-desktop">
+            <hostData>Linux, i686, 8-processor, 8G RAM
+            </hostData>
+        </host>
+        <runIndex>run1
+        </runIndex>
+        <status>Done
+        </status>
+        <logFile>asip_top_sx.log
+        </logFile>
+        <timingScore>25767
+        </timingScore>
+        <WorstCaseSlack>-0.417ns
+        </WorstCaseSlack>
+        <Luts>10,414 (6%)
+	</Luts>
+	<SliceRegisters>7,951 (2%)
+	</SliceRegisters>
+	<runTime>0h 7m 45s
+        </runTime>
+    </strategy>
+    <strategy name="MapIOReg">
+        <strategyData>map  -ol high -pr b -w ; par  -ol high -xe n 
+        </strategyData>
+        <xdsFile>mapioreg.xds
+        </xdsFile>
+        <host name="david-desktop">
+            <hostData>Linux, i686, 8-processor, 8G RAM
+            </hostData>
+        </host>
+        <runIndex>run2
+        </runIndex>
+        <status>Done
+        </status>
+        <logFile>asip_top_sx.log
+        </logFile>
+        <timingScore>4272
+        </timingScore>
+        <WorstCaseSlack>-0.439ns
+        </WorstCaseSlack>
+        <Luts>10,414 (6%)
+	</Luts>
+	<SliceRegisters>7,951 (2%)
+	</SliceRegisters>
+	<runTime>0h 7m 35s
+        </runTime>
+    </strategy>
+    <strategy name="MapRegDup">
+        <strategyData>map  -ol high -xe n -register_duplication on -w ; par  -ol high -xe n 
+        </strategyData>
+        <xdsFile>mapregdup.xds
+        </xdsFile>
+        <host name="david-desktop">
+            <hostData>Linux, i686, 8-processor, 8G RAM
+            </hostData>
+        </host>
+        <runIndex>run3
+        </runIndex>
+        <status>Done
+        </status>
+        <logFile>asip_top_sx.log
+        </logFile>
+        <timingScore>431
+        </timingScore>
+        <WorstCaseSlack>-0.108ns
+        </WorstCaseSlack>
+        <Luts>10,509 (6%)
+	</Luts>
+	<SliceRegisters>8,223 (2%)
+	</SliceRegisters>
+	<runTime>0h 9m 5s
+        </runTime>
+    </strategy>
+    <bestStrategy>MapRegDup
+    </bestStrategy>
+    <envVariables>
+        <env name="PATH"  value="/home/david/Xilinx/ISE13.2/ISE_DS/ISE//bin/lin:/home/david/jdk1.7.0_67/bin:/home/david/jdk1.7.0_67/jre/bin:/home/david/sage-6.2-i686-Linux:/home/david/synopsys/dc201303/bin:/home/david/texlive/2014/bin/i386-linux:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/david/modelsim6.5b/modeltech/bin:/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin"/>
+        <env name="LD_LIBRARY_PATH"  value="/home/david/Xilinx/ISE13.2/ISE_DS/ISE//lib/lin:/home/david/gf2x-1.1"/>
+        <env name="XILINX"  value="/home/david/Xilinx/ISE13.2/ISE_DS/ISE/"/>
+        <env name="LM_LICENSE_FILE"  value="/home/david/modelsim6.5b/license/LICENSE.TXT"/>
+        
+    </envVariables>
+    <copyResult>MapRegDup
+    </copyResult>
+</smartXplorerReport>

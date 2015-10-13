@@ -1,0 +1,46 @@
+strategySpecString = ':oc:sqmap:sq:cl:sp:sq:sp:dsol:sphigh:sp:dsw:sp:sq:cm:sp:sqpower:sq:cl:sp:sqoff:sq:cm:sp:sqbitgen:sq:cl:sp:sqon:sq:cm:sp:sqsynplify:sq:cl:sp:sq:sq:cm:sp:sqngdbuild:sq:cl:sp:sq:dssd:sp:clslhome:clsldavid:clslDropbox:clslNiederreiterCryptoprocessor:clslASIP:clslsim:clslise_project:sp:dsp:spxc6vlx240t:dsff784:ds3:sp:dsuc:sp:clslhome:clsldavid:clslDropbox:clslNiederreiterCryptoprocessor:clslASIP:clslsim:clslise_project:clslasip_top.ucf:sq:cm:sp:sqtrce:sq:cl:sp:sq:dsv:sp3:sp:dss:sp3:sp:dsn:sp3:sp:dsfastpaths:sp:dsxml:spasip_top.twx:sp:dsucf:spasip_top.ucf:sq:cm:sp:sqmax_score:sq:cl:spNone:cm:sp:sqindex:sq:cl:sp1:cm:sp:sqpar:sq:cl:sp:sq:sp:dsol:sphigh:sp:sq:cm:sp:sqname:sq:cl:sp:sqMapRunTime:sq:cm:sp:sqxst:sq:cl:sp:sq:sq:cm:sp:sqarea:sq:cl:sp:os:sqlut:sq:cm:sp:sqslice_reg:sq:cs:cm:sp:sqversion:sq:cl:sp:sq13.2:sq:cm:sp:sqenv:sq:cl:sp:sq:oc:cc:sq:cm:sp:sqsxLaunchDir:sq:cl:sp:sq:slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:sq:cc'
+Xilinx Environment Variables:
+
+{'XILINX': '/home/david/Xilinx/ISE13.2/ISE_DS/ISE/'
+'PATH': '/home/david/Xilinx/ISE13.2/ISE_DS/ISE//bin/lin:/home/david/jdk1.7.0_67/bin:/home/david/jdk1.7.0_67/jre/bin:/home/david/sage-6.2-i686-Linux:/home/david/synopsys/dc201303/bin:/home/david/texlive/2014/bin/i386-linux:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/david/modelsim6.5b/modeltech/bin:/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin'
+'LD_LIBRARY_PATH': '/home/david/Xilinx/ISE13.2/ISE_DS/ISE//lib/lin:/home/david/gf2x-1.1'
+'LM_LICENSE_FILE': '/home/david/modelsim6.5b/license/LICENSE.TXT'}
+envDict = {}
+PATH = ['/home/david/Xilinx/ISE13.2/ISE_DS/ISE//bin/lin', '/home/david/jdk1.7.0_67/bin', '/home/david/jdk1.7.0_67/jre/bin', '/home/david/sage-6.2-i686-Linux', '/home/david/synopsys/dc201303/bin', '/home/david/texlive/2014/bin/i386-linux', '/usr/lib/lightdm/lightdm', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/home/david/modelsim6.5b/modeltech/bin', '/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin']
+Found xst at /home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/xst.
+Found ngdbuild at /home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/ngdbuild.
+Found map at /home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/map.
+Found par at /home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/par.
+Found trce at /home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/trce.
+Found xpwr at /home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/xpwr.
+Found bitgen at /home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/bitgen.
+david-desktop_0.stat:/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/.smartxplorer/.sx.keepAlive.david-desktop_0
+INFO: total number of threads running this host 704
+...searching for file: mapruntime.xds
+Creating XDS file ... mapruntime.xds
+###################################
+
+      <property name = "Map:Placer Effort Level"
+               value = "High" />
+      <property name = "Place &amp; Route:Place &amp; Route Effort Level (Overall)"
+               value = "High" />
+      <property name = "Generate Post-Place &amp; Route Static Timing:Number of Paths in Error/Verbose Report"
+               value = "3" />
+      <property name = "Generate Post-Place &amp; Route Static Timing:Report Type"
+               value = "Verbose Report" />
+      <property name = "Generate Post-Place &amp; Route Static Timing:Change Device Speed To"
+               value = "-3" />
+      <property name = "Generate Post-Place &amp; Route Static Timing:Report Paths by Endpoint"
+               value = "3" />
+      <property name = "Generate Post-Place &amp; Route Static Timing:Report Fastest Path(s) in Each Constraint"
+               value = "true" />
+###################################
+launching map with options  -ol high -w  -p xc6vlx240t-ff784-3 -o asip_top_map.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun1:slasip_top.pcf...
+runTask: map asip_top.ngd -ol high -w -p xc6vlx240t-ff784-3 -o asip_top_map.ncd /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.pcf
+args = ['map', 'asip_top.ngd', '-ol', 'high', '-w', '-p', 'xc6vlx240t-ff784-3', '-o', 'asip_top_map.ncd', '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.pcf']
+launching par with options  -ol high  -w asip_top.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun1:slasip_top.pcf...
+runTask: par asip_top_map.ncd -ol high -w asip_top.ncd /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.pcf
+args = ['par', 'asip_top_map.ncd', '-ol', 'high', '-w', 'asip_top.ncd', '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.pcf']
+launching trce...
+runTask: trce /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.ncd /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.pcf -xml /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.twx -v 3 -s 3 -n 3 -fastpaths -ucf asip_top.ucf -o /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.twr
+args = ['trce', '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.ncd', '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.pcf', '-xml', '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.twx', '-v', '3', '-s', '3', '-n', '3', '-fastpaths', '-ucf', 'asip_top.ucf', '-o', '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.twr']

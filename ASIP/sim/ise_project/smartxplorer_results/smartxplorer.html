@@ -1,0 +1,379 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0014)about:SXplorer -->
+<html>
+<head>
+
+    <noscript>
+    <!--
+        We have the "refresh" meta-tag in case the user's browser does
+	not correctly support JavaScript or has JavaScript disabled.
+     <meta http-equiv="refresh" content="2">
+     -->
+
+     </noscript>
+
+     <script language="JavaScript">
+
+     var sURL = unescape(window.location.pathname);
+
+     function doLoad()
+     {
+         // the timeout value should be the same as in the "refresh" meta-tag
+         setTimeout( "refresh()", 31536000000);
+     }
+
+     function refresh()
+     {
+         //  This version of the refresh function will cause a new
+         //  entry in the visitor's history.  It is provided for
+         //  those browsers that only support JavaScript 1.0.
+         //
+         //window.location.href = sURL;
+         // CR 452967
+         window.location.reload( false );
+     }
+
+     </script>
+
+     <script language="JavaScript">
+     function sxtooltip_findPosX(obj) {
+       var curleft = 0;
+       if (obj.offsetParent) {
+           while (obj.offsetParent) {
+            curleft += obj.offsetLeft
+            obj = obj.offsetParent;
+           }
+       } else if (obj.x)
+           curleft += obj.x;
+       return curleft;
+     }
+
+
+     function sxtooltip_findPosY(obj) {
+         var curtop = 0;
+         if (obj.offsetParent) {
+            while (obj.offsetParent) {
+               curtop += obj.offsetTop
+               obj = obj.offsetParent;
+            }
+         } else if (obj.y)
+            curtop += obj.y;
+         return curtop;
+     }
+
+
+     function sxtooltip_show(tooltipId, parentId, x1, y1) {
+         // x1 and y1 are (left, down) offsets from the upper-left corner
+         // of the parent
+         var ie4 = document.all;
+         var tt = document.getElementById(tooltipId);
+
+         if ((tt.style.top == '' || tt.style.top == 0) ||
+             (tt.style.left == '' || tt.style.left == 0)) {
+
+             // need to offset widths for IE
+             ieWidthOffset = 0
+             iePosOffset = 0
+             if (ie4) {
+                 ieWidthOffset = 300
+                 iePosOffset = 20
+             }
+             tt.style.width = ieWidthOffset + tt.offsetWidth + 'px';
+             tt.style.height = tt.offsetHeight + 'px';
+
+             var parent = document.getElementById(parentId);
+
+             if (x1 < 0 ) x1 = 0;
+
+             var x = sxtooltip_findPosX(parent) + x1;
+             var y = sxtooltip_findPosY(parent) + y1;
+
+             tt.style.top = iePosOffset + y + 'px';
+             tt.style.left = iePosOffset + x + 'px';
+        }
+
+        tt.style.visibility = 'visible';
+     }
+
+     function sxtooltip_hide(id) {
+        tt = document.getElementById(id);
+        tt.style.visibility = 'hidden';
+     }
+     </script>
+
+
+</head>
+
+	<title>SmartXplorer Report</title>
+	<style type="text/css">
+		/***
+			The following is just an example of how to use the table.
+			You can override any class names to be used if you wish.
+		***/
+		table.toplevel {
+			font-family:Lucida Grande, Verdana;
+			font-size:0.8em;
+			width:60%;
+			border:1px solid #ccc;
+			border-collapse:collapse;
+			cursor:default;
+                        margin-left: 10px;
+                        margin-right: 10px;
+		}
+		table th{
+			padding:2px;
+			font-weight:600;
+                        background-color: cornflowerblue;
+                        background-color: #87cefa;
+		}
+		table td{
+			padding:2px;
+			font-weight:normal;
+		}
+		table thead td, table thead th {
+			background-repeat:no-repeat;
+			background-position:top right;
+		}
+		table tbody tr td{
+			padding:2px;
+			border-bottom:1px solid #ddd;
+		}
+		table tbody tr.alt td{
+			background: #e3edfa;
+		}
+		table tbody tr.selected td{
+			background: yellow;
+		}
+		table tbody tr:hover td{
+			background: #a6c2e7;
+			background: #FFFFCC;
+		}
+		table tbody tr.selected:hover td{
+			background:#ff9;
+		}
+                .defaultCellColor {
+                        background-color: lightsteelblue;
+                        background-color: #fcba7a;
+
+                }
+                .timingMetCellColor {
+                        background-color: #ccffcc;
+                }
+                .bestStrategyCellColor {
+                        background-color: #00FF00;
+                }
+                .alternateCellColor {
+                        background-color: #efeeee;
+                }
+
+
+                .sxtooltip {
+  		        visibility: hidden;
+                        position: absolute;
+                        background: beige;
+                        background: lightcyan;
+                        background: blanchedalmond;
+                        top: 0;
+                        left: 0;
+                        z-index: 2;
+                        font: normal 10pt sans-serif;
+                        padding: 3px;
+                        border: solid 1px;
+                }
+
+	</style>
+
+
+       <!--
+           Use the "onload" event to start the refresh process.
+        -->
+<body onload="doLoad()">
+
+	<h2><u>SmartXplorer Report </u></h2>
+
+	<br />
+
+	<div>
+        Release 13.2 SmartXplorer <br />Copyright(c) 1995-2010 <a href="http://www.xilinx.com"> Xilinx </a>, Inc. All rights reserved. <br /> <br />
+	<b> smartxplorer -p xc6vlx240t-ff784-3 -b -wd smartxplorer_results asip_top.ngd -to "-v 3 -s 3 -n 3 -fastpaths -xml asip_top.twx -ucf asip_top.ucf" -max_runs 3 <b/> <br />
+
+	<br />
+
+
+    <h3>Run Summary</h3>
+
+    <table id="t1" class="toplevel"
+        multiple="true" alternateRows="true" maxSortable="1"
+        cellpadding="0" cellspacing="0" border="1">
+    <thead>
+
+        <tr>
+            <th field="Strategy" dataType="String" align="left" valign="top">Strategy</th>
+            <th field="Host" dataType="String" valign="top">Host</th>
+            <th field="Output" dataType="String" align="left" valign="top">Output</th>
+            <th field="Status" dataType="String" align="left" valign="top">Status</th>
+            <th field="Current" dataType="Number" sort="asc" align="center" valign="top">Timing <br> Score</th>
+            <th field="Current" dataType="Number" sort="asc" align="center" valign="top">Worst Case <br> Slack</th>
+            <th field="Status" dataType="String" align="center" valign="top"> Luts</th>
+            <th field="Status" dataType="String" align="center" valign="top"> Slice <br> Registers</th>
+            
+            <th field="Run Time" dataType="Number" sort="asc" align="center" valign="top">Total <br> RunTime </th>
+
+        </tr>
+        <tr>  </tr>
+    </thead>
+
+    <tbody>
+         
+        <tr class="bestStrategyCellColor" >
+        <td id="strat3"><span
+        onmouseover="sxtooltip_show('stratTt3', 'strat3', 20, 20);"
+        onmouseout="sxtooltip_hide('stratTt3');">
+        MapRegDup
+        </span></td>
+        <div id="stratTt3" class="sxtooltip">
+        map  -ol high -xe n -register_duplication on -w ; par  -ol high -xe n 
+        </div>
+
+        
+        <td id="host0"><span
+        onmouseover="sxtooltip_show('hostTt0', 'host0', 20, 20)"
+        onmouseout="sxtooltip_hide('hostTt0');">
+        david-desktop
+        </span></td>
+        <div id="hostTt0" class="sxtooltip">
+        Linux, i686, 8-processor, 8G RAM
+        </div> 
+        <td><a href=run3/asip_top_sx.log target=_blank>run3</a></td>
+        <td><b> Done <b/></td>
+        <td><a href=run3/asip_top.twx.html target=_blank>431</a></td>
+        <td><a href=run3/asip_top.twx.html target=_blank>-0.108ns</a></td>
+        <td>10,509 (6%)</td>
+        <td>8,223 (2%)</td>
+        
+        <td>0h 9m 5s</td></tr>
+        <tr >
+        <td id="strat1"><span
+        onmouseover="sxtooltip_show('stratTt1', 'strat1', 20, 20);"
+        onmouseout="sxtooltip_hide('stratTt1');">
+        MapRunTime
+        </span></td>
+        <div id="stratTt1" class="sxtooltip">
+        map  -ol high -w ; par  -ol high 
+        </div>
+
+        
+        <td id="host0"><span
+        onmouseover="sxtooltip_show('hostTt0', 'host0', 20, 20)"
+        onmouseout="sxtooltip_hide('hostTt0');">
+        david-desktop
+        </span></td>
+        <div id="hostTt0" class="sxtooltip">
+        Linux, i686, 8-processor, 8G RAM
+        </div> 
+        <td><a href=run1/asip_top_sx.log target=_blank>run1</a></td>
+        <td><b> Done <b/></td>
+        <td><a href=run1/asip_top.twx.html target=_blank>25767</a></td>
+        <td><a href=run1/asip_top.twx.html target=_blank>-0.417ns</a></td>
+        <td>10,414 (6%)</td>
+        <td>7,951 (2%)</td>
+        
+        <td>0h 7m 45s</td></tr>
+        <tr class="defaultCellColor" >
+        <td id="strat2"><span
+        onmouseover="sxtooltip_show('stratTt2', 'strat2', 20, 20);"
+        onmouseout="sxtooltip_hide('stratTt2');">
+        MapIOReg
+        </span></td>
+        <div id="stratTt2" class="sxtooltip">
+        map  -ol high -pr b -w ; par  -ol high -xe n 
+        </div>
+
+        
+        <td id="host0"><span
+        onmouseover="sxtooltip_show('hostTt0', 'host0', 20, 20)"
+        onmouseout="sxtooltip_hide('hostTt0');">
+        david-desktop
+        </span></td>
+        <div id="hostTt0" class="sxtooltip">
+        Linux, i686, 8-processor, 8G RAM
+        </div> 
+        <td><a href=run2/asip_top_sx.log target=_blank>run2</a></td>
+        <td><b> Done <b/></td>
+        <td><a href=run2/asip_top.twx.html target=_blank>4272</a></td>
+        <td><a href=run2/asip_top.twx.html target=_blank>-0.439ns</a></td>
+        <td>10,414 (6%)</td>
+        <td>7,951 (2%)</td>
+        
+        <td>0h 7m 35s</td></tr>
+    </tbody>
+    </table>
+
+    <br />     <br />
+
+        <h3>Best Strategy: MapRegDup (run3), Timing Score: 431, Runtime: 0h 9m 5s</h3>
+
+        <table id="t3" class="toplevel"
+                multiple="true" alternateRows="true" maxSortable="1"
+                cellpadding="0" cellspacing="0" border="1">
+        <thead>
+
+                <tr>
+                        <th field="Command Lines" dataType="String" align="left" valign="top">Command Lines</th>
+                </tr>
+                <tr>  </tr>
+        </thead>
+
+        <tbody>
+             
+        <tr >
+        <td> map asip_top.ngd -ol high -xe n -register_duplication on -w -p xc6vlx240t-ff784-3 -o asip_top_map.ncd /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run3/asip_top.pcf
+<br><br></td></tr>
+        <tr class="alternateCellColor" >
+        <td> par asip_top_map.ncd -ol high -xe n -w asip_top.ncd /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run3/asip_top.pcf
+<br><br></td></tr>
+        <tr >
+        <td> trce /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run3/asip_top.ncd /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run3/asip_top.pcf -xml /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run3/asip_top.twx -v 3 -s 3 -n 3 -fastpaths -ucf asip_top.ucf -o /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run3/asip_top.twr
+<br><br></td></tr>
+        </tbody>
+        </table>
+
+        <br />  <br />
+
+	<h3>Environment Variables</h3>
+
+	<table id="t2" class="toplevel"
+		multiple="true" alternateRows="true" maxSortable="1"
+		cellpadding="0" cellspacing="0" border="1">
+	<thead>
+
+		<tr>
+			<th field="Name" dataType="String" align="left" valign="top">Name</th>
+			<th field="Value" dataType="String" valign="top">Value</th>
+		</tr>
+		<tr>  </tr>
+	</thead>
+
+	<tbody>
+	     
+        <tr >
+        <td>PATH</td>
+        <td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE//bin/lin:/home/david/jdk1.7.0_67/bin:/home/david/jdk1.7.0_67/jre/bin:/home/david/sage-6.2-i686-Linux:/home/david/synopsys/dc201303/bin:/home/david/texlive/2014/bin/i386-linux:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/david/modelsim6.5b/modeltech/bin:/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin</td></tr>
+        <tr class="alternateCellColor" >
+        <td>LD_LIBRARY_PATH</td>
+        <td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE//lib/lin:/home/david/gf2x-1.1</td></tr>
+        <tr >
+        <td>XILINX</td>
+        <td>/home/david/Xilinx/ISE13.2/ISE_DS/ISE/</td></tr>
+        <tr class="alternateCellColor" >
+        <td>LM_LICENSE_FILE</td>
+        <td>/home/david/modelsim6.5b/license/LICENSE.TXT</td></tr>
+	</tbody>
+	</table>
+
+	<br /> 	<br />
+
+
+</body>
+</html>
