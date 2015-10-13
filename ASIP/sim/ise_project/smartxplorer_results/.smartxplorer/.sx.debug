@@ -1,0 +1,116 @@
+PING david-desktop (127.0.1.1) 56(84) bytes of data.
+
+--- david-desktop ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 999ms
+rtt min/avg/max/mdev = 0.017/0.024/0.031/0.007 ms
+
+launching strategy on machine: david-desktop
+'/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/smartxplorer'  --runStrategy  '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1'   '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.ngd'  xc6vlx240t-ff784-3  '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top_sx.log'   '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/.smartxplorer/david-desktop_0.stat'   '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/.smartxplorer/smartxplorer.env'   'None'  :oc:sqmap:sq:cl:sp:sq:sp:dsol:sphigh:sp:dsw:sp:sq:cm:sp:sqpower:sq:cl:sp:sqoff:sq:cm:sp:sqbitgen:sq:cl:sp:sqon:sq:cm:sp:sqsynplify:sq:cl:sp:sq:sq:cm:sp:sqngdbuild:sq:cl:sp:sq:dssd:sp:clslhome:clsldavid:clslDropbox:clslNiederreiterCryptoprocessor:clslASIP:clslsim:clslise_project:sp:dsp:spxc6vlx240t:dsff784:ds3:sp:dsuc:sp:clslhome:clsldavid:clslDropbox:clslNiederreiterCryptoprocessor:clslASIP:clslsim:clslise_project:clslasip_top.ucf:sq:cm:sp:sqtrce:sq:cl:sp:sq:dsv:sp3:sp:dss:sp3:sp:dsn:sp3:sp:dsfastpaths:sp:dsxml:spasip_top.twx:sp:dsucf:spasip_top.ucf:sq:cm:sp:sqmax_score:sq:cl:spNone:cm:sp:sqindex:sq:cl:sp1:cm:sp:sqpar:sq:cl:sp:sq:sp:dsol:sphigh:sp:sq:cm:sp:sqname:sq:cl:sp:sqMapRunTime:sq:cm:sp:sqxst:sq:cl:sp:sq:sq:cm:sp:sqarea:sq:cl:sp:os:sqlut:sq:cm:sp:sqslice_reg:sq:cs:cm:sp:sqversion:sq:cl:sp:sq13.2:sq:cm:sp:sqenv:sq:cl:sp:sq:oc:cc:sq:cm:sp:sqsxLaunchDir:sq:cl:sp:sq:slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:sq:cc map par
+david-desktop_0 waiting on /home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/.smartxplorer/.sx.keepAlive.david-desktop_0
+david-desktop_0 david-desktop_0.stat 1444211351.1 1444211351.08 1444211366.06
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211381.12 1444211366.06 1444211396.08
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211411.14 1444211396.08 1444211426.11
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211441.17 1444211426.11 1444211456.13
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211471.2 1444211456.13 1444211486.16
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211501.22 1444211486.16 1444211516.19
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211531.25 1444211516.19 1444211546.21
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211561.28 1444211546.21 1444211576.23
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211591.31 1444211576.23 1444211606.26
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211621.34 1444211606.26 1444211636.28
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211651.37 1444211636.28 1444211666.31
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211681.4 1444211666.31 1444211696.33
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211711.43 1444211696.33 1444211726.36
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211741.46 1444211726.36 1444211756.38
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211771.46 1444211756.38 1444211786.41
+david-desktop_0 no new lines in stat file
+New best strategy: MapRunTime score: 25767
+launching strategy on machine: david-desktop
+'/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/smartxplorer'  --runStrategy  '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run2'   '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run2/asip_top.ngd'  xc6vlx240t-ff784-3  '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run2/asip_top_sx.log'   '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/.smartxplorer/david-desktop_0.stat'   '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/.smartxplorer/smartxplorer.env'   'None'  :oc:sqmap:sq:cl:sp:sq:sp:dsol:sphigh:sp:dspr:spb:sp:dsw:sp:sq:cm:sp:sqpower:sq:cl:sp:sqoff:sq:cm:sp:sqbitgen:sq:cl:sp:sqon:sq:cm:sp:sqsynplify:sq:cl:sp:sq:sq:cm:sp:sqngdbuild:sq:cl:sp:sq:dssd:sp:clslhome:clsldavid:clslDropbox:clslNiederreiterCryptoprocessor:clslASIP:clslsim:clslise_project:sp:dsp:spxc6vlx240t:dsff784:ds3:sp:dsuc:sp:clslhome:clsldavid:clslDropbox:clslNiederreiterCryptoprocessor:clslASIP:clslsim:clslise_project:clslasip_top.ucf:sq:cm:sp:sqtrce:sq:cl:sp:sq:dsv:sp3:sp:dss:sp3:sp:dsn:sp3:sp:dsfastpaths:sp:dsxml:spasip_top.twx:sp:dsucf:spasip_top.ucf:sq:cm:sp:sqmax_score:sq:cl:spNone:cm:sp:sqindex:sq:cl:sp2:cm:sp:sqpar:sq:cl:sp:sq:sp:dsol:sphigh:sp:dsxe:spn:sp:sq:cm:sp:sqname:sq:cl:sp:sqMapIOReg:sq:cm:sp:sqxst:sq:cl:sp:sq:sq:cm:sp:sqarea:sq:cl:sp:os:sqlut:sq:cm:sp:sqslice_reg:sq:cs:cm:sp:sqversion:sq:cl:sp:sq13.2:sq:cm:sp:sqenv:sq:cl:sp:sq:oc:cc:sq:cm:sp:sqsxLaunchDir:sq:cl:sp:sq:slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:sq:cc map par
+david-desktop_0 david-desktop_0.stat 1444211801.49 1444211827.45 1444211827.47
+david-desktop_0 david-desktop_0.stat 1444211827.5 1444211827.47 1444211837.48
+david-desktop_0 david-desktop_0.stat 1444211831.52 1444211837.48 1444211837.48
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211857.53 1444211837.48 1444211867.51
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211887.56 1444211867.51 1444211897.54
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211917.58 1444211897.54 1444211927.57
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211947.61 1444211927.57 1444211957.59
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444211977.64 1444211957.59 1444211987.62
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212007.65 1444211987.62 1444212017.64
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212037.68 1444212017.64 1444212047.67
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212067.69 1444212047.67 1444212077.69
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212097.72 1444212077.69 1444212107.72
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212127.75 1444212107.72 1444212137.75
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212157.78 1444212137.75 1444212167.77
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212187.81 1444212167.77 1444212197.79
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212217.84 1444212197.79 1444212227.82
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212247.85 1444212227.82 1444212257.84
+david-desktop_0 no new lines in stat file
+New best strategy: MapIOReg score: 4272
+launching strategy on machine: david-desktop
+'/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/smartxplorer'  --runStrategy  '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run3'   '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run3/asip_top.ngd'  xc6vlx240t-ff784-3  '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run3/asip_top_sx.log'   '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/.smartxplorer/david-desktop_0.stat'   '/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/.smartxplorer/smartxplorer.env'   'None'  :oc:sqmap:sq:cl:sp:sq:sp:dsol:sphigh:sp:dsxe:spn:sp:dsregister_duplication:spon:sp:dsw:sp:sq:cm:sp:sqpower:sq:cl:sp:sqoff:sq:cm:sp:sqbitgen:sq:cl:sp:sqon:sq:cm:sp:sqsynplify:sq:cl:sp:sq:sq:cm:sp:sqngdbuild:sq:cl:sp:sq:dssd:sp:clslhome:clsldavid:clslDropbox:clslNiederreiterCryptoprocessor:clslASIP:clslsim:clslise_project:sp:dsp:spxc6vlx240t:dsff784:ds3:sp:dsuc:sp:clslhome:clsldavid:clslDropbox:clslNiederreiterCryptoprocessor:clslASIP:clslsim:clslise_project:clslasip_top.ucf:sq:cm:sp:sqtrce:sq:cl:sp:sq:dsv:sp3:sp:dss:sp3:sp:dsn:sp3:sp:dsfastpaths:sp:dsxml:spasip_top.twx:sp:dsucf:spasip_top.ucf:sq:cm:sp:sqmax_score:sq:cl:spNone:cm:sp:sqindex:sq:cl:sp3:cm:sp:sqpar:sq:cl:sp:sq:sp:dsol:sphigh:sp:dsxe:spn:sp:sq:cm:sp:sqname:sq:cl:sp:sqMapRegDup:sq:cm:sp:sqxst:sq:cl:sp:sq:sq:cm:sp:sqarea:sq:cl:sp:os:sqlut:sq:cm:sp:sqslice_reg:sq:cs:cm:sp:sqversion:sq:cl:sp:sq13.2:sq:cm:sp:sqenv:sq:cl:sp:sq:oc:cc:sq:cm:sp:sqsxLaunchDir:sq:cl:sp:sq:slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:sq:cc map par
+david-desktop_0 david-desktop_0.stat 1444212277.86 1444212293.88 1444212293.91
+david-desktop_0 david-desktop_0.stat 1444212293.93 1444212293.91 1444212308.89
+david-desktop_0 david-desktop_0.stat 1444212307.89 1444212308.89 1444212308.89
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212323.96 1444212308.89 1444212338.92
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212353.99 1444212338.92 1444212368.95
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212384.02 1444212368.95 1444212398.97
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212414.04 1444212398.97 1444212429.0
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212444.07 1444212429.0 1444212459.02
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212474.1 1444212459.02 1444212489.05
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212504.13 1444212489.05 1444212519.07
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212534.16 1444212519.07 1444212549.1
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212564.18 1444212549.1 1444212579.13
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212594.19 1444212579.13 1444212609.16
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212624.22 1444212609.16 1444212639.18
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212654.25 1444212639.18 1444212669.21
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212684.26 1444212669.21 1444212699.23
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212714.29 1444212699.23 1444212729.26
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212744.32 1444212729.26 1444212759.28
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212774.34 1444212759.28 1444212789.31
+david-desktop_0 no new lines in stat file
+david-desktop_0 david-desktop_0.stat 1444212804.37 1444212789.31 1444212819.33
+david-desktop_0 no new lines in stat file
+New best strategy: MapRegDup score: 431
