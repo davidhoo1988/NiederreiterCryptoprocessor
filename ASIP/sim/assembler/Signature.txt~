@@ -107,13 +107,9 @@ X_2M:		MUL R1		R1 //store X^2m in R1
 		ADD R2		R1 // X^2m + X
 		MOV R1  	IDX0
 		JRE IDX0        @DECODEFAILURE
-		MOV #4		R7
-		MOV #5		R0
-		MOV R0 		IDX0
-SOLVE_EQ:	MOV @IDX0	R0 //load GF(2^16) code locators
-		EVAL Rmod	R0
-		MOV R0		@IDX0
-		IDX0++
-		JRE IDX0	@SOLVE_EQ
+		EVAL Rmod	R0 //root finding
+		MOV #4 		R1
+		MOV R1 		IDX0
+		MOV R0 		@IDX0
 		HALT
 

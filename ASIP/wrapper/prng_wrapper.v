@@ -87,7 +87,7 @@ always @(posedge clk or negedge reset_b) begin
 	if (!reset_b)
 		gprf_t_dat <= 0;
 	else if (t_cs)
-		gprf_t_dat <= ipt_prng_to_wrp_dat + `PRNG_DAT_W'd7287;
+		gprf_t_dat <= ipt_prng_to_wrp_dat + `PRNG_DAT_W'd5;
 	else
 		gprf_t_dat <= gprf_t_dat;
 end

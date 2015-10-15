@@ -31,19 +31,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 ================================================================================
 Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 4 ns HIGH 50%;
 
- 288304 paths analyzed, 50683 endpoints analyzed, 8 failing endpoints
- 8 timing errors detected. (8 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.108ns.
+ 349954 paths analyzed, 48961 endpoints analyzed, 162 failing endpoints
+ 162 timing errors detected. (162 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   4.339ns.
 --------------------------------------------------------------------------------
 
-Paths for end point asip_syn/pc_if/mv_PC_4 (SLICE_X84Y107.CE), 69 paths
+Paths for end point asip_syn/alu/gopf_eval/eval_r_reg_134 (SLICE_X25Y74.CE), 387 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     -0.108ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAM)
-  Destination:          asip_syn/pc_if/mv_PC_4 (FF)
+Slack (setup path):     -0.339ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/alu/gopf_eval/index_12 (FF)
+  Destination:          asip_syn/alu/gopf_eval/eval_r_reg_134 (FF)
   Requirement:          4.000ns
-  Data Path Delay:      3.963ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.110ns (1.296 - 1.406)
+  Data Path Delay:      4.219ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.085ns (0.818 - 0.903)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 4.000ns
   Clock Uncertainty:    0.035ns
@@ -54,50 +54,38 @@ Slack (setup path):     -0.108ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram to asip_syn/pc_if/mv_PC_4
+  Maximum Data Path at Slow Process Corner: asip_syn/alu/gopf_eval/index_12 to asip_syn/alu/gopf_eval/eval_r_reg_134
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB36_X3Y20.DOADO1  Trcko_DOA_REG         0.593   ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-                                                       ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-    SLICE_X57Y100.D1     net (fanout=2)        0.769   imem_Q<1>
-    SLICE_X57Y100.D      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.C6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-    SLICE_X57Y100.C      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.B6     net (fanout=1)        0.263   asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.B      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X57Y100.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.A      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.B6     net (fanout=1)        0.521   asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X65Y101.B      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X65Y101.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.A      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005718
-    SLICE_X71Y106.D5     net (fanout=1)        0.460   asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X71Y106.D      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n0057111
-    SLICE_X71Y106.C6     net (fanout=1)        0.086   asip_syn/lock_rq
-    SLICE_X71Y106.C      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/pc_if/_n0042_inv1
-    SLICE_X84Y107.CE     net (fanout=2)        0.425   asip_syn/pc_if/_n0042_inv
-    SLICE_X84Y107.CLK    Tceck                 0.164   asip_syn/pc_if/mv_PC<6>
-                                                       asip_syn/pc_if/mv_PC_4
+    SLICE_X10Y65.AQ      Tcko                  0.283   asip_syn/alu/gopf_eval/index<15>
+                                                       asip_syn/alu/gopf_eval/index_12
+    SLICE_X10Y61.B1      net (fanout=4)        0.658   asip_syn/alu/gopf_eval/index<12>
+    SLICE_X10Y61.B       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>1
+    SLICE_X10Y61.A6      net (fanout=1)        0.099   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+    SLICE_X10Y61.A       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>3
+    SLICE_X23Y44.A2      net (fanout=3)        1.181   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o
+    SLICE_X23Y44.A       Tilo                  0.053   asip_syn/alu/gopf_eval/_n0678_inv31
+                                                       asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A4      net (fanout=1)        1.202   asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A       Tilo                  0.053   asip_syn/alu/gopf_eval/eval_r_reg<16>
+                                                       asip_syn/alu/gopf_eval/_n0678_inv78
+    SLICE_X25Y74.CE      net (fanout=19)       0.393   asip_syn/alu/gopf_eval/_n0678_inv
+    SLICE_X25Y74.CLK     Tceck                 0.191   asip_syn/alu/gopf_eval/eval_r_reg<50>
+                                                       asip_syn/alu/gopf_eval/eval_r_reg_134
     -------------------------------------------------  ---------------------------
-    Total                                      3.963ns (1.181ns logic, 2.782ns route)
-                                                       (29.8% logic, 70.2% route)
+    Total                                      4.219ns (0.686ns logic, 3.533ns route)
+                                                       (16.3% logic, 83.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     -0.038ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAM)
-  Destination:          asip_syn/pc_if/mv_PC_4 (FF)
+Slack (setup path):     -0.266ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/alu/gopf_eval/index_15 (FF)
+  Destination:          asip_syn/alu/gopf_eval/eval_r_reg_134 (FF)
   Requirement:          4.000ns
-  Data Path Delay:      3.893ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.110ns (1.296 - 1.406)
+  Data Path Delay:      4.146ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.085ns (0.818 - 0.903)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 4.000ns
   Clock Uncertainty:    0.035ns
@@ -108,50 +96,38 @@ Slack (setup path):     -0.038ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram to asip_syn/pc_if/mv_PC_4
+  Maximum Data Path at Slow Process Corner: asip_syn/alu/gopf_eval/index_15 to asip_syn/alu/gopf_eval/eval_r_reg_134
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB36_X3Y20.DOADO0  Trcko_DOA_REG         0.593   ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-                                                       ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-    SLICE_X57Y100.D2     net (fanout=2)        0.699   imem_Q<0>
-    SLICE_X57Y100.D      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.C6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-    SLICE_X57Y100.C      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.B6     net (fanout=1)        0.263   asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.B      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X57Y100.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.A      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.B6     net (fanout=1)        0.521   asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X65Y101.B      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X65Y101.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.A      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005718
-    SLICE_X71Y106.D5     net (fanout=1)        0.460   asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X71Y106.D      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n0057111
-    SLICE_X71Y106.C6     net (fanout=1)        0.086   asip_syn/lock_rq
-    SLICE_X71Y106.C      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/pc_if/_n0042_inv1
-    SLICE_X84Y107.CE     net (fanout=2)        0.425   asip_syn/pc_if/_n0042_inv
-    SLICE_X84Y107.CLK    Tceck                 0.164   asip_syn/pc_if/mv_PC<6>
-                                                       asip_syn/pc_if/mv_PC_4
+    SLICE_X10Y65.DQ      Tcko                  0.283   asip_syn/alu/gopf_eval/index<15>
+                                                       asip_syn/alu/gopf_eval/index_15
+    SLICE_X10Y61.B2      net (fanout=4)        0.585   asip_syn/alu/gopf_eval/index<15>
+    SLICE_X10Y61.B       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>1
+    SLICE_X10Y61.A6      net (fanout=1)        0.099   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+    SLICE_X10Y61.A       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>3
+    SLICE_X23Y44.A2      net (fanout=3)        1.181   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o
+    SLICE_X23Y44.A       Tilo                  0.053   asip_syn/alu/gopf_eval/_n0678_inv31
+                                                       asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A4      net (fanout=1)        1.202   asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A       Tilo                  0.053   asip_syn/alu/gopf_eval/eval_r_reg<16>
+                                                       asip_syn/alu/gopf_eval/_n0678_inv78
+    SLICE_X25Y74.CE      net (fanout=19)       0.393   asip_syn/alu/gopf_eval/_n0678_inv
+    SLICE_X25Y74.CLK     Tceck                 0.191   asip_syn/alu/gopf_eval/eval_r_reg<50>
+                                                       asip_syn/alu/gopf_eval/eval_r_reg_134
     -------------------------------------------------  ---------------------------
-    Total                                      3.893ns (1.181ns logic, 2.712ns route)
-                                                       (30.3% logic, 69.7% route)
+    Total                                      4.146ns (0.686ns logic, 3.460ns route)
+                                                       (16.5% logic, 83.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.019ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAM)
-  Destination:          asip_syn/pc_if/mv_PC_4 (FF)
+Slack (setup path):     -0.212ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/alu/gopf_eval/index_4 (FF)
+  Destination:          asip_syn/alu/gopf_eval/eval_r_reg_134 (FF)
   Requirement:          4.000ns
-  Data Path Delay:      3.836ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.110ns (1.296 - 1.406)
+  Data Path Delay:      4.096ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.081ns (0.818 - 0.899)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 4.000ns
   Clock Uncertainty:    0.035ns
@@ -162,50 +138,41 @@ Slack (setup path):     0.019ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram to asip_syn/pc_if/mv_PC_4
+  Maximum Data Path at Slow Process Corner: asip_syn/alu/gopf_eval/index_4 to asip_syn/alu/gopf_eval/eval_r_reg_134
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB36_X3Y20.DOADO7  Trcko_DOA_REG         0.593   ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-                                                       ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-    SLICE_X57Y100.C2     net (fanout=2)        0.781   imem_Q<7>
-    SLICE_X57Y100.C      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.B6     net (fanout=1)        0.263   asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.B      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X57Y100.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.A      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.B6     net (fanout=1)        0.521   asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X65Y101.B      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X65Y101.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.A      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005718
-    SLICE_X71Y106.D5     net (fanout=1)        0.460   asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X71Y106.D      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n0057111
-    SLICE_X71Y106.C6     net (fanout=1)        0.086   asip_syn/lock_rq
-    SLICE_X71Y106.C      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/pc_if/_n0042_inv1
-    SLICE_X84Y107.CE     net (fanout=2)        0.425   asip_syn/pc_if/_n0042_inv
-    SLICE_X84Y107.CLK    Tceck                 0.164   asip_syn/pc_if/mv_PC<6>
-                                                       asip_syn/pc_if/mv_PC_4
+    SLICE_X10Y63.AQ      Tcko                  0.283   asip_syn/alu/gopf_eval/index<7>
+                                                       asip_syn/alu/gopf_eval/index_4
+    SLICE_X11Y61.A2      net (fanout=4)        0.479   asip_syn/alu/gopf_eval/index<4>
+    SLICE_X11Y61.A       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>1
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>2
+    SLICE_X10Y61.A5      net (fanout=1)        0.155   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>1
+    SLICE_X10Y61.A       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>3
+    SLICE_X23Y44.A2      net (fanout=3)        1.181   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o
+    SLICE_X23Y44.A       Tilo                  0.053   asip_syn/alu/gopf_eval/_n0678_inv31
+                                                       asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A4      net (fanout=1)        1.202   asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A       Tilo                  0.053   asip_syn/alu/gopf_eval/eval_r_reg<16>
+                                                       asip_syn/alu/gopf_eval/_n0678_inv78
+    SLICE_X25Y74.CE      net (fanout=19)       0.393   asip_syn/alu/gopf_eval/_n0678_inv
+    SLICE_X25Y74.CLK     Tceck                 0.191   asip_syn/alu/gopf_eval/eval_r_reg<50>
+                                                       asip_syn/alu/gopf_eval/eval_r_reg_134
     -------------------------------------------------  ---------------------------
-    Total                                      3.836ns (1.128ns logic, 2.708ns route)
-                                                       (29.4% logic, 70.6% route)
+    Total                                      4.096ns (0.686ns logic, 3.410ns route)
+                                                       (16.7% logic, 83.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point asip_syn/pc_if/mv_PC_5 (SLICE_X84Y107.CE), 69 paths
+Paths for end point asip_syn/alu/gopf_eval/eval_r_reg_111 (SLICE_X25Y74.CE), 387 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     -0.108ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAM)
-  Destination:          asip_syn/pc_if/mv_PC_5 (FF)
+Slack (setup path):     -0.339ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/alu/gopf_eval/index_12 (FF)
+  Destination:          asip_syn/alu/gopf_eval/eval_r_reg_111 (FF)
   Requirement:          4.000ns
-  Data Path Delay:      3.963ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.110ns (1.296 - 1.406)
+  Data Path Delay:      4.219ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.085ns (0.818 - 0.903)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 4.000ns
   Clock Uncertainty:    0.035ns
@@ -216,50 +183,38 @@ Slack (setup path):     -0.108ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram to asip_syn/pc_if/mv_PC_5
+  Maximum Data Path at Slow Process Corner: asip_syn/alu/gopf_eval/index_12 to asip_syn/alu/gopf_eval/eval_r_reg_111
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB36_X3Y20.DOADO1  Trcko_DOA_REG         0.593   ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-                                                       ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-    SLICE_X57Y100.D1     net (fanout=2)        0.769   imem_Q<1>
-    SLICE_X57Y100.D      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.C6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-    SLICE_X57Y100.C      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.B6     net (fanout=1)        0.263   asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.B      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X57Y100.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.A      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.B6     net (fanout=1)        0.521   asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X65Y101.B      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X65Y101.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.A      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005718
-    SLICE_X71Y106.D5     net (fanout=1)        0.460   asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X71Y106.D      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n0057111
-    SLICE_X71Y106.C6     net (fanout=1)        0.086   asip_syn/lock_rq
-    SLICE_X71Y106.C      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/pc_if/_n0042_inv1
-    SLICE_X84Y107.CE     net (fanout=2)        0.425   asip_syn/pc_if/_n0042_inv
-    SLICE_X84Y107.CLK    Tceck                 0.164   asip_syn/pc_if/mv_PC<6>
-                                                       asip_syn/pc_if/mv_PC_5
+    SLICE_X10Y65.AQ      Tcko                  0.283   asip_syn/alu/gopf_eval/index<15>
+                                                       asip_syn/alu/gopf_eval/index_12
+    SLICE_X10Y61.B1      net (fanout=4)        0.658   asip_syn/alu/gopf_eval/index<12>
+    SLICE_X10Y61.B       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>1
+    SLICE_X10Y61.A6      net (fanout=1)        0.099   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+    SLICE_X10Y61.A       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>3
+    SLICE_X23Y44.A2      net (fanout=3)        1.181   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o
+    SLICE_X23Y44.A       Tilo                  0.053   asip_syn/alu/gopf_eval/_n0678_inv31
+                                                       asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A4      net (fanout=1)        1.202   asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A       Tilo                  0.053   asip_syn/alu/gopf_eval/eval_r_reg<16>
+                                                       asip_syn/alu/gopf_eval/_n0678_inv78
+    SLICE_X25Y74.CE      net (fanout=19)       0.393   asip_syn/alu/gopf_eval/_n0678_inv
+    SLICE_X25Y74.CLK     Tceck                 0.191   asip_syn/alu/gopf_eval/eval_r_reg<50>
+                                                       asip_syn/alu/gopf_eval/eval_r_reg_111
     -------------------------------------------------  ---------------------------
-    Total                                      3.963ns (1.181ns logic, 2.782ns route)
-                                                       (29.8% logic, 70.2% route)
+    Total                                      4.219ns (0.686ns logic, 3.533ns route)
+                                                       (16.3% logic, 83.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     -0.038ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAM)
-  Destination:          asip_syn/pc_if/mv_PC_5 (FF)
+Slack (setup path):     -0.266ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/alu/gopf_eval/index_15 (FF)
+  Destination:          asip_syn/alu/gopf_eval/eval_r_reg_111 (FF)
   Requirement:          4.000ns
-  Data Path Delay:      3.893ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.110ns (1.296 - 1.406)
+  Data Path Delay:      4.146ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.085ns (0.818 - 0.903)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 4.000ns
   Clock Uncertainty:    0.035ns
@@ -270,50 +225,38 @@ Slack (setup path):     -0.038ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram to asip_syn/pc_if/mv_PC_5
+  Maximum Data Path at Slow Process Corner: asip_syn/alu/gopf_eval/index_15 to asip_syn/alu/gopf_eval/eval_r_reg_111
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB36_X3Y20.DOADO0  Trcko_DOA_REG         0.593   ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-                                                       ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-    SLICE_X57Y100.D2     net (fanout=2)        0.699   imem_Q<0>
-    SLICE_X57Y100.D      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.C6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-    SLICE_X57Y100.C      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.B6     net (fanout=1)        0.263   asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.B      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X57Y100.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.A      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.B6     net (fanout=1)        0.521   asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X65Y101.B      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X65Y101.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.A      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005718
-    SLICE_X71Y106.D5     net (fanout=1)        0.460   asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X71Y106.D      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n0057111
-    SLICE_X71Y106.C6     net (fanout=1)        0.086   asip_syn/lock_rq
-    SLICE_X71Y106.C      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/pc_if/_n0042_inv1
-    SLICE_X84Y107.CE     net (fanout=2)        0.425   asip_syn/pc_if/_n0042_inv
-    SLICE_X84Y107.CLK    Tceck                 0.164   asip_syn/pc_if/mv_PC<6>
-                                                       asip_syn/pc_if/mv_PC_5
+    SLICE_X10Y65.DQ      Tcko                  0.283   asip_syn/alu/gopf_eval/index<15>
+                                                       asip_syn/alu/gopf_eval/index_15
+    SLICE_X10Y61.B2      net (fanout=4)        0.585   asip_syn/alu/gopf_eval/index<15>
+    SLICE_X10Y61.B       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>1
+    SLICE_X10Y61.A6      net (fanout=1)        0.099   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+    SLICE_X10Y61.A       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>3
+    SLICE_X23Y44.A2      net (fanout=3)        1.181   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o
+    SLICE_X23Y44.A       Tilo                  0.053   asip_syn/alu/gopf_eval/_n0678_inv31
+                                                       asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A4      net (fanout=1)        1.202   asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A       Tilo                  0.053   asip_syn/alu/gopf_eval/eval_r_reg<16>
+                                                       asip_syn/alu/gopf_eval/_n0678_inv78
+    SLICE_X25Y74.CE      net (fanout=19)       0.393   asip_syn/alu/gopf_eval/_n0678_inv
+    SLICE_X25Y74.CLK     Tceck                 0.191   asip_syn/alu/gopf_eval/eval_r_reg<50>
+                                                       asip_syn/alu/gopf_eval/eval_r_reg_111
     -------------------------------------------------  ---------------------------
-    Total                                      3.893ns (1.181ns logic, 2.712ns route)
-                                                       (30.3% logic, 69.7% route)
+    Total                                      4.146ns (0.686ns logic, 3.460ns route)
+                                                       (16.5% logic, 83.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.019ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAM)
-  Destination:          asip_syn/pc_if/mv_PC_5 (FF)
+Slack (setup path):     -0.212ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/alu/gopf_eval/index_4 (FF)
+  Destination:          asip_syn/alu/gopf_eval/eval_r_reg_111 (FF)
   Requirement:          4.000ns
-  Data Path Delay:      3.836ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.110ns (1.296 - 1.406)
+  Data Path Delay:      4.096ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.081ns (0.818 - 0.899)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 4.000ns
   Clock Uncertainty:    0.035ns
@@ -324,50 +267,41 @@ Slack (setup path):     0.019ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram to asip_syn/pc_if/mv_PC_5
+  Maximum Data Path at Slow Process Corner: asip_syn/alu/gopf_eval/index_4 to asip_syn/alu/gopf_eval/eval_r_reg_111
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB36_X3Y20.DOADO7  Trcko_DOA_REG         0.593   ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-                                                       ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-    SLICE_X57Y100.C2     net (fanout=2)        0.781   imem_Q<7>
-    SLICE_X57Y100.C      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.B6     net (fanout=1)        0.263   asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.B      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X57Y100.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.A      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.B6     net (fanout=1)        0.521   asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X65Y101.B      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X65Y101.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.A      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005718
-    SLICE_X71Y106.D5     net (fanout=1)        0.460   asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X71Y106.D      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n0057111
-    SLICE_X71Y106.C6     net (fanout=1)        0.086   asip_syn/lock_rq
-    SLICE_X71Y106.C      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/pc_if/_n0042_inv1
-    SLICE_X84Y107.CE     net (fanout=2)        0.425   asip_syn/pc_if/_n0042_inv
-    SLICE_X84Y107.CLK    Tceck                 0.164   asip_syn/pc_if/mv_PC<6>
-                                                       asip_syn/pc_if/mv_PC_5
+    SLICE_X10Y63.AQ      Tcko                  0.283   asip_syn/alu/gopf_eval/index<7>
+                                                       asip_syn/alu/gopf_eval/index_4
+    SLICE_X11Y61.A2      net (fanout=4)        0.479   asip_syn/alu/gopf_eval/index<4>
+    SLICE_X11Y61.A       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>1
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>2
+    SLICE_X10Y61.A5      net (fanout=1)        0.155   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>1
+    SLICE_X10Y61.A       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>3
+    SLICE_X23Y44.A2      net (fanout=3)        1.181   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o
+    SLICE_X23Y44.A       Tilo                  0.053   asip_syn/alu/gopf_eval/_n0678_inv31
+                                                       asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A4      net (fanout=1)        1.202   asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A       Tilo                  0.053   asip_syn/alu/gopf_eval/eval_r_reg<16>
+                                                       asip_syn/alu/gopf_eval/_n0678_inv78
+    SLICE_X25Y74.CE      net (fanout=19)       0.393   asip_syn/alu/gopf_eval/_n0678_inv
+    SLICE_X25Y74.CLK     Tceck                 0.191   asip_syn/alu/gopf_eval/eval_r_reg<50>
+                                                       asip_syn/alu/gopf_eval/eval_r_reg_111
     -------------------------------------------------  ---------------------------
-    Total                                      3.836ns (1.128ns logic, 2.708ns route)
-                                                       (29.4% logic, 70.6% route)
+    Total                                      4.096ns (0.686ns logic, 3.410ns route)
+                                                       (16.7% logic, 83.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point asip_syn/pc_if/mv_PC_6 (SLICE_X84Y107.CE), 69 paths
+Paths for end point asip_syn/alu/gopf_eval/eval_r_reg_99 (SLICE_X25Y74.CE), 387 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     -0.108ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAM)
-  Destination:          asip_syn/pc_if/mv_PC_6 (FF)
+Slack (setup path):     -0.339ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/alu/gopf_eval/index_12 (FF)
+  Destination:          asip_syn/alu/gopf_eval/eval_r_reg_99 (FF)
   Requirement:          4.000ns
-  Data Path Delay:      3.963ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.110ns (1.296 - 1.406)
+  Data Path Delay:      4.219ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.085ns (0.818 - 0.903)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 4.000ns
   Clock Uncertainty:    0.035ns
@@ -378,50 +312,38 @@ Slack (setup path):     -0.108ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram to asip_syn/pc_if/mv_PC_6
+  Maximum Data Path at Slow Process Corner: asip_syn/alu/gopf_eval/index_12 to asip_syn/alu/gopf_eval/eval_r_reg_99
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB36_X3Y20.DOADO1  Trcko_DOA_REG         0.593   ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-                                                       ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-    SLICE_X57Y100.D1     net (fanout=2)        0.769   imem_Q<1>
-    SLICE_X57Y100.D      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.C6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-    SLICE_X57Y100.C      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.B6     net (fanout=1)        0.263   asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.B      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X57Y100.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.A      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.B6     net (fanout=1)        0.521   asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X65Y101.B      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X65Y101.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.A      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005718
-    SLICE_X71Y106.D5     net (fanout=1)        0.460   asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X71Y106.D      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n0057111
-    SLICE_X71Y106.C6     net (fanout=1)        0.086   asip_syn/lock_rq
-    SLICE_X71Y106.C      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/pc_if/_n0042_inv1
-    SLICE_X84Y107.CE     net (fanout=2)        0.425   asip_syn/pc_if/_n0042_inv
-    SLICE_X84Y107.CLK    Tceck                 0.164   asip_syn/pc_if/mv_PC<6>
-                                                       asip_syn/pc_if/mv_PC_6
+    SLICE_X10Y65.AQ      Tcko                  0.283   asip_syn/alu/gopf_eval/index<15>
+                                                       asip_syn/alu/gopf_eval/index_12
+    SLICE_X10Y61.B1      net (fanout=4)        0.658   asip_syn/alu/gopf_eval/index<12>
+    SLICE_X10Y61.B       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>1
+    SLICE_X10Y61.A6      net (fanout=1)        0.099   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+    SLICE_X10Y61.A       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>3
+    SLICE_X23Y44.A2      net (fanout=3)        1.181   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o
+    SLICE_X23Y44.A       Tilo                  0.053   asip_syn/alu/gopf_eval/_n0678_inv31
+                                                       asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A4      net (fanout=1)        1.202   asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A       Tilo                  0.053   asip_syn/alu/gopf_eval/eval_r_reg<16>
+                                                       asip_syn/alu/gopf_eval/_n0678_inv78
+    SLICE_X25Y74.CE      net (fanout=19)       0.393   asip_syn/alu/gopf_eval/_n0678_inv
+    SLICE_X25Y74.CLK     Tceck                 0.191   asip_syn/alu/gopf_eval/eval_r_reg<50>
+                                                       asip_syn/alu/gopf_eval/eval_r_reg_99
     -------------------------------------------------  ---------------------------
-    Total                                      3.963ns (1.181ns logic, 2.782ns route)
-                                                       (29.8% logic, 70.2% route)
+    Total                                      4.219ns (0.686ns logic, 3.533ns route)
+                                                       (16.3% logic, 83.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     -0.038ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAM)
-  Destination:          asip_syn/pc_if/mv_PC_6 (FF)
+Slack (setup path):     -0.266ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/alu/gopf_eval/index_15 (FF)
+  Destination:          asip_syn/alu/gopf_eval/eval_r_reg_99 (FF)
   Requirement:          4.000ns
-  Data Path Delay:      3.893ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.110ns (1.296 - 1.406)
+  Data Path Delay:      4.146ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.085ns (0.818 - 0.903)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 4.000ns
   Clock Uncertainty:    0.035ns
@@ -432,50 +354,38 @@ Slack (setup path):     -0.038ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram to asip_syn/pc_if/mv_PC_6
+  Maximum Data Path at Slow Process Corner: asip_syn/alu/gopf_eval/index_15 to asip_syn/alu/gopf_eval/eval_r_reg_99
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB36_X3Y20.DOADO0  Trcko_DOA_REG         0.593   ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-                                                       ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-    SLICE_X57Y100.D2     net (fanout=2)        0.699   imem_Q<0>
-    SLICE_X57Y100.D      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.C6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-    SLICE_X57Y100.C      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.B6     net (fanout=1)        0.263   asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.B      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X57Y100.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.A      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.B6     net (fanout=1)        0.521   asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X65Y101.B      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X65Y101.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.A      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005718
-    SLICE_X71Y106.D5     net (fanout=1)        0.460   asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X71Y106.D      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n0057111
-    SLICE_X71Y106.C6     net (fanout=1)        0.086   asip_syn/lock_rq
-    SLICE_X71Y106.C      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/pc_if/_n0042_inv1
-    SLICE_X84Y107.CE     net (fanout=2)        0.425   asip_syn/pc_if/_n0042_inv
-    SLICE_X84Y107.CLK    Tceck                 0.164   asip_syn/pc_if/mv_PC<6>
-                                                       asip_syn/pc_if/mv_PC_6
+    SLICE_X10Y65.DQ      Tcko                  0.283   asip_syn/alu/gopf_eval/index<15>
+                                                       asip_syn/alu/gopf_eval/index_15
+    SLICE_X10Y61.B2      net (fanout=4)        0.585   asip_syn/alu/gopf_eval/index<15>
+    SLICE_X10Y61.B       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>1
+    SLICE_X10Y61.A6      net (fanout=1)        0.099   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+    SLICE_X10Y61.A       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>3
+    SLICE_X23Y44.A2      net (fanout=3)        1.181   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o
+    SLICE_X23Y44.A       Tilo                  0.053   asip_syn/alu/gopf_eval/_n0678_inv31
+                                                       asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A4      net (fanout=1)        1.202   asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A       Tilo                  0.053   asip_syn/alu/gopf_eval/eval_r_reg<16>
+                                                       asip_syn/alu/gopf_eval/_n0678_inv78
+    SLICE_X25Y74.CE      net (fanout=19)       0.393   asip_syn/alu/gopf_eval/_n0678_inv
+    SLICE_X25Y74.CLK     Tceck                 0.191   asip_syn/alu/gopf_eval/eval_r_reg<50>
+                                                       asip_syn/alu/gopf_eval/eval_r_reg_99
     -------------------------------------------------  ---------------------------
-    Total                                      3.893ns (1.181ns logic, 2.712ns route)
-                                                       (30.3% logic, 69.7% route)
+    Total                                      4.146ns (0.686ns logic, 3.460ns route)
+                                                       (16.5% logic, 83.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.019ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram (RAM)
-  Destination:          asip_syn/pc_if/mv_PC_6 (FF)
+Slack (setup path):     -0.212ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               asip_syn/alu/gopf_eval/index_4 (FF)
+  Destination:          asip_syn/alu/gopf_eval/eval_r_reg_99 (FF)
   Requirement:          4.000ns
-  Data Path Delay:      3.836ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.110ns (1.296 - 1.406)
+  Data Path Delay:      4.096ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.081ns (0.818 - 0.899)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 4.000ns
   Clock Uncertainty:    0.035ns
@@ -486,123 +396,114 @@ Slack (setup path):     0.019ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram to asip_syn/pc_if/mv_PC_6
+  Maximum Data Path at Slow Process Corner: asip_syn/alu/gopf_eval/index_4 to asip_syn/alu/gopf_eval/eval_r_reg_99
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB36_X3Y20.DOADO7  Trcko_DOA_REG         0.593   ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-                                                       ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram
-    SLICE_X57Y100.C2     net (fanout=2)        0.781   imem_Q<7>
-    SLICE_X57Y100.C      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.B6     net (fanout=1)        0.263   asip_syn/wrapper_top/imem_wrapper/Mmux_n005713
-    SLICE_X57Y100.B      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X57Y100.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005714
-    SLICE_X57Y100.A      Tilo                  0.053   asip_syn/wrapper_top/imem_wrapper/Mmux_n005712
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.B6     net (fanout=1)        0.521   asip_syn/wrapper_top/imem_wrapper/Mmux_n005715
-    SLICE_X65Y101.B      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X65Y101.A6     net (fanout=1)        0.086   asip_syn/wrapper_top/imem_wrapper/Mmux_n005716
-    SLICE_X65Y101.A      Tilo                  0.053   asip_syn/gprf/r_6_15
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n005718
-    SLICE_X71Y106.D5     net (fanout=1)        0.460   asip_syn/wrapper_top/imem_wrapper/Mmux_n005717
-    SLICE_X71Y106.D      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/wrapper_top/imem_wrapper/Mmux_n0057111
-    SLICE_X71Y106.C6     net (fanout=1)        0.086   asip_syn/lock_rq
-    SLICE_X71Y106.C      Tilo                  0.053   asip_syn/pc_if/lock_rq_tmp1
-                                                       asip_syn/pc_if/_n0042_inv1
-    SLICE_X84Y107.CE     net (fanout=2)        0.425   asip_syn/pc_if/_n0042_inv
-    SLICE_X84Y107.CLK    Tceck                 0.164   asip_syn/pc_if/mv_PC<6>
-                                                       asip_syn/pc_if/mv_PC_6
+    SLICE_X10Y63.AQ      Tcko                  0.283   asip_syn/alu/gopf_eval/index<7>
+                                                       asip_syn/alu/gopf_eval/index_4
+    SLICE_X11Y61.A2      net (fanout=4)        0.479   asip_syn/alu/gopf_eval/index<4>
+    SLICE_X11Y61.A       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>1
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>2
+    SLICE_X10Y61.A5      net (fanout=1)        0.155   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>1
+    SLICE_X10Y61.A       Tilo                  0.053   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>
+                                                       asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o<15>3
+    SLICE_X23Y44.A2      net (fanout=3)        1.181   asip_syn/alu/gopf_eval/index[15]_PWR_129_o_equal_1_o
+    SLICE_X23Y44.A       Tilo                  0.053   asip_syn/alu/gopf_eval/_n0678_inv31
+                                                       asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A4      net (fanout=1)        1.202   asip_syn/alu/gopf_eval/_n0678_inv40
+    SLICE_X24Y74.A       Tilo                  0.053   asip_syn/alu/gopf_eval/eval_r_reg<16>
+                                                       asip_syn/alu/gopf_eval/_n0678_inv78
+    SLICE_X25Y74.CE      net (fanout=19)       0.393   asip_syn/alu/gopf_eval/_n0678_inv
+    SLICE_X25Y74.CLK     Tceck                 0.191   asip_syn/alu/gopf_eval/eval_r_reg<50>
+                                                       asip_syn/alu/gopf_eval/eval_r_reg_99
     -------------------------------------------------  ---------------------------
-    Total                                      3.836ns (1.128ns logic, 2.708ns route)
-                                                       (29.4% logic, 70.6% route)
+    Total                                      4.096ns (0.686ns logic, 3.410ns route)
+                                                       (16.7% logic, 83.3% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 4 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram (RAMB36_X2Y32.DIADI8), 1 path
+Paths for end point dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram (RAMB36_X3Y18.DIADI1), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.004ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               dat_sram/data_in_tmp1_81 (FF)
-  Destination:          dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram (RAM)
+Slack (hold path):      0.017ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dat_sram/data_in_tmp1_19_1 (FF)
+  Destination:          dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.189ns (Levels of Logic = 0)
-  Clock Path Skew:      0.185ns (0.825 - 0.640)
+  Data Path Delay:      0.146ns (Levels of Logic = 0)
+  Clock Path Skew:      0.129ns (0.582 - 0.453)
   Source Clock:         clk_BUFGP rising at 4.000ns
   Destination Clock:    clk_BUFGP rising at 4.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: dat_sram/data_in_tmp1_81 to dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
+  Minimum Data Path at Fast Process Corner: dat_sram/data_in_tmp1_19_1 to dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
     Location                Delay type         Delay(ns)  Physical Resource
                                                           Logical Resource(s)
     ----------------------------------------------------  -------------------
-    SLICE_X41Y157.BQ        Tcko                  0.098   dat_sram/data_in_tmp1<83>
-                                                          dat_sram/data_in_tmp1_81
-    RAMB36_X2Y32.DIADI8     net (fanout=36)       0.289   dat_sram/data_in_tmp1<81>
-    RAMB36_X2Y32.CLKARDCLKL Trckd_DIA   (-Th)     0.198   dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
-                                                          dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
+    SLICE_X49Y90.AQ         Tcko                  0.098   dat_sram/data_in_tmp1<19>_1
+                                                          dat_sram/data_in_tmp1_19_1
+    RAMB36_X3Y18.DIADI1     net (fanout=16)       0.246   dat_sram/data_in_tmp1<19>_1
+    RAMB36_X3Y18.CLKARDCLKL Trckd_DIA   (-Th)     0.198   dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
+                                                          dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
     ----------------------------------------------------  ---------------------------
-    Total                                         0.189ns (-0.100ns logic, 0.289ns route)
-                                                          (-52.9% logic, 152.9% route)
+    Total                                         0.146ns (-0.100ns logic, 0.246ns route)
+                                                          (-68.5% logic, 168.5% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram (RAMB36_X2Y32.DIPADIP0), 1 path
+Paths for end point dat_sram/dat_sram10/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram (RAMB36_X3Y28.DIPADIP1), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.006ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               dat_sram/data_in_tmp1_80 (FF)
-  Destination:          dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram (RAM)
+Slack (hold path):      0.019ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dat_sram/data_in_tmp1_53 (FF)
+  Destination:          dat_sram/dat_sram10/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.191ns (Levels of Logic = 0)
-  Clock Path Skew:      0.185ns (0.825 - 0.640)
+  Data Path Delay:      0.132ns (Levels of Logic = 0)
+  Clock Path Skew:      0.113ns (0.579 - 0.466)
   Source Clock:         clk_BUFGP rising at 4.000ns
   Destination Clock:    clk_BUFGP rising at 4.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: dat_sram/data_in_tmp1_80 to dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
+  Minimum Data Path at Fast Process Corner: dat_sram/data_in_tmp1_53 to dat_sram/dat_sram10/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
     Location                Delay type         Delay(ns)  Physical Resource
                                                           Logical Resource(s)
     ----------------------------------------------------  -------------------
-    SLICE_X41Y157.AQ        Tcko                  0.098   dat_sram/data_in_tmp1<83>
-                                                          dat_sram/data_in_tmp1_80
-    RAMB36_X2Y32.DIPADIP0   net (fanout=36)       0.291   dat_sram/data_in_tmp1<80>
-    RAMB36_X2Y32.CLKARDCLKL Trckd_DIPA  (-Th)     0.198   dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
-                                                          dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
+    SLICE_X61Y142.BQ        Tcko                  0.098   dat_sram/data_in_tmp1<53>
+                                                          dat_sram/data_in_tmp1_53
+    RAMB36_X3Y28.DIPADIP1   net (fanout=17)       0.232   dat_sram/data_in_tmp1<53>
+    RAMB36_X3Y28.CLKARDCLKL Trckd_DIPA  (-Th)     0.198   dat_sram/dat_sram10/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
+                                                          dat_sram/dat_sram10/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
     ----------------------------------------------------  ---------------------------
-    Total                                         0.191ns (-0.100ns logic, 0.291ns route)
-                                                          (-52.4% logic, 152.4% route)
+    Total                                         0.132ns (-0.100ns logic, 0.232ns route)
+                                                          (-75.8% logic, 175.8% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point dat_sram/dat_sram25/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram (RAMB36_X4Y22.DIADI15), 1 path
+Paths for end point dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram (RAMB36_X3Y18.DIADI0), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.016ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               dat_sram/data_in_tmp1_16 (FF)
-  Destination:          dat_sram/dat_sram25/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram (RAM)
+Slack (hold path):      0.021ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dat_sram/data_in_tmp1_18_1 (FF)
+  Destination:          dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.137ns (Levels of Logic = 0)
-  Clock Path Skew:      0.121ns (0.595 - 0.474)
+  Data Path Delay:      0.147ns (Levels of Logic = 0)
+  Clock Path Skew:      0.126ns (0.582 - 0.456)
   Source Clock:         clk_BUFGP rising at 4.000ns
   Destination Clock:    clk_BUFGP rising at 4.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: dat_sram/data_in_tmp1_16 to dat_sram/dat_sram25/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
+  Minimum Data Path at Fast Process Corner: dat_sram/data_in_tmp1_18_1 to dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
     Location                Delay type         Delay(ns)  Physical Resource
                                                           Logical Resource(s)
     ----------------------------------------------------  -------------------
-    SLICE_X95Y112.DQ        Tcko                  0.098   dat_sram/data_in_tmp1<16>
-                                                          dat_sram/data_in_tmp1_16
-    RAMB36_X4Y22.DIADI15    net (fanout=36)       0.237   dat_sram/data_in_tmp1<16>
-    RAMB36_X4Y22.CLKARDCLKL Trckd_DIA   (-Th)     0.198   dat_sram/dat_sram25/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
-                                                          dat_sram/dat_sram25/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
+    SLICE_X50Y90.AQ         Tcko                  0.115   dat_sram/data_in_tmp1<18>_1
+                                                          dat_sram/data_in_tmp1_18_1
+    RAMB36_X3Y18.DIADI0     net (fanout=16)       0.230   dat_sram/data_in_tmp1<18>_1
+    RAMB36_X3Y18.CLKARDCLKL Trckd_DIA   (-Th)     0.198   dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
+                                                          dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram
     ----------------------------------------------------  ---------------------------
-    Total                                         0.137ns (-0.100ns logic, 0.237ns route)
-                                                          (-73.0% logic, 173.0% route)
+    Total                                         0.147ns (-0.083ns logic, 0.230ns route)
+                                                          (-56.5% logic, 156.5% route)
 
 --------------------------------------------------------------------------------
 
@@ -613,7 +514,7 @@ Slack: 2.333ns (period - min period limit)
   Min period limit: 1.667ns (599.880MHz) (Trper_CLKA)
   Physical resource: dat_sram/dat_sram9/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram/CLKARDCLKL
   Logical resource: dat_sram/dat_sram9/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram/CLKARDCLKL
-  Location pin: RAMB36_X8Y22.CLKARDCLKL
+  Location pin: RAMB36_X8Y20.CLKARDCLKL
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 2.333ns (period - min period limit)
@@ -621,7 +522,7 @@ Slack: 2.333ns (period - min period limit)
   Min period limit: 1.667ns (599.880MHz) (Trper_CLKB)
   Physical resource: dat_sram/dat_sram9/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram/CLKBWRCLKL
   Logical resource: dat_sram/dat_sram9/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram/CLKBWRCLKL
-  Location pin: RAMB36_X8Y22.CLKBWRCLKL
+  Location pin: RAMB36_X8Y20.CLKBWRCLKL
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 2.333ns (period - min period limit)
@@ -629,7 +530,7 @@ Slack: 2.333ns (period - min period limit)
   Min period limit: 1.667ns (599.880MHz) (Trper_CLKA)
   Physical resource: dat_sram/dat_sram9/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram/CLKARDCLKL
   Logical resource: dat_sram/dat_sram9/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram/CLKARDCLKL
-  Location pin: RAMB36_X6Y22.CLKARDCLKL
+  Location pin: RAMB36_X7Y16.CLKARDCLKL
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -646,32 +547,32 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.108|         |         |         |
+clk            |    4.339|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
 Timing summary:
 ---------------
 
-Timing errors: 8  Score: 431  (Setup/Max: 431, Hold: 0)
+Timing errors: 162  Score: 36578  (Setup/Max: 36578, Hold: 0)
 
-Constraints cover 288304 paths, 0 nets, and 73932 connections
+Constraints cover 349954 paths, 0 nets, and 70915 connections
 
 Design statistics:
-   Minimum period:   4.108ns{1}   (Maximum frequency: 243.427MHz)
+   Minimum period:   4.339ns{1}   (Maximum frequency: 230.468MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Wed Oct  7 18:13:49 2015 
+Analysis completed Thu Oct 15 13:25:24 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 621 MB
+Peak Memory Usage: 615 MB
 
 
 

@@ -18,6 +18,7 @@
 ../alu1/SPLIT/split.v
 ../alu1/DEG/deg.v
 ../alu1/GOPF_EVAL/gopf_eval.v
+../alu1/GOPF_EVAL/Constant_Multiplier.v
 
 ../prng/prng_lcg.v
 ../prng/prng_lsfr.v

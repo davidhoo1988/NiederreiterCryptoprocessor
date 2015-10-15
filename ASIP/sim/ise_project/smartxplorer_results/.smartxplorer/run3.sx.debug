@@ -15,7 +15,7 @@ Found trce at /home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/trce.
 Found xpwr at /home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/xpwr.
 Found bitgen at /home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin/bitgen.
 david-desktop_0.stat:/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/.smartxplorer/.sx.keepAlive.david-desktop_0
-INFO: total number of threads running this host 697
+INFO: total number of threads running this host 640
 ...searching for file: mapregdup.xds
 Creating XDS file ... mapregdup.xds
 ###################################

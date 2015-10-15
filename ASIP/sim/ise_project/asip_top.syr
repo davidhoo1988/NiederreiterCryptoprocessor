@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: asip_top.prj
@@ -294,7 +294,7 @@ WARNING:HDLCompiler:91 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/a
 Elaborating module <DEG>.
 
 Elaborating module <GOPF_EVAL>.
-WARNING:HDLCompiler:1127 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v" Line 563: Assignment to eval_done ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_EVAL/gopf_eval.v" Line 123: Result of 3-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <prng_lcg>.
 WARNING:HDLCompiler:413 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/prng/prng_lcg.v" Line 132: Result of 4-bit expression is truncated to fit in 3-bit target.
@@ -317,7 +317,7 @@ Elaborating module <dmem_array>.
 
 Elaborating module <dat_sram>.
 WARNING:HDLCompiler:1499 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/ipcore_dir/dat_sram.v" Line 39: Empty module <dat_sram> remains a black box.
-WARNING:HDLCompiler:1127 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/ram/dmem_array.v" Line 996: Assignment to dmem_rw_tmp2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/ram/dmem_array.v" Line 886: Assignment to dmem_rw_tmp2 ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -352,14 +352,14 @@ WARNING:Xst:647 - Input <t_rw> is never used. This port will be preserved and le
     Found 10-bit register for signal <pcif_to_wrp_addr_reg>.
     Found 43-bit register for signal <iram_to_wrp_dat_reg>.
     Found 19-bit register for signal <decdst_to_wrp_jmp_addr_reg>.
-    Found 8-bit register for signal <timer_cnt>.
+    Found 18-bit register for signal <timer_cnt>.
     Found 1-bit register for signal <decdst_to_wrp_jmp_addr_sel_reg>.
     Found 1-bit register for signal <pcif_to_wrp_en_b_reg>.
-    Found 8-bit subtractor for signal <timer_cnt[7]_GND_4_o_sub_14_OUT> created at line 157.
-    Found 8-bit comparator equal for signal <timer_cnt[7]_ipt_decopr_to_wrp_delay[7]_equal_10_o> created at line 121
+    Found 18-bit subtractor for signal <timer_cnt[17]_GND_4_o_sub_14_OUT> created at line 157.
+    Found 18-bit comparator equal for signal <timer_cnt[17]_ipt_decopr_to_wrp_delay[17]_equal_10_o> created at line 121
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  82 D-type flip-flop(s).
+	inferred  92 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 	inferred   5 Multiplexer(s).
 Unit <imem_wrapper> synthesized.
@@ -396,7 +396,7 @@ WARNING:Xst:647 - Input <ipt_decsrc_to_wrp_rmod_t_sel> is never used. This port 
     Found 144-bit register for signal <gprf_to_wrp_dat2_reg>.
     Found 16-bit register for signal <decsrc_to_wrp_imm_tmp>.
     Found 16-bit register for signal <decsrc_to_wrp_imm_reg>.
-    Found 8-bit register for signal <timer_cnt>.
+    Found 18-bit register for signal <timer_cnt>.
     Found 1-bit register for signal <decdst_to_wrp_indir_addr_sel_tmp>.
     Found 1-bit register for signal <decdst_to_wrp_indir_addr_sel_reg>.
     Found 1-bit register for signal <decsrc_to_wrp_imm_en_tmp>.
@@ -435,16 +435,16 @@ WARNING:Xst:647 - Input <ipt_decsrc_to_wrp_rmod_t_sel> is never used. This port 
     Found 1-bit register for signal <decdst_to_wrp_r7_t_sel_tmp>.
     Found 1-bit register for signal <decdst_to_wrp_rmod_t_sel_tmp>.
     Found 1-bit register for signal <halt>.
-    Found 8-bit subtractor for signal <timer_cnt[7]_GND_7_o_sub_16_OUT> created at line 693.
+    Found 18-bit subtractor for signal <timer_cnt[17]_GND_7_o_sub_16_OUT> created at line 693.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred 373 D-type flip-flop(s).
+	inferred 383 D-type flip-flop(s).
 	inferred  21 Multiplexer(s).
 Unit <gprf_wrapper> synthesized.
 
 Synthesizing Unit <alu_wrapper>.
     Related source file is "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/wrapper/alu_wrapper.v".
-WARNING:Xst:647 - Input <ipt_decopr_to_wrp_delay<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ipt_decopr_to_wrp_delay<17:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 4-bit register for signal <alu_typ_sel_tmp2>.
     Found 4-bit register for signal <alu_typ_sel_tmp1>.
     Found 145-bit register for signal <gprf_bus1_r_dat>.
@@ -467,7 +467,7 @@ Unit <alu_wrapper> synthesized.
 
 Synthesizing Unit <prng_wrapper>.
     Related source file is "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/wrapper/prng_wrapper.v".
-WARNING:Xst:647 - Input <ipt_decopr_to_wrp_delay<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ipt_decopr_to_wrp_delay<17:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit register for signal <prng_t_dat_tmp1>.
     Found 144-bit register for signal <gprf_t_dat>.
     Found 2-bit register for signal <prng_typ_sel_tmp1>.
@@ -482,7 +482,7 @@ Synthesizing Unit <sprf_wrapper>.
     Related source file is "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/wrapper/sprf_wrapper.v".
     Set property "MAX_FANOUT = 50" for signal <sprf_r0_typ_sel_tmp1>.
     Set property "MAX_FANOUT = 50" for signal <sprf_r1_typ_sel_tmp1>.
-WARNING:Xst:647 - Input <ipt_decopr_to_wrp_delay<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ipt_decopr_to_wrp_delay<17:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ipt_sprf_to_wrp_dat<143:17>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 2-bit register for signal <sprf_r1_typ_sel_tmp1>.
     Found 2-bit register for signal <sprf_r0_typ_sel_tmp2>.
@@ -534,6 +534,16 @@ WARNING:Xst:737 - Found 1-bit latch for signal <alu_typ_sel<3>>. Latches may be 
 WARNING:Xst:737 - Found 1-bit latch for signal <alu_typ_sel<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <alu_typ_sel<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <alu_typ_sel<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -544,7 +554,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<1>>. Latches may b
 WARNING:Xst:737 - Found 1-bit latch for signal <src_dst_delay<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <opr_typ_sel<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred  17 Latch(s).
+	inferred  27 Latch(s).
 	inferred   5 Multiplexer(s).
 Unit <opr_decoder> synthesized.
 
@@ -1742,7 +1752,6 @@ Unit <gprf> synthesized.
 Synthesizing Unit <ALU>.
     Related source file is "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v".
         m = 16
-INFO:Xst:3210 - "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v" line 553: Output port <eval_done> of the instance <gopf_eval> is unconnected or connected to loadless signal.
     Found 145-bit register for signal <alu_o_reg>.
     Found 145-bit register for signal <alu_mod_reg>.
     Found 144-bit register for signal <alu_t_reg>.
@@ -1801,9 +1810,9 @@ Synthesizing Unit <GOPF_MUL>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit subtractor for signal <multiplier_degree[3]_GND_56_o_sub_21_OUT> created at line 225.
-    Found 4-bit adder for signal <counter[3]_GND_56_o_add_27_OUT> created at line 230.
-    Found 2-bit adder for signal <mul_cnt[1]_GND_56_o_add_30_OUT> created at line 260.
+    Found 4-bit subtractor for signal <multiplier_degree[3]_GND_66_o_sub_21_OUT> created at line 225.
+    Found 4-bit adder for signal <counter[3]_GND_66_o_add_27_OUT> created at line 230.
+    Found 2-bit adder for signal <mul_cnt[1]_GND_66_o_add_30_OUT> created at line 260.
     Found 4-bit comparator equal for signal <counter[3]_multiplier_degree[3]_equal_30_o> created at line 246
     Summary:
 	inferred   3 Adder/Subtractor(s).
@@ -2006,8 +2015,8 @@ Synthesizing Unit <GOPF_DIV>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 5-bit subtractor for signal <GND_58_o_GND_58_o_sub_225_OUT> created at line 447.
-    Found 5-bit adder for signal <counter[4]_GND_58_o_add_263_OUT> created at line 567.
+    Found 5-bit subtractor for signal <GND_68_o_GND_68_o_sub_225_OUT> created at line 447.
+    Found 5-bit adder for signal <counter[4]_GND_68_o_add_263_OUT> created at line 567.
     Found 144-bit 8-to-1 multiplexer for signal <_n1611> created at line 467.
     Found 144-bit 8-to-1 multiplexer for signal <_n1630> created at line 467.
     Found 4-bit comparator greater for signal <dividend_cnt[3]_divisor_cnt[3]_LessThan_208_o> created at line 404
@@ -2083,7 +2092,7 @@ Synthesizing Unit <Inv_Ctrl>.
     Related source file is "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/ALU_InvGenerator/Inv_Ctrl.v".
     Found 5-bit register for signal <counter>.
     Found 1-bit register for signal <temp_o>.
-    Found 5-bit adder for signal <counter[4]_GND_67_o_add_4_OUT> created at line 32.
+    Found 5-bit adder for signal <counter[4]_GND_77_o_add_4_OUT> created at line 32.
     Found 5-bit comparator greater for signal <n0003> created at line 30
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -2118,7 +2127,7 @@ Synthesizing Unit <SPLIT>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <cnt[3]_GND_68_o_add_8_OUT> created at line 140.
+    Found 4-bit adder for signal <cnt[3]_GND_78_o_add_8_OUT> created at line 140.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred 438 D-type flip-flop(s).
@@ -2148,7 +2157,7 @@ Synthesizing Unit <DEG>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit subtractor for signal <poly_deg_out[3]_GND_69_o_sub_12_OUT> created at line 113.
+    Found 4-bit subtractor for signal <poly_deg_out[3]_GND_79_o_sub_12_OUT> created at line 113.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred 149 D-type flip-flop(s).
@@ -2158,35 +2167,182 @@ Unit <DEG> synthesized.
 
 Synthesizing Unit <GOPF_EVAL>.
     Related source file is "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_EVAL/gopf_eval.v".
-        m = 144
-        DATA_PRE = 0
-        DATA_SHIFT = 1
-        DATA_MAC = 2
-WARNING:Xst:647 - Input <gopf<144:144>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 144-bit register for signal <gopf_reg>.
-    Found 144-bit register for signal <gf2e_element_reg>.
-    Found 144-bit register for signal <mul_o_in_reg>.
-    Found 144-bit register for signal <mul_t_in_reg>.
-    Found 3-bit register for signal <CurrentState>.
-    Found 1-bit register for signal <finish>.
+        m = 16
+        poly_len = 144
+        block_size = 10
+    Found 2-bit register for signal <start_buffer>.
+    Found 16-bit register for signal <index>.
+    Found 16-bit register for signal <tmp_reg>.
+    Found 144-bit register for signal <eval_r_reg>.
+    Found 1-bit register for signal <counter_en>.
+    Found 1-bit register for signal <sigma_poly_reg<0>>.
+    Found 1-bit register for signal <sigma_poly_reg<1>>.
+    Found 1-bit register for signal <sigma_poly_reg<2>>.
+    Found 1-bit register for signal <sigma_poly_reg<3>>.
+    Found 1-bit register for signal <sigma_poly_reg<4>>.
+    Found 1-bit register for signal <sigma_poly_reg<5>>.
+    Found 1-bit register for signal <sigma_poly_reg<6>>.
+    Found 1-bit register for signal <sigma_poly_reg<7>>.
+    Found 1-bit register for signal <sigma_poly_reg<8>>.
+    Found 1-bit register for signal <sigma_poly_reg<9>>.
+    Found 1-bit register for signal <sigma_poly_reg<10>>.
+    Found 1-bit register for signal <sigma_poly_reg<11>>.
+    Found 1-bit register for signal <sigma_poly_reg<12>>.
+    Found 1-bit register for signal <sigma_poly_reg<13>>.
+    Found 1-bit register for signal <sigma_poly_reg<14>>.
+    Found 1-bit register for signal <sigma_poly_reg<15>>.
+    Found 1-bit register for signal <sigma_poly_reg<16>>.
+    Found 1-bit register for signal <sigma_poly_reg<17>>.
+    Found 1-bit register for signal <sigma_poly_reg<18>>.
+    Found 1-bit register for signal <sigma_poly_reg<19>>.
+    Found 1-bit register for signal <sigma_poly_reg<20>>.
+    Found 1-bit register for signal <sigma_poly_reg<21>>.
+    Found 1-bit register for signal <sigma_poly_reg<22>>.
+    Found 1-bit register for signal <sigma_poly_reg<23>>.
+    Found 1-bit register for signal <sigma_poly_reg<24>>.
+    Found 1-bit register for signal <sigma_poly_reg<25>>.
+    Found 1-bit register for signal <sigma_poly_reg<26>>.
+    Found 1-bit register for signal <sigma_poly_reg<27>>.
+    Found 1-bit register for signal <sigma_poly_reg<28>>.
+    Found 1-bit register for signal <sigma_poly_reg<29>>.
+    Found 1-bit register for signal <sigma_poly_reg<30>>.
+    Found 1-bit register for signal <sigma_poly_reg<31>>.
+    Found 1-bit register for signal <sigma_poly_reg<32>>.
+    Found 1-bit register for signal <sigma_poly_reg<33>>.
+    Found 1-bit register for signal <sigma_poly_reg<34>>.
+    Found 1-bit register for signal <sigma_poly_reg<35>>.
+    Found 1-bit register for signal <sigma_poly_reg<36>>.
+    Found 1-bit register for signal <sigma_poly_reg<37>>.
+    Found 1-bit register for signal <sigma_poly_reg<38>>.
+    Found 1-bit register for signal <sigma_poly_reg<39>>.
+    Found 1-bit register for signal <sigma_poly_reg<40>>.
+    Found 1-bit register for signal <sigma_poly_reg<41>>.
+    Found 1-bit register for signal <sigma_poly_reg<42>>.
+    Found 1-bit register for signal <sigma_poly_reg<43>>.
+    Found 1-bit register for signal <sigma_poly_reg<44>>.
+    Found 1-bit register for signal <sigma_poly_reg<45>>.
+    Found 1-bit register for signal <sigma_poly_reg<46>>.
+    Found 1-bit register for signal <sigma_poly_reg<47>>.
+    Found 1-bit register for signal <sigma_poly_reg<48>>.
+    Found 1-bit register for signal <sigma_poly_reg<49>>.
+    Found 1-bit register for signal <sigma_poly_reg<50>>.
+    Found 1-bit register for signal <sigma_poly_reg<51>>.
+    Found 1-bit register for signal <sigma_poly_reg<52>>.
+    Found 1-bit register for signal <sigma_poly_reg<53>>.
+    Found 1-bit register for signal <sigma_poly_reg<54>>.
+    Found 1-bit register for signal <sigma_poly_reg<55>>.
+    Found 1-bit register for signal <sigma_poly_reg<56>>.
+    Found 1-bit register for signal <sigma_poly_reg<57>>.
+    Found 1-bit register for signal <sigma_poly_reg<58>>.
+    Found 1-bit register for signal <sigma_poly_reg<59>>.
+    Found 1-bit register for signal <sigma_poly_reg<60>>.
+    Found 1-bit register for signal <sigma_poly_reg<61>>.
+    Found 1-bit register for signal <sigma_poly_reg<62>>.
+    Found 1-bit register for signal <sigma_poly_reg<63>>.
+    Found 1-bit register for signal <sigma_poly_reg<64>>.
+    Found 1-bit register for signal <sigma_poly_reg<65>>.
+    Found 1-bit register for signal <sigma_poly_reg<66>>.
+    Found 1-bit register for signal <sigma_poly_reg<67>>.
+    Found 1-bit register for signal <sigma_poly_reg<68>>.
+    Found 1-bit register for signal <sigma_poly_reg<69>>.
+    Found 1-bit register for signal <sigma_poly_reg<70>>.
+    Found 1-bit register for signal <sigma_poly_reg<71>>.
+    Found 1-bit register for signal <sigma_poly_reg<72>>.
+    Found 1-bit register for signal <sigma_poly_reg<73>>.
+    Found 1-bit register for signal <sigma_poly_reg<74>>.
+    Found 1-bit register for signal <sigma_poly_reg<75>>.
+    Found 1-bit register for signal <sigma_poly_reg<76>>.
+    Found 1-bit register for signal <sigma_poly_reg<77>>.
+    Found 1-bit register for signal <sigma_poly_reg<78>>.
+    Found 1-bit register for signal <sigma_poly_reg<79>>.
+    Found 1-bit register for signal <sigma_poly_reg<80>>.
+    Found 1-bit register for signal <sigma_poly_reg<81>>.
+    Found 1-bit register for signal <sigma_poly_reg<82>>.
+    Found 1-bit register for signal <sigma_poly_reg<83>>.
+    Found 1-bit register for signal <sigma_poly_reg<84>>.
+    Found 1-bit register for signal <sigma_poly_reg<85>>.
+    Found 1-bit register for signal <sigma_poly_reg<86>>.
+    Found 1-bit register for signal <sigma_poly_reg<87>>.
+    Found 1-bit register for signal <sigma_poly_reg<88>>.
+    Found 1-bit register for signal <sigma_poly_reg<89>>.
+    Found 1-bit register for signal <sigma_poly_reg<90>>.
+    Found 1-bit register for signal <sigma_poly_reg<91>>.
+    Found 1-bit register for signal <sigma_poly_reg<92>>.
+    Found 1-bit register for signal <sigma_poly_reg<93>>.
+    Found 1-bit register for signal <sigma_poly_reg<94>>.
+    Found 1-bit register for signal <sigma_poly_reg<95>>.
+    Found 1-bit register for signal <sigma_poly_reg<96>>.
+    Found 1-bit register for signal <sigma_poly_reg<97>>.
+    Found 1-bit register for signal <sigma_poly_reg<98>>.
+    Found 1-bit register for signal <sigma_poly_reg<99>>.
+    Found 1-bit register for signal <sigma_poly_reg<100>>.
+    Found 1-bit register for signal <sigma_poly_reg<101>>.
+    Found 1-bit register for signal <sigma_poly_reg<102>>.
+    Found 1-bit register for signal <sigma_poly_reg<103>>.
+    Found 1-bit register for signal <sigma_poly_reg<104>>.
+    Found 1-bit register for signal <sigma_poly_reg<105>>.
+    Found 1-bit register for signal <sigma_poly_reg<106>>.
+    Found 1-bit register for signal <sigma_poly_reg<107>>.
+    Found 1-bit register for signal <sigma_poly_reg<108>>.
+    Found 1-bit register for signal <sigma_poly_reg<109>>.
+    Found 1-bit register for signal <sigma_poly_reg<110>>.
+    Found 1-bit register for signal <sigma_poly_reg<111>>.
+    Found 1-bit register for signal <sigma_poly_reg<112>>.
+    Found 1-bit register for signal <sigma_poly_reg<113>>.
+    Found 1-bit register for signal <sigma_poly_reg<114>>.
+    Found 1-bit register for signal <sigma_poly_reg<115>>.
+    Found 1-bit register for signal <sigma_poly_reg<116>>.
+    Found 1-bit register for signal <sigma_poly_reg<117>>.
+    Found 1-bit register for signal <sigma_poly_reg<118>>.
+    Found 1-bit register for signal <sigma_poly_reg<119>>.
+    Found 1-bit register for signal <sigma_poly_reg<120>>.
+    Found 1-bit register for signal <sigma_poly_reg<121>>.
+    Found 1-bit register for signal <sigma_poly_reg<122>>.
+    Found 1-bit register for signal <sigma_poly_reg<123>>.
+    Found 1-bit register for signal <sigma_poly_reg<124>>.
+    Found 1-bit register for signal <sigma_poly_reg<125>>.
+    Found 1-bit register for signal <sigma_poly_reg<126>>.
+    Found 1-bit register for signal <sigma_poly_reg<127>>.
+    Found 1-bit register for signal <sigma_poly_reg<128>>.
+    Found 1-bit register for signal <sigma_poly_reg<129>>.
+    Found 1-bit register for signal <sigma_poly_reg<130>>.
+    Found 1-bit register for signal <sigma_poly_reg<131>>.
+    Found 1-bit register for signal <sigma_poly_reg<132>>.
+    Found 1-bit register for signal <sigma_poly_reg<133>>.
+    Found 1-bit register for signal <sigma_poly_reg<134>>.
+    Found 1-bit register for signal <sigma_poly_reg<135>>.
+    Found 1-bit register for signal <sigma_poly_reg<136>>.
+    Found 1-bit register for signal <sigma_poly_reg<137>>.
+    Found 1-bit register for signal <sigma_poly_reg<138>>.
+    Found 1-bit register for signal <sigma_poly_reg<139>>.
+    Found 1-bit register for signal <sigma_poly_reg<140>>.
+    Found 1-bit register for signal <sigma_poly_reg<141>>.
+    Found 1-bit register for signal <sigma_poly_reg<142>>.
+    Found 1-bit register for signal <sigma_poly_reg<143>>.
+    Found 1-bit register for signal <sigma_poly_reg<144>>.
+    Found 1-bit register for signal <sigma_poly_reg<145>>.
+    Found 1-bit register for signal <sigma_poly_reg<146>>.
+    Found 1-bit register for signal <sigma_poly_reg<147>>.
+    Found 1-bit register for signal <sigma_poly_reg<148>>.
+    Found 1-bit register for signal <sigma_poly_reg<149>>.
+    Found 1-bit register for signal <sigma_poly_reg<150>>.
+    Found 1-bit register for signal <sigma_poly_reg<151>>.
+    Found 1-bit register for signal <sigma_poly_reg<152>>.
+    Found 1-bit register for signal <sigma_poly_reg<153>>.
+    Found 1-bit register for signal <sigma_poly_reg<154>>.
+    Found 1-bit register for signal <sigma_poly_reg<155>>.
+    Found 1-bit register for signal <sigma_poly_reg<156>>.
+    Found 1-bit register for signal <sigma_poly_reg<157>>.
+    Found 1-bit register for signal <sigma_poly_reg<158>>.
+    Found 1-bit register for signal <sigma_poly_reg<159>>.
     Found 1-bit register for signal <eval_done>.
-    Found 144-bit register for signal <mul_add_in_reg>.
-    Found finite state machine <FSM_4> for signal <CurrentState>.
-    -----------------------------------------------------------------------
-    | States             | 3                                              |
-    | Transitions        | 5                                              |
-    | Inputs             | 2                                              |
-    | Outputs            | 5                                              |
-    | Clock              | clk (rising_edge)                              |
-    | Reset              | rst_b (negative)                               |
-    | Reset type         | asynchronous                                   |
-    | Reset State        | 000                                            |
-    | Encoding           | auto                                           |
-    | Implementation     | LUT                                            |
-    -----------------------------------------------------------------------
+    Found 2-bit register for signal <counter>.
+    Found 2-bit adder for signal <counter[1]_GND_80_o_add_7_OUT> created at line 143.
+    Found 16-bit adder for signal <index[15]_GND_80_o_add_11_OUT> created at line 152.
     Summary:
-	inferred 722 D-type flip-flop(s).
-	inferred   1 Finite State Machine(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred 342 D-type flip-flop(s).
+	inferred 146 Multiplexer(s).
 Unit <GOPF_EVAL> synthesized.
 
 Synthesizing Unit <prng_lcg>.
@@ -2200,7 +2356,7 @@ Synthesizing Unit <prng_lcg>.
     Found 2-bit register for signal <prng_typ_reg>.
     Found 3-bit register for signal <cnt>.
     Found 32-bit register for signal <prng_seed_reg>.
-    Found finite state machine <FSM_5> for signal <CurrentState>.
+    Found finite state machine <FSM_4> for signal <CurrentState>.
     -----------------------------------------------------------------------
     | States             | 3                                              |
     | Transitions        | 7                                              |
@@ -2213,7 +2369,7 @@ Synthesizing Unit <prng_lcg>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <cnt[2]_GND_71_o_add_11_OUT> created at line 132.
+    Found 3-bit adder for signal <cnt[2]_GND_81_o_add_11_OUT> created at line 132.
     Found 32-bit adder for signal <lcg_arith> created at line 140.
     Summary:
 	inferred   2 Adder/Subtractor(s).
@@ -2237,7 +2393,7 @@ Synthesizing Unit <MUL_32bit>.
     Found 32-bit subtractor for signal <z1> created at line 68.
     Found 16-bit adder for signal <multiplicand[31]_multiplicand[15]_add_3_OUT> created at line 73.
     Found 33-bit adder for signal <n0045[32:0]> created at line 108.
-    Found 48-bit adder for signal <GND_72_o_z2_reg1[31]_add_20_OUT> created at line 108.
+    Found 48-bit adder for signal <GND_82_o_z2_reg1[31]_add_20_OUT> created at line 108.
     Summary:
 	inferred   5 Adder/Subtractor(s).
 	inferred 256 D-type flip-flop(s).
@@ -2533,10 +2689,10 @@ Synthesizing Unit <sprf>.
     Found 1-bit register for signal <r<1><1>>.
     Found 1-bit register for signal <r<1><0>>.
     Found 1-bit register for signal <r<0><143>>.
-    Found 144-bit subtractor for signal <r[0][143]_GND_74_o_sub_2_OUT> created at line 48.
-    Found 144-bit subtractor for signal <r[1][143]_GND_74_o_sub_148_OUT> created at line 60.
-    Found 144-bit adder for signal <r[0][143]_GND_74_o_add_0_OUT> created at line 47.
-    Found 144-bit adder for signal <r[1][143]_GND_74_o_add_146_OUT> created at line 59.
+    Found 144-bit subtractor for signal <r[0][143]_GND_84_o_sub_2_OUT> created at line 48.
+    Found 144-bit subtractor for signal <r[1][143]_GND_84_o_sub_148_OUT> created at line 60.
+    Found 144-bit adder for signal <r[0][143]_GND_84_o_add_0_OUT> created at line 47.
+    Found 144-bit adder for signal <r[1][143]_GND_84_o_add_146_OUT> created at line 59.
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred 288 D-type flip-flop(s).
@@ -2545,6 +2701,7 @@ Unit <sprf> synthesized.
 
 Synthesizing Unit <dmem_array>.
     Related source file is "/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/ram/dmem_array.v".
+    Set property "MAX_FANOUT = 18" for signal <dmem_addr_tmp1>.
     Set property "MAX_FANOUT = 18" for signal <data_in_tmp1>.
     Found 11-bit register for signal <dmem_addr_tmp1>.
     Found 6-bit register for signal <dmem_cs_tmp1>.
@@ -2582,9 +2739,6 @@ Synthesizing Unit <dmem_array>.
     Found 1-bit register for signal <dmem30_rw>.
     Found 1-bit register for signal <dmem31_rw>.
     Found 1-bit register for signal <dmem32_rw>.
-    Found 1-bit register for signal <dmem33_rw>.
-    Found 1-bit register for signal <dmem34_rw>.
-    Found 1-bit register for signal <dmem35_rw>.
     Found 6-bit register for signal <dmem_cs_tmp2>.
     Found 3-bit register for signal <dmem_cs_tmp3<5:3>>.
     Found 144-bit register for signal <data_out1_reg>.
@@ -2593,27 +2747,27 @@ Synthesizing Unit <dmem_array>.
     Found 144-bit register for signal <data_out4_reg>.
     Found 144-bit register for signal <data_out5_reg>.
     Found 144-bit register for signal <data_out>.
-    Found 144-bit 8-to-1 multiplexer for signal <dmem_cs_tmp2[2]_data_out7[143]_wide_mux_51_OUT> created at line 1010.
-    Found 144-bit 8-to-1 multiplexer for signal <dmem_cs_tmp2[2]_data_out15[143]_wide_mux_52_OUT> created at line 1010.
-    Found 144-bit 8-to-1 multiplexer for signal <dmem_cs_tmp2[2]_data_out23[143]_wide_mux_53_OUT> created at line 1010.
-    Found 144-bit 8-to-1 multiplexer for signal <dmem_cs_tmp2[2]_data_out31[143]_wide_mux_54_OUT> created at line 1010.
-    Found 144-bit 5-to-1 multiplexer for signal <dmem_cs_tmp2[2]_GND_76_o_wide_mux_55_OUT> created at line 1010.
-    Found 144-bit 7-to-1 multiplexer for signal <dmem_cs_tmp3[5]_GND_76_o_wide_mux_62_OUT> created at line 1073.
+    Found 144-bit 8-to-1 multiplexer for signal <dmem_cs_tmp2[2]_data_out7[143]_wide_mux_48_OUT> created at line 900.
+    Found 144-bit 8-to-1 multiplexer for signal <dmem_cs_tmp2[2]_data_out15[143]_wide_mux_49_OUT> created at line 900.
+    Found 144-bit 8-to-1 multiplexer for signal <dmem_cs_tmp2[2]_data_out23[143]_wide_mux_50_OUT> created at line 900.
+    Found 144-bit 8-to-1 multiplexer for signal <dmem_cs_tmp2[2]_data_out31[143]_wide_mux_51_OUT> created at line 900.
+    Found 144-bit 7-to-1 multiplexer for signal <dmem_cs_tmp3[5]_GND_86_o_wide_mux_59_OUT> created at line 963.
     Summary:
-	inferred 1070 D-type flip-flop(s).
-	inferred 174 Multiplexer(s).
+	inferred 1067 D-type flip-flop(s).
+	inferred 165 Multiplexer(s).
 Unit <dmem_array> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 23
+# Adders/Subtractors                                   : 25
  10-bit adder                                          : 1
  144-bit adder                                         : 2
  144-bit subtractor                                    : 2
- 16-bit adder                                          : 1
- 2-bit adder                                           : 1
+ 16-bit adder                                          : 2
+ 18-bit subtractor                                     : 2
+ 2-bit adder                                           : 2
  26-bit adder                                          : 1
  3-bit adder                                           : 1
  32-bit adder                                          : 1
@@ -2624,17 +2778,17 @@ Macro Statistics
  48-bit adder                                          : 1
  5-bit adder                                           : 2
  5-bit subtractor                                      : 1
- 8-bit subtractor                                      : 2
-# Registers                                            : 1828
- 1-bit register                                        : 1717
+# Registers                                            : 1985
+ 1-bit register                                        : 1874
  10-bit register                                       : 2
  11-bit register                                       : 1
- 144-bit register                                      : 39
+ 144-bit register                                      : 35
  145-bit register                                      : 6
- 16-bit register                                       : 24
+ 16-bit register                                       : 26
  17-bit register                                       : 2
+ 18-bit register                                       : 2
  19-bit register                                       : 1
- 2-bit register                                        : 7
+ 2-bit register                                        : 9
  25-bit register                                       : 2
  3-bit register                                        : 2
  32-bit register                                       : 6
@@ -2643,23 +2797,22 @@ Macro Statistics
  5-bit register                                        : 2
  6-bit register                                        : 3
  64-bit register                                       : 1
- 8-bit register                                        : 2
-# Latches                                              : 36
- 1-bit latch                                           : 36
+# Latches                                              : 46
+ 1-bit latch                                           : 46
 # Comparators                                          : 5
  16-bit comparator greater                             : 1
+ 18-bit comparator equal                               : 1
  4-bit comparator equal                                : 1
  4-bit comparator greater                              : 1
  5-bit comparator greater                              : 1
- 8-bit comparator equal                                : 1
-# Multiplexers                                         : 1859
- 1-bit 2-to-1 multiplexer                              : 1733
+# Multiplexers                                         : 1996
+ 1-bit 2-to-1 multiplexer                              : 1869
  10-bit 2-to-1 multiplexer                             : 1
- 144-bit 5-to-1 multiplexer                            : 1
  144-bit 7-to-1 multiplexer                            : 1
  144-bit 8-to-1 multiplexer                            : 6
- 16-bit 2-to-1 multiplexer                             : 70
+ 16-bit 2-to-1 multiplexer                             : 72
  17-bit 2-to-1 multiplexer                             : 3
+ 18-bit 2-to-1 multiplexer                             : 5
  19-bit 2-to-1 multiplexer                             : 1
  2-bit 2-to-1 multiplexer                              : 3
  3-bit 2-to-1 multiplexer                              : 1
@@ -2667,15 +2820,15 @@ Macro Statistics
  4-bit 2-to-1 multiplexer                              : 20
  43-bit 2-to-1 multiplexer                             : 1
  5-bit 2-to-1 multiplexer                              : 11
- 8-bit 2-to-1 multiplexer                              : 5
-# FSMs                                                 : 6
-# Xors                                                 : 518
+# FSMs                                                 : 5
+# Xors                                                 : 520
  1-bit xor2                                            : 472
  1-bit xor3                                            : 17
  1-bit xor4                                            : 13
  1-bit xor5                                            : 1
  1-bit xor6                                            : 3
  144-bit xor2                                          : 3
+ 16-bit xor10                                          : 2
  16-bit xor17                                          : 9
 
 =========================================================================
@@ -2724,9 +2877,6 @@ Loading core <dat_sram> for timing and area information for instance <dat_sram29
 Loading core <dat_sram> for timing and area information for instance <dat_sram30>.
 Loading core <dat_sram> for timing and area information for instance <dat_sram31>.
 Loading core <dat_sram> for timing and area information for instance <dat_sram32>.
-Loading core <dat_sram> for timing and area information for instance <dat_sram33>.
-Loading core <dat_sram> for timing and area information for instance <dat_sram34>.
-Loading core <dat_sram> for timing and area information for instance <dat_sram35>.
 INFO:Xst:2261 - The FF/Latch <first_fragment_reg_143> in Unit <split> is equivalent to the following 63 FFs/Latches, which will be removed : <first_fragment_reg_142> <first_fragment_reg_141> <first_fragment_reg_140> <first_fragment_reg_139> <first_fragment_reg_138> <first_fragment_reg_137> <first_fragment_reg_136> <first_fragment_reg_135> <first_fragment_reg_134> <first_fragment_reg_133> <first_fragment_reg_132> <first_fragment_reg_131> <first_fragment_reg_130> <first_fragment_reg_129> <first_fragment_reg_128> <first_fragment_reg_127> <first_fragment_reg_126> <first_fragment_reg_125> <first_fragment_reg_124> <first_fragment_reg_123> <first_fragment_reg_122> <first_fragment_reg_121> <first_fragment_reg_120> <first_fragment_reg_119> <first_fragment_reg_118> <first_fragment_reg_117> <first_fragment_reg_116> <first_fragment_reg_115> <first_fragment_reg_114> <first_fragment_reg_113> <first_fragment_reg_112> <first_fragment_reg_111> <first_fragment_reg_110> <first_fragment_reg_109> <first_fragment_reg_108>
    <first_fragment_reg_107> <first_fragment_reg_106> <first_fragment_reg_105> <first_fragment_reg_104> <first_fragment_reg_103> <first_fragment_reg_102> <first_fragment_reg_101> <first_fragment_reg_100> <first_fragment_reg_99> <first_fragment_reg_98> <first_fragment_reg_97> <first_fragment_reg_96> <first_fragment_reg_95> <first_fragment_reg_94> <first_fragment_reg_93> <first_fragment_reg_92> <first_fragment_reg_91> <first_fragment_reg_90> <first_fragment_reg_89> <first_fragment_reg_88> <first_fragment_reg_87> <first_fragment_reg_86> <first_fragment_reg_85> <first_fragment_reg_84> <first_fragment_reg_83> <first_fragment_reg_82> <first_fragment_reg_81> <first_fragment_reg_80> 
 INFO:Xst:2261 - The FF/Latch <second_fragment_reg_143> in Unit <split> is equivalent to the following 79 FFs/Latches, which will be removed : <second_fragment_reg_142> <second_fragment_reg_141> <second_fragment_reg_140> <second_fragment_reg_139> <second_fragment_reg_138> <second_fragment_reg_137> <second_fragment_reg_136> <second_fragment_reg_135> <second_fragment_reg_134> <second_fragment_reg_133> <second_fragment_reg_132> <second_fragment_reg_131> <second_fragment_reg_130> <second_fragment_reg_129> <second_fragment_reg_128> <second_fragment_reg_127> <second_fragment_reg_126> <second_fragment_reg_125> <second_fragment_reg_124> <second_fragment_reg_123> <second_fragment_reg_122> <second_fragment_reg_121> <second_fragment_reg_120> <second_fragment_reg_119> <second_fragment_reg_118> <second_fragment_reg_117> <second_fragment_reg_116> <second_fragment_reg_115> <second_fragment_reg_114> <second_fragment_reg_113> <second_fragment_reg_112> <second_fragment_reg_111> <second_fragment_reg_110>
@@ -2736,6 +2886,7 @@ INFO:Xst:2261 - The FF/Latch <BHBLAdd_0> in Unit <multiplier> is equivalent to t
 INFO:Xst:2261 - The FF/Latch <BHBLAdd_2> in Unit <multiplier> is equivalent to the following 9 FFs/Latches, which will be removed : <BHBLAdd_3> <BHBLAdd_6> <BHBLAdd_7> <BHBLAdd_8> <BHBLAdd_9> <BHBLAdd_10> <BHBLAdd_11> <BHBLAdd_13> <BHBLAdd_14> 
 INFO:Xst:2261 - The FF/Latch <prng_r_dat_15> in Unit <prng> is equivalent to the following 9 FFs/Latches, which will be removed : <prng_r_dat_16> <prng_r_dat_17> <prng_r_dat_18> <prng_r_dat_19> <prng_r_dat_20> <prng_r_dat_21> <prng_r_dat_22> <prng_r_dat_23> <prng_r_dat_24> 
 INFO:Xst:2261 - The FF/Latch <src_dst_delay_7> in Unit <opr_decoder> is equivalent to the following 3 FFs/Latches, which will be removed : <src_dst_delay_6> <src_dst_delay_5> <src_dst_delay_3> 
+INFO:Xst:2261 - The FF/Latch <src_dst_delay_17> in Unit <opr_decoder> is equivalent to the following 9 FFs/Latches, which will be removed : <src_dst_delay_16> <src_dst_delay_15> <src_dst_delay_14> <src_dst_delay_13> <src_dst_delay_12> <src_dst_delay_11> <src_dst_delay_10> <src_dst_delay_9> <src_dst_delay_8> 
 WARNING:Xst:1710 - FF/Latch <first_fragment_reg_143> (without init value) has a constant value of 0 in block <split>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <second_fragment_reg_143> (without init value) has a constant value of 0 in block <split>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <BHBLAdd_0> (without init value) has a constant value of 1 in block <multiplier>. This FF/Latch will be trimmed during the optimization process.
@@ -2880,22 +3031,6 @@ WARNING:Xst:2677 - Node <gprf_t_dat_141> of sequential type is unconnected in bl
 WARNING:Xst:2677 - Node <gprf_t_dat_142> of sequential type is unconnected in block <prng_wrapper>.
 WARNING:Xst:2677 - Node <gprf_t_dat_143> of sequential type is unconnected in block <prng_wrapper>.
 WARNING:Xst:2677 - Node <dividend_reg_144> of sequential type is unconnected in block <gopf_div>.
-WARNING:Xst:2677 - Node <gopf_reg_143> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_142> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_141> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_140> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_139> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_138> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_137> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_136> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_135> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_134> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_133> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_132> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_131> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_130> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_129> of sequential type is unconnected in block <gopf_eval>.
-WARNING:Xst:2677 - Node <gopf_reg_128> of sequential type is unconnected in block <gopf_eval>.
 WARNING:Xst:2677 - Node <alu_mod_reg_144> of sequential type is unconnected in block <alu>.
 WARNING:Xst:2677 - Node <result_32> of sequential type is unconnected in block <multiplier>.
 WARNING:Xst:2677 - Node <result_33> of sequential type is unconnected in block <multiplier>.
@@ -2933,6 +3068,11 @@ WARNING:Xst:2404 -  FFs/Latches <sprfwrp_to_wrp_addr_reg<16:11>> (without init v
 WARNING:Xst:2404 -  FFs/Latches <gprf_bus1_r_dat<144:144>> (without init value) have a constant value of 0 in block <alu_wrapper>.
 WARNING:Xst:2404 -  FFs/Latches <gprf_t_dat<143:26>> (without init value) have a constant value of 0 in block <prng_wrapper>.
 WARNING:Xst:2404 -  FFs/Latches <prng_r_dat<24:15>> (without init value) have a constant value of 0 in block <prng_lcg>.
+
+Synthesizing (advanced) Unit <GOPF_EVAL>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <index>: 1 register on signal <index>.
+Unit <GOPF_EVAL> synthesized (advanced).
 
 Synthesizing (advanced) Unit <GOPF_MUL>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
@@ -3079,22 +3219,6 @@ WARNING:Xst:2677 - Node <gprf_to_wrp_dat2_reg_143> of sequential type is unconne
 WARNING:Xst:2677 - Node <gprf_t_dat_25> of sequential type is unconnected in block <prng_wrapper>.
 WARNING:Xst:2677 - Node <alu_mod_reg_144> of sequential type is unconnected in block <ALU>.
 WARNING:Xst:2677 - Node <dividend_reg_144> of sequential type is unconnected in block <GOPF_DIV>.
-WARNING:Xst:2677 - Node <gopf_reg_143> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_142> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_141> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_140> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_139> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_138> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_137> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_136> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_135> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_134> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_133> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_132> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_131> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_130> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_129> of sequential type is unconnected in block <GOPF_EVAL>.
-WARNING:Xst:2677 - Node <gopf_reg_128> of sequential type is unconnected in block <GOPF_EVAL>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -3104,6 +3228,7 @@ Macro Statistics
  144-bit adder                                         : 2
  144-bit subtractor                                    : 2
  16-bit adder                                          : 1
+ 18-bit subtractor                                     : 2
  2-bit adder                                           : 1
  26-bit adder                                          : 1
  32-bit adder                                          : 1
@@ -3113,41 +3238,42 @@ Macro Statistics
  48-bit adder                                          : 1
  5-bit adder                                           : 2
  5-bit subtractor                                      : 1
- 8-bit subtractor                                      : 2
-# Counters                                             : 4
+# Counters                                             : 6
  10-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
  3-bit up counter                                      : 1
  4-bit up counter                                      : 2
-# Registers                                            : 8861
- Flip-Flops                                            : 8861
+# Registers                                            : 8496
+ Flip-Flops                                            : 8496
 # Comparators                                          : 5
  16-bit comparator greater                             : 1
+ 18-bit comparator equal                               : 1
  4-bit comparator equal                                : 1
  4-bit comparator greater                              : 1
  5-bit comparator greater                              : 1
- 8-bit comparator equal                                : 1
-# Multiplexers                                         : 1883
- 1-bit 2-to-1 multiplexer                              : 1763
- 144-bit 5-to-1 multiplexer                            : 1
+# Multiplexers                                         : 2019
+ 1-bit 2-to-1 multiplexer                              : 1899
  144-bit 7-to-1 multiplexer                            : 1
  144-bit 8-to-1 multiplexer                            : 6
- 16-bit 2-to-1 multiplexer                             : 68
+ 16-bit 2-to-1 multiplexer                             : 69
  17-bit 2-to-1 multiplexer                             : 3
+ 18-bit 2-to-1 multiplexer                             : 5
  19-bit 2-to-1 multiplexer                             : 1
  2-bit 2-to-1 multiplexer                              : 3
  32-bit 2-to-1 multiplexer                             : 2
  4-bit 2-to-1 multiplexer                              : 18
  43-bit 2-to-1 multiplexer                             : 1
  5-bit 2-to-1 multiplexer                              : 11
- 8-bit 2-to-1 multiplexer                              : 5
-# FSMs                                                 : 6
-# Xors                                                 : 518
+# FSMs                                                 : 5
+# Xors                                                 : 520
  1-bit xor2                                            : 472
  1-bit xor3                                            : 17
  1-bit xor4                                            : 13
  1-bit xor5                                            : 1
  1-bit xor6                                            : 3
  144-bit xor2                                          : 3
+ 16-bit xor10                                          : 2
  16-bit xor17                                          : 9
 
 =========================================================================
@@ -3315,23 +3441,8 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BHBLAdd_12> (withou
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BHBLAdd_13> (without init value) has a constant value of 0 in block <MUL_32bit>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BHBLAdd_14> (without init value) has a constant value of 0 in block <MUL_32bit>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BHBLAdd_15> (without init value) has a constant value of 1 in block <MUL_32bit>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_132> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_116> <mul_add_in_reg_100> <mul_add_in_reg_84> <mul_add_in_reg_68> <mul_add_in_reg_52> <mul_add_in_reg_36> <mul_add_in_reg_20> <mul_add_in_reg_4> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_133> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_117> <mul_add_in_reg_101> <mul_add_in_reg_85> <mul_add_in_reg_69> <mul_add_in_reg_53> <mul_add_in_reg_37> <mul_add_in_reg_21> <mul_add_in_reg_5> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_134> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_118> <mul_add_in_reg_102> <mul_add_in_reg_86> <mul_add_in_reg_70> <mul_add_in_reg_54> <mul_add_in_reg_38> <mul_add_in_reg_22> <mul_add_in_reg_6> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_135> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_119> <mul_add_in_reg_103> <mul_add_in_reg_87> <mul_add_in_reg_71> <mul_add_in_reg_55> <mul_add_in_reg_39> <mul_add_in_reg_23> <mul_add_in_reg_7> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_136> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_120> <mul_add_in_reg_104> <mul_add_in_reg_88> <mul_add_in_reg_72> <mul_add_in_reg_56> <mul_add_in_reg_40> <mul_add_in_reg_24> <mul_add_in_reg_8> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_142> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_126> <mul_add_in_reg_110> <mul_add_in_reg_94> <mul_add_in_reg_78> <mul_add_in_reg_62> <mul_add_in_reg_46> <mul_add_in_reg_30> <mul_add_in_reg_14> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_137> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_121> <mul_add_in_reg_105> <mul_add_in_reg_89> <mul_add_in_reg_73> <mul_add_in_reg_57> <mul_add_in_reg_41> <mul_add_in_reg_25> <mul_add_in_reg_9> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_143> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_127> <mul_add_in_reg_111> <mul_add_in_reg_95> <mul_add_in_reg_79> <mul_add_in_reg_63> <mul_add_in_reg_47> <mul_add_in_reg_31> <mul_add_in_reg_15> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_138> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_122> <mul_add_in_reg_106> <mul_add_in_reg_90> <mul_add_in_reg_74> <mul_add_in_reg_58> <mul_add_in_reg_42> <mul_add_in_reg_26> <mul_add_in_reg_10> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_139> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_123> <mul_add_in_reg_107> <mul_add_in_reg_91> <mul_add_in_reg_75> <mul_add_in_reg_59> <mul_add_in_reg_43> <mul_add_in_reg_27> <mul_add_in_reg_11> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_140> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_124> <mul_add_in_reg_108> <mul_add_in_reg_92> <mul_add_in_reg_76> <mul_add_in_reg_60> <mul_add_in_reg_44> <mul_add_in_reg_28> <mul_add_in_reg_12> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_129> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_113> <mul_add_in_reg_97> <mul_add_in_reg_81> <mul_add_in_reg_65> <mul_add_in_reg_49> <mul_add_in_reg_33> <mul_add_in_reg_17> <mul_add_in_reg_1> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_141> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_125> <mul_add_in_reg_109> <mul_add_in_reg_93> <mul_add_in_reg_77> <mul_add_in_reg_61> <mul_add_in_reg_45> <mul_add_in_reg_29> <mul_add_in_reg_13> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_130> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_114> <mul_add_in_reg_98> <mul_add_in_reg_82> <mul_add_in_reg_66> <mul_add_in_reg_50> <mul_add_in_reg_34> <mul_add_in_reg_18> <mul_add_in_reg_2> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_131> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_115> <mul_add_in_reg_99> <mul_add_in_reg_83> <mul_add_in_reg_67> <mul_add_in_reg_51> <mul_add_in_reg_35> <mul_add_in_reg_19> <mul_add_in_reg_3> 
-INFO:Xst:2261 - The FF/Latch <mul_add_in_reg_128> in Unit <GOPF_EVAL> is equivalent to the following 8 FFs/Latches, which will be removed : <mul_add_in_reg_112> <mul_add_in_reg_96> <mul_add_in_reg_80> <mul_add_in_reg_64> <mul_add_in_reg_48> <mul_add_in_reg_32> <mul_add_in_reg_16> <mul_add_in_reg_0> 
 INFO:Xst:2261 - The FF/Latch <src_dst_delay_7> in Unit <opr_decoder> is equivalent to the following 3 FFs/Latches, which will be removed : <src_dst_delay_6> <src_dst_delay_5> <src_dst_delay_3> 
+INFO:Xst:2261 - The FF/Latch <src_dst_delay_17> in Unit <opr_decoder> is equivalent to the following 9 FFs/Latches, which will be removed : <src_dst_delay_16> <src_dst_delay_15> <src_dst_delay_14> <src_dst_delay_13> <src_dst_delay_12> <src_dst_delay_11> <src_dst_delay_10> <src_dst_delay_9> <src_dst_delay_8> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <asip_syn/alu/gopf_mul/FSM_0> on signal <CurrentState[1:2]> with gray encoding.
 -------------------
@@ -3371,16 +3482,7 @@ Optimizing FSM <asip_syn/alu/deg/FSM_3> on signal <CurrentState[1:1]> with seque
  001   | 1
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <asip_syn/alu/gopf_eval/FSM_4> on signal <CurrentState[1:2]> with sequential encoding.
--------------------
- State | Encoding
--------------------
- 000   | 00
- 010   | 01
- 001   | 10
--------------------
-Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <asip_syn/prng/FSM_5> on signal <CurrentState[1:2]> with user encoding.
+Optimizing FSM <asip_syn/prng/FSM_4> on signal <CurrentState[1:2]> with user encoding.
 -------------------
  State | Encoding
 -------------------
@@ -3521,7 +3623,6 @@ WARNING:Xst:2677 - Node <asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat2_reg_
 WARNING:Xst:2677 - Node <asip_syn/pc_if/mv_PC_9> of sequential type is unconnected in block <asip_top>.
 WARNING:Xst:2677 - Node <asip_syn/pc_if/mv_PC_8> of sequential type is unconnected in block <asip_top>.
 WARNING:Xst:2677 - Node <asip_syn/pc_if/mv_PC_7> of sequential type is unconnected in block <asip_top>.
-WARNING:Xst:2677 - Node <asip_syn/alu/gopf_eval/eval_done> of sequential type is unconnected in block <asip_top>.
 WARNING:Xst:2677 - Node <asip_syn/prng/multiplier/result_63> of sequential type is unconnected in block <asip_top>.
 WARNING:Xst:2677 - Node <asip_syn/prng/multiplier/result_62> of sequential type is unconnected in block <asip_top>.
 WARNING:Xst:2677 - Node <asip_syn/prng/multiplier/result_61> of sequential type is unconnected in block <asip_top>.
@@ -3614,153 +3715,9 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <asip_syn/alu/gopf_d
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <asip_syn/alu/gopf_div/inv_tmp_reg_114> (without init value) has a constant value of 0 in block <asip_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <asip_syn/alu/gopf_div/inv_tmp_reg_113> (without init value) has a constant value of 0 in block <asip_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <asip_syn/alu/gopf_div/inv_tmp_reg_112> (without init value) has a constant value of 0 in block <asip_top>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_58> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_58> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_63> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_63> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_59> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_59> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_64> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_64> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_65> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_65> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_70> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_70> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_66> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_66> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_71> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_71> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_67> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_67> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_72> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_72> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_68> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_68> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_73> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_73> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_69> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_69> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_74> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_74> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_75> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_75> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_80> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_80> 
 INFO:Xst:2261 - The FF/Latch <asip_syn/wrapper_top/alu_wrapper/alu_t_sel_tmp1> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/wrapper_top/alu_wrapper/alu_o_sel_tmp1> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_81> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_81> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_76> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_76> 
 INFO:Xst:2261 - The FF/Latch <asip_syn/wrapper_top/alu_wrapper/alu_t_sel_tmp2> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/wrapper_top/alu_wrapper/alu_o_sel_tmp2> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_82> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_82> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_77> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_77> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_78> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_78> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_83> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_83> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_79> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_79> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_84> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_84> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_85> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_85> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_90> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_90> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_86> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_86> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_91> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_91> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_87> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_87> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_92> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_92> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_88> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_88> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_93> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_93> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_89> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_89> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_94> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_94> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_95> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_95> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_96> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_96> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_97> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_97> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_98> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_98> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_99> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_99> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_0> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_0> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_1> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_1> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_2> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_2> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_3> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_3> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_4> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_4> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_5> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_5> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_6> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_6> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_7> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_7> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_8> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_8> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_9> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_9> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_100> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_100> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_101> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_101> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_102> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_102> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_103> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_103> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_104> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_104> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_105> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_105> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_110> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_110> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_106> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_106> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_111> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_111> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_107> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_107> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_112> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_112> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_108> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_108> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_113> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_113> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_109> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_109> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_114> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_114> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_115> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_115> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_120> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_120> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_116> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_116> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_121> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_121> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_117> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_117> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_122> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_122> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_118> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_118> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_123> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_123> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_119> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_119> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_124> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_124> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_125> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_125> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_130> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_130> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_126> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_126> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_131> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_131> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_127> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_127> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_132> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_132> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_128> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_128> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_133> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_133> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_129> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_129> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_134> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_134> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_135> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_135> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_140> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_140> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_136> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_136> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_141> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_141> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_137> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_137> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_142> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_142> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_138> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_138> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_143> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_143> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_139> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_139> 
 INFO:Xst:2261 - The FF/Latch <asip_syn/wrapper_top/prng_wrapper/prng_typ_sel_tmp1_1> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/wrapper_top/prng_wrapper/prng_t_sel_tmp1> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_10> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_10> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_11> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_11> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_12> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_12> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_13> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_13> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_14> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_14> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_15> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_15> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_20> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_20> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_16> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_16> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_21> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_21> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_17> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_17> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_22> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_22> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_18> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_18> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_23> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_23> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_19> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_19> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_24> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_24> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_25> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_25> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_30> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_30> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_26> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_26> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_31> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_31> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_27> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_27> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_32> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_32> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_28> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_28> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_33> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_33> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_29> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_29> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_34> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_34> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_35> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_35> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_40> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_40> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_36> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_36> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_41> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_41> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_37> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_37> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_42> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_42> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_38> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_38> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_43> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_43> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_39> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_39> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_44> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_44> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_45> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_45> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_50> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_50> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_46> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_46> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_51> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_51> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_47> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_47> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_52> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_52> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_48> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_48> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_53> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_53> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_49> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_49> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_54> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_54> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_55> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_55> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_60> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_60> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_56> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_56> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_61> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_61> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_57> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_57> 
-INFO:Xst:2261 - The FF/Latch <asip_syn/alu/gopf_eval/mul_o_in_reg_62> in Unit <asip_top> is equivalent to the following FF/Latch, which will be removed : <asip_syn/alu/gopf_eval/gf2e_element_reg_62> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -3925,6 +3882,9 @@ INFO:Xst:2261 - The FF/Latch <asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat1
 INFO:Xst:2261 - The FF/Latch <asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat1_reg_98> in Unit <asip_top> is equivalent to the following 2 FFs/Latches, which will be removed : <asip_syn/wrapper_top/alu_wrapper/gprf_bus1_r_dat_98> <asip_syn/wrapper_top/sprf_wrapper/sprf_t_dat_98> 
 INFO:Xst:2261 - The FF/Latch <asip_syn/wrapper_top/gprf_wrapper/gprf_to_wrp_dat1_reg_99> in Unit <asip_top> is equivalent to the following 2 FFs/Latches, which will be removed : <asip_syn/wrapper_top/alu_wrapper/gprf_bus1_r_dat_99> <asip_syn/wrapper_top/sprf_wrapper/sprf_t_dat_99> 
 Found area constraint ratio of 100 (+ 5) on block asip_top, actual ratio is 10.
+FlipFlop asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_0 has been replicated 2 time(s)
+FlipFlop asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_1 has been replicated 1 time(s)
+FlipFlop asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_2 has been replicated 1 time(s)
 FlipFlop asip_syn/wrapper_top/alu_wrapper/alu_typ_sel_tmp2_3 has been replicated 1 time(s)
 FlipFlop dat_sram/data_in_tmp1_0 has been replicated 1 time(s)
 FlipFlop dat_sram/data_in_tmp1_1 has been replicated 1 time(s)
@@ -4070,6 +4030,17 @@ FlipFlop dat_sram/data_in_tmp1_96 has been replicated 1 time(s)
 FlipFlop dat_sram/data_in_tmp1_97 has been replicated 1 time(s)
 FlipFlop dat_sram/data_in_tmp1_98 has been replicated 1 time(s)
 FlipFlop dat_sram/data_in_tmp1_99 has been replicated 1 time(s)
+FlipFlop dat_sram/dmem_addr_tmp1_0 has been replicated 16 time(s)
+FlipFlop dat_sram/dmem_addr_tmp1_1 has been replicated 16 time(s)
+FlipFlop dat_sram/dmem_addr_tmp1_10 has been replicated 16 time(s)
+FlipFlop dat_sram/dmem_addr_tmp1_2 has been replicated 16 time(s)
+FlipFlop dat_sram/dmem_addr_tmp1_3 has been replicated 16 time(s)
+FlipFlop dat_sram/dmem_addr_tmp1_4 has been replicated 16 time(s)
+FlipFlop dat_sram/dmem_addr_tmp1_5 has been replicated 16 time(s)
+FlipFlop dat_sram/dmem_addr_tmp1_6 has been replicated 16 time(s)
+FlipFlop dat_sram/dmem_addr_tmp1_7 has been replicated 16 time(s)
+FlipFlop dat_sram/dmem_addr_tmp1_8 has been replicated 16 time(s)
+FlipFlop dat_sram/dmem_addr_tmp1_9 has been replicated 16 time(s)
 
 Final Macro Processing ...
 
@@ -4103,8 +4074,8 @@ Unit <asip_top> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 8093
- Flip-Flops                                            : 8093
+# Registers                                            : 8197
+ Flip-Flops                                            : 8197
 # Shift Registers                                      : 23
  2-bit shift register                                  : 19
  3-bit shift register                                  : 3
@@ -4131,31 +4102,32 @@ Top Level Output File Name         : asip_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 13445
-#      GND                         : 41
-#      INV                         : 309
-#      LUT1                        : 319
-#      LUT2                        : 617
-#      LUT3                        : 1493
-#      LUT4                        : 851
-#      LUT5                        : 2713
-#      LUT6                        : 5062
-#      MUXCY                       : 720
-#      MUXF7                       : 584
-#      VCC                         : 41
-#      XORCY                       : 695
-# FlipFlops/Latches                : 8143
-#      FD                          : 1501
-#      FDC                         : 393
-#      FDCE                        : 5553
-#      FDE                         : 493
+# BELS                             : 13098
+#      GND                         : 38
+#      INV                         : 338
+#      LUT1                        : 328
+#      LUT2                        : 619
+#      LUT3                        : 1141
+#      LUT4                        : 934
+#      LUT5                        : 2682
+#      LUT6                        : 4870
+#      MUXCY                       : 775
+#      MUXF7                       : 588
+#      VCC                         : 38
+#      XORCY                       : 747
+# FlipFlops/Latches                : 8248
+#      FD                          : 1533
+#      FDC                         : 394
+#      FDCE                        : 5497
+#      FDE                         : 477
 #      FDP                         : 1
 #      FDPE                        : 12
+#      FDR                         : 146
 #      FDRE                        : 133
-#      FDSE                        : 36
-#      LD                          : 21
-# RAMS                             : 290
-#      RAMB36E1                    : 290
+#      FDSE                        : 33
+#      LD                          : 22
+# RAMS                             : 266
+#      RAMB36E1                    : 266
 # Shift Registers                  : 23
 #      SRLC16E                     : 23
 # Clock Buffers                    : 2
@@ -4174,26 +4146,26 @@ Selected Device : 6vlx240tff784-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            8143  out of  301440     2%  
- Number of Slice LUTs:                11387  out of  150720     7%  
-    Number used as Logic:             11364  out of  150720     7%  
+ Number of Slice Registers:            8248  out of  301440     2%  
+ Number of Slice LUTs:                10935  out of  150720     7%  
+    Number used as Logic:             10912  out of  150720     7%  
     Number used as Memory:               23  out of  58400     0%  
        Number used as SRL:               23
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  13634
-   Number with an unused Flip Flop:    5491  out of  13634    40%  
-   Number with an unused LUT:          2247  out of  13634    16%  
-   Number of fully used LUT-FF pairs:  5896  out of  13634    43%  
-   Number of unique control sets:        61
+ Number of LUT Flip Flop pairs used:  13521
+   Number with an unused Flip Flop:    5273  out of  13521    38%  
+   Number with an unused LUT:          2586  out of  13521    19%  
+   Number of fully used LUT-FF pairs:  5662  out of  13521    41%  
+   Number of unique control sets:        66
 
 IO Utilization: 
  Number of IOs:                         147
  Number of bonded IOBs:                 147  out of    400    36%  
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:              290  out of    416    69%  
-    Number using Block RAM only:        290
+ Number of Block RAM/FIFO:              266  out of    416    63%  
+    Number using Block RAM only:        266
  Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
  Number of DSP48E1s:                      3  out of    768     0%  
 
@@ -4215,14 +4187,14 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
----------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
-Clock Signal                                                                                                                                                   | Clock buffer(FF name)                                    | Load  |
----------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
-clk                                                                                                                                                            | BUFGP                                                    | 8438  |
-asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel2(asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel3:O)                                                     | NONE(*)(asip_syn/ins_decoder/opr_decoder/alu_typ_sel_0)  | 4     |
-asip_syn/dec_delay_src_dst_sel(asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel4:O)                                                                          | NONE(*)(asip_syn/ins_decoder/opr_decoder/src_dst_delay_0)| 10    |
-asip_syn/ins_decoder/opr_decoder/opr_code[4]_alu_typ_sel[3]_select_63_OUT<2>1(asip_syn/ins_decoder/opr_decoder/opr_code[4]_alu_typ_sel[3]_select_63_OUT<2>11:O)| NONE(*)(asip_syn/ins_decoder/dst_decoder/jmp_addr_0)     | 7     |
----------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
+---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
+Clock Signal                                                                                                                           | Clock buffer(FF name)                                    | Load  |
+---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
+clk                                                                                                                                    | BUFGP                                                    | 8518  |
+asip_syn/ins_decoder/opr_decoder/_n0139(asip_syn/ins_decoder/opr_decoder/_n01391:O)                                                    | NONE(*)(asip_syn/ins_decoder/opr_decoder/alu_typ_sel_0)  | 4     |
+asip_syn/dec_delay_src_dst_sel(asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel4:O)                                                  | NONE(*)(asip_syn/ins_decoder/opr_decoder/src_dst_delay_0)| 11    |
+asip_syn/ins_decoder/dst_decoder/opr_code[4]_opr_code[4]_AND_95_o(asip_syn/ins_decoder/dst_decoder/opr_code[4]_opr_code[4]_AND_95_o1:O)| NONE(*)(asip_syn/ins_decoder/dst_decoder/jmp_addr_0)     | 7     |
+---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
 (*) These 3 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -4233,42 +4205,39 @@ Asynchronous Control Signals Information:
 -----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Control Signal                                       | Buffer(FF name)                                                                                                                                | Load  |
 -----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-dat_sram/dat_sram0/N1(dat_sram/dat_sram0/XST_GND:G)  | NONE(dat_sram/dat_sram0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
-dat_sram/dat_sram1/N1(dat_sram/dat_sram1/XST_GND:G)  | NONE(dat_sram/dat_sram1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram0/N1(dat_sram/dat_sram0/XST_GND:G)  | NONE(dat_sram/dat_sram0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram1/N1(dat_sram/dat_sram1/XST_GND:G)  | NONE(dat_sram/dat_sram1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
 dat_sram/dat_sram10/N1(dat_sram/dat_sram10/XST_GND:G)| NONE(dat_sram/dat_sram10/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram11/N1(dat_sram/dat_sram11/XST_GND:G)| NONE(dat_sram/dat_sram11/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram12/N1(dat_sram/dat_sram12/XST_GND:G)| NONE(dat_sram/dat_sram12/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram13/N1(dat_sram/dat_sram13/XST_GND:G)| NONE(dat_sram/dat_sram13/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram11/N1(dat_sram/dat_sram11/XST_GND:G)| NONE(dat_sram/dat_sram11/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram12/N1(dat_sram/dat_sram12/XST_GND:G)| NONE(dat_sram/dat_sram12/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram13/N1(dat_sram/dat_sram13/XST_GND:G)| NONE(dat_sram/dat_sram13/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
 dat_sram/dat_sram14/N1(dat_sram/dat_sram14/XST_GND:G)| NONE(dat_sram/dat_sram14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram15/N1(dat_sram/dat_sram15/XST_GND:G)| NONE(dat_sram/dat_sram15/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram16/N1(dat_sram/dat_sram16/XST_GND:G)| NONE(dat_sram/dat_sram16/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram17/N1(dat_sram/dat_sram17/XST_GND:G)| NONE(dat_sram/dat_sram17/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram18/N1(dat_sram/dat_sram18/XST_GND:G)| NONE(dat_sram/dat_sram18/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram19/N1(dat_sram/dat_sram19/XST_GND:G)| NONE(dat_sram/dat_sram19/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram2/N1(dat_sram/dat_sram2/XST_GND:G)  | NONE(dat_sram/dat_sram2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
-dat_sram/dat_sram20/N1(dat_sram/dat_sram20/XST_GND:G)| NONE(dat_sram/dat_sram20/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram21/N1(dat_sram/dat_sram21/XST_GND:G)| NONE(dat_sram/dat_sram21/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram22/N1(dat_sram/dat_sram22/XST_GND:G)| NONE(dat_sram/dat_sram22/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram23/N1(dat_sram/dat_sram23/XST_GND:G)| NONE(dat_sram/dat_sram23/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram24/N1(dat_sram/dat_sram24/XST_GND:G)| NONE(dat_sram/dat_sram24/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram25/N1(dat_sram/dat_sram25/XST_GND:G)| NONE(dat_sram/dat_sram25/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram26/N1(dat_sram/dat_sram26/XST_GND:G)| NONE(dat_sram/dat_sram26/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram15/N1(dat_sram/dat_sram15/XST_GND:G)| NONE(dat_sram/dat_sram15/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram16/N1(dat_sram/dat_sram16/XST_GND:G)| NONE(dat_sram/dat_sram16/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram17/N1(dat_sram/dat_sram17/XST_GND:G)| NONE(dat_sram/dat_sram17/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram18/N1(dat_sram/dat_sram18/XST_GND:G)| NONE(dat_sram/dat_sram18/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram19/N1(dat_sram/dat_sram19/XST_GND:G)| NONE(dat_sram/dat_sram19/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram2/N1(dat_sram/dat_sram2/XST_GND:G)  | NONE(dat_sram/dat_sram2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram20/N1(dat_sram/dat_sram20/XST_GND:G)| NONE(dat_sram/dat_sram20/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram21/N1(dat_sram/dat_sram21/XST_GND:G)| NONE(dat_sram/dat_sram21/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram22/N1(dat_sram/dat_sram22/XST_GND:G)| NONE(dat_sram/dat_sram22/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram23/N1(dat_sram/dat_sram23/XST_GND:G)| NONE(dat_sram/dat_sram23/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram24/N1(dat_sram/dat_sram24/XST_GND:G)| NONE(dat_sram/dat_sram24/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram25/N1(dat_sram/dat_sram25/XST_GND:G)| NONE(dat_sram/dat_sram25/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram26/N1(dat_sram/dat_sram26/XST_GND:G)| NONE(dat_sram/dat_sram26/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
 dat_sram/dat_sram27/N1(dat_sram/dat_sram27/XST_GND:G)| NONE(dat_sram/dat_sram27/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram28/N1(dat_sram/dat_sram28/XST_GND:G)| NONE(dat_sram/dat_sram28/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram29/N1(dat_sram/dat_sram29/XST_GND:G)| NONE(dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram3/N1(dat_sram/dat_sram3/XST_GND:G)  | NONE(dat_sram/dat_sram3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
-dat_sram/dat_sram30/N1(dat_sram/dat_sram30/XST_GND:G)| NONE(dat_sram/dat_sram30/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram28/N1(dat_sram/dat_sram28/XST_GND:G)| NONE(dat_sram/dat_sram28/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram29/N1(dat_sram/dat_sram29/XST_GND:G)| NONE(dat_sram/dat_sram29/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
+dat_sram/dat_sram3/N1(dat_sram/dat_sram3/XST_GND:G)  | NONE(dat_sram/dat_sram3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram30/N1(dat_sram/dat_sram30/XST_GND:G)| NONE(dat_sram/dat_sram30/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
 dat_sram/dat_sram31/N1(dat_sram/dat_sram31/XST_GND:G)| NONE(dat_sram/dat_sram31/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
 dat_sram/dat_sram32/N1(dat_sram/dat_sram32/XST_GND:G)| NONE(dat_sram/dat_sram32/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram33/N1(dat_sram/dat_sram33/XST_GND:G)| NONE(dat_sram/dat_sram33/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram34/N1(dat_sram/dat_sram34/XST_GND:G)| NONE(dat_sram/dat_sram34/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
-dat_sram/dat_sram35/N1(dat_sram/dat_sram35/XST_GND:G)| NONE(dat_sram/dat_sram35/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram)| 16    |
 dat_sram/dat_sram4/N1(dat_sram/dat_sram4/XST_GND:G)  | NONE(dat_sram/dat_sram4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
-dat_sram/dat_sram5/N1(dat_sram/dat_sram5/XST_GND:G)  | NONE(dat_sram/dat_sram5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
-dat_sram/dat_sram6/N1(dat_sram/dat_sram6/XST_GND:G)  | NONE(dat_sram/dat_sram6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
-dat_sram/dat_sram7/N1(dat_sram/dat_sram7/XST_GND:G)  | NONE(dat_sram/dat_sram7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram5/N1(dat_sram/dat_sram5/XST_GND:G)  | NONE(dat_sram/dat_sram5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram6/N1(dat_sram/dat_sram6/XST_GND:G)  | NONE(dat_sram/dat_sram6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram7/N1(dat_sram/dat_sram7/XST_GND:G)  | NONE(dat_sram/dat_sram7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
 dat_sram/dat_sram8/N1(dat_sram/dat_sram8/XST_GND:G)  | NONE(dat_sram/dat_sram8/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
-dat_sram/dat_sram9/N1(dat_sram/dat_sram9/XST_GND:G)  | NONE(dat_sram/dat_sram9/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
+dat_sram/dat_sram9/N1(dat_sram/dat_sram9/XST_GND:G)  | NONE(dat_sram/dat_sram9/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SP.SIMPLE_PRIM36.ram) | 16    |
 ins_sram/N1(ins_sram/XST_GND:G)                      | NONE(ins_sram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SP.WIDE_PRIM36.ram)             | 4     |
 -----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
@@ -4277,7 +4246,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 3.578ns (Maximum Frequency: 279.454MHz)
-   Minimum input arrival time before clock: 1.591ns
+   Minimum input arrival time before clock: 1.647ns
    Maximum output required time after clock: 0.590ns
    Maximum combinational path delay: No path found
 
@@ -4288,7 +4257,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 3.578ns (frequency: 279.454MHz)
-  Total number of paths / destination ports: 282256 / 23058
+  Total number of paths / destination ports: 302339 / 22306
 -------------------------------------------------------------------------
 Delay:               3.578ns (Levels of Logic = 146)
   Source:            asip_syn/sprf/r_1_0 (FF)
@@ -4301,151 +4270,151 @@ Delay:               3.578ns (Levels of Logic = 146)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             3   0.280   0.289  asip_syn/sprf/r_1_0 (asip_syn/sprf/r_1_0)
-     INV:I->O              1   0.070   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_lut<0>_INV_0 (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_lut<0>)
-     MUXCY:S->O            1   0.219   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<0> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<0>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<1> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<1>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<2> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<2>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<3> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<3>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<4> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<4>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<5> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<5>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<6> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<6>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<7> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<7>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<8> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<8>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<9> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<9>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<10> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<10>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<11> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<11>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<12> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<12>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<13> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<13>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<14> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<14>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<15> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<15>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<16> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<16>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<17> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<17>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<18> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<18>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<19> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<19>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<20> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<20>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<21> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<21>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<22> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<22>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<23> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<23>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<24> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<24>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<25> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<25>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<26> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<26>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<27> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<27>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<28> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<28>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<29> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<29>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<30> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<30>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<31> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<31>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<32> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<32>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<33> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<33>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<34> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<34>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<35> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<35>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<36> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<36>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<37> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<37>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<38> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<38>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<39> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<39>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<40> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<40>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<41> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<41>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<42> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<42>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<43> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<43>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<44> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<44>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<45> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<45>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<46> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<46>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<47> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<47>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<48> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<48>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<49> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<49>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<50> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<50>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<51> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<51>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<52> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<52>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<53> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<53>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<54> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<54>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<55> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<55>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<56> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<56>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<57> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<57>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<58> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<58>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<59> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<59>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<60> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<60>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<61> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<61>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<62> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<62>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<63> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<63>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<64> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<64>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<65> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<65>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<66> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<66>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<67> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<67>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<68> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<68>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<69> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<69>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<70> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<70>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<71> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<71>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<72> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<72>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<73> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<73>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<74> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<74>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<75> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<75>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<76> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<76>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<77> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<77>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<78> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<78>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<79> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<79>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<80> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<80>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<81> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<81>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<82> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<82>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<83> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<83>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<84> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<84>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<85> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<85>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<86> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<86>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<87> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<87>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<88> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<88>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<89> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<89>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<90> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<90>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<91> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<91>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<92> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<92>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<93> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<93>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<94> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<94>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<95> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<95>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<96> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<96>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<97> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<97>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<98> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<98>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<99> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<99>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<100> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<100>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<101> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<101>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<102> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<102>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<103> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<103>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<104> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<104>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<105> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<105>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<106> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<106>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<107> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<107>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<108> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<108>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<109> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<109>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<110> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<110>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<111> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<111>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<112> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<112>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<113> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<113>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<114> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<114>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<115> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<115>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<116> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<116>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<117> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<117>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<118> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<118>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<119> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<119>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<120> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<120>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<121> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<121>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<122> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<122>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<123> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<123>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<124> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<124>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<125> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<125>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<126> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<126>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<127> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<127>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<128> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<128>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<129> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<129>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<130> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<130>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<131> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<131>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<132> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<132>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<133> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<133>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<134> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<134>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<135> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<135>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<136> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<136>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<137> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<137>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<138> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<138>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<139> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<139>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<140> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<140>)
-     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<141> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<141>)
-     MUXCY:CI->O           0   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<142> (asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_cy<142>)
-     XORCY:CI->O           1   0.180   0.357  asip_syn/sprf/Madd_r[1][143]_GND_74_o_add_146_OUT_xor<143> (asip_syn/sprf/r[1][143]_GND_74_o_add_146_OUT<143>)
+     INV:I->O              1   0.070   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_lut<0>_INV_0 (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_lut<0>)
+     MUXCY:S->O            1   0.219   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<0> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<1> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<2> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<3> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<4> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<5> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<6> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<7> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<7>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<8> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<9> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<9>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<10> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<10>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<11> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<11>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<12> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<12>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<13> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<13>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<14> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<14>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<15> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<15>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<16> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<16>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<17> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<18> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<19> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<19>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<20> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<20>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<21> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<21>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<22> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<22>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<23> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<23>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<24> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<24>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<25> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<25>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<26> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<26>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<27> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<27>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<28> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<28>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<29> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<29>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<30> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<30>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<31> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<31>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<32> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<32>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<33> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<33>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<34> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<34>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<35> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<35>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<36> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<36>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<37> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<37>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<38> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<38>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<39> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<39>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<40> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<40>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<41> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<41>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<42> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<42>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<43> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<43>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<44> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<44>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<45> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<45>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<46> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<46>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<47> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<47>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<48> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<48>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<49> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<49>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<50> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<50>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<51> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<51>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<52> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<52>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<53> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<53>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<54> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<54>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<55> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<55>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<56> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<56>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<57> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<57>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<58> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<58>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<59> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<59>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<60> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<60>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<61> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<61>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<62> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<62>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<63> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<63>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<64> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<64>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<65> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<65>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<66> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<66>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<67> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<67>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<68> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<68>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<69> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<69>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<70> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<70>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<71> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<71>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<72> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<72>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<73> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<73>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<74> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<74>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<75> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<75>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<76> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<76>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<77> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<77>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<78> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<78>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<79> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<79>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<80> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<80>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<81> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<81>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<82> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<82>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<83> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<83>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<84> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<84>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<85> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<85>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<86> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<86>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<87> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<87>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<88> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<88>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<89> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<89>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<90> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<90>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<91> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<91>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<92> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<92>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<93> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<93>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<94> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<94>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<95> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<95>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<96> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<96>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<97> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<97>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<98> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<98>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<99> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<99>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<100> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<100>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<101> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<101>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<102> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<102>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<103> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<103>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<104> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<104>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<105> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<105>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<106> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<106>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<107> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<107>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<108> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<108>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<109> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<109>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<110> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<110>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<111> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<111>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<112> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<112>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<113> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<113>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<114> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<114>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<115> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<115>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<116> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<116>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<117> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<117>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<118> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<118>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<119> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<119>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<120> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<120>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<121> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<121>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<122> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<122>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<123> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<123>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<124> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<124>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<125> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<125>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<126> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<126>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<127> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<127>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<128> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<128>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<129> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<129>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<130> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<130>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<131> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<131>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<132> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<132>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<133> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<133>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<134> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<134>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<135> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<135>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<136> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<136>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<137> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<137>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<138> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<138>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<139> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<139>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<140> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<140>)
+     MUXCY:CI->O           1   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<141> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<141>)
+     MUXCY:CI->O           0   0.015   0.000  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<142> (asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_cy<142>)
+     XORCY:CI->O           1   0.180   0.357  asip_syn/sprf/Madd_r[1][143]_GND_84_o_add_146_OUT_xor<143> (asip_syn/sprf/r[1][143]_GND_84_o_add_146_OUT<143>)
      LUT5:I3->O            1   0.053   0.000  asip_syn/sprf/Mmux_r1_typ_sel[1]_r[1][143]_Mux_148_o11 (asip_syn/sprf/r1_typ_sel[1]_r[1][143]_Mux_148_o)
      FDCE:D                   -0.012          asip_syn/sprf/r_1_143
     ----------------------------------------
@@ -4454,9 +4423,9 @@ Delay:               3.578ns (Levels of Logic = 146)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 1845 / 1839
+  Total number of paths / destination ports: 1873 / 1867
 -------------------------------------------------------------------------
-Offset:              1.591ns (Levels of Logic = 3)
+Offset:              1.647ns (Levels of Logic = 3)
   Source:            reset_b (PAD)
   Destination:       asip_syn/alu/gopf_div/mul_t_in_reg_0 (FF)
   Destination Clock: clk rising
@@ -4465,13 +4434,13 @@ Offset:              1.591ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             9   0.003   0.333  reset_b_IBUF (reset_b_IBUF)
-     LUT3:I2->O            1   0.053   0.594  asip_syn/alu/gopf_div/_n4622_inv_SW0 (N380)
+     IBUF:I->O             8   0.003   0.390  reset_b_IBUF (reset_b_IBUF)
+     LUT3:I1->O            1   0.053   0.594  asip_syn/alu/gopf_div/_n4622_inv_SW0 (N356)
      LUT6:I0->O          160   0.053   0.406  asip_syn/alu/gopf_div/_n4622_inv (asip_syn/alu/gopf_div/_n4622_inv)
      FDE:CE                    0.149          asip_syn/alu/gopf_div/mul_o_in_reg_143
     ----------------------------------------
-    Total                      1.591ns (0.258ns logic, 1.333ns route)
-                                       (16.2% logic, 83.8% route)
+    Total                      1.647ns (0.258ns logic, 1.389ns route)
+                                       (15.7% logic, 84.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -4502,10 +4471,10 @@ Clock to Setup on destination clock asip_syn/dec_delay_src_dst_sel
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    2.032|         |
+clk            |         |         |    1.794|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock asip_syn/ins_decoder/opr_decoder/opr_code[4]_alu_typ_sel[3]_select_63_OUT<2>1
+Clock to Setup on destination clock asip_syn/ins_decoder/dst_decoder/opr_code[4]_opr_code[4]_AND_95_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -4513,7 +4482,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    0.647|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel2
+Clock to Setup on destination clock asip_syn/ins_decoder/opr_decoder/_n0139
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -4522,28 +4491,28 @@ clk            |         |         |    1.032|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
------------------------------------------------------------------------------+---------+---------+---------+---------+
-                                                                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------------------------------------------------------------------+---------+---------+---------+---------+
-asip_syn/dec_delay_src_dst_sel                                               |         |    3.178|         |         |
-asip_syn/ins_decoder/opr_decoder/opr_code[4]_alu_typ_sel[3]_select_63_OUT<2>1|         |    0.561|         |         |
-asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel2                          |         |    0.561|         |         |
-clk                                                                          |    3.578|         |         |         |
------------------------------------------------------------------------------+---------+---------+---------+---------+
+-----------------------------------------------------------------+---------+---------+---------+---------+
+                                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------------------------+---------+---------+---------+---------+
+asip_syn/dec_delay_src_dst_sel                                   |         |    2.659|         |         |
+asip_syn/ins_decoder/dst_decoder/opr_code[4]_opr_code[4]_AND_95_o|         |    0.561|         |         |
+asip_syn/ins_decoder/opr_decoder/_n0139                          |         |    0.561|         |         |
+clk                                                              |    3.578|         |         |         |
+-----------------------------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 49.00 secs
-Total CPU time to Xst completion: 47.98 secs
+Total REAL time to Xst completion: 50.00 secs
+Total CPU time to Xst completion: 49.36 secs
  
 --> 
 
 
-Total memory usage is 241152 kilobytes
+Total memory usage is 216288 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  734 (   0 filtered)
-Number of infos    :  354 (   0 filtered)
+Number of warnings :  710 (   0 filtered)
+Number of infos    :  195 (   0 filtered)
 

@@ -30,19 +30,19 @@ Running SmartXplorer strategies...
 
 
 ######################################################################
- BestStrategy : MapRegDup
+ BestStrategy : MapIOReg
 ######################################################################
- Run index                           : run3
- Map options                         : -ol high -xe n -register_duplication on -w 
+ Run index                           : run2
+ Map options                         : -ol high -pr b -w 
  Par options                         : -ol high -xe n 
- Number of Luts                      : 10,509 (6%)
- Number of Slice Registers           : 8,223 (2%)
- Achieved Timing Score               : 431
- Worst Case Slack                : -0.108ns
+ Number of Luts                      : 10,093 (6%)
+ Number of Slice Registers           : 8,007 (2%)
+ Achieved Timing Score               : 16988
+ Worst Case Slack                : -0.306ns
 
 ######################################################################
 
-Total Real Time:1502.8(secs)
+Total Real Time:1412.7(secs)
 SmartXplorer Done
 
 

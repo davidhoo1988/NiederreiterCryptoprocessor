@@ -1,62 +1,60 @@
 START:Strategy:1:MapRunTime
-REMOTE_PID:10821
-RUNNING:10821:10825:MapRunTime:map:asip_top.ngd: -ol high -w  -p xc6vlx240t-ff784-3 -o asip_top_map.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun1:slasip_top.pcf
-STATUS:MapRunTime:map:Score:None:lut:None:slice_reg:7,951 (2%):slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:225.21 secs 
-STATUS:MapRunTime:map:Score:None:lut:10,414 (6%):slice_reg:7,951 (2%):slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:225.21 secs 
-STATUS:MapRunTime:map:Score:None:lut:10,414 (6%):slice_reg:7,951 (2%):slice:3,726 (9%):bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:225.22 secs 
-STATUS:MapRunTime:map:Score:None:lut:10,414 (6%):slice_reg:7,951 (2%):slice:3,726 (9%):bram:289:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:225.22 secs 
-STATUS:MapRunTime:map:Score:None:lut:10,414 (6%):slice_reg:7,951 (2%):slice:3,726 (9%):bram:289:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:225.22 secs 
-STATUS:MapRunTime:map:Score:None:lut:10,414 (6%):slice_reg:7,951 (2%):slice:3,726 (9%):bram:289:dsp48:3 (1%):mult18x18:None:Power:None:wnsInfo:None:Time:225.22 secs 
+REMOTE_PID:12951
+RUNNING:12951:12973:MapRunTime:map:asip_top.ngd: -ol high -w  -p xc6vlx240t-ff784-3 -o asip_top_map.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun1:slasip_top.pcf
+STATUS:MapRunTime:map:Score:None:lut:None:slice_reg:8,007 (2%):slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:245.33 secs 
+STATUS:MapRunTime:map:Score:None:lut:10,093 (6%):slice_reg:8,007 (2%):slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:245.33 secs 
+STATUS:MapRunTime:map:Score:None:lut:10,093 (6%):slice_reg:8,007 (2%):slice:4,101 (10%):bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:245.33 secs 
+STATUS:MapRunTime:map:Score:None:lut:10,093 (6%):slice_reg:8,007 (2%):slice:4,101 (10%):bram:265:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:245.33 secs 
+STATUS:MapRunTime:map:Score:None:lut:10,093 (6%):slice_reg:8,007 (2%):slice:4,101 (10%):bram:265:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:245.33 secs 
+STATUS:MapRunTime:map:Score:None:lut:10,093 (6%):slice_reg:8,007 (2%):slice:4,101 (10%):bram:265:dsp48:3 (1%):mult18x18:None:Power:None:wnsInfo:None:Time:245.33 secs 
 DONE:map:0
-RUNNING:10821:18714:MapRunTime:par:asip_top_map.ncd: -ol high  -w asip_top.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun1:slasip_top.pcf
-STATUS:MapRunTime:par:Score:59981:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:365.33 secs 
-STATUS:MapRunTime:par:Score:28637:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:400.35 secs 
-STATUS:MapRunTime:par:Score:27355:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:420.37 secs 
-STATUS:MapRunTime:par:Score:25767:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:425.37 secs 
-STATUS:MapRunTime:par:Score:25767:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:-0.417ns:Time:425.38 secs 
+RUNNING:12951:21255:MapRunTime:par:asip_top_map.ncd: -ol high  -w asip_top.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun1:slasip_top.pcf
+STATUS:MapRunTime:par:Score:31510:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:370.43 secs 
+STATUS:MapRunTime:par:Score:21092:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:385.45 secs 
+STATUS:MapRunTime:par:Score:20258:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:410.46 secs 
+STATUS:MapRunTime:par:Score:19280:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:410.46 secs 
+STATUS:MapRunTime:par:Score:19280:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:-0.306ns:Time:415.47 secs 
 DONE:par:0
-RUNNING:10821:23137:MapRunTime:trce:/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.ncd::slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun1:slasip_top.pcf -xml :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun1:slasip_top.twx -v 3 -s 3 -n 3 -fastpaths   -ucf asip_top.ucf -o :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun1:slasip_top.twr
-STATUS:MapRunTime:trce:Score:25767:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:460.41 secs 
+RUNNING:12951:21275:MapRunTime:trce:/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run1/asip_top.ncd::slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun1:slasip_top.pcf -xml :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun1:slasip_top.twx -v 3 -s 3 -n 3 -fastpaths   -ucf asip_top.ucf -o :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun1:slasip_top.twr
+STATUS:MapRunTime:trce:Score:19280:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:445.49 secs 
 DONE:trce:0
 START:Strategy:2:MapIOReg
-REMOTE_PID:23138
-RUNNING:23138:23142:MapIOReg:map:asip_top.ngd: -ol high -pr b -w  -p xc6vlx240t-ff784-3 -o asip_top_map.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun2:slasip_top.pcf
-STATUS:MapIOReg:map:Score:None:lut:None:slice_reg:7,951 (2%):slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:225.23 secs 
-STATUS:MapIOReg:map:Score:None:lut:10,414 (6%):slice_reg:7,951 (2%):slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:225.23 secs 
-STATUS:MapIOReg:map:Score:None:lut:10,414 (6%):slice_reg:7,951 (2%):slice:3,726 (9%):bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:225.23 secs 
-STATUS:MapIOReg:map:Score:None:lut:10,414 (6%):slice_reg:7,951 (2%):slice:3,726 (9%):bram:289:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:225.23 secs 
-STATUS:MapIOReg:map:Score:None:lut:10,414 (6%):slice_reg:7,951 (2%):slice:3,726 (9%):bram:289:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:225.23 secs 
-STATUS:MapIOReg:map:Score:None:lut:10,414 (6%):slice_reg:7,951 (2%):slice:3,726 (9%):bram:289:dsp48:3 (1%):mult18x18:None:Power:None:wnsInfo:None:Time:225.23 secs 
+REMOTE_PID:21276
+RUNNING:21276:21280:MapIOReg:map:asip_top.ngd: -ol high -pr b -w  -p xc6vlx240t-ff784-3 -o asip_top_map.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun2:slasip_top.pcf
+STATUS:MapIOReg:map:Score:None:lut:None:slice_reg:8,007 (2%):slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:245.30 secs 
+STATUS:MapIOReg:map:Score:None:lut:10,093 (6%):slice_reg:8,007 (2%):slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:245.30 secs 
+STATUS:MapIOReg:map:Score:None:lut:10,093 (6%):slice_reg:8,007 (2%):slice:4,101 (10%):bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:245.30 secs 
+STATUS:MapIOReg:map:Score:None:lut:10,093 (6%):slice_reg:8,007 (2%):slice:4,101 (10%):bram:265:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:245.30 secs 
+STATUS:MapIOReg:map:Score:None:lut:10,093 (6%):slice_reg:8,007 (2%):slice:4,101 (10%):bram:265:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:245.30 secs 
+STATUS:MapIOReg:map:Score:None:lut:10,093 (6%):slice_reg:8,007 (2%):slice:4,101 (10%):bram:265:dsp48:3 (1%):mult18x18:None:Power:None:wnsInfo:None:Time:245.30 secs 
 DONE:map:0
-RUNNING:23138:23151:MapIOReg:par:asip_top_map.ncd: -ol high -xe n  -w asip_top.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun2:slasip_top.pcf
-STATUS:MapIOReg:par:Score:17706:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:370.34 secs 
-STATUS:MapIOReg:par:Score:5791:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:390.36 secs 
-STATUS:MapIOReg:par:Score:4515:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:410.37 secs 
-STATUS:MapIOReg:par:Score:4272:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:415.38 secs 
-STATUS:MapIOReg:par:Score:4272:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:-0.439ns:Time:415.38 secs 
+RUNNING:21276:21289:MapIOReg:par:asip_top_map.ncd: -ol high -xe n  -w asip_top.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun2:slasip_top.pcf
+STATUS:MapIOReg:par:Score:23317:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:370.43 secs 
+STATUS:MapIOReg:par:Score:22489:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:375.43 secs 
+STATUS:MapIOReg:par:Score:21654:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:395.45 secs 
+STATUS:MapIOReg:par:Score:16988:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:400.46 secs 
+STATUS:MapIOReg:par:Score:16988:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:-0.306ns:Time:400.46 secs 
 DONE:par:0
-RUNNING:23138:23159:MapIOReg:trce:/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run2/asip_top.ncd::slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun2:slasip_top.pcf -xml :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun2:slasip_top.twx -v 3 -s 3 -n 3 -fastpaths   -ucf asip_top.ucf -o :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun2:slasip_top.twr
-STATUS:MapIOReg:trce:Score:4272:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:450.41 secs 
+RUNNING:21276:21298:MapIOReg:trce:/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run2/asip_top.ncd::slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun2:slasip_top.pcf -xml :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun2:slasip_top.twx -v 3 -s 3 -n 3 -fastpaths   -ucf asip_top.ucf -o :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun2:slasip_top.twr
+STATUS:MapIOReg:trce:Score:16988:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:430.49 secs 
 DONE:trce:0
 START:Strategy:3:MapRegDup
-REMOTE_PID:23160
-RUNNING:23160:23164:MapRegDup:map:asip_top.ngd: -ol high -xe n -register_duplication on -w  -p xc6vlx240t-ff784-3 -o asip_top_map.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun3:slasip_top.pcf
-STATUS:MapRegDup:map:Score:None:lut:None:slice_reg:8,223 (2%):slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:310.28 secs 
-STATUS:MapRegDup:map:Score:None:lut:10,509 (6%):slice_reg:8,223 (2%):slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:310.28 secs 
-STATUS:MapRegDup:map:Score:None:lut:10,509 (6%):slice_reg:8,223 (2%):slice:3,845 (10%):bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:310.28 secs 
-STATUS:MapRegDup:map:Score:None:lut:10,509 (6%):slice_reg:8,223 (2%):slice:3,845 (10%):bram:289:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:310.28 secs 
-STATUS:MapRegDup:map:Score:None:lut:10,509 (6%):slice_reg:8,223 (2%):slice:3,845 (10%):bram:289:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:310.28 secs 
-STATUS:MapRegDup:map:Score:None:lut:10,509 (6%):slice_reg:8,223 (2%):slice:3,845 (10%):bram:289:dsp48:3 (1%):mult18x18:None:Power:None:wnsInfo:None:Time:310.29 secs 
+REMOTE_PID:21303
+RUNNING:21303:21307:MapRegDup:map:asip_top.ngd: -ol high -xe n -register_duplication on -w  -p xc6vlx240t-ff784-3 -o asip_top_map.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun3:slasip_top.pcf
+STATUS:MapRegDup:map:Score:None:lut:None:slice_reg:8,237 (2%):slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:305.31 secs 
+STATUS:MapRegDup:map:Score:None:lut:10,165 (6%):slice_reg:8,237 (2%):slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:305.31 secs 
+STATUS:MapRegDup:map:Score:None:lut:10,165 (6%):slice_reg:8,237 (2%):slice:4,200 (11%):bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:305.31 secs 
+STATUS:MapRegDup:map:Score:None:lut:10,165 (6%):slice_reg:8,237 (2%):slice:4,200 (11%):bram:265:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:305.31 secs 
+STATUS:MapRegDup:map:Score:None:lut:10,165 (6%):slice_reg:8,237 (2%):slice:4,200 (11%):bram:265:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:305.31 secs 
+STATUS:MapRegDup:map:Score:None:lut:10,165 (6%):slice_reg:8,237 (2%):slice:4,200 (11%):bram:265:dsp48:3 (1%):mult18x18:None:Power:None:wnsInfo:None:Time:305.31 secs 
 DONE:map:0
-RUNNING:23160:23183:MapRegDup:par:asip_top_map.ncd: -ol high -xe n  -w asip_top.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun3:slasip_top.pcf
-STATUS:MapRegDup:par:Score:2303:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:440.40 secs 
-STATUS:MapRegDup:par:Score:1945:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:445.41 secs 
-STATUS:MapRegDup:par:Score:1667:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:495.45 secs 
-STATUS:MapRegDup:par:Score:463:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:495.45 secs 
-STATUS:MapRegDup:par:Score:431:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:500.46 secs 
-STATUS:MapRegDup:par:Score:431:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:-0.108ns:Time:505.46 secs 
+RUNNING:21303:21316:MapRegDup:par:asip_top_map.ncd: -ol high -xe n  -w asip_top.ncd  :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun3:slasip_top.pcf
+STATUS:MapRegDup:par:Score:42285:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:425.41 secs 
+STATUS:MapRegDup:par:Score:41402:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:445.43 secs 
+STATUS:MapRegDup:par:Score:36578:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:445.43 secs 
+STATUS:MapRegDup:par:Score:36578:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:-0.339ns:Time:450.43 secs 
 DONE:par:0
-RUNNING:23160:23190:MapRegDup:trce:/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run3/asip_top.ncd::slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun3:slasip_top.pcf -xml :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun3:slasip_top.twx -v 3 -s 3 -n 3 -fastpaths   -ucf asip_top.ucf -o :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun3:slasip_top.twr
-STATUS:MapRegDup:trce:Score:431:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:540.50 secs 
+RUNNING:21303:21326:MapRegDup:trce:/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/smartxplorer_results/run3/asip_top.ncd::slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun3:slasip_top.pcf -xml :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun3:slasip_top.twx -v 3 -s 3 -n 3 -fastpaths   -ucf asip_top.ucf -o :slhome:sldavid:slDropbox:slNiederreiterCryptoprocessor:slASIP:slsim:slise_project:slsmartxplorer_results:slrun3:slasip_top.twr
+STATUS:MapRegDup:trce:Score:36578:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:480.46 secs 
 DONE:trce:0
 DONE:Xplorer

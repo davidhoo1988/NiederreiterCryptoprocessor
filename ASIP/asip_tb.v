@@ -82,9 +82,6 @@ begin
    $readmemb("./mem_data/multiple_dram/data12.txt",asip_top.dat_sram.dat_sram30.mem);
    $readmemb("./mem_data/multiple_dram/data13.txt",asip_top.dat_sram.dat_sram31.mem);
    $readmemb("./mem_data/multiple_dram/data14.txt",asip_top.dat_sram.dat_sram32.mem);
-   $readmemb("./mem_data/multiple_dram/data15.txt",asip_top.dat_sram.dat_sram33.mem);
-   $readmemb("./mem_data/multiple_dram/data16.txt",asip_top.dat_sram.dat_sram34.mem);
-   $readmemb("./mem_data/multiple_dram/data17.txt",asip_top.dat_sram.dat_sram35.mem);   
 end    
 
 

@@ -11,23 +11,23 @@ Target Device  : xc6vlx240t
 Target Package : ff784
 Target Speed   : -3
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Wed Oct  7 17:57:08 2015
+Mapped Date    : Thu Oct 15 13:09:54 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    3
 Slice Logic Utilization:
-  Number of Slice Registers:                 7,951 out of 301,440    2%
-    Number used as Flip Flops:               7,930
-    Number used as Latches:                     21
+  Number of Slice Registers:                 8,007 out of 301,440    2%
+    Number used as Flip Flops:               7,985
+    Number used as Latches:                     22
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                     10,414 out of 150,720    6%
-    Number used as logic:                   10,230 out of 150,720    6%
-      Number using O6 output only:           8,535
-      Number using O5 output only:             318
-      Number using O5 and O6:                1,377
+  Number of Slice LUTs:                     10,093 out of 150,720    6%
+    Number used as logic:                    9,940 out of 150,720    6%
+      Number using O6 output only:           8,363
+      Number using O5 output only:             326
+      Number using O5 and O6:                1,251
       Number used as ROM:                        0
     Number used as Memory:                      23 out of  58,400    1%
       Number used as Dual Port RAM:              0
@@ -36,20 +36,20 @@ Slice Logic Utilization:
         Number using O6 output only:            23
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:    161
-      Number with same-slice register load:    158
+    Number used exclusively as route-thrus:    130
+      Number with same-slice register load:    127
       Number with same-slice carry load:         3
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 3,726 out of  37,680    9%
-  Number of LUT Flip Flop pairs used:       11,896
-    Number with an unused Flip Flop:         4,761 out of  11,896   40%
-    Number with an unused LUT:               1,482 out of  11,896   12%
-    Number of fully used LUT-FF pairs:       5,653 out of  11,896   47%
-    Number of unique control sets:              61
+  Number of occupied Slices:                 4,101 out of  37,680   10%
+  Number of LUT Flip Flop pairs used:       12,133
+    Number with an unused Flip Flop:         4,985 out of  12,133   41%
+    Number with an unused LUT:               2,040 out of  12,133   16%
+    Number of fully used LUT-FF pairs:       5,108 out of  12,133   42%
+    Number of unique control sets:              64
     Number of slice register sites lost
-      to control set restrictions:             114 out of 301,440    1%
+      to control set restrictions:             130 out of 301,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -63,8 +63,8 @@ IO Utilization:
   Number of bonded IOBs:                       147 out of     400   36%
 
 Specific Feature Utilization:
-  Number of RAMB36E1/FIFO36E1s:                289 out of     416   69%
-    Number using RAMB36E1 only:                289
+  Number of RAMB36E1/FIFO36E1s:                265 out of     416   63%
+    Number using RAMB36E1 only:                265
     Number using FIFO36E1 only:                  0
   Number of RAMB18E1/FIFO18E1s:                  0 out of     832    0%
   Number of BUFG/BUFGCTRLs:                      2 out of      32    6%
@@ -91,11 +91,11 @@ Specific Feature Utilization:
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       0 out of       4    0%
 
-Average Fanout of Non-Clock Nets:                4.30
+Average Fanout of Non-Clock Nets:                4.31
 
-Peak Memory Usage:  691 MB
-Total REAL time to MAP completion:  3 mins 40 secs 
-Total CPU time to MAP completion:   3 mins 39 secs 
+Peak Memory Usage:  689 MB
+Total REAL time to MAP completion:  4 mins 
+Total CPU time to MAP completion:   3 mins 59 secs 
 
 Table of Contents
 -----------------
@@ -123,13 +123,13 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   asip_syn/ins_decoder/opr_decoder/src_dst_delay_sel2 is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
+   asip_syn/ins_decoder/dst_decoder/opr_code[4]_opr_code[4]_AND_95_o is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   asip_syn/ins_decoder/opr_decoder/opr_code[4]_alu_typ_sel[3]_select_63_OUT<2>1
-   is sourced by a combinatorial pin. This is not good design practice. Use the
-   CE pin to control the loading of data into the flip-flop.
+   asip_syn/ins_decoder/opr_decoder/_n0139 is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
@@ -157,7 +157,7 @@ INFO:Pack:1650 - Map created a placed design.
 Section 4 - Removed Logic Summary
 ---------------------------------
  147 block(s) removed
-  82 block(s) optimized away
+  76 block(s) optimized away
  261 signal(s) removed
 
 Section 5 - Removed Logic
@@ -173,7 +173,7 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
-Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT31"
+Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT31"
 (ROM) removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<31>" is loadless and has been
 removed.
@@ -424,7 +424,7 @@ removed.
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_15" (FF) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>16" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>16" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<16>" is loadless and has been
 removed.
@@ -434,12 +434,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<0>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_0" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT15" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT15" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT15"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT15"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>17" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>17" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<17>" is loadless and has been
 removed.
@@ -449,12 +449,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<1>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_1" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT16" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT16" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT16"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT16"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>18" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>18" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<18>" is loadless and has been
 removed.
@@ -464,12 +464,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<2>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_2" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT17" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT17" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT17"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT17"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>19" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>19" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<19>" is loadless and has been
 removed.
@@ -479,12 +479,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<3>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_3" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT18" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT18" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT18"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT18"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>20" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>20" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<20>" is loadless and has been
 removed.
@@ -494,12 +494,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<4>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_4" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT19" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT19" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT19"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT19"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>21" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>21" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<21>" is loadless and has been
 removed.
@@ -509,12 +509,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<5>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_5" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT20" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT20" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT20"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT20"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>22" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>22" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<22>" is loadless and has been
 removed.
@@ -524,12 +524,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<6>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_6" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT21" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT21" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT21"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT21"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>23" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>23" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<23>" is loadless and has been
 removed.
@@ -539,12 +539,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<7>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_7" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT22" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT22" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT22"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT22"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>24" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>24" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<24>" is loadless and has been
 removed.
@@ -554,12 +554,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<8>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_8" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT23" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT23" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT23"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT23"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>25" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>25" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<25>" is loadless and has been
 removed.
@@ -569,12 +569,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<9>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_9" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT24" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT24" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT24"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT24"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>26" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>26" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<26>" is loadless and has been
 removed.
@@ -584,12 +584,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<10>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_10" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT25" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT25" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT25"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT25"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>27" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>27" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<27>" is loadless and has been
 removed.
@@ -599,12 +599,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<11>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_11" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT26" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT26" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT26"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT26"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>28" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>28" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<28>" is loadless and has been
 removed.
@@ -614,12 +614,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<12>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_12" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT27" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT27" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT27"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT27"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>29" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>29" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<29>" is loadless and has been
 removed.
@@ -629,12 +629,12 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<13>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_13" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT28" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT28" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT28"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT28"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>30" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>30" (ROM)
 removed.
  The signal "asip_syn/prng/multiplier/z1_reg1<30>" is loadless and has been
 removed.
@@ -644,16 +644,16 @@ removed.
  The signal "asip_syn/prng/multiplier/z2_reg1<14>" is loadless and has been
 removed.
   Loadless block "asip_syn/prng/multiplier/z2_reg1_14" (FF) removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT29" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT29" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT29"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT29"
 (ROM) removed.
 Loadless block
-"asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT_lut<0>31" (ROM)
+"asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT_lut<0>31" (ROM)
 removed.
- The signal "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT30" is
+ The signal "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT30" is
 loadless and has been removed.
-  Loadless block "asip_syn/prng/multiplier/Madd_GND_72_o_z2_reg1[31]_add_20_OUT30"
+  Loadless block "asip_syn/prng/multiplier/Madd_GND_82_o_z2_reg1[31]_add_20_OUT30"
 (ROM) removed.
 Loadless block "asip_syn/prng/multiplier/Msub_z131" (ROM) removed.
 The signal "ins_sram/douta<143>" is sourceless and has been removed.
@@ -825,12 +825,6 @@ GND 		dat_sram/dat_sram31/XST_GND
 VCC 		dat_sram/dat_sram31/XST_VCC
 GND 		dat_sram/dat_sram32/XST_GND
 VCC 		dat_sram/dat_sram32/XST_VCC
-GND 		dat_sram/dat_sram33/XST_GND
-VCC 		dat_sram/dat_sram33/XST_VCC
-GND 		dat_sram/dat_sram34/XST_GND
-VCC 		dat_sram/dat_sram34/XST_VCC
-GND 		dat_sram/dat_sram35/XST_GND
-VCC 		dat_sram/dat_sram35/XST_VCC
 GND 		dat_sram/dat_sram4/XST_GND
 VCC 		dat_sram/dat_sram4/XST_VCC
 GND 		dat_sram/dat_sram5/XST_GND

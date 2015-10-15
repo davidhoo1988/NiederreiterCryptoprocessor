@@ -25,9 +25,9 @@ o-quiet -auto_acc_if_foreign -work work
 n@_opt2
 Z4 OE;O;6.5b;42
 T_opt3
-V7f`;[CbB]2If5;KF4HBz60
+V>P0l8Piz[_f@mNhMlOCGM3
 R1
-=1-f8b156b053e7-5603f595-e8fbb-5e2d
+=1-f8b156b053e7-561dfbda-84b3c-6452
 R2
 n@_opt3
 R4
@@ -35,9 +35,9 @@ vALU
 VXYPe^VT`R3N6kYe`l0c=:0
 r1
 31
-InEPGMllaD=>45jD@^L1=E1
+IMT=`:5NE9_jO[;5^=Vh[Y0
 Z5 d/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1
-w1443767505
+w1444741347
 8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v
 F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu.v
 L0 27
@@ -46,7 +46,7 @@ Z7 !s102 -nocovercells
 Z8 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
 n@a@l@u
 !s85 0
-!s100 zUC3z6AYbIdQnKdId<RLf1
+!s100 Fc=`^4@bH<i7oIIXdh:KB3
 vALU_InvGenerator
 VNj4MJ@Nk>?bhejI]FDTL32
 r1
@@ -83,9 +83,9 @@ valu_tb
 VL;=kgzZ7GJ2Reg7Z1GkmR2
 r1
 31
-Ij?=HDJaQlfl>`_J0ceH]L3
+I5L5I5`nzlL8ZkVRiFj7@G1
 R5
-w1443620276
+w1444787371
 8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu_tb.v
 F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/alu_tb.v
 L0 6
@@ -93,7 +93,23 @@ R6
 R7
 R8
 !s85 0
-!s100 U8A_AzR5L=h=G4KlKTUUb0
+!s100 ClKVOdfmedj3VGzdGVFBd2
+vConstant_Multiplier
+VGX1[K0@kaRE3l?=DSafA20
+r1
+31
+InaG6gAh0N0jS2UEkhjeTf2
+R5
+w1444741918
+8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_DIV/Constant_Multiplier.v
+F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_DIV/Constant_Multiplier.v
+L0 2
+R6
+R7
+R8
+n@constant_@multiplier
+!s85 0
+!s100 5TIk5LA4YjRBDWNPn@WO`0
 vDEG
 V?:9S`P>^Y:H`YSC4P8iao0
 r1
@@ -127,13 +143,13 @@ n@g@o@p@f_@d@i@v
 !s85 0
 !s100 H5i<Rk82:>zMPMibJcGOE3
 vGOPF_EVAL
-VCBbBUWGIWWVeIna5GO<8N3
+VZVI]Nd2m^;S`f01:@C=7e0
 r1
 !s85 0
 31
-I`fDhcLN<LFF9mcLWE;WVE0
+I6I<>_;C2[1I7`:M10h4I]2
 R5
-w1443767744
+w1444891485
 8/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_EVAL/gopf_eval.v
 F/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/alu1/GOPF_EVAL/gopf_eval.v
 L0 1
@@ -141,7 +157,7 @@ R6
 R7
 R8
 n@g@o@p@f_@e@v@a@l
-!s100 ?>h:`?Nlle[mQc[nb]^3K3
+!s100 9VLFeXz]WLMTC8>IfOfmi3
 vGOPF_MUL
 V:z;R>JXXj5AgPZ6`796Y:3
 r1

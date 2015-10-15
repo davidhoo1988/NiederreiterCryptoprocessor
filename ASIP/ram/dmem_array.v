@@ -6,7 +6,7 @@
 //  Email                : davidhoo471494221@gmail.com
 //  ----------------------------------------------------------------------------
 //  Description      : This module include all block memory modules.
-//`define SYNTHESIS
+`define SYNTHESIS
 `ifndef SYNTHESIS
 	`include    "../include/define.v"
 `else
@@ -28,6 +28,8 @@ module dmem_array(
 //---------------------------------------------------------- 
 reg dmem_rw_tmp1;
 reg [`DMEMCSW-1:0] 		dmem_cs_tmp1;
+
+(* max_fanout = "18" *)
 reg [`SUBDMEMADDRW-1:0] dmem_addr_tmp1;
 
 (* max_fanout = "18" *)
@@ -37,8 +39,7 @@ reg dmem0_rw, dmem1_rw, dmem2_rw, dmem3_rw, dmem4_rw, dmem5_rw, dmem6_rw, dmem7_
 	dmem8_rw, dmem9_rw, dmem10_rw, dmem11_rw, dmem12_rw, dmem13_rw, dmem14_rw, dmem15_rw,
 	dmem16_rw, dmem17_rw,
 	dmem18_rw, dmem19_rw, dmem20_rw, dmem21_rw, dmem22_rw, dmem23_rw, dmem24_rw, dmem25_rw,
-	dmem26_rw, dmem27_rw, dmem28_rw, dmem29_rw, dmem30_rw, dmem31_rw, dmem32_rw, dmem33_rw,
-	dmem34_rw, dmem35_rw;
+	dmem26_rw, dmem27_rw, dmem28_rw, dmem29_rw, dmem30_rw, dmem31_rw, dmem32_rw;
 
 reg dmem_rw_tmp2;
 reg [`DMEMCSW-1:0] dmem_cs_tmp2;
@@ -47,8 +48,7 @@ wire [`MEM_W-1:0 ]	data_out0, data_out1, data_out2, data_out3, data_out4, data_o
 					data_out8, data_out9, data_out10, data_out11, data_out12, data_out13, data_out14, data_out15,
 					data_out16, data_out17,
 					data_out18, data_out19, data_out20, data_out21, data_out22, data_out23, data_out24, data_out25,
-					data_out26, data_out27, data_out28, data_out29, data_out30, data_out31, data_out32, data_out33,
-					data_out34, data_out35; 
+					data_out26, data_out27, data_out28, data_out29, data_out30, data_out31, data_out32;
 
 
 reg [`DMEMCSW-1:0] dmem_cs_tmp3;
@@ -385,36 +385,6 @@ RA1SH   dat_sram32(
                 .OEN 				( 1'b0						)
 );
 
-RA1SH   dat_sram33(
-                .CLK 				( clk						),
-                .A   				( dmem_addr_tmp1			    ),
-                .D   				( data_in_tmp1        	),  
-                .WEN 				( dmem33_rw					),
-                .CEN 				( 1'b0  				),
-                .Q   				( data_out33				),
-                .OEN 				( 1'b0						)
-);
-
-RA1SH   dat_sram34(
-                .CLK 				( clk						),
-                .A   				( dmem_addr_tmp1			    ),
-                .D   				( data_in_tmp1        	),  
-                .WEN 				( dmem34_rw					),
-                .CEN 				( 1'b0  				),
-                .Q   				( data_out34				),
-                .OEN 				( 1'b0						)
-);
-
-RA1SH   dat_sram35(
-                .CLK 				( clk						),
-                .A   				( dmem_addr_tmp1			    ),
-                .D   				( data_in_tmp1        	),  
-                .WEN 				( dmem35_rw					),
-                .CEN 				( 1'b0  				),
-                .Q   				( data_out35				),
-                .OEN 				( 1'b0						)
-);
-
 `else
 dat_sram dat_sram0(
 					.clka					(clk),
@@ -647,27 +617,6 @@ dat_sram dat_sram32(
 					.dina					(data_in_tmp1),
 					.douta					(data_out32)
 );
-dat_sram dat_sram33(
-					.clka					(clk),
-					.wea					(dmem33_rw),
-					.addra					(dmem_addr_tmp1),
-					.dina					(data_in_tmp1),
-					.douta					(data_out33)
-);
-dat_sram dat_sram34(
-					.clka					(clk),
-					.wea					(dmem34_rw),
-					.addra					(dmem_addr_tmp1),
-					.dina					(data_in_tmp1),
-					.douta					(data_out34)
-);
-dat_sram dat_sram35(
-					.clka					(clk),
-					.wea					(dmem35_rw),
-					.addra					(dmem_addr_tmp1),
-					.dina					(data_in_tmp1),
-					.douta					(data_out35)
-);
 `endif
 
 //first stage pipeline
@@ -690,304 +639,245 @@ end
 
 always@ (posedge clk) begin
 	if (dmem_rw == 1'd1) begin
-		{dmem35_rw,dmem34_rw,
-		 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+		{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 		 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 		 dmem17_rw,dmem16_rw,
 		 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-		 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= 36'd68719476735;	
+		 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= 33'd8589934591;	
 	end 
 	else begin
 		case(dmem_cs)
 			`DMEMCSW'd0: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd1;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd1;
 			end
 			`DMEMCSW'd1: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd2;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd2;
 			end
 			`DMEMCSW'd2: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd4;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd4;
 			end
 			`DMEMCSW'd3: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd8;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd8;
 			end
 			`DMEMCSW'd4: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd16;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd16;
 			end
 			`DMEMCSW'd5: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd32;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd32;
 			end
 			`DMEMCSW'd6: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw}<= ~36'd64;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw}<= ~33'd64;
 			end
 			`DMEMCSW'd7: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd128;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd128;
 			end
 			`DMEMCSW'd8: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd256;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd256;
 			end
 			`DMEMCSW'd9: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd512;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd512;
 			end
 			`DMEMCSW'd10: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd1024;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd1024;
 			end
 			`DMEMCSW'd11: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd2048;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd2048;
 			end
 			`DMEMCSW'd12: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw}<= ~36'd4096;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw}<= ~33'd4096;
 			end
 			`DMEMCSW'd13: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd8192;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd8192;
 			end
 			`DMEMCSW'd14: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd16384;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd16384;
 			end
 			`DMEMCSW'd15: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd32768;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd32768;
 			end
 			`DMEMCSW'd16: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd65536;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd65536;
 			end
 			`DMEMCSW'd17: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd131072;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd131072;
 			end
 			`DMEMCSW'd18: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw}<= ~36'd262144;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw}<= ~33'd262144;
 			end
 			`DMEMCSW'd19: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd524288;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd524288;
 			end
 			`DMEMCSW'd20: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd1048576;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd1048576;
 			end
 			`DMEMCSW'd21: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd2097152;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd2097152;
 			end
 			`DMEMCSW'd22: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd4194304;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd4194304;
 			end
 			`DMEMCSW'd23: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd8388608;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd8388608;
 			end
 			`DMEMCSW'd24: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd16777216;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd16777216;
 			end
 			`DMEMCSW'd25: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd33554432;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd33554432;
 			end
 			`DMEMCSW'd26: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd67108864;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd67108864;
 			end
 			`DMEMCSW'd27: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd134217728;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd134217728;
 			end
 			`DMEMCSW'd28: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd268435456;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd268435456;
 			end
 			`DMEMCSW'd29: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd536870912;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd536870912;
 			end
 			`DMEMCSW'd30: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd1073741824;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd1073741824;
 			end
 			`DMEMCSW'd31: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd2147483648;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd2147483648;
 			end
 			`DMEMCSW'd32: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
+				{dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
 				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
 				 dmem17_rw,dmem16_rw,
 				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd4294967296;
+				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~33'd4294967296;
 			end
-			`DMEMCSW'd33: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
-				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
-				 dmem17_rw,dmem16_rw,
-				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd8589934592;
-			end
-			`DMEMCSW'd34: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
-				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
-				 dmem17_rw,dmem16_rw,
-				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd17179869184;
-			end
-			`DMEMCSW'd35: begin
-				{dmem35_rw,dmem34_rw,
-				 dmem33_rw,dmem32_rw,dmem31_rw,dmem30_rw,dmem29_rw,dmem28_rw,dmem27_rw, dmem26_rw,
-				 dmem25_rw,dmem24_rw,dmem23_rw,dmem22_rw,dmem21_rw,dmem20_rw,dmem19_rw, dmem18_rw,
-				 dmem17_rw,dmem16_rw,
-				 dmem15_rw,dmem14_rw,dmem13_rw,dmem12_rw,dmem11_rw,dmem10_rw,dmem9_rw, dmem8_rw,
-				 dmem7_rw, dmem6_rw, dmem5_rw, dmem4_rw, dmem3_rw, dmem2_rw, dmem1_rw, dmem0_rw} <= ~36'd34359738368;	 
-			end
-			
 		endcase
 	end
 end		
@@ -1020,21 +910,21 @@ always @(posedge clk) begin
 			data_out2_reg <= data_out9;
 			data_out3_reg <= data_out17;
 			data_out4_reg <= data_out25;
-			data_out5_reg <= data_out33;
+			data_out5_reg <= 0;
 		end
 		`DMEMCSW'd2: begin
 			data_out1_reg <= data_out2;
 			data_out2_reg <= data_out10;
 			data_out3_reg <= data_out18;
 			data_out4_reg <= data_out26;
-			data_out5_reg <= data_out34;
+			data_out5_reg <= 0;
 		end
 		`DMEMCSW'd3: begin
 			data_out1_reg <= data_out3;
 			data_out2_reg <= data_out11;
 			data_out3_reg <= data_out19;
 			data_out4_reg <= data_out27;
-			data_out5_reg <= data_out35;
+			data_out5_reg <= 0;
 		end
 		`DMEMCSW'd4: begin
 			data_out1_reg <= data_out4;

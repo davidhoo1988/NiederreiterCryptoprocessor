@@ -27,7 +27,7 @@
  `define	SRC_GPRF_W		16				//SRC_W - 3
  `define	DST_GPRF_W		16				//DST_W - 3
  
- `define 	DLY_W			8				//Cycle Delay Between SRC and DST
+ `define 	DLY_W			18				//Cycle Delay Between SRC and DST
 //----------------------------------------------------------
 // SetUp memory
 //----------------------------------------------------------  

@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-10-07T17:06:40</DateModified>
+  <DateModified>2015-10-15T15:22:46</DateModified>
   <ModuleName>asip_top</ModuleName>
-  <SummaryTimeStamp>2015-10-07T17:04:57</SummaryTimeStamp>
+  <SummaryTimeStamp>2015-10-15T15:18:11</SummaryTimeStamp>
   <SavedFilePath>/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/iseconfig/asip_top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/david/Dropbox/NiederreiterCryptoprocessor/ASIP/sim/ise_project/</ImplementationReportsDirectory>
   <DateInitialized>2015-10-06T10:20:52</DateInitialized>

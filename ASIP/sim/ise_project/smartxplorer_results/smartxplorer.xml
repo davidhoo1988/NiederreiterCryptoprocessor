@@ -4,7 +4,7 @@
     </command>
     <programStatus>Done
     </programStatus>
-    <programPID>10686
+    <programPID>12890
     </programPID>
     
     <strategy name="MapRunTime">
@@ -22,15 +22,15 @@
         </status>
         <logFile>asip_top_sx.log
         </logFile>
-        <timingScore>25767
+        <timingScore>19280
         </timingScore>
-        <WorstCaseSlack>-0.417ns
+        <WorstCaseSlack>-0.306ns
         </WorstCaseSlack>
-        <Luts>10,414 (6%)
+        <Luts>10,093 (6%)
 	</Luts>
-	<SliceRegisters>7,951 (2%)
+	<SliceRegisters>8,007 (2%)
 	</SliceRegisters>
-	<runTime>0h 7m 45s
+	<runTime>0h 7m 30s
         </runTime>
     </strategy>
     <strategy name="MapIOReg">
@@ -48,15 +48,15 @@
         </status>
         <logFile>asip_top_sx.log
         </logFile>
-        <timingScore>4272
+        <timingScore>16988
         </timingScore>
-        <WorstCaseSlack>-0.439ns
+        <WorstCaseSlack>-0.306ns
         </WorstCaseSlack>
-        <Luts>10,414 (6%)
+        <Luts>10,093 (6%)
 	</Luts>
-	<SliceRegisters>7,951 (2%)
+	<SliceRegisters>8,007 (2%)
 	</SliceRegisters>
-	<runTime>0h 7m 35s
+	<runTime>0h 7m 15s
         </runTime>
     </strategy>
     <strategy name="MapRegDup">
@@ -74,18 +74,18 @@
         </status>
         <logFile>asip_top_sx.log
         </logFile>
-        <timingScore>431
+        <timingScore>36578
         </timingScore>
-        <WorstCaseSlack>-0.108ns
+        <WorstCaseSlack>-0.339ns
         </WorstCaseSlack>
-        <Luts>10,509 (6%)
+        <Luts>10,165 (6%)
 	</Luts>
-	<SliceRegisters>8,223 (2%)
+	<SliceRegisters>8,237 (2%)
 	</SliceRegisters>
-	<runTime>0h 9m 5s
+	<runTime>0h 8m 5s
         </runTime>
     </strategy>
-    <bestStrategy>MapRegDup
+    <bestStrategy>MapIOReg
     </bestStrategy>
     <envVariables>
         <env name="PATH"  value="/home/david/Xilinx/ISE13.2/ISE_DS/ISE//bin/lin:/home/david/jdk1.7.0_67/bin:/home/david/jdk1.7.0_67/jre/bin:/home/david/sage-6.2-i686-Linux:/home/david/synopsys/dc201303/bin:/home/david/texlive/2014/bin/i386-linux:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/david/modelsim6.5b/modeltech/bin:/home/david/Xilinx/ISE13.2/ISE_DS/ISE/bin/lin"/>
@@ -94,6 +94,6 @@
         <env name="LM_LICENSE_FILE"  value="/home/david/modelsim6.5b/license/LICENSE.TXT"/>
         
     </envVariables>
-    <copyResult>MapRegDup
+    <copyResult>MapIOReg
     </copyResult>
 </smartXplorerReport>

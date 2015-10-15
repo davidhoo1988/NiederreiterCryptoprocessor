@@ -1,76 +1,76 @@
-		MOV #1 	R30
-		MOV R30 IDX0
+		MOV #1 	R6
+		MOV R6 IDX0
 		MOV @IDX0 R1   //load s1(x) = s(x) to R1
 		IDX0--
 		MOV @IDX0 Rmod //load g(x),Rmod
 		MOV #0  R2
-		MOV #2	R30
-		MOV R30 IDX0
+		MOV #2	R6
+		MOV R6 IDX0
 		MOV @IDX0 R3   //load '1' to R3
 		MOV R1	R5 //backup R1 to R5
 		DIV Rmod R1
 		MOV R5 	R0		 
-		MOV R31		R4	
+		MOV R7		R4	
 		MUL R3      	R4
 		ADD R2		R4
 		MOV R3		R2
 		MOV R4		R3
-		MOV #0		R31
+		MOV #0		R7
 GCD:	MOV R1 		R5		
 		DIV R0 		R1
-		MOV R0		R30
+		MOV R0		R6
 		MOV R5		R0
-		MOV R30		R4
+		MOV R6		R4
 		MUL R3		R4
 		ADD R2		R4
 		MOV R3		R2
 		MOV R4		R3
-		DEG R1		R30
-		MOV R30		IDX0
+		DEG R1		R6
+		MOV R6		IDX0
 		JRE IDX0        @GCD
 		INV R1		R1
 		MUL R1 		R3 
 		MOV R3		R2 //T(x) = s(x)^(-1) mod g(x) in R2
-		MOV #3 		R30
-		MOV R30 	IDX0
+		MOV #3 		R6
+		MOV R6 		IDX0
 		MOV @IDX0	R1 //load 'x' to R1
 		ADD R1 R2  //store x+T(x) to R2
 		SPLIT R2 	R3
-		MOV #4		R30
-		MOV R30		IDX0
+		MOV #4		R6
+		MOV R6		IDX0
 		MOV @IDX0 	R1 // load g0*g1^-1
 		MUL R1 		R3
 		ADD R2 		R3 
 		MOV R3		R1 //store R(x) in R1	
-		MOV #0 	R30     // start MODIFIED_GCD PRE
-		MOV R30	IDX0	
+		MOV #0 	R6     // start MODIFIED_GCD PRE
+		MOV R6	IDX0	
 		MOV @IDX0 Rmod //load g(x) to Rmod 
 		MOV #0  R2        //load '0' to R2
-		MOV #2	R30
-		MOV R30 IDX0
+		MOV #2	R6
+		MOV R6 IDX0
 		MOV @IDX0 R3   //load '1' to R3
 		MOV R1	R5 //backup R1 to R5
 		DIV Rmod R1
-		MOV R31  R4 //backup q to R4
+		MOV R7  R4 //backup q to R4
 		MOV R5	R0 //update R0,R1
 		MOV R3  R2
 		MOV R4	R3 //update R2,R3
-		DEG R1	R30
-		MOV R30 IDX0
-		MOV #4	R31
+		DEG R1	R6
+		MOV R6 IDX0
+		MOV #4	R7
 		JRE IDX0  @MODIFIED_GCD
 		HALT
 MODIFIED_GCD: 	MOV R1 		R5		
 		DIV R0 		R1
-		MOV R0		R30 // q in R30
+		MOV R0		R6 // q in R6
 		MOV R5		R0 //update R0,R1
-		MOV R30		R4  // q in R4
+		MOV R6		R4  // q in R4
 		MUL R3		R4
 		ADD R2		R4
 		MOV R3		R2 
 		MOV R4		R3 //update R2,R3
-		DEG R1  	R30
-		MOV R30 	IDX0
+		DEG R1  	R6
+		MOV R6 		IDX0
 		JRE IDX0  	@MODIFIED_GCD
 		MUL R1		R1 //alpha^2
 		MUL R3		R3 //beta^2
@@ -79,22 +79,22 @@ MODIFIED_GCD: 	MOV R1 		R5
 		INV R0 		R0
 		MUL R1		R0 //normalize sigma
 		MOV R0		Rmod //set sigma to be modulus
-		MOV #3 		R30
-		MOV R30 	IDX0
+		MOV #3 		R6
+		MOV R6 		IDX0
 		MOV @IDX0 	R1 //load 'x' to R1
-		MOV #0 		R31
+		MOV #0 		R7
 		MOV #16		R0
 		MOV R0 		IDX0
 X_2M:		MUL R1		R1 //store X^2m in R1		
 		IDX0--
 		JRE IDX0  	@X_2M
-		MOV R30 	IDX0
+		MOV R6 		IDX0
 		MOV @IDX0 	R2 //load 'x' to R1
 		ADD R2		R1 // X^2m + X
 		MOV R1  	IDX0
 		JRE IDX0        @DECODEFAILURE
-		MOV #4		R31
-		MOV #7287	R0
+		MOV #4		R7
+		MOV #7286	R0
 		MOV R0 		IDX0
 SOLVE_EQ:	MOV @IDX0	R0 //load GF(2^16) code locators
 		EVAL Rmod	R0

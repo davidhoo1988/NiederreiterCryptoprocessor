@@ -162,7 +162,7 @@ assign non_zero_sel = (alu_t_reg[`DAT_W-16:`DAT_W-1] > alu_o_reg[`DAT_W-16:`DAT_
 
 assign alu_r_dat1 	= alu_reg_dat;
 assign alu_r_dat2 	= alu_reg_dat2;
-assign compute_done = mul_done | div_done | split_done | deg_done | rshift_done;
+assign compute_done = mul_done | div_done | split_done | deg_done | rshift_done | eval_done;
 
 always @ (posedge clk or negedge rst_b)
 begin
@@ -266,17 +266,9 @@ begin
 	else
 		en_eval_reg <= en_eval;	
 end
-//==========================================================
-//below has been modified by Wangchen DAI in 29/01/2015
-//==========================================================
-//the FF16 module is designed and implemented by Wangchen DAI;
-//FF16 module could provide GF(2^16) multiplication (3 clk cycles)
-//as well as addition (1 clk cycle)
-//f(x)=x^16+x^5+x^3+x^2+1 is the irreducible polynomial, 
-//which is used to generate the finite field
-//==========================================================
 
-//
+
+
 //----------------------------------------------------------
 // logic computation part
 //----------------------------------------------------------
@@ -555,8 +547,7 @@ GOPF_EVAL gopf_eval(
 	.clk 				(clk),
 	.rst_b 				(rst_b),
 	.start				(en_eval_reg),
-	.gopf 				(alu_o_reg),
-	.gf2e_element 		(alu_t_reg),
+	.sigma_poly			(alu_o_reg),
 	
 	//output
 	.eval_r_dat 		(eval_r_dat),
